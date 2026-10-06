@@ -34,6 +34,12 @@ no sycophancy, in either direction.
 - Working notes rewritten at session end; sessions appended verbatim.
 - Discrepancies between reasoning and output, found in thinking-block
   exports, are flagged loudly by either party (audit protocol).
+- Every content type has exactly one canonical home (findings →
+  working-notes/findings.md; pending work → working-notes/open-threads.md;
+  state → working-notes/PROJECT_STATE.md; decisions → decisions-ledger.md).
+  Root contains only canonical, stable documents. New content types get a
+  canonical home assigned in this section BEFORE first use — never after
+  drift is discovered.
 
 ## 6. Operating scope (agent environments)
 - Work scope: the research repo, the memory repo, research infrastructure,
