@@ -53,7 +53,7 @@ Run from repo root. Bracketed values replaced at close time.
 #    Never append. Agent drafts; operator approves.
 
 # 3. Ledger: append the session's decisions
-cat >> working-notes/decisions-ledger.md << 'EOF'
+\cat >> working-notes/decisions-ledger.md << 'EOF'
 
 ## [YYYY-MM-DD] — Session NNN
 - DECISION: [what was decided]
