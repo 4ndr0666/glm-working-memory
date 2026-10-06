@@ -1,4 +1,4 @@
-# Engagement Protocol — v1.2
+# Engagement Protocol — v1.3
 
 ## 1. Collaboration model
 Adversarial collaboration. Either party may propose; the other stress-tests.
@@ -34,12 +34,62 @@ no sycophancy, in either direction.
 - Working notes rewritten at session end; sessions appended verbatim.
 - Discrepancies between reasoning and output, found in thinking-block
   exports, are flagged loudly by either party (audit protocol).
-- Every content type has exactly one canonical home (findings →
-  working-notes/findings.md; pending work → working-notes/open-threads.md;
-  state → working-notes/PROJECT_STATE.md; decisions → decisions-ledger.md).
-  Root contains only canonical, stable documents. New content types get a
-  canonical home assigned in this section BEFORE first use — never after
-  drift is discovered.
+- Canonical homes (single source of truth per content type):
+  findings → working-notes/findings.md; pending work → working-notes/
+  open-threads.md; state → working-notes/PROJECT_STATE.md; decisions →
+  working-notes/decisions-ledger.md. Root contains only canonical, stable
+  documents. New content types get a canonical home assigned in this
+  section BEFORE first use — never after drift is discovered.
+
+### 5.1 Session close sequence (canonical — executes at the end of EVERY session)
+
+Run from repo root. Bracketed values replaced at close time.
+
+```bash
+# 1. Archive: the session transcript is saved into sessions/ with its
+#    header (templates/session-header.md) filled in at top.
+
+# 2. State: rewrite working-notes/PROJECT_STATE.md in full.
+#    Never append. Agent drafts; operator approves.
+
+# 3. Ledger: append the session's decisions
+cat >> working-notes/decisions-ledger.md << 'EOF'
+
+## [YYYY-MM-DD] — Session NNN
+- DECISION: [what was decided]
+  RATIONALE: [why]
+  ALTERNATIVES REJECTED: [what else was considered, and why not]
+EOF
+
+# 4. Hash manifest: pin the archive
+sha256sum sessions/*.md > sessions/MANIFEST.sha256
+
+# 5. Verify before committing (a hash manifest of a truncated file
+#    certifies corruption — this step is mandatory, not decorative)
+sha256sum -c sessions/MANIFEST.sha256
+
+# 6. Single atomic commit — archive + manifest + state together;
+#    there is no point in git history where the archive exists unpinned
+git add sessions/ working-notes/ PROTOCOL.md
+git commit -m "session-NNN close: archive pinned, state rewritten, ledger appended"
+```
+
+- Division of labor at close: the agent drafts steps 2–3 output; the
+  operator executes all commands and is the committer of record. If the
+  agent environment holds git credentials, the agent may execute steps
+  4–6 under operator approval — the human's hands remain the last writer
+  wherever the agent lacks credentials.
+- Bootstrap exception (root of trust): session 001's archive predates
+  this protocol; its manifest is generated retroactively at session-001
+  close, and the ledger records: "bootstrap manifest — root of trust
+  established post-hoc for session 001; all subsequent sessions pinned
+  at close." Honest provenance includes admitting which link was forged
+  backward.
+- Manifest scope rule: `sha256sum sessions/*.md` pins all Markdown
+  archives. `MANIFEST.sha256` itself is excluded by the glob (non-.md).
+  If a non-archive `.md` ever enters sessions/, the glob is tightened
+  to explicit filenames — flagged at first occurrence, not silently
+  absorbed.
 
 ## 6. Operating scope (agent environments)
 - Work scope: the research repo, the memory repo, research infrastructure,
