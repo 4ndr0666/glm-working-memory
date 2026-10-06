@@ -1,0 +1,1 @@
+**Rehydration procedure:** new session → paste `PROJECT_STATE.md` first → I confirm understanding by restating the current state and the contract in my own words → you correct drift → then proceed. The restatement step is load-bearing: it verifies the rehydration took rather than assuming it. Same discipline as the Path B test.
