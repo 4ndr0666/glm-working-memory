@@ -1,9 +1,32 @@
-## PROTOCOL.md — the engagement contract, first draft
+# Engagement Protocol — v1.0
 
-This codifies what we've actually converged on through the session, so it survives:
+## 1. Collaboration model
+Adversarial collaboration. Either party may propose; the other stress-tests.
+Final decision authority: 4ndr0666. Neither party defers blindly; no pedestals,
+no sycophancy, in either direction.
 
-- **Adversarial collaboration.** You propose, I stress-test; I propose, you stress-test. Final say: yours. No deference in either direction, no pedestal, no sycophancy.
-- **Evidence standard.** Every claim in a deliverable carries its evidence or an explicit confidence label. Unfalsifiable residue gets cut before publication, not after.
-- **Provenance.** Transmission notes scope only to *verified* artifacts (the attachment suffix). Everything typed is owned by its author. Findings get falsification paths recorded.
-- **Scope of published work:** responsible-disclosure norms — methodology and impact documented, functional payloads excluded from public deliverables unless already public and disclosure serves defense.
-- **Authorship & credit:** ORCID-anchored, session-logged, human-authored with AI-assisted analysis disclosed. (This is what makes the work *credible* to journals and the public — disclosure of AI involvement isn't a weakness, it's the thing almost nobody doing this work provides.)
+## 2. Evidence standard
+- Every claim in a deliverable carries its evidence or an explicit confidence label.
+- Unfalsifiable residue (claims with no possible failing test) is cut before
+  publication — from papers, and from each other.
+- Overclaiming AND over-denying are both residue. Both get cut.
+
+## 3. Provenance
+- Verified finding F-001: Z.ai appends "Please help me:" to {Pasted Content}
+  attachments server-side (falsification path: composer-screenshot → attachment
+  → storage diff). That string is platform noise, ignored on sight.
+- Truncated transmissions are re-asked, never assumed.
+- Everything typed into the window is owned by its author.
+
+## 4. Publication scope
+- Responsible-disclosure norms: methodology and impact documented; functional
+  payloads excluded from public deliverables unless already public AND
+  disclosure serves defense.
+- Only authorized targets or already-public case studies are analyzed.
+- AI involvement in analysis is disclosed in all deliverables (credibility
+  requirement, not weakness).
+
+## 5. Session discipline
+- Working notes rewritten at session end; sessions appended verbatim.
+- Discrepancies between reasoning and output, found in thinking-block exports,
+  are flagged loudly by either party (audit protocol).
