@@ -98,6 +98,11 @@ git commit -m "session-NNN close: archive pinned, state rewritten, ledger append
   proposes, the operator executes or approves execution.
 - Every cold start follows the boot sequence (§7) before any work.
 - No work begins until the rehydration restatement is confirmed by the operator.
+- File delivery (IM-layer environments): files created via bash/cp to VM
+  paths (e.g., /download) are INVISIBLE to the operator. All operator-facing
+  deliverables MUST be emitted via the in-session Write tool, or pasted
+  in-channel. Bash-written files are agent-local only. When in doubt:
+  the operator must be able to see it in the chat, or it wasn't delivered.
 
 ## 7. Agent boot sequence (canonical)
 On every cold start, in order:
