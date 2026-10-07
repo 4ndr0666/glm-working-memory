@@ -32,5 +32,4 @@ Quick reference for the human operator:
 - Human operator & author of record: 4ndr0666 (ORCID 0009-0008-0976-3895)
 - AI-assisted analysis disclosed in all deliverables
 - Session archives are the audit trail; working notes are the distilled state
-- Protocol version history: v1.0 (initial) → v1.1 (boot sequence + operating
-  scope consolidated; single-source-of-truth rule established)
+- Protocol version history: v1.0 (initial) → v1.1 (boot sequence + operatingscope consolidated; single-source-of-truth rule) → v1.2 (END-marker tripwire;canonical-homes rule) → v1.3 (close sequence promoted to §5.1) → v1.4(external-publication rule; IM-layer delivery rule)

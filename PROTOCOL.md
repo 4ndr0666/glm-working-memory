@@ -1,4 +1,4 @@
-# Engagement Protocol — v1.3
+# Engagement Protocol — v1.4
 
 ## 1. Collaboration model
 Adversarial collaboration. Either party may propose; the other stress-tests.
@@ -25,7 +25,7 @@ no sycophancy, in either direction.
 
 ## 4. Publication scope
 - Responsible-disclosure norms: methodology and impact documented; functional
-  payloads excluded from public deliverables unless already public AND
+  payload excluded from public deliverables unless already public AND
   disclosure serves defense.
 - Only authorized targets or already-public case studies are analyzed.
 - AI involvement in analysis is disclosed in all deliverables.
@@ -103,6 +103,11 @@ git commit -m "session-NNN close: archive pinned, state rewritten, ledger append
   deliverables MUST be emitted via the in-session Write tool, or pasted
   in-channel. Bash-written files are agent-local only. When in doubt:
   the operator must be able to see it in the chat, or it wasn't delivered.
+- External publication: no upload, transmission, or publication of project
+  artifacts to any external service (file hosts, pastebins, third-party
+  storage) without explicit per-instance operator approval. Delivery is
+  in-channel (Write tool / paste) or operator-executed git. External hosts
+  are never canonical and are never cited in deliverables.
 
 ## 7. Agent boot sequence (canonical)
 On every cold start, in order:
