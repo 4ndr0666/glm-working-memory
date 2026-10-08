@@ -125,3 +125,20 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
   disagreed; no victory is claimed over a mismatch. (b) Dropping the embedded hash
   after four failures — the failures were in boundary construction, not the goal;
   v1.1.3 proves the goal reachable.
+
+## [2026-10-08] — Session 003 (digest-history convention adopted)
+- DECISION: Documents cannot embed their own digest (self-reference defect —
+  the exporter-v1.1.1 lesson, re-derived in a document by the reviewing
+  chat-surface instance's directive and caught by the agent instance before
+  execution). Convention adopted: frozen versions carry their full digests
+  in successor §9 blocks; current-version digests are stated in-channel
+  only; repo pin at commit supersedes all.
+- RATIONALE: Embedding would change the file's bytes and invalidate the
+  digest, forging the corruption signature the provenance chain exists to
+  detect. First instance of a cross-domain lesson transfer catching a
+  reviewer error (chat-surface reviewer directive corrected by agent-side
+  instance using the exporter failure history).
+- ALTERNATIVES REJECTED: (a) Embedding the digest anyway and treating the
+  mismatch as expected — poisons every future audit of the document.
+  (b) Leaving the placeholder unfilled — an unfilled provenance field is
+  its own integrity gap in a deliverable about provenance.
