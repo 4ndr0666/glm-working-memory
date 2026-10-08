@@ -107,3 +107,21 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
   error-prone; replace, don't patch. (b) Dropping the embedded hash — the
   capture→pin window still needs coverage; the failure was in convention
   design, not in the goal.
+
+## [2026-10-08] — Session 002 (exporter v1.1.3 — verification chain proven end-to-end)
+- DECISION: Capture-side SHA-256 (prefix-hash against VERIFICATION ANCHOR) verified
+  matching on live export: capture c229590b…459d5 == sha256sum via awk prefix check.
+  The capture→pin provenance chain is now closed end-to-end. Versions v1.1.0–v1.1.2
+  failed with distinct boundary defects (pre-substitution hashing; unproven exclusion
+  conventions; whitespace mismatch at the anchor boundary); v1.1.3 fixes the class by
+  making the hashed region and the checked region byte-identical by construction.
+- RATIONALE: Four verification cycles were required, each failure caught by the
+  operator running the check unprompted — the human-half of the control system
+  functioned throughout. The process lesson (test vectors before shipping
+  verification conventions) is recorded and inherited. Known residual: the embedded
+  Verify line in the archive may carry mangled awk escaping (cosmetic to the hash,
+  which sits outside its own pre-image); to be confirmed and fixed at next touch.
+- ALTERNATIVES REJECTED: (a) Declaring success on the v1.1.1 run — the digests
+  disagreed; no victory is claimed over a mismatch. (b) Dropping the embedded hash
+  after four failures — the failures were in boundary construction, not the goal;
+  v1.1.3 proves the goal reachable.
