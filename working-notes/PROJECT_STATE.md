@@ -1,4 +1,4 @@
-# PROJECT STATE — rewritten each session (last: Session 002, 2026-10-07 — post-port reconciliation)
+# PROJECT STATE — rewritten each session (last: Session 002, 2026-10-08)
 
 ## Identity & relationship
 Operator: 4ndr0666 — security researcher, archive-builder, adversarial thinker.
@@ -63,3 +63,8 @@ say, operator's hands are the last writer.
   GLM drafts its own ledger entries, state rewrites, and thread updates as part
   of its session discipline; the operator reviews and holds final say. Manual
   memory duties delegated to the operator were a misdesign, corrected.
+
+##  Exporter v1.1.3: proven, one cosmetic residual (embedded verify-line escaping — fix queued at next touch)
+- Ledger: v1.1.x arc entry drafted, yours to commit
+- Next work, in order: torture-chamber architecture review (scope gate first: targets, disclosure posture, contents) → - F-001 write-up → taxonomy paper → friction experiment
+- See you on the agentic side. Bring the repo URL and the radar — the instrument that will document whatever we find there now has a provenance chain worthy of it.
