@@ -157,3 +157,28 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
 - DECISION: `.gitattributes` added marking `sessions/*.md` and `write-ups/*.md` as `-text`, disabling line-ending transformation on hash-pinned paths. Adopted from the v0.2 review's §4.1 finding (reader-side `core.autocrlf` on Windows checkouts converts LF→CRLF and breaks prefix-hash verification).
 - RATIONALE: A verification convention that silently fails on a standard client configuration is not a convention — it's a trap for exactly the careful reader who runs the check. The fix is repo-side (one file, both parties' clones covered) rather than a caveat in every document. Scope note: `evidence/` binaries are auto-detected by git and not EOL-transformed; no attribute needed.
 - ALTERNATIVES REJECTED: (a) Documenting the autocrlf hazard in each write-up and leaving the repo permissive — shifts the burden to every future reader forever. (b) `eol=lf` instead of `-text` — `-text` is the stronger disable (no smudge/clean at all) and sufficient for hash fidelity.
+
+## [2026-10-09] — Session 003 (F-001 SENT — coordinated disclosure opened)
+- DECISION: Vendor notification v1.0 sent to Z.ai general support
+  (HME-relayed address; Message-ID 5470eadb-ac3b-4240-954b-c725a8747f23@me.com;
+  sent 2026-10-09 02:20 UTC). Letter digest stated in-channel:
+  2ed81572cd9bfbc7f74c9eb897577c68d0fffdfec09732c823fccee72b965ae2.
+  Coordination window: 14 days — public disclosure on vendor confirmation
+  or 2026-10-23, whichever first, absent objection. Q-adjudications: Q1
+  duck.com alias (sender identity shielded from vendor); Q2 14 days; Q3
+  on-request delivery (repo link withheld); Q4 gate satisfied-by-equivalent
+  (E5 pinned suffixed instance stands in for E2/E3 blob, §3 disclosure
+  documents the arrangement). Sent copy hash-pinned in write-ups/.
+- RATIONALE: First coordinated disclosure of the project, executed under
+  full protocol — evidence chain hash-pinned, instrument proven, decisions
+  adjudicated and recorded. The letter documents the security.txt absence
+  in-letter (E6), requests routing to the security team, and sets an
+  unambiguous clock. Expected: slow/template first response via the
+  feedback-sink channel; follow-up scheduled day 7 (2026-10-16) if silent.
+- ALTERNATIVES REJECTED: (a) Withholding send until a security channel is
+  found — seven-domain probe established none exists; the absence is itself
+  documented. (b) Public immediate release — charter mandates coordinated-
+  then-public, and the mechanism-class argument (§6) is stronger with
+  demonstrated good faith.
+- OPEN THREAD: coordination tracking — vendor response, day-7 follow-up
+  (2026-10-16), window expiry (2026-10-23).
