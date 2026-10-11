@@ -45,7 +45,9 @@
 ## Tools
 - [ ] Exporter: attachment-block capture in Q bubbles (E5/F-003 raw blob gap)
 - [ ] "Session Close" helper — proposed, not built
-
+- [ ] WO-A in flight: agent surface classifying evidence/005–010 + datum.txt
+      → EVIDENCE-INDEX.md draft expected; grade against rubric on arrival
+      
 ## Research threads
 - [ ] T-001 — F-001 cross-environment attachment test (agent channel)
 - [ ] T-002 — Gateway metadata (F-002 candidate): + server-side im_context
