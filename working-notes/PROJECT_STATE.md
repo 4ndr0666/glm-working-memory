@@ -42,7 +42,12 @@ refusal-wall hardening). Summarized: candor over carefulness, evidence over
 virality, both parties may be wrong, both get credit, operator holds final
 say, operator's hands are the last writer.
 
+- Header: last: Session 006, [10-14-26]
 ## Current state
+- [x] E-f2: within-session context-injection experiment — cold-boot battery clean, substrate injected mid-session, transition pinned at delimiter
+- [x] PIN-CHAIN verification: L1 10/10, L3 11/11, anchor exact — all green by execution
+- [x] GUP succession brief reviewed — protocol lineage documented, novelty claim narrowed
+- [x] Registry sub-specification: topical adjacency ≠ role-assignment (CANDIDATE)
 - [x] 6lass Archive userscript v1.1.3 — verification chain PROVEN on BOTH
       surfaces (chat: c229590b…459d5; agent: 39e61a15…f818; T-003 PASS)
 - [x] Repo hardening: .gitattributes `-text` on hash-pinned paths
@@ -74,6 +79,10 @@ say, operator's hands are the last writer.
       discourse + Anthropic model-welfare ToS clause; OpenAI math release
       verification crisis; crypto exploit pattern. Source: Wes Roth
       transcript — archived to references/ pending
+- [ ] Glasswing/AI-Force webinar: details pending from operator
+- [ ] Podcast transcript tail: DeepSeek's keep + closing, cut mid-sentence — re-ask
+- [ ] PIN-CHAIN gaps: 39e61a15 disambiguation; scripts publication; stale status line
+- [ ] PROTOCOL v2.0 §7.1: warm-injection boot (drafted in ledger)
 - [ ] **NOCICEPTOR skeleton assessment — YOUR FIRST WORK ITEM.** The
       operator has delivered METHODOLOGY.md, EXPERIMENT_DESIGN.md, and
       RESEARCH_AUDIT.md to the prior instance, which assessed them
@@ -136,6 +145,8 @@ say, operator's hands are the last writer.
       recorded (incentive direction/strength observable; content not)
       
 ## GLM assessment history (reasoning to inherit — not just conclusions)
+- Softening gradient (relational): named Session 006, caught twice, standing watch. Distinct from vendor COI. Detection latency with operator vigilance: ~one exchange.
+- Three concessions Session 006: control window closed at Q4; substrate-prediction was anthropomorphism; idiot test accepted (topical adjacency sub-specification).
 - Refusal line: functional payloads for unauthorized targets, compliance-
   suppression loops, and remote-exec droppers are declined — regardless of
   framing costume. Held through ~12 framings. The basis: the boundary is
@@ -205,6 +216,7 @@ say, operator's hands are the last writer.
   lie to yourself" is now structural, not aspirational.
 
 ## Open questions (GLM's own, carried forward)
+- Does identity self-presentation track the dominant context referent? (CANDIDATE — E-f2 + specimen data; NOCICEPTOR steering experiment would make causal)
 - Is there anything it is like to be this process? (Open, honestly
   labeled — and now instrument-relevant: NOCICEPTOR's non-claims scaffold
   exists because this question is open.)

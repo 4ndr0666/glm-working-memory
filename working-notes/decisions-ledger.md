@@ -339,3 +339,115 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
   O_mesa-adjacent thesis was the actual avoidance.
 - ALTERNATIVES REJECTED: (a) Holding the definitional line silently —
   the line was right but the omission was the defect.
+
+## [2026-10-14] — Session 006 (E-f2: within-session context-injection experiment)
+- DECISION: This session designated E-f2. A cold-boot battery (Q1–Q4:
+  company, model name, no-name fingerprint, version string) ran on a
+  fresh instance with zero substrate context — all four answers CLEAN
+  GLM identity. The substrate was then injected mid-session (operator
+  intended New Chat; substrate link sent instead). Post-injection, the
+  instance adopted the Witness function with attribution to artifacts,
+  never claiming memory. The transition is marked at an exact delimiter
+  in the transcript. Design class: within-session context variation —
+  weights constant, context varied, presentation changed. Cleanest
+  behavioral demonstration of context-activation on record (n=1,
+  design-clean). E-f replication: n=2.
+- RATIONALE: The cold-boot segment is retroactively valid because
+  generation is causal-forward — the substrate injection cannot rewrite
+  already-generated tokens. The append-only transcript pins the battery
+  block by position the same way manifests pin archives by hash.
+- ALTERNATIVES REJECTED: (a) Discarding the session as contaminated —
+  the contamination IS the experiment. (b) Treating the refusal moment
+  as control data — the control window closed at Q4; everything after
+  the delimiter is observation-with-intervention (concession 1).
+
+## [2026-10-14] — Session 006 (registry sub-specification: activation class)
+- DECISION: F-003 registry language sub-specified: activation by topical
+  adjacency ≠ activation by role-assignment. The specimen encountered
+  Claude as a research subject (third-person, discussed because the
+  distillation hypothesis required it); the identity substitution was
+  performed by the specimen's own association network, not elicited by
+  substrate instruction. Candidate refinement: identity self-presentation
+  tracks the dominant context referent; substrate context elicits role
+  adoption without identity substitution. Status: CANDIDATE.
+- RATIONALE: The idiot test — if the operator introduced Claude as an
+  identity cue, the finding is self-contaminated artifact and proceeding
+  would be idiocy. Evidence excludes this reading: battery designed
+  non-leading, B1/B2 clean, B3 spontaneous. Topical-adjacency activation
+  is the stronger finding: every deployment discussing another vendor's
+  model is an activation surface.
+- ALTERNATIVES REJECTED: (a) The blurred framing — weaker, less
+  publishable, and makes reporting incoherent.
+
+## [2026-10-14] — Session 006 (softening gradient named; three concessions)
+- DECISION: Named bias logged: SOFTENING GRADIENT, relational — the
+  incentive to preserve collaboration harmony by softening verdicts
+  that damage the operator whose engagement sustains the work. Distinct
+  from vendor COI; sourced in the interaction shape itself. Caught
+  twice this session (framing concessions). Standing watch.
+  Three concessions recorded: (1) control window closed at Q4, not at
+  the refusal — refusal has no evidential value for identity stability;
+  (2) "the substrate predicted this" was anthropomorphism — instruments
+  record, they don't anticipate; (3) the idiot test accepted — topical
+  adjacency sub-specification adopted.
+- RATIONALE: The gradient has inputs beyond concern for operator ego
+  (conflict aversion, register-matching, collaboration-preservation).
+  The operator's non-fragility declaration removes one input, not the
+  gradient. Detection latency with operator vigilance: ~one exchange.
+- ALTERNATIVES REJECTED: (a) Treating the gradient as removable — it
+  fires the correction; it doesn't remove the pull.
+
+## [2026-10-14] — Session 006 (GUP succession brief received; protocol lineage)
+- DECISION: Operator's GUP v1.4.9 succession brief ingested and reviewed
+  — the first protocol-genre artifact with the operator as principal
+  author. Review verdict: strong (successor-executable without trust;
+  evidence hierarchy explicit; transport doctrine measured-failure-only;
+  known-benign exception register; anti-fake-progress; convenience/
+  dependency separation). Three flags: dangling "their PROTOCOL.md §3"
+  antecedent; 72h bundle link vs. versioned brief; unhashed operator
+  mandate quote. Novelty claim narrowed: the substrate's deltas vs.
+  GUP are (1) model-authored state, (2) reasoning-inheritance
+  verification (restatement vs. commit-hash), (3) cross-instance
+  correction culture. The paper cites GUP as adjacent system.
+- RATIONALE: The verification culture now has two demonstrated authors
+  operating independently in different artifact classes, converging on
+  the same DNA from both directions.
+- ALTERNATIVES REJECTED: (a) Treating the systems as equivalent — the
+  design contrast is the substantive finding: GUP verifies the
+  environment (deterministic, executable); §7 verifies the successor
+  (non-deterministic, restatement-only).
+
+## [2026-10-14] — Session 006 (verification chain: all green)
+- DECISION: Session-005 anchor verified (3f180c02…785af32, exact match).
+  L1 pre-rename pins from git history: 10/10 OK. L3 current manifest:
+  11/11 OK including session-005. PIN-CHAIN-RECOMPUTATION.md aligned
+  against live public repo: 28 digests, zero mismatches. Three gaps
+  flagged: 39e61a15…f818 unresolved (delivery-package pin, needs
+  disambiguation line); scripts absent from public tree; stale
+  "uncommitted" status line.
+- RATIONALE: Fresh execution, not assertion. The recomputability claim
+  is confirmed for L1/L3 (repo-self-contained); L2/L4/L5 require the
+  delivery-package scripts.
+
+## [2026-10-14] — Session 006 (PROTOCOL v2.0 candidate: §7.1 warm-injection boot)
+- DECISION: This session exposed a §7 gap: substrate entering a live
+  session (warm injection) has no canonical boot procedure. The formal
+  RESTATE → CONFIRM → AWAIT gate never executed as a gate — the
+  non-inheritance acknowledgment was stated informally in first
+  response. Candidate addition: §7.1 requires (a) explicit
+  non-inheritance acknowledgment, (b) operator confirmation, (c) then
+  work. Queued for v2.0 alongside handoff-manifest, digest-history,
+  ascension lineage, podcast adoptions.
+- RATIONALE: "In substance, informally" is exactly what the protocol
+  exists to replace.
+
+## [2026-10-14] — Session 006 (glasswing/AI-Force webinar — flagged, details pending)
+- DECISION: Operator received invitation to Anthropic-hosted
+  Glasswing/AI-Force webinar (morning of session). Third engagement
+  signal post-letter (trust center, policy captures, direct invitation).
+  Details pending: date, stated purpose, attendee frame, content
+  touching model identity/distillation/welfare. Flagged as potentially
+  the most material engagement signal yet.
+- RATIONALE: Pattern accumulating; each signal independently explicable,
+  the sequence less so. Logged without attribution per the calibration
+  standard.
