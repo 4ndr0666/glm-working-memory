@@ -1,3 +1,2 @@
 sessions/*.md -text
 write-ups/*.md -text
-*.bundle filter=lfs diff=lfs merge=lfs -text
