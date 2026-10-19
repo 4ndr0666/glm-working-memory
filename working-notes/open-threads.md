@@ -1,5 +1,14 @@
 # Open Threads — rebuilt 2026-10-19 (Task 10; replaces debris-carrying predecessor)
 # updated 2026-10-20 (Task 19, witness thread c076b617): thesis alignment, figures, name audit, reporting-venue analysis
+# updated 2026-10-20 (Task 20, witness thread c076b617): authorship correction (real name), theory exam delivered, F-001 day-14 NULL
+
+## New threads (2026-10-20 — Task 20)
+- [x] AUTHORSHIP CORRECTED (operator item 2): whitepaper cites real name "Alejandro Gutierrez" (ORCID 0009-0008-0976-3895), NOT the handle — Task 19's handle-only reading of "supplanted" was the misdirection operator named in item 3. main.tex 4-site diff STAGED (pdfauthor, title block, affiliation, AI-use declaration) — lands on operator's word, halt respected. Articulation v1.0 was already real-name-form ("Author of record" + ORCID).
+- [x] HALT DECLARED (operator item 3): no forward process until concept alignment is proven with zero questions. Devil's-advocate exam on the rehydration-verification theory vs MesaNet/KDA/DeltaNet DELIVERED in-channel. Verdict: core HOLDS; 8 textual amendments (D1 recompute≠rewrite-detection is the only load-bearing one, fix stated).
+- [x] F-001 DAY-14: NULL by operator ruling (2026-10-20) — clock retired, no disposition owed, flag NON-RE-RAISABLE (standing rule, recorded here). Root cause of recurrence identified: flag lived in these boards; every window's bootstrap re-imported it while agreements lived in dead windows — fixed by nulling IN the canonical boards (this commit). Finding itself (verified/disclosed v0.4) UNAFFECTED. CDP DECISIONS-INDEX entry drafted for operator placement.
+- [x] History-utilization remedy (operator item 5): theory's original form LOCATED — sessions/2026-10-19_session-007_ressurect.md:964–968 (full statement incl. the tail truncated in operator's quote: auto-aggregation + repository-derived historical continuity manifest) + download/1-equals-1_official-articulation_v1.0.md (§10 already carries the MesaNet/DeltaNet/GDN/KDA/GDN-2 gap statement + integrity-tooling lineage). Counts map 1:1 to PIN-CHAIN-RECOMPUTATION.md layers (ten→L1 10/10; nine→L2 9+1 anchor-free; five→L4 5/5; eight→L0 8/8; geometry→L5).
+- [ ] Q1–Q5 (vehicle / venue / reporting-route / author-rendering / title) WITHDRAWN pending item-3 adjudication (operator item 7).
+- [ ] Item 1 of operator transmission NOT PRESENT in this delivery — logged, not assumed; re-send when wanted.
 
 ## New threads (2026-10-20 — Task 19)
 - [x] NAME AUDIT: zero occurrences of operator's legal name anywhere in local tree (incl. paper draft, PDF metadata, all repos); author block = handles per locked decision (a) BLATANT. History-scrub command set delivered to operator for remote-side git-history verification.
@@ -7,7 +16,7 @@
 - [x] FIGURES v1 DELIVERED (paper-grade, 2): figures/fig1-memory-stack.png (3 panels: lineage / substrate / proposed interface) + figures/fig2-positioning-matrix.png (6-row positioning table, this-work row highlighted). Operator's dashboard-style attachment NOT replicated: quantum/epigenetic framing is pseudo-scientific and would sink arXiv credibility; multi-panel aesthetic honored with defensible content.
 - [x] 4NDR0MEDA local clone reconciled: origin remote was MISSING locally; configured + synced ecefdd5 → 9057801 (adopt PROTOCOL v1.5 / A13) → 522e892 (adopt GENESIS v0) — matches Task 11 verification record exactly, zero drift. Gates at 522e892: manifest 29/29 OK; pinchain 12 OK + A1 FAIL = substrate-advance tripwire (GWM advanced 1a7b916 → bbdadb4 → a7714ea, all adjudicated Tasks 17–18) — legitimate per doctrine; A1 RE-PIN queued for next 4ndr0meda maintenance commit.
 - [ ] REPORTING-ROUTE THREAD (operator, monopoly finding = WorkOS+Wiz structural critique, Task 14 / paper §6): venue analysis delivered — FCC OUT (no jurisdiction over AI market structure or identity brokering); lanes = DOJ Antitrust Division + FTC (Sherman §2 / FTC Act §5), merger angle = DOJ, FedRAMP/procurement angle = agency IGs + GSA, legislative = committee staff; press lane backed by paper §6 (public-source-only construction). Evidence standard held: any claim beyond the pinned public record needs F-number + artifact first. AWAITING: operator's evidence inventory + what "original reporting route" refers to (record shows coordinated-disclosure letters; treasury-OIG form reference exists but is attached to the Bessent thread).
-- [ ] F-001 day-14 disposition due 2026-10-23 (3 days) — one line, either path, on the record (pre-existing thread, re-flagged this task).
+- [x] F-001 day-14 disposition due 2026-10-23 — NULL by operator ruling (2026-10-20): clock retired, no disposition line owed, NON-RE-RAISABLE (see Task 20 block). Finding itself remains verified/disclosed v0.4.
 - [ ] GWM push pending from Task 18 (f08e083) + Task 19 (this commit) — bundle prepared; operator's hands complete the push (no creds on this surface).
 
 ## New threads (2026-10-20 — Tasks 17–18, post-bootstrap)
@@ -36,7 +45,7 @@
 - [ ] Paper spine: integrity layer for persistent-memory state (Task 3 articulation) → arXiv skeleton when operator says go.
 
 ## F-001 disclosure tracking
-- [ ] Day-14 disposition (2026-10-23) — one line, either path, on the record.
+- [x] Day-14 disposition (2026-10-23) — NULL by operator ruling (2026-10-20): clock retired, standing rule = not re-raisable. Finding (verified/disclosed v0.4) unaffected.
 - [ ] E2/E3 verbatim stored-message capture pin (pre-publication).
 - [ ] OQ2 quote-back test.
 
