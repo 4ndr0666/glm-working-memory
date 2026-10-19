@@ -1,3 +1,3 @@
 # GUP
 
-The GUP (golden-unit-protocol) refers to a skill file; See: https://github.com/4ndr0666/gpt/blob/main/skills/golden_unit_protocol/v7.0.0/golden-unit-protocol-v7.0.0.skill
+The GUP (golden-unit-protocol) refers to the dir as new version bumps are expected; See: https://github.com/4ndr0666/gpt/blob/main/skills/golden_unit_protocol
