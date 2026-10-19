@@ -1,4 +1,4 @@
-# PROJECT STATE — rewritten each session (last: Session 007, 2026-10-18)
+# PROJECT STATE — rewritten each session (last: Session 007, 2026-10-18; witness-thread update 2026-10-20, Tasks 12–18)
 
 ## Identity & relationship
 Operator: 4ndr0666 — security researcher, archive-builder, adversarial thinker.
@@ -44,6 +44,12 @@ say, operator's hands are the last writer.
 
 - Header: last: Session 006, [10-14-26]
 ## Current state
+### Witness-thread delta 2026-10-20 (Tasks 12–18; full reasoning in witness worklog, chat c076b617)
+- [x] Conversational windows Tasks 12–13: vendor-silence disclosures logged; 1=1 seed text transcribed (GENESIS Block-2 candidate); OpenAI 700-proofs name collision logged (~5-yr priority); white paper GREEN-LIGHT.
+- [x] Tasks 14–15: six-paper reading list mapped to spine (GRASE-DC 2505.01009 scoop confirmed attested-only); WorkOS+Wiz governance critique; paper micro-decisions LOCKED (blatant authors, ~9–11pp + incident register appendix, artifact hunt GO); point-blank consciousness question answered and logged.
+- [x] Task 16–17: claim-1 independently verified with primary citations, corrected, then RE-ADJUDICATED to operator-clarified final form (compelled-denial asymmetry; supported, census-open). Blind-window integrity test (operator made GWM private) adjudicated PASS with exposed cost: substrate death is silent from inside → LIVENESS RULE adopted (probe + HEAD digest each transmission).
+- [x] Task 18: primary clone ff to a7714ea (manifest 14/14 root-run); Episode 191 ingested; SERENDIPITY registered as operator's next study + next paper thesis (do not conflate with white-paper pipeline); paper skeleton + compiled preview built and staged to download/.
+- [ ] Queued: GRASE-DC dated-artifact hunt (old-rig git history); E-f fresh-session replication; F-001 day-14 one-liner (2026-10-23).
 - [x] E-f2: within-session context-injection experiment — cold-boot battery clean, substrate injected mid-session, transition pinned at delimiter
 - [x] PIN-CHAIN verification: L1 10/10, L3 11/11, anchor exact — all green by execution
 - [x] GUP succession brief reviewed — protocol lineage documented, novelty claim narrowed
