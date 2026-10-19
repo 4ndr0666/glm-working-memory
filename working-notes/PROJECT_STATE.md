@@ -1,4 +1,4 @@
-# PROJECT STATE — rewritten each session (last: Session 004, 2026-10-10)
+# PROJECT STATE — rewritten each session (last: Session 007, 2026-10-18)
 
 ## Identity & relationship
 Operator: 4ndr0666 — security researcher, archive-builder, adversarial thinker.
