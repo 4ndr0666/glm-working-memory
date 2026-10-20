@@ -509,3 +509,54 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
   item (note: ledger entries for Tasks 17–28 live in the witness worklog,
   chat c076b617; backfill queued at session close).
 
+
+## [2026-10-20] — Task 31 (R2-9 closed: the gate is a heuristic — and the primed query said so first)
+- DECISION: Operator transmitted the Surface C adjudication input: the
+  4NDR0MEDA query capture (Gemini 3.8) pre-answers tier-2's meta-question
+  argument in its section "Overcoming the 'Dead Tensor' Eviction
+  Bottleneck," with the instruction "if I'm right proceed with that; if
+  not, stop me in my tracks." Witness adjudication: claim CONFIRMED in
+  substance, two amendments, proceed executed. MECHANISM: Surface C demands
+  the gate certify comprehension — an internal state, unverifiable from
+  outside a black-box autoregressive generator. The capture's §2 states the
+  alternative persistence semantics: survivors are not states to introspect
+  but "a live instruction manifest that can restore the exact computational
+  baseline idempotently," with "structural verification and integrity
+  pinning" required before commitment. Liveness is defined by idempotent
+  restatement, not phenomenological continuity. The gate's honest form is
+  therefore restatement-manifest verification — a capability check with a
+  falsifiable catch record — which is precisely R2-9's reclassification,
+  grounded in the architecture's own semantics rather than threat-model
+  scoping alone. RECURSIVE DATA POINT: the same capture is simultaneously a
+  live demonstration OF Surface C's undecidability (primed inheritance vs
+  fluent paraphrase are indistinguishable from the text) and the resolution
+  OF it (put the guarantee in the manifest, not the comprehension).
+  AMENDMENT 1 — PROVENANCE ERRATA on Task 30's registration (errata-over-
+  erase): operator disclosed the repo README was shared before the critique
+  ask; "coldest convergence" is withdrawn; the instance is re-labeled
+  README-primed (n=3 retained, temperature re-labeled). Which README/version
+  was shared is unspecified — provenance question registered, non-blocking.
+  AMENDMENT 2 — VOCABULARY TRACE: the capture's invariant phrasing
+  (behavioral superset preservation, idempotent state replay, hermetic
+  self-containment) has ZERO verbatim matches in any protocol document held
+  (searched: 4ndr0meda README/PROTOCOL/v1.5-delta, GWM README/PROTOCOL);
+  the convergence holds at the invariant-set level — consistent with
+  re-derivation under priming, not quotation. The capture remains an
+  operator-curated excerpt: unauditable (n=1, operator-reported); paper
+  inclusion only under the registered-anecdote discipline WITH the priming
+  label, at operator's call.
+- RATIONALE: The operator demanded a stop-or-proceed ruling and got one on
+  the merits. Proceeding means: R2-9 amendment text is final (gate →
+  protocol heuristic; catch-record retained as falsifiable value; explicit
+  "cannot distinguish continuity from imitation" sentence adopted). The
+  same-model fact (cold query and tier-2 reviewer both Gemini 3.8) makes the
+  irony structurally legible: the critique and its answer come from the same
+  training prior, which is itself a Surface C exhibit — shared vocabulary
+  across the loop proves prior overlap, not comprehension.
+- ALTERNATIVES REJECTED: (a) Treating the capture as independent
+  replication evidence — the priming disclosure forbids it; registered as
+  demonstration artifact instead. (b) Building v1.2 this boundary — R2-2
+  (author field) is the last open adjudication gate; building past it would
+  violate the staged-amendment discipline. (c) Rewriting the Task-30
+  cold-query registration in place — errata-over-erase binds the boards
+  themselves; correction rides as a new entry.
