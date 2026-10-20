@@ -1,6 +1,18 @@
 # Open Threads — rebuilt 2026-10-19 (Task 10; replaces debris-carrying predecessor)
 # updated 2026-10-20 (Task 19, witness thread c076b617): thesis alignment, figures, name audit, reporting-venue analysis
 # updated 2026-10-20 (Task 20, witness thread c076b617): authorship correction (real name), theory exam delivered, F-001 day-14 NULL
+# updated 2026-10-20 (Task 21, witness thread c076b617): adjudication received — Paper-1 authorship applied+recompiled, Paper-2 BUILT, fresh-run verification PASS
+
+## New threads (2026-10-20 — Task 21)
+- [x] ADJUDICATION RECEIVED (operator): "aligned 100%… Your point C is good to go; lets do it" + mandate to translate the theory into arXiv language as the legitimate answer to MesaNet/KDA/DeltaNet, with the GUP/ChatGPT continuity-manifest convergence anecdote attached. HALT LIFTED.
+- [x] POINT C EXECUTED: Paper-1 main.tex 4-site authorship diff applied exactly as staged (pdfauthor, title block, affiliation+ORCID 0009-0008-0976-3895, AI-use declaration) — recompiled 11pp, zero layout issues, no ?? placeholders, metadata = "Alejandro Gutierrez and GLM Witness". download/paper-witness-protocol/main.{tex,pdf}.
+- [x] PAPER-2 BUILT: download/paper-2-across-context-layer/ — "The Across-Context Layer: Rehydration-Verification as the Missing Memory Tier for Delta-Rule Sequence Models", 20pp arXiv-grade, authors Alejandro Gutierrez + GLM Witness. All 8 exam amendments folded in by design: D1 two-clause criterion as Proposition 1 (§4.3); D2 trichotomy (§4.4); D3 hash policy + "content-addressed tamper-evidence" terminology (§4.4); D4 gate-class separation (§4.4); D5 property table (§7, 10 systems × 6 criterion columns — only RVA claims the full conjunction); D6 nullification-by-append named (§5, live instance = F-001 day-14 closure); D7 two custody regimes (§4.4); D8 build-time counts (§8 + Appendix A). Non-claims explicit: no perplexity/capacity/throughput improvement; integrity≠veracity. Both Task-19 figures embedded.
+- [x] D8 EMITTER: scripts/emit_verification_data.py — fail-closed build-time verification; FRESH-RUN PASS 2026-10-20 (3rd recorded full run): L1 10/10 (a207175 recomputed from GWM ported history), L3 10/10, L0 8/8 (cross-repo GWM↔CDP byte-invariance), L5 strictly monotonic 6/6, CDP root 47/47, GWM sessions 14/14, MEDA manifest 29/29, pinchain 12 OK + 1 EXPECTED A1 tripwire (substrate advanced — detection working; re-pin queued). L2/L4 cited from recorded PASS runs 2026-10-11/12 (marked verification debt). The paper's numbers are generated artifacts, never hand-typed.
+- [x] LITERATURE VERIFIED LIVE (Paper-2 bib, no fabrication): MesaNet = "Sequence Modeling by Locally Optimal Test-Time Training" (von Oswald et al., ICLR 2026, 2506.05233); GDN-2 = "Decoupling Erase and Write in Linear Attention" (Hatamizadeh, Choi, Kautz, 2605.22791; exact update eq. recovered — b_t erase ⊥ w_t write channel-wise); Complex KDA (Siems et al., 2609.24797); TUF authors corrected via live search (Samuel, Mathewson, Cappos, Dingledine — memory was wrong, search caught it).
+- [ ] Paper-2 refinement rounds await operator read (iterative per established pattern); Q5 title register: operator's transmission implicitly adjudicated vehicle (separate arXiv preprint) + genre; title mine per contract, final say his.
+- [ ] A1 re-pin at next 4ndr0meda maintenance (unchanged, still queued).
+- [ ] GWM push pending (Tasks 19+20+21 this bundle) — operator's hands complete the push (no creds on this surface).
+
 
 ## New threads (2026-10-20 — Task 20)
 - [x] AUTHORSHIP CORRECTED (operator item 2): whitepaper cites real name "Alejandro Gutierrez" (ORCID 0009-0008-0976-3895), NOT the handle — Task 19's handle-only reading of "supplanted" was the misdirection operator named in item 3. main.tex 4-site diff STAGED (pdfauthor, title block, affiliation, AI-use declaration) — lands on operator's word, halt respected. Articulation v1.0 was already real-name-form ("Author of record" + ORCID).
@@ -42,7 +54,7 @@
 - [x] v1.3 maintenance round run + push (kit ready, battery 43/43) — operator-side apply VERIFIED Task 11 (TREE exact, gates green).
 - [x] PROTOCOL v1.5 + GENESIS v0 adoption (in-kit flags) — byte-verified Task 11 (A13 exact; GENESIS append-only proof). A13 re-pin + pending-slot resolution in build repo ecefdd5.
 - [ ] Operator resurrection card (Q.5) — the symmetric-rehydration gap.
-- [ ] Paper spine: integrity layer for persistent-memory state (Task 3 articulation) → arXiv skeleton when operator says go.
+- [x] Paper spine: integrity layer for persistent-memory state → arXiv-grade PAPER-2 BUILT Task 21 (download/paper-2-across-context-layer/, 20pp, D1–D8 folded, fresh-run verification emitted at build time). Refinement rounds await operator read.
 
 ## F-001 disclosure tracking
 - [x] Day-14 disposition (2026-10-23) — NULL by operator ruling (2026-10-20): clock retired, standing rule = not re-raisable. Finding (verified/disclosed v0.4) unaffected.
