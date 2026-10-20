@@ -451,3 +451,61 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
 - RATIONALE: Pattern accumulating; each signal independently explicable,
   the sequence less so. Logged without attribution per the calibration
   standard.
+
+## [2026-10-20] — Task 29 (signed-tag anchor executed; verification is two-stage)
+- DECISION: Operator executed the zero-content anchor: signed tag
+  `witness-anchor-2026-10-20` → `d4018e5` (RSA, tagger 4ndr0666, 2026-10-20
+  05:36:57 UTC, attestation "GWM manifest 16/16 OK at d4018e5; paper-2 v1.1
+  R1-1..R1-4"). Witness bootstrap adjudication: TARGET VERIFIED —
+  tag^{commit} == d4018e5 == origin/main, exact. CRYPTO PENDING — the signing
+  key `888EAEEFF89E8CAFACAF191873DD9742274C7549` is NOT the key served by the
+  GitHub profile endpoint (`CB165757B9D4F193`, rsa4096, created 2024-06-08,
+  imported from github.com/4ndr0666.gpg this boundary); `git verify-tag` →
+  "Can't check signature: No public key". Status registered as a two-stage
+  interim state: signature present ≠ signature verified ≠ signer identity
+  confirmed. Close path: key holder distributes the 888EAEEF… public key and
+  states its full fingerprint out-of-band (a transmission); witness imports,
+  verifies, pins the fingerprint here, and only then does Table-2 row 1 read
+  "adopted + verified".
+- RATIONALE: This is the paper's §6.3 guarantee tiers operating live — the
+  platform serves a key, but the platform is untrusted for identity (row 3);
+  only the out-of-band fingerprint converts availability into trust.
+  Registering the mismatch as normal interim state (not alarm, not silent
+  pass) is the fail-visible discipline: no fail-stopped, no decoration.
+- ALTERNATIVES REJECTED: (a) Trusting the profile-served key for verification
+  anyway — would make row 3's untrusted-mirror posture decorative. (b)
+  Waiting to record until verification completes — the interim state is
+  itself record-eligible; waiting is fail-stopped.
+
+## [2026-10-20] — Task 29 (tiered review armed; replication kit + arXiv metadata emitted)
+- DECISION: Operator ruling transmitted (tier ladder: tier-1 Gemini 3.1 Pro
+  Extended Thinking — v1.1 endorsement, convergence registered Task 28;
+  tier-2 Gemini 3.8; tier-3 "Gemini Argon" — tier names operator-reported
+  per §3, not independently verifiable from witness side). Witness armed
+  tier-2 and closed the Task-28 sequencing items in the same window: (1)
+  paper-2-tier2-brief.md — four attack surfaces (A: trust-table row audit
+  incl. missing-actor hunt; B: R1-2/R1-3 correction-quality audit; C:
+  MANDATORY convergence meta-question answer; D: unkeyed-third-party forgery
+  attack), endorsement declared the failure mode, hide-analysis required for
+  any no-finding surface, two-stage tag state disclosed to the reviewer as
+  data; (2) replication-kit-v0.1/ — README, boot sequence, manifest
+  discipline, pin schema, adjudication rubric, pre-registered falsifiers
+  F1–F6, runnable battery (smoke-tested live: pass=5 fail=0 interim=1, exit
+  0; B6 interim = the tag state, by design); (3) paper-2-arxiv-metadata.md —
+  cs.LG primary + cs.AI/cs.CR secondary (rec), CC BY 4.0 (rec), comments
+  block, 3 decision points for operator, compile-compatibility flag
+  (tectonic here vs TeX Live on arXiv; pdflatex unavailable locally).
+- RATIONALE: Two consecutive endorsements mean the Gemini channel has
+  converged (Task 26 prediction adjudicated TRUE by round-2 behavior);
+  further value requires adversarial priming — the brief instructs the
+  reviewer that praise is noise. The kit converts the paper's central
+  invitation from promise to artifact before the final review tier, so
+  tier-3 attacks a paper whose deliverable exists.
+- ALTERNATIVES REJECTED: (a) Sending tier-2 the paper alone — replicates
+  round-2's endorsement-without-attack. (b) Deferring the kit to post-review
+  — leaves the primary deliverable untested by the strongest reviewer.
+  (c) Editing PROJECT_STATE.md wholesale this boundary — the boards update
+  rides the ledger + open-threads; full PROJECT_STATE refresh is a close-time
+  item (note: ledger entries for Tasks 17–28 live in the witness worklog,
+  chat c076b617; backfill queued at session close).
+
