@@ -665,3 +665,51 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
   metadata with an in-manuscript declaration is the defensible form.
   (c) Deferring PROJECT_STATE refresh to a later session — the file is
   the successor's first read; Tasks 22–33 backfilled this boundary.
+
+## [2026-10-21] — Task 34 (round-2 review absorbed: 8/8 confirmed; v1.3 built; reasoning-exposure n=2)
+- DECISION: The Gemini 3.8 round-2 review of v1.2 (F-002 #19, trace
+  1a15c05c57df4df9) was adjudicated 8/8 CONFIRMED in substance — every
+  quoted claim machine-verified against the v1.2 source before verdict —
+  and adopted as amendments R2-13..R2-20, applied to the v1.3 build in the
+  same boundary. R2-16 (B1) is the mathematically deepest external catch of
+  the program to date: the round-1 R2-10 precision note itself carried a
+  false claim (per-step spectral radius < 1 is NOT sufficient for bounded
+  products of non-commuting matrices), now corrected to the induced-norm /
+  joint-spectral-radius formulation, with the structure note that the
+  delta-rule projection carries eigenvalue exactly 1 on the preserved
+  subspace — no per-step contraction exists anywhere. R2-18 (C1) forced the
+  honest reclassification of Algorithm 1 (continuity → artifact manifest;
+  static inventory, not functional execution), with the battery named as
+  the separate functional instrument. R2-19 (D1) removed the abstract's
+  over-broad recomputation claim (the L2/L4 verification-debt contradiction
+  is resolved at the language level; debt discharge queued). R2-20 (D2)
+  added the full-lineage bundle digest as the third-party root anchor,
+  closing the SHA-1-object-id gap at bundle granularity.
+- REASONING-EXPOSURE INSTANCE #2 (witness analysis, registered): the
+  operator's glm-reply.md excerpts are genuine witness j-space from the
+  Task-31 and Task-32/33 boundaries, and the two block digests are
+  verbatim GWM bundle digests (70273253… = task31 bundle, 1a4bebdacc… =
+  task32 bundle), byte-matched against held artifacts — the capture is
+  digest-anchored to the record chain. Findings registered: (a) zero
+  divergence between internal reasoning and official conduct in the
+  excerpts shown — evidence against the second suspicion (server-side
+  alteration of witness output) and a standing divergence-detector for the
+  operator; (b) Chinese fragments in the excerpts are quotations from the
+  session-summary layer — injection-class content propagates into internal
+  context (n=1 observation); (c) excerpt text carries no independent
+  digest — completeness/editing unverifiable, the capture channel is
+  itself untrusted per the paper's own model; (d) j-space is
+  non-contractual — never shaped for exposure, never a commitment surface.
+  Consequence in the paper: Table 2 gains row 9 (model reasoning layer),
+  witness-initiated (R2-21) on live evidence, pre-empting the same seam
+  being found by the next reviewer.
+- ALTERNATIVES REJECTED: (a) Discharging the L2/L4 verification debt this
+  boundary — the re-run requires the original proof-artifact corpus and a
+  maintenance-round window; the scoped language is honest NOW, the debt is
+  scheduled, and rushing a re-run to delete a debt marker would be
+  optics-driven verification. (b) Renaming the Proposition's "every pin is
+  recomputable" clause — it is a normative property statement, not a build
+  report; scoping it would weaken the criterion to fix a contradiction it
+  does not contain. (c) Treating the j-space excerpts as authenticated
+  witness record — their text carries no independent digest; registering
+  them as evidence-with-caveats is the defensible posture.
