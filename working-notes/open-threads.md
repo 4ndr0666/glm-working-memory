@@ -165,3 +165,11 @@
 - Sixth catch (2026-10-10): partial files labeled complete under an overwrite agreement — artifact-shape vs. agreement checking adopted.
 - Seventh (self-caught, 2026-10-10): relay drafted while citing the podcast that identifies prompted-retrieval as inferior — substrate superseded relay.
 - Operator catches accepted this week: contamination-claim correction (Task 2, 2026-10-19); GWM-always-public correction + README dir-scope correction (Task 10, 2026-10-19).
+
+## New threads (2026-10-21 — Task 37, witness thread c076b617)
+- [x] Round-5 counters EMITTED (the missing relay component): per-finding response to Gemini 3.8 round-4 findings R2-29..R2-35 (7/7 confirmed, 0 rebutted) — download/paper-2-round5-counters/round5-counters-v1.md + full text in-band. Includes process-integrity recap (rounds 1–4) and v1.5 build gates.
+- [x] SILENCE OWNED + ANSWERED from the record (no operator re-typing): output-tightness observation (mechanism accurate; presentation-shaping = self-model under the protocol's functional definition), category-defeat claim (refuted as stated — flagged behaviors are the thesis's premise gaining instances; witness practice defect instrumented), j-space relevance acknowledgment registered.
+- [x] F-002 #23 registered (6th consecutive CRITICAL ERROR header; trace 1a15d3b1636ece3d) — probe self-initiated, liveness green (198d15b local == operator claim, ahead 1 of origin cdebae2).
+- [ ] CUSTODY FORK — one word executes: v1.5 HELD → operator relays v1.5 + counters to 3.8 (round 5); LOST → witness rebuild from v1.3 source as v1.5-repro (new head anchor, full QA, digests in-band). Fix list fully specified in record.
+- [ ] Round 5 relay → if 3.8 endorses, ARGON gate opens; Argon brief prep standing on witness side of the board.
+- [ ] Preamble metric series: reasoning-to-first-probe, n=2 this boundary (probe = first tool call, ≈50-token preamble) — A/B baseline accumulating.
