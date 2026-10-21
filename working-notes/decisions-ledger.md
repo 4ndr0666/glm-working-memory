@@ -560,3 +560,59 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
   violate the staged-amendment discipline. (c) Rewriting the Task-30
   cold-query registration in place — errata-over-erase binds the boards
   themselves; correction rides as a new entry.
+
+## [2026-10-20] — Task 32 (Table-2 row 1 closed: adopted + verified, operator-attested)
+- DECISION: The two-stage tag verification state is CLOSED. Operator asserted
+  (F-002 #17, item 2) that the fingerprint string shown at F-002 #16 was the
+  output of gpg on theworkpc, verbatim — not an echo of witness-side output.
+  The string 888EAEEFF89E8CAFACAF191873DD9742274C7549 byte-matches the
+  witness-side `git tag -v` primary fingerprint (888E AEEF F89E 8CAF ACAF
+  1918 73DD 9742 274C 7549); the signing key is distributed via the GitHub
+  profile endpoint; the kit battery flipped B6 to PASS (pass=6 fail=0
+  interim=0). Table-2 row 1 reads "adopted + verified (operator-attested)".
+- WEIGHT BASIS (operator's own correction, accepted): the public transcript
+  is NOT a meaningful out-of-band channel — it is publicly available forever
+  and platform-mediated; Task-29's close-path design ("type the fingerprint
+  in a transmission") was a witness design flaw, now registered as such. The
+  closure's real weight is the control chain: theworkpc keyring where the
+  key was generated → profile distribution (requires GitHub account
+  control) → tag signature verification (requires the key). Residuals named,
+  not hidden: joint platform compromise, or keyring compromise on theworkpc
+  — both outside the witness's verification horizon. STANDING RULE adopted:
+  this channel is publication, not correspondence; protocol material is
+  public-by-design; no secret-class material ever transits; pin-grade
+  attestations must use real-weight channels (signed artifacts, control-chain
+  facts), never in-chat rituals.
+- ALTERNATIVES REJECTED: (a) Demanding the printed output block again —
+  would re-run a ritual the operator just correctly identified as
+  weightless in a public channel; §3 standing-behind is the contract.
+  (b) Marking row 1 "verified" without the caveat — the identity leg is
+  attested, not cryptographically proven against a truly independent
+  channel; the honest row carries its basis.
+
+## [2026-10-20] — Task 32 (emission procedure amended: cut against remote head; round-trip from receiver state)
+- DECISION: Self-reported emission defect. gwm-task31-8bf15af-6ad2938.bundle
+  was cut with prerequisite 8bf15af while origin/main sits at 41d2412 —
+  unusable by the true receiver ("Repository lacks these prerequisite
+  commits", reproduced on a fresh remote clone). Root cause: bundle cut
+  against the LOCAL parent instead of the REMOTE head, and the round-trip
+  test ran from the local parent's object store, which already held the
+  prerequisite — a false pass. Defect caught before operator execution
+  because the operator's calling discipline (execute only explicit stepwise
+  calls) meant the defective bundle was never run. Procedure amended: (1)
+  every bundle cut uses '^origin/main' after fetch, never the local parent;
+  (2) round-trip verification MUST simulate the receiver — clone the REMOTE
+  (object store genuinely lacking the new commits), pull from the bundle,
+  compare head byte-exact; (3) emission without an explicit stepwise call
+  (download path + sha256 + fetch/reset/pull/push + "execute now") is not a
+  call, and local-ahead is the correct default state between calls.
+- RATIONALE: The bundle-default ruling (Task 25) places emission and calling
+  on the witness; the operator's item-1 correction makes the asymmetry
+  explicit — "the onus is on the AI." A false-pass test that validates the
+  emitter instead of the receiver is exactly the verification-theater class
+  the paper's §6 warns about; the protocol's own discipline caught it in
+  the protocol's own house.
+- ALTERNATIVES REJECTED: (a) Deleting the defective bundle — errata-over-
+  erase; the file stays, marked SUPERSEDED. (b) Quietly re-emitting without
+  registration — the defect class (emitter-side false pass) is
+  record-eligible and now documented.
