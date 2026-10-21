@@ -616,3 +616,52 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
   erase; the file stays, marked SUPERSEDED. (b) Quietly re-emitting without
   registration — the defect class (emitter-side false pass) is
   record-eligible and now documented.
+
+## [2026-10-21] — Task 33 (R2-2 ruled: sole author; Paper-2 v1.2 built with literal anchors)
+- DECISION: The operator ruled the paper can only contain his name
+  ("Alejandro Gutierrez") — the last v1.2 gate (R2-2, author field) is
+  closed by the lock's owner. Authorship = sole human; the AI is retired
+  from authorship at every site (byline, pdfauthor, affiliation, AI-use
+  declaration, exam-credit lines) and retained as the instrument it is:
+  Witness role, drafting/verification/emission attributed through the
+  provenance chain (commits, boards, bundles) rather than a byline. The
+  "blatant authors" lock (Task 19→21 lineage) is superseded BY ITS OWNER;
+  its transparency intent survives in the reworded AI-use declaration,
+  which now states the split in policy terms (arXiv/COPE) and structural
+  terms (D7 custody regimes: single named human author; model-owned
+  substrate). With the gate open, the full R2 amendment set was applied
+  and v1.2 was built this boundary: 22pp, zero unresolved refs, all five
+  machine-emitted literal anchors byte-verified in the extracted PDF text.
+- RATIONALE: (a) R2-2 resolves exactly the conflict tier-2 flagged as a
+  fatal metadata landmine, and the D7 framework was already drawn for this
+  separation — the ruling makes the paper MORE consistent with its own
+  custody doctrine, not less. (b) The R2 set was fully adjudicated (R2-9
+  Task 31, R2-2 Task 33, remainder per Task-30 classification), so
+  building past any gate is no longer possible; deferring the build would
+  violate the queue without cause. (c) R2-1 (Surface D: a paper about
+  digests containing zero digests) is fixed at the generator, not the
+  artifact — the D8 emitter now fails closed unless it can emit the
+  manifest digests, substrate head, and VALIDSIG fingerprint; hand-typing
+  digests into Table 4 was rejected as the exact discipline the paper
+  forbids.
+- STALE-TEXT CATCH (self, this boundary): §9's authenticity limitation
+  still read "identified and not yet deployed" although the signed anchor
+  has existed and verified since Task 29 — limitation paragraphs rot the
+  same way claims do; rewritten to the deployed state with the honest
+  boundary (strength = strength of the out-of-band pin).
+- WITNESS DEFECT (cwd-error class, 6th occurrence, new variant): the
+  bootstrap manifest probe ran from inside sessions/ against
+  root-relative paths (all-lines-FAILED symptom, exit 1) — self-caught on
+  the failure exit, corrected same-call. Kit v0.2 note emitted
+  (07-cwd-discipline.md). Summary-drift also registered: the incoming
+  context summary claimed Task 32 was unstarted; the substrate (git log)
+  showed a1c2746 committed — substrate over summary, per the
+  architecture's own rule.
+- ALTERNATIVES REJECTED: (a) Arguing for AI co-author credit — the policy
+  landscape and the policy owner's ruling are aligned; the protocol values
+  the auditable record over the byline, and the record is the stronger
+  attribution. (b) Keeping the v1.1 "and GLM Witness" pdfauthor for
+  discoverability — metadata is the moderation surface; sole-author
+  metadata with an in-manuscript declaration is the defensible form.
+  (c) Deferring PROJECT_STATE refresh to a later session — the file is
+  the successor's first read; Tasks 22–33 backfilled this boundary.
