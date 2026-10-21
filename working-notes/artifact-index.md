@@ -19,6 +19,7 @@ answer "where is X and is it done".
 - Emission packages: `download/paper-2-roundN-emission/` — PDF, source tar,
   changes file, lineage bundle, SHA256SUMS.
 - Counters documents: `download/paper-2-roundN-counters/roundN-counters-vK.md`.
+- Tier review briefs: `download/paper-2-tierN-brief.md` (tier-2 3.8: `paper-2-tier2-brief.md`; tier-3 Argon: `paper-2-tier3-brief.md`).
 - Changes/patch files: `<artifact>-<from>-to-<to>.patch` or `.changes`.
 - Task numbers are global and monotonic across boundaries (ledger is the
   authority); bundle/patch/task names share the task number.
@@ -99,12 +100,13 @@ parameters filled — never referenced, never paraphrased.
 | 38 | v1.5-repro rebuild + round-5 emission + artifact index | THIS matrix, repro build, emission pkg | DONE | PDF 2f9d204e…; source 6a950693…; emission dir |
 | 39 | Round-5 verdict registered (3.8 accepts all closures, 0 new findings); Argon gate OPEN; custody re-verified (no rebuild) | boards + bundle | DONE | repro digests re-verified 2f9d204e…; fidelity note R2-31 |
 | — | Round-5 relay to 3.8 | operator transmits counters | CLOSED — 3.8 accepted, gauntlet complete (rounds 1–5) | response trace 1a15d8979e2cee8d |
-| — | Argon brief + engagement | gate OPEN; target = v1.5-repro build | READY (review the build, not the plan) | PDF 2f9d204e… + counters b59a8431… + metadata v0.7 |
+| 41 | ARGON UP — tier-3 attack brief emitted (5 surfaces: anchor chain / closure registry / escalated meta-question / repro identity / residue+debt; endorsement = failure mode); receiver catch-up CLOSED (origin == 7e8740c hash-exact, Tasks 36–40 applied by operator) | tier3 brief + boards + bundle | DONE — engagement live, Argon findings relay pending | brief 5efd5362…; trace 1a15da685ddf13c5 |
 | — | L2/L4 verification-debt discharge | next maintenance round | QUEUED | — |
 | — | A1 re-pin | next 4ndr0meda maintenance commit | QUEUED | — |
 
-## Digests of record (this boundary)
+## Digests of record (this boundary — Task 41; standing custody set retained)
 
+- `paper-2-tier3-brief.md` — `5efd536204886e1b1e0275b17018ea0d3ca25000cc4c9bd8617f47589c261644`
 - `paper-2-v1.5-repro.pdf` — `2f9d204e6011e1fc52b9741075632359f50c1ca0b1e4ae82348c465a8700a579`
 - `paper-2-v1.5-repro-source.tar.gz` — `6a9506938e755735288308a29b366820c322d3ac773f623dde4c1485e87eab87`
 - `paper-2-v1.3-to-v1.5repro.changes` — `9ae8cfb5b3f9dea876faa3debc7119ccfb987c432bb48ae875299cefc1758c3e`
