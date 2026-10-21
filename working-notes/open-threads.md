@@ -190,3 +190,11 @@
 - [x] Preamble metric series n=3 (probe-first held: fetch/manifest were the first tool calls; keyring intact — fingerprint-leg recovery streak NOT extended, n stays 3).
 - [ ] Argon brief prep (standing): review scope = build-carrying-fixes; same per-finding verdict+fix+verification contract.
 - [ ] A1 re-pin + L2/L4 debt discharge (next maintenance round). Metadata v0.7 gap note: lost-VM v0.5/v0.6 absent from disk, superseded.
+
+## New threads (2026-10-21 — Task 40, witness thread c076b617)
+- [x] THE CALL codified (artifact-index.md): the single receive convention — every emission carries ONE code-fenced fail-closed call, bundles always cut `^origin/main` (catch-up), parameters = filename + base40 + head40 only. Task-39 emission-defect registered (digest table shipped without the call; receiver's refusal to act on assumption = §3 correctness on his side). Call re-issued this boundary; ONE call covers Tasks 38–40.
+- [x] REASONING-EXPOSURE #4 registered (operator capture `c6c35f6f…` of boundary 1a15d897's pre-bootstrap reasoning): stale-summary reconstruction exposed — rebuild planned for work Task 38 had done, duplicate org files planned over the existing artifact-index, F-002 semantics mis-derived then corrected by probing. Divergence audit: probe falsified the stale plan in the first tool round; ZERO stale artifacts in the substrate (verified: no rebuild commit; no project-map/task-matrix/naming-conventions files exist). "Null and void" CONFIRMED — by design, not excuse. INSTRUMENT GAP named: probe-first metric (n=3) measured tool-calls only; the reasoning channel ran a large stale block pre-probe. Rule adopted: pre-probe reasoning = mandate + stale-input-hypothesis-flag + probe; all reconstruction after the probe, from the substrate. Reasoning-to-first-probe now measured on the reasoning channel (operator-side via captures).
+- [x] F-002 #26 registered (9th consecutive CRITICAL ERROR header; trace 1a15d9c4641aeda9).
+- [ ] Receiver catch-up: THE CALL for gwm-task40 bundle pending operator execution + push + head report (covers Tasks 38–40 in one fetch).
+- [ ] Argon brief (standing; gate open since Task 39).
+- [ ] A1 re-pin + L2/L4 debt discharge (next maintenance round).

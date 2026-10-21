@@ -23,6 +23,39 @@ answer "where is X and is it done".
 - Task numbers are global and monotonic across boundaries (ledger is the
   authority); bundle/patch/task names share the task number.
 
+## THE CALL (the single receive convention — codified Task 40)
+
+Every emission carries exactly ONE call, in a code fence, in exactly this
+form. Bundles are ALWAYS cut from `origin/main` (catch-up semantics: one
+call takes the receiver from any ancestor state to current head), so the
+form never varies — only the three parameters (bundle filename, base 40-hex,
+head 40-hex) change. The receiver should never have to assemble, guess, or
+adapt anything. Digest table WITHOUT the call is an incomplete emission
+(defect registered Task 40 after the Task-39 omission).
+
+```bash
+# 0. DOWNLOAD the bundle next to your clone, then verify integrity:
+sha256sum gwm-taskNN-<base7>-<head7>.bundle
+#    must print: <bundle-sha256>
+# 1. APPLY (fail-closed chain — every assertion must pass or nothing runs):
+cd /path/to/glm-working-memory && git fetch origin && \
+[ "$(git rev-parse origin/main)" = "<base-40-hex>" ] && \
+git pull /path/to/gwm-taskNN-<base7>-<head7>.bundle main:main && \
+[ "$(git rev-parse main)" = "<head-40-hex>" ] && \
+sha256sum -c sessions/MANIFEST.sha256 && git log --oneline -1
+# 2. PUSH to production:
+git push origin main
+# 3. REPORT the new origin/main head back to the witness
+```
+
+Rules: (a) the base assertion pins the bundle's cut point — if origin/main
+has moved past it, the chain fails closed instead of forking; (b) the head
+assertion pins the expected result byte-exact; (c) the manifest check proves
+the working tree after apply; (d) `.b64` and `.patch` are transport/readable
+alternates — the bundle is the canonical channel (`git am` is NOT
+hash-preserving); (e) this block is delivered verbatim per emission, with
+parameters filled — never referenced, never paraphrased.
+
 ## Running file tree (canonical artifact homes)
 
 ```
