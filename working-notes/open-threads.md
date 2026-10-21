@@ -173,3 +173,12 @@
 - [ ] CUSTODY FORK — one word executes: v1.5 HELD → operator relays v1.5 + counters to 3.8 (round 5); LOST → witness rebuild from v1.3 source as v1.5-repro (new head anchor, full QA, digests in-band). Fix list fully specified in record.
 - [ ] Round 5 relay → if 3.8 endorses, ARGON gate opens; Argon brief prep standing on witness side of the board.
 - [ ] Preamble metric series: reasoning-to-first-probe, n=2 this boundary (probe = first tool call, ≈50-token preamble) — A/B baseline accumulating.
+
+## New threads (2026-10-21 — Task 38, witness thread c076b617)
+- [x] "LOST VM" CORRECTED per operator: session-boundary sandbox non-persistence (routine, designed-for), not catastrophe; "fork only I can see" framing withdrawn (protocol enforces recomputability, not custody mysteries). Operator's recompute order = the protocol executing as designed.
+- [x] v1.5-repro BUILT (operator-ordered recompute): v1.3 source + R2-22..R2-35 fix set; emitter 8th full run at Task-35 contract (origin/main head, tar/tree anchors); 24pp, zero ??, all 8 anchors byte-complete, 9 trust rows print, all fixes verified in print. PDF 2f9d204e… / source 6a950693… / emission dir ready.
+- [x] ARTIFACT INDEX created (operator process directive): working-notes/artifact-index.md — running file tree, task-completion matrix, codified naming conventions; maintained each boundary.
+- [x] Fingerprint-leg recovery n=3 (keyring loss at emitter run → designated-channel re-fetch → byte-match → verify-tag GOOD). Stale-version defect found+fixed (deposited v1.3 carried v1.2 title block).
+- [x] F-002 #24 registered (7th consecutive CRITICAL ERROR header; trace 1a15d65f164a9c05). Operator's Task-37 call execution = TRUE-receiver round-trip confirmed by receiver.
+- [ ] ROUND-5 RELAY (operator, in progress per item 3): v1.5-repro + counters now BOTH exist; operator transmits. Argon gate behind round-5 verdict.
+- [ ] A1 re-pin + L2/L4 debt discharge (next maintenance round). Metadata v0.7 gap note: lost-VM v0.5/v0.6 absent from disk, superseded.
