@@ -57,6 +57,13 @@ alternates — the bundle is the canonical channel (`git am` is NOT
 hash-preserving); (e) this block is delivered verbatim per emission, with
 parameters filled — never referenced, never paraphrased.
 
+Transport correction (Task 43, principal): the operator side has NO download
+surface — the IM layer is the only delivery channel. Bundles therefore travel
+as their `.b64` twin, pasted in the transmission; the receiver saves it, decodes
+(`base64 -d`), and runs the chain above from step 0 (the sha256 leg then proves
+the decode). Production = the operator's machine; witness commits are stranded
+until the operator applies and pushes.
+
 ## Running file tree (canonical artifact homes)
 
 ```
@@ -99,13 +106,14 @@ parameters filled — never referenced, never paraphrased.
 | 37 | Silence owned + answered; ROUND-5 COUNTERS emitted | counters doc + boards | DONE | round5-counters-v1.md b59a8431…; a00150a |
 | 38 | v1.5-repro rebuild + round-5 emission + artifact index | THIS matrix, repro build, emission pkg | DONE | PDF 2f9d204e…; source 6a950693…; emission dir |
 | 39 | Round-5 verdict registered (3.8 accepts all closures, 0 new findings); Argon gate OPEN; custody re-verified (no rebuild) | boards + bundle | DONE — gate-open inference corrected by operator (Task 42): gate NOT open, bar = 0 pushback from 3.8 Thinking High Mode | repro digests re-verified 2f9d204e…; fidelity note R2-31 |
-| — | Round-5 relay to 3.8 | operator transmits counters | REOPENED (Task 42) — relay set ×6 did not land; re-emitted with verify chain; 0-pushback bar PENDING (operator: gate not open) | trace 1a15d8979e2cee8d; re-emission trace 1a1601e19c268fb1 |
+| — | Round-5 relay to 3.8 | operator transmits counters | COUNT DELIVERED (Task 43): in-band verbatim + pinned to substrate; awaiting 3.8's a/b response via operator relay; 0-pushback bar PENDING | trace 1a15d8979e2cee8d; delivery trace 1a16055f5b086ca5 |
 | 41 | ARGON UP — tier-3 attack brief emitted (5 surfaces: anchor chain / closure registry / escalated meta-question / repro identity / residue+debt; endorsement = failure mode); receiver catch-up CLOSED (origin == 7e8740c hash-exact, Tasks 36–40 applied by operator) | tier3 brief + boards + bundle | DONE — engagement framing corrected (Task 42): brief PRE-POSITIONED, Argon cycle closed until the operator declares the gate | brief 5efd5362…; trace 1a15da685ddf13c5 |
-| 42 | Argon gate CORRECTED by operator ruling (NOT open; bar = 0 pushback from Gemini 3.8 Thinking High Mode); transmission gap registered — relay set ×6 re-emitted with ONE code-fenced verify chain; Task-41 emission round-trip CLOSED (origin == cc7ff47 == bundle head); keyring loss 4th occurrence recovered in-boundary | boards + bundle + relay re-emission | DONE | trace 1a1601e19c268fb1; custody re-verified 6/6 byte-match |
+| 42 | Argon gate CORRECTED by operator ruling (NOT open; bar = 0 pushback from Gemini 3.8 Thinking High Mode); transmission gap registered — relay set ×6 re-emitted with ONE code-fenced verify chain; Task-41 emission round-trip CLOSED (origin == cc7ff47 == bundle head); keyring loss 4th occurrence recovered in-boundary | boards + bundle + relay re-emission | DONE — emission design later voided on receiver side (Task 43 channel-model correction: download/ never existed for the operator) | trace 1a1601e19c268fb1; custody re-verified 6/6 byte-match |
+| 43 | CHANNEL MODEL corrected (IM layer = only delivery layer; production = operator's machine; witness commits stranded until applied); snapshot 41fd081 ingested + audited; counters pinned to substrate + emitted IN-BAND verbatim; FINAL POINTS to 3.8 emitted (R2-29..35, the record's latest counter set); F-001 day-14 stale flag corrected (resolved per principal); F-002 #29 | boards + bundle (b64 in-band) + counters in-band | DONE | trace 1a16055f5b086ca5; counters b59a8431… dual-channel |
 | — | L2/L4 verification-debt discharge | next maintenance round | QUEUED | — |
 | — | A1 re-pin | next 4ndr0meda maintenance commit | QUEUED | — |
 
-## Digests of record (this boundary — Task 42; standing custody set re-verified byte-match 2026-10-22, no rebuild)
+## Digests of record (this boundary — Task 43; standing custody set re-verified byte-match 2026-10-22, no rebuild)
 
 - `paper-2-tier3-brief.md` — `5efd536204886e1b1e0275b17018ea0d3ca25000cc4c9bd8617f47589c261644`
 - `paper-2-v1.5-repro.pdf` — `2f9d204e6011e1fc52b9741075632359f50c1ca0b1e4ae82348c465a8700a579`

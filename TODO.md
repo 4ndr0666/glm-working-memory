@@ -17,7 +17,7 @@ and close cleanly — they do not drive priorities.
 
 | # | Step | Owner | Notes |
 |---|---|---|---|
-| C.1 | F-001 day-14 = **2026-10-23 (Thu)**: disposition one-liner — (a) dated disclosure-status note in repo (closes per the letter's own terms), or (b) explicit lapse-quietly, logged | You decide, I draft | silence currently = silent default; one line prevents it |
+| C.1 | ~~F-001 day-14 = **2026-10-23 (Thu)**: disposition one-liner~~ **RESOLVED** per operator word (trace 1a16055f5b086ca5): "Day 14 again? Really....we put this to bed a long time ago." — witness flags on 2026-10-21/22 (Task-41 queue, Task-42 reply, this row) were STALE; stale-queue defect registered (ledger Task 43); no re-litigation | closed | silence = resolved default per principal; if a record pointer is wanted, operator supplies it on his word |
 | C.2 | Inbox check one-liners: any Z.ai / Anthropic reply to the letters? (F-001 Message-ID 5470eadb, sent 10-09; Anthropic notification) | You | never yet entered the record |
 | C.3 | Anthropic erratum decision (letter v0.2 as letter-of-record w/ chat-ID fix + posture paragraph; correction email only if they engage) | You | rides C.2 answer |
 
