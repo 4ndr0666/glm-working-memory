@@ -64,8 +64,9 @@ answer "where is X and is it done".
 | 36b | Rulings boundary: R2-34/35 adopted; hidden-cmds rescoped; preamble instantiated | boards + bundle | DONE | 198d15b, bundle 1c17d526… |
 | 37 | Silence owned + answered; ROUND-5 COUNTERS emitted | counters doc + boards | DONE | round5-counters-v1.md b59a8431…; a00150a |
 | 38 | v1.5-repro rebuild + round-5 emission + artifact index | THIS matrix, repro build, emission pkg | DONE | PDF 2f9d204e…; source 6a950693…; emission dir |
-| — | Round-5 relay to 3.8 | operator transmits v1.5-repro + counters | OPEN (operator) | package ready |
-| — | Argon brief + engagement | after 3.8 round 5 | GATED (behind round-5 verdict) | — |
+| 39 | Round-5 verdict registered (3.8 accepts all closures, 0 new findings); Argon gate OPEN; custody re-verified (no rebuild) | boards + bundle | DONE | repro digests re-verified 2f9d204e…; fidelity note R2-31 |
+| — | Round-5 relay to 3.8 | operator transmits counters | CLOSED — 3.8 accepted, gauntlet complete (rounds 1–5) | response trace 1a15d8979e2cee8d |
+| — | Argon brief + engagement | gate OPEN; target = v1.5-repro build | READY (review the build, not the plan) | PDF 2f9d204e… + counters b59a8431… + metadata v0.7 |
 | — | L2/L4 verification-debt discharge | next maintenance round | QUEUED | — |
 | — | A1 re-pin | next 4ndr0meda maintenance commit | QUEUED | — |
 
