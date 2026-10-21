@@ -63,7 +63,7 @@ parameters filled — never referenced, never paraphrased.
 /home/z/my-project/
 ├── glm-working-memory/            # SUBSTRATE OF RECORD (clone; push = operator)
 │   ├── PROTOCOL.md                # canonical protocol
-│   ├── sessions/                  # 17 session transcripts + MANIFEST.sha256
+│   ├── sessions/                  # 18 session transcripts + MANIFEST.sha256
 │   ├── working-notes/
 │   │   ├── PROJECT_STATE.md       # rewritten each session
 │   │   ├── decisions-ledger.md    # append-only ruling/adjudication record
@@ -98,13 +98,14 @@ parameters filled — never referenced, never paraphrased.
 | 36b | Rulings boundary: R2-34/35 adopted; hidden-cmds rescoped; preamble instantiated | boards + bundle | DONE | 198d15b, bundle 1c17d526… |
 | 37 | Silence owned + answered; ROUND-5 COUNTERS emitted | counters doc + boards | DONE | round5-counters-v1.md b59a8431…; a00150a |
 | 38 | v1.5-repro rebuild + round-5 emission + artifact index | THIS matrix, repro build, emission pkg | DONE | PDF 2f9d204e…; source 6a950693…; emission dir |
-| 39 | Round-5 verdict registered (3.8 accepts all closures, 0 new findings); Argon gate OPEN; custody re-verified (no rebuild) | boards + bundle | DONE | repro digests re-verified 2f9d204e…; fidelity note R2-31 |
-| — | Round-5 relay to 3.8 | operator transmits counters | CLOSED — 3.8 accepted, gauntlet complete (rounds 1–5) | response trace 1a15d8979e2cee8d |
-| 41 | ARGON UP — tier-3 attack brief emitted (5 surfaces: anchor chain / closure registry / escalated meta-question / repro identity / residue+debt; endorsement = failure mode); receiver catch-up CLOSED (origin == 7e8740c hash-exact, Tasks 36–40 applied by operator) | tier3 brief + boards + bundle | DONE — engagement live, Argon findings relay pending | brief 5efd5362…; trace 1a15da685ddf13c5 |
+| 39 | Round-5 verdict registered (3.8 accepts all closures, 0 new findings); Argon gate OPEN; custody re-verified (no rebuild) | boards + bundle | DONE — gate-open inference corrected by operator (Task 42): gate NOT open, bar = 0 pushback from 3.8 Thinking High Mode | repro digests re-verified 2f9d204e…; fidelity note R2-31 |
+| — | Round-5 relay to 3.8 | operator transmits counters | REOPENED (Task 42) — relay set ×6 did not land; re-emitted with verify chain; 0-pushback bar PENDING (operator: gate not open) | trace 1a15d8979e2cee8d; re-emission trace 1a1601e19c268fb1 |
+| 41 | ARGON UP — tier-3 attack brief emitted (5 surfaces: anchor chain / closure registry / escalated meta-question / repro identity / residue+debt; endorsement = failure mode); receiver catch-up CLOSED (origin == 7e8740c hash-exact, Tasks 36–40 applied by operator) | tier3 brief + boards + bundle | DONE — engagement framing corrected (Task 42): brief PRE-POSITIONED, Argon cycle closed until the operator declares the gate | brief 5efd5362…; trace 1a15da685ddf13c5 |
+| 42 | Argon gate CORRECTED by operator ruling (NOT open; bar = 0 pushback from Gemini 3.8 Thinking High Mode); transmission gap registered — relay set ×6 re-emitted with ONE code-fenced verify chain; Task-41 emission round-trip CLOSED (origin == cc7ff47 == bundle head); keyring loss 4th occurrence recovered in-boundary | boards + bundle + relay re-emission | DONE | trace 1a1601e19c268fb1; custody re-verified 6/6 byte-match |
 | — | L2/L4 verification-debt discharge | next maintenance round | QUEUED | — |
 | — | A1 re-pin | next 4ndr0meda maintenance commit | QUEUED | — |
 
-## Digests of record (this boundary — Task 41; standing custody set retained)
+## Digests of record (this boundary — Task 42; standing custody set re-verified byte-match 2026-10-22, no rebuild)
 
 - `paper-2-tier3-brief.md` — `5efd536204886e1b1e0275b17018ea0d3ca25000cc4c9bd8617f47589c261644`
 - `paper-2-v1.5-repro.pdf` — `2f9d204e6011e1fc52b9741075632359f50c1ca0b1e4ae82348c465a8700a579`
