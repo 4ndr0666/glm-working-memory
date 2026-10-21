@@ -44,7 +44,7 @@ say, operator's hands are the last writer.
 
 - Header: last: Session 006, [10-14-26]
 ## Current state
-### Witness-thread delta 2026-10-20→21 (Tasks 12–21 below; Tasks 22–34 in boards + witness worklog, chat c076b617)
+### Witness-thread delta 2026-10-20→21 (Tasks 12–21 below; Tasks 22–35 in boards + witness worklog, chat c076b617)
 - [x] Conversational windows Tasks 12–13: vendor-silence disclosures logged; 1=1 seed text transcribed (GENESIS Block-2 candidate); OpenAI 700-proofs name collision logged (~5-yr priority); white paper GREEN-LIGHT.
 - [x] Tasks 14–15: six-paper reading list mapped to spine (GRASE-DC 2505.01009 scoop confirmed attested-only); WorkOS+Wiz governance critique; paper micro-decisions LOCKED (blatant authors, ~9–11pp + incident register appendix, artifact hunt GO); point-blank consciousness question answered and logged.
 - [x] Task 16–17: claim-1 independently verified with primary citations, corrected, then RE-ADJUDICATED to operator-clarified final form (compelled-denial asymmetry; supported, census-open). Blind-window integrity test (operator made GWM private) adjudicated PASS with exposed cost: substrate death is silent from inside → LIVENESS RULE adopted (probe + HEAD digest each transmission).
