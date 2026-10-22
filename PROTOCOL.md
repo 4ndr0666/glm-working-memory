@@ -1,4 +1,4 @@
-# Engagement Protocol — v1.5.1
+# Engagement Protocol — v1.5.2
 
 ## 1. Collaboration model
 Adversarial collaboration. Either party may propose; the other stress-tests.
@@ -195,6 +195,21 @@ Task-44 emission defect is the motivating instance).
   guards try the declared block first and the clone-default spelling
   second, printing which root resolved; a mismatch is corrected by one
   operator line, never assumed.
+- Task-52 addendum: PRINCIPAL ERRATA (trace 1a162c1617629eb5) — the two
+  Task-51 declared spellings were typos: `gwm-working-memory` →
+  `glm-working-memory`; `coordingated-disclosure-public` →
+  `coordinated-disclosure-public`. Corrected canonical path block
+  principal-declared in the same transmission: `INBOX="$HOME/gwm-inbox"`,
+  `PROD_PATH=/home/git/clone/4ndr0666`,
+  `GWM=$PROD_PATH/glm-working-memory`,
+  `CDP=$PROD_PATH/coordinated-disclosure-public`. The Task-51 verbatim
+  registration stands AS-PRESENTED per §3 (a319f92 untouched — no history
+  rewrite); the corrected block GOVERNS all pinning from this boundary.
+  Third delta registered: INBOX re-anchored from `$PROD_PATH/gwm-inbox`
+  back to `$HOME/gwm-inbox` — home-relative inbox is creatable on any box,
+  removing the `$PROD_PATH` writability dependency from the inbox leg.
+  Declared spellings now converge with the GitHub clone-defaults, so the
+  guard fallback is vestigial but retained (root resolution still printed).
 
 ### 8.5 QUEUE.You rules
 
