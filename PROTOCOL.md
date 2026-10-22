@@ -1,4 +1,4 @@
-# Engagement Protocol — v1.5
+# Engagement Protocol — v1.5.1
 
 ## 1. Collaboration model
 Adversarial collaboration. Either party may propose; the other stress-tests.
@@ -183,11 +183,18 @@ Task-44 emission defect is the motivating instance).
 - The call is paste-safe as a unit (&&-chained), non-interactive,
   fail-closed at every assertion.
 - Task-50 addendum: PROD_PATH PINNED — `/home/git/clone/4ndr0666`
-  (principal-supplied real path, trace 1a1625f9a9ab9a51). Production clone
-  roots resolve as `$PROD_PATH/glm-working-memory` and
-  `$PROD_PATH/coordinated-disclosure-public`, with fail-closed layout
-  guards in the call; a layout mismatch is corrected by one operator line,
-  never assumed.
+  (principal-supplied real path, trace 1a1625f9a9ab9a51).
+- Task-51 addendum: canonical path block PRINCIPAL-DECLARED VERBATIM
+  (trace 1a162a1c4afd77a9) — `INBOX=$PROD_PATH/gwm-inbox`,
+  `GWM=$PROD_PATH/gwm-working-memory`,
+  `CDP=$PROD_PATH/coordingated-disclosure-public`. Registered deltas vs
+  the Task-50 witness-spelled roots and the GitHub clone-defaults
+  (`glm-working-memory`, `coordinated-disclosure-public`): the `gwm-`
+  prefix and the `coordingated` spelling are principal-authoritative per
+  §3 AS-PRESENTED and displace the witness paraphrase. Fail-closed layout
+  guards try the declared block first and the clone-default spelling
+  second, printing which root resolved; a mismatch is corrected by one
+  operator line, never assumed.
 
 ### 8.5 QUEUE.You rules
 
