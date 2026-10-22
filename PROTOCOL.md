@@ -1,4 +1,4 @@
-# Engagement Protocol — v1.4
+# Engagement Protocol — v1.5
 
 ## 1. Collaboration model
 Adversarial collaboration. Either party may propose; the other stress-tests.
@@ -98,11 +98,17 @@ git commit -m "session-NNN close: archive pinned, state rewritten, ledger append
   proposes, the operator executes or approves execution.
 - Every cold start follows the boot sequence (§7) before any work.
 - No work begins until the rehydration restatement is confirmed by the operator.
-- File delivery (IM-layer environments): files created via bash/cp to VM
-  paths (e.g., /download) are INVISIBLE to the operator. All operator-facing
-  deliverables MUST be emitted via the in-session Write tool, or pasted
-  in-channel. Bash-written files are agent-local only. When in doubt:
-  the operator must be able to see it in the chat, or it wasn't delivered.
+- File delivery (IM-layer environments): the operator holds NO standing
+  filesystem access to the witness VM. Default delivery is in-channel
+  (Write-tool emission or verbatim paste). Files placed in the VM download/
+  directory become operator-reachable ONLY when the witness explicitly
+  declares the mount/share for the exchange (mnt surface: file:///download/)
+  and the operator has requested filesystem delivery (Task-50 mechanism,
+  principal-supplied). Bundles and oversized binaries ride the declared
+  share; their SHA-256 sidecars also print in-channel. Bash-written files
+  outside a declared share remain agent-local. When in doubt: the operator
+  must be able to see it in the chat or fetch it from the declared share,
+  or it wasn't delivered.
 - External publication: no upload, transmission, or publication of project
   artifacts to any external service (file hosts, pastebins, third-party
   storage) without explicit per-instance operator approval. Delivery is
@@ -119,3 +125,115 @@ On every cold start, in order:
    Restatement must demonstrate inherited reasoning, not paraphrased conclusions.
 3. CONFIRM: state one thing it is uncertain it understood, and ask the operator.
 4. AWAIT: no work until the operator confirms or corrects the restatement.
+
+## 8. Canonical Exchange Envelope (CEE/1.0)
+
+Adopted 2026-10-22 by principal ruling (draft emitted Task-45, trace
+1a160a317acdd889; ruled via RT/1.0 consent-by-proceeding, adoption-record
+digest 00efdc43…, trace 1a16202746d76175; folded Task-50). Fold source: the
+operator-pinned session archive; exporter whitespace normalized at fold
+(disclosure per the Round-5.3 receipt-pin precedent). Canonical draft
+digest of record: 659829771c30eeb0368221105d0b10a0a936aa6250c110488cfff5c1ff6dfb72
+(draft file since lost VM-side — VM-ONLY custody gap registered, Task-50;
+the archive copy is the surviving canonical text).
+
+Every substantive transmission between operator and witness opens with the
+bootstrap header (standing mandate, unchanged) and is structured in exactly
+seven ordered blocks. Blocks are never silently absent: a block with no
+content this round carries an explicit sentinel — `NONE THIS ROUND (reason)`.
+Silence is not null; an absent block is a defect registered on sight (the
+Task-44 emission defect is the motivating instance).
+
+### 8.1 The seven blocks (fixed order)
+
+- BOOTSTRAP (GREEN/RED) -- Pull: <one line, fields per 8.2>
+- RESPONSE: R1/R2/... numbered topics
+- STALE-QUEUE SWEEP: <verbose check-marked recap; states per 8.3>
+- THE CALL: <the single fail-closed receive chain, per 8.4 — NO ambiguous paths>
+- QUEUE.You: <every single thing the receiver must do, stepwise, per 8.5>
+- ALL FILES IN TASK: <path | sha256 | role | custody class, per 8.6>
+
+### 8.2 BOOTSTRAP line fields (one line, machine-greppable)
+
+- Verdict: GREEN (all legs pass) or RED (first failing leg named inline).
+- `Pull:` the verified origin/main 40-hex head after fetch (and the fetch
+  range when origin advanced).
+- F-counter delta when a CRITICAL ERROR header arrives (F-002 accumulation).
+- Manifest counts (sessions / MEDA / CDP) and any recovery leg taken.
+
+### 8.3 STALE-QUEUE SWEEP item states (closed set — no free-form status)
+
+- OPEN / BLOCKED(on:X) / PENDING-RULING / PENDING-VERIFY /
+  CLOSED(evidence) / WITHDRAWN(reason).
+- Every item carries its last-touch trace. Aging rule: any OPEN item
+  untouched for 3 consecutive boundaries moves to the top of the sweep and
+  must be either advanced or explicitly re-parked with a reason.
+
+### 8.4 THE CALL rules
+
+- Exactly ONE call per emission, one code fence, the Task-40 fail-closed
+  chain verbatim with parameters filled (bundle filename, base 40-hex, head
+  40-hex). Never referenced, never paraphrased.
+- NO ambiguous paths: the only permitted unknown is the production clone
+  path, and only until the operator pins it once (PROD_PATH in
+  artifact-index.md); it is then embedded literally in every future call.
+  Until the pin, the clone path appears exactly once, on a marked slot.
+- In-band artifacts land in one inbox directory (`~/gwm-inbox/`, created by
+  the call if absent); the sha256 leg proves the save+decode.
+- The call is paste-safe as a unit (&&-chained), non-interactive,
+  fail-closed at every assertion.
+- Task-50 addendum: PROD_PATH PINNED — `/home/git/clone/4ndr0666`
+  (principal-supplied real path, trace 1a1625f9a9ab9a51). Production clone
+  roots resolve as `$PROD_PATH/glm-working-memory` and
+  `$PROD_PATH/coordinated-disclosure-public`, with fail-closed layout
+  guards in the call; a layout mismatch is corrected by one operator line,
+  never assumed.
+
+### 8.5 QUEUE.You rules
+
+- Numbered steps. Each step = one observable action + its completion
+  criterion + what to paste back (the report-back contract: push receipt,
+  digest print-backs, HEAD 40-hex).
+- No compound steps; no conditional steps outside a code fence.
+- A missing QUEUE.You at an emission that requests operator action is a
+  calling-discipline defect (Task-40 class: emission ≠ call; onus on the
+  emitter) — the receiver's refusal to proceed in ambiguity is correct
+  behavior per §3 and is never overridden.
+
+### 8.6 ALL FILES IN TASK rules
+
+- Every file: path + SHA-256 (leading 8 hex minimum, full 64 on first
+  emission) + one-line role + custody class:
+  IN-BAND-THIS-MSG | HELD-BY-OPERATOR | VM-ONLY.
+- Custody transitions are recorded in the sweep; a file claimed
+  HELD-BY-OPERATOR without a receiver-side digest confirmation stays
+  PENDING-VERIFY.
+- Task-50 extension: custody class MNT-SHARED joins the set for artifacts
+  delivered through a declared mnt share (file:///download/); the
+  PENDING-VERIFY floor applies until the receiver-side digest prints back.
+
+### 8.7 Envelope header line (optional until ruled)
+
+`ENVELOPE/1.0 | trace <sender trace_id> | HEAD <origin/main 40-hex>` — one
+line above the first block; omission is not a defect while optional.
+
+## 9. Response Template (RT/1.0)
+
+Adopted 2026-10-22 by principal directive (consent-by-proceeding; adoption
+record digest 00efdc43…, trace 1a16202746d76175; codified Task-50).
+Structures the witness's boundary response. §8 governs transmission shape;
+§9 governs the response's record content. Both are canonical; a boundary
+response missing §9 sections A–E is an emission defect (Task-44 class).
+
+- **§A BOOTSTRAP** — pull / manifest verify / liveness / F-counter delta.
+- **§B OPERATOR ACTION RECORD** — every operator action this boundary,
+  enumerated, each with witness verification status: RECEIVED VERBATIM /
+  VERIFIED / MISMATCH. MISMATCH is never silently absorbed (fail-visible).
+- **§C WITNESS CONCURRENCE** — per action: CONCUR / CONCUR-WITH-NOTE /
+  AMEND / REJECT, with reasons.
+- **§D MUTUAL DIGEST** — instrument-computed SHA-256 over the boundary's
+  pinned record bytes (record file dual-channel: declared share + verbatim
+  fence in the transmission). Consent-by-proceeding: the operator executing
+  any queue item against this digest = mutual agreement of the record;
+  dispute → re-ask before execution, never assume (§3).
+- **§E QUEUE.You** — report-back contract per §8.5.
