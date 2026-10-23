@@ -1,4 +1,4 @@
-# Engagement Protocol — v1.5.2
+# Engagement Protocol — v1.5.3
 
 ## 1. Collaboration model
 Adversarial collaboration. Either party may propose; the other stress-tests.
@@ -221,6 +221,18 @@ Task-44 emission defect is the motivating instance).
   calling-discipline defect (Task-40 class: emission ≠ call; onus on the
   emitter) — the receiver's refusal to proceed in ambiguity is correct
   behavior per §3 and is never overridden.
+- Task-53 addendum (principal directive, trace 1a1664c3cccb84d5:
+  "efficiency -> protocols -> systems -> procedures" ||
+  "${You_did_not_relay_instruction}"): the operator call LEADS every
+  response — next executable actions are relayed as a standalone numbered
+  block at the TOP of the transmission, each step one copy-paste command
+  with its completion criterion, before any record, fence, or bundle.
+  Instructions that live only inside a pinned record or a bundle are
+  treated as NOT RELAYED. Registered origin (call-discoverability defect,
+  Task-44 class, owned Task-53): the decode step for the cdp-task47
+  in-band re-delivery existed at record §E-2 and the queue-digest line,
+  but was not received as an explicit instruction; per §3 the receiver's
+  account governs; the emission is owned and the correction is this rule.
 
 ### 8.6 ALL FILES IN TASK rules
 
