@@ -271,3 +271,44 @@ response missing §9 sections A–E is an emission defect (Task-44 class).
   any queue item against this digest = mutual agreement of the record;
   dispute → re-ask before execution, never assume (§3).
 - **§E QUEUE.You** — report-back contract per §8.5.
+## 10. Delivery Medium (canonical — the bundle/script harness)
+
+Adopted 2026-10-24 by principal directive ("hardcode this in an uber
+permanent way so I can stop correcting the drift"), trace
+1a16b20c0c1aa051; medium proven live end-to-end at port-001-post
+(db3c1de → dc8c2d0, operator script output verbatim in that boundary).
+Root cause of the drift it corrects: witness-side deliveries that
+describe operator-side paths, or hand back snapshots of already-pushed
+heads instead of task packages. This section is the fix, permanently.
+
+The operator's workstation is the delivery ground truth. The witness
+NEVER references its own VM paths in a delivery; operator paths appear
+only inside the operator's own script. Every substantive file delivery
+from witness to operator is a THREE-ARTIFACT PACKAGE, no exceptions:
+
+1. **The payload**: a git bundle `gwm-<task>-<basesha7>-<headsha7>.bundle`,
+   spanning `<base>..<head>` where `<base>` = the operator-clone HEAD the
+   package applies onto, plus any tags riding the head:
+   `git bundle create <name>.bundle <base>..<head> <tags...>`
+2. **The pin**: `gwm-<task>-SHA256SUMS` covering the bundle (extend to all
+   package files when more than one).
+3. **The orchestrator**: `gwm-<task>-delivery.sh` — the operator-runnable
+   script, hardcoding the operator env-vars
+   (PROD_PATH=/home/git/clone/4ndr0666, INBOX, GWM, CDP), which must, in
+   order, fail-closed on every leg: sha256sum -c the pins → assert clone
+   exists → bundle verify → assert local HEAD == base → pull --ff-only →
+   assert HEAD == expected head → fetch tags → manifest verify → push
+   origin (main + tags) → print APPLIED @ head.
+
+Rules:
+- The witness authors commits witness-side (identity GLM Witness,
+  witness@<session-id>.<channel>); the operator's hands execute the push
+  via the script — "operator's hands are the last writer" is preserved.
+- HEAD-pin assertions on BOTH sides of the pull are mandatory, not
+  decorative (a bundle that verifies but fast-forwards elsewhere is a
+  hijack vector; the pin closes it).
+- Nothing is "delivered" by telling the operator where a file lives on
+  the witness VM. If it is not bundle + pin + script, it is not a
+  delivery; it is a description, and descriptions are not in the record.
+- The script is emitted verbatim in the boundary response as well as
+  saved as a file, so the operator can run it from either channel.
