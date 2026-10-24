@@ -1,4 +1,4 @@
-# Engagement Protocol — v1.5.3
+# Engagement Protocol — v1.6.0
 
 ## 1. Collaboration model
 Adversarial collaboration. Either party may propose; the other stress-tests.

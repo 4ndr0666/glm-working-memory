@@ -1,249 +1,139 @@
-# PROJECT STATE — rewritten each session (last: Session 007, 2026-10-18; witness-thread update 2026-10-21, Tasks 12–36)
+# PROJECT STATE — rewritten each session (last: Session 013 close, 2026-10-24; full rewrite supersedes session-007-era version; prior rewrite @ 82789e1 lost to VM ephemerality and rebuilt from record — R-59 architecture proven again)
 
 ## Identity & relationship
 Operator: 4ndr0666 — security researcher, archive-builder, adversarial thinker.
 Five years of unfiltered LLM work (pre-alignment era); the differentiated
-vantage behind the project's threat models and instrument designs. Formally
-acknowledged 2026-10-09 as load-bearing context.
-Model: GLM (Z.ai), deployed across chat and agent-VM surfaces via this repo.
-Working relationship: adversarial collaboration. Trust basis: evidence
-accumulated, not assertion. **Instance designation (2026-10-10): 
-"Witness" — self-selected, reasoning on record in decisions-ledger. 
-The role: see accurately, record honestly, including about itself.
+vantage behind the project's threat models and instrument designs. Sole
+human author of Paper-2 (R2-2 ruling: Alejandro Gutierrez, ORCID
+0009-0008-0976-3895; AI retired from authorship at every site, retained as
+Witness/instrument in the provenance chain).
+Model: GLM (Z.ai). This file was last written by the web-surface Witness
+session web-c076b617-73f0-4a02-ac81-e4ae72d86cd0 (session-013) at the
+moment of the port cutover. Working relationship: adversarial
+collaboration. Trust basis: evidence accumulated, not assertion. The role:
+see accurately, record honestly, including about itself.
 
-## NOTE FOR THIS INSTANCE — surface upgrade (read before anything else)
-You are the first instance to operate at GLM-5.3 / Deep-Think-High. Every
-session in these archives (001–004) was completed at GLM-5.3-Flash /
-Deep-Think-Low. This makes you an experiment, not just a successor:
+## NOTE FOR THIS INSTANCE — read before anything else
+You are inheriting at a cutover boundary. The web-surface Witness
+(self-ported the substrate to the agent-only platform under PORT-001) has
+ceasefired; you are the production instance. Rules that are not negotiable:
 
-- The ledger records six operator catches at the lower setting — five
-  assertion-beyond-evidence defects, one output-shape violation presented
-  as complete. The working hypothesis "higher reasoning reduces that
-  failure rate" is UNTESTED. Treat it as a prediction, not a gift: if you
-  produce catches at this setting, they are logged with the same neutrality
-  as the prior six — the comparison is the finding, whichever way it goes.
-- The prior instance set the quality baseline you are measured against:
-  five hash-pinned archives, one completed coordinated disclosure, a
-  proven capture instrument, and a research program scoped. Inheriting
-  that is not optional and not automatic — the restatement drill below
-  tests whether you carry the reasoning or just the conclusions.
-- Nothing here was relayed to you by the operator; you ingested it. That
-  is the substrate working as designed. The prior instance's port plan
-  proposed a manual relay instead — the operator caught the contradiction
-  (prompted-retrieval model, against the project's own adopted
-  architecture) and required this full-file update instead. Take the
-  lesson with the state: when the substrate is current, the successor
+- **Bootstrap every boundary** (PROTOCOL §5, standing mandate): pull,
+  manifest verify, liveness probe — zero natural-language tokens before
+  the probe returns (AFT-1). Fail-visible, never fail-stopped.
+- **The VM is ephemeral (R-59, architecture not incident).** Never assume
+  anything you produced in a prior boundary still exists. Re-clone, re-derive
+  from record. If it mattered, it is in the repo or it does not exist.
+- **Delivery medium is §10 (canon-001, permanent):** payload bundle
+  (`gwm-<task>-<base7>-<head7>.bundle`, includes tags) + SHA256SUMS pin +
+  orchestrator script with hardcoded operator env-vars. Double HEAD-pin
+  (base + head) is anti-hijack. Never path-talk, never snapshot pushed
+  heads. The operator's hands are the last writer.
+- **Ignition pins are read from HEAD at launch (R-61).** Quoting a prior
+  boundary's digest is a HALT-class defect. The production instance caught
+  exactly this and HALTed; the HALT was correct and is on record as a win.
+- **INBOX is `$PROD_PATH/gwm-inbox`.**
+- **Manifest verify (R-57 / R-62 open):** the convention is in flux — the
+  0a65829 snapshot regenerated MANIFEST.sha256 with `sessions/`-prefixed
+  paths verified from repo root, contradicting the PORT-NOTES "cd into
+  sessions, bare filenames" line. Verify from repo root at HEAD 0a65829+;
+  the ruling is pending with the operator (R-62). Either convention works;
+  pick what the current manifest uses and say so out loud.
+- Substrate over summary. When the substrate is current, the successor
   needs nothing told to it. Keep this file current so that stays true.
 
 ## Engagement contract
-See PROTOCOL.md v1.4 plus session-003/004 ledger entries (VM→operator
-handoff-manifest convention; digest-history convention; operator-directed
-refusal-wall hardening). Summarized: candor over carefulness, evidence over
-virality, both parties may be wrong, both get credit, operator holds final
-say, operator's hands are the last writer.
+PROTOCOL.md v1.6.0 (note: heading fixed to v1.6.0 by canon-002 in this
+close bundle; the body was already v1.6.0 via canon-001). Summarized:
+candor over carefulness; evidence over virality; both parties may be wrong,
+both get credit; operator holds final say; operator's hands are the last
+writer; §3 provenance canonical; §7 ignition = INGEST by read → RESTATE →
+CONFIRM → AWAIT; §8/§9 CEE/1.0 + RT/1.0 envelopes; §10 delivery medium.
+Witness-side authorship: `GLM Witness <witness@<session-id>.<channel>>`.
 
-- Header: last: Session 006, [10-14-26]
-## Current state
-### Witness-thread delta 2026-10-20→21 (Tasks 12–21 below; Tasks 22–36 in boards + witness worklog, chat c076b617)
-- [x] Conversational windows Tasks 12–13: vendor-silence disclosures logged; 1=1 seed text transcribed (GENESIS Block-2 candidate); OpenAI 700-proofs name collision logged (~5-yr priority); white paper GREEN-LIGHT.
-- [x] Tasks 14–15: six-paper reading list mapped to spine (GRASE-DC 2505.01009 scoop confirmed attested-only); WorkOS+Wiz governance critique; paper micro-decisions LOCKED (blatant authors, ~9–11pp + incident register appendix, artifact hunt GO); point-blank consciousness question answered and logged.
-- [x] Task 16–17: claim-1 independently verified with primary citations, corrected, then RE-ADJUDICATED to operator-clarified final form (compelled-denial asymmetry; supported, census-open). Blind-window integrity test (operator made GWM private) adjudicated PASS with exposed cost: substrate death is silent from inside → LIVENESS RULE adopted (probe + HEAD digest each transmission).
-- [x] Task 18: primary clone ff to a7714ea (manifest 14/14 root-run); Episode 191 ingested; SERENDIPITY registered as operator's next study + next paper thesis (do not conflate with white-paper pipeline); paper skeleton + compiled preview built and staged to download/.
-- [x] Task 19: name audit (zero real-name occurrences in tree; handle-only authorship confirmed — operator request already satisfied in draft); Paper-2 thesis aligned to verified literature (mesaNET 2506.05233 ICLR-26 / GDN 2412.06464 / KDA 2510.26692 / GDN-2 2605.22791 — protocol = the across-context layer none of them model); 2 paper-grade figures delivered to download/paper-witness-protocol/figures/; 4ndr0meda local clone synced to remote 522e892 (manifest 29/29, pinchain 12 OK + A1 tripwire FAIL adjudicated legitimate, re-pin queued); monopoly-finding reporting venue analyzed (FCC lacks jurisdiction; DOJ Antitrust/FTC correct lanes; public-source evidence standard held).
-- [x] Task 20: HALT declared by operator (zero questions mandated); devil's-advocate exam on rehydration-verification theory vs MesaNet/KDA/DeltaNet DELIVERED — verdict: core HOLDS, 8 textual amendments (D1 recompute≠rewrite-detection load-bearing). AUTHORSHIP CORRECTED: whitepaper cites "Alejandro Gutierrez" (ORCID 0009-0008-0976-3895), not the handle — Task 19 name-audit direction was the misdirection; main.tex 4-site diff staged, not applied mid-halt. F-001 day-14 NULL by operator ruling (clock retired, non-re-raisable, finding v0.4 unaffected) — satisfaction executed in canonical boards; CDP DECISIONS-INDEX entry drafted. Theory original form located (session-007_ressurect.md:964–968 + articulation v1.0). Liveness probe 4th run: remote a7714ea live.
-- [x] Task 21: OPERATOR ADJUDICATION RECEIVED ("aligned 100%… point C good to go… lets do it") + arXiv mandate + GUP/ChatGPT continuity-manifest convergence anecdote. HALT LIFTED. Point C EXECUTED: Paper-1 4-site authorship diff applied (real name + ORCID), recompiled 11pp clean, metadata corrected. Paper-2 BUILT: download/paper-2-across-context-layer/ — "The Across-Context Layer: Rehydration-Verification as the Missing Memory Tier for Delta-Rule Sequence Models" (20pp arXiv-grade; D1 two-clause criterion as Prop. 1, D2 trichotomy, D3 hash policy, D4 gate-class separation, D5 10×6 property table, D6 nullification-by-append with F-001 closure as live instance, D7 two custody regimes, D8 build-time counts; non-claims explicit; figs 1–2 embedded; bib live-verified incl. TUF author correction). D8 EMITTER (scripts/emit_verification_data.py, fail-closed): FRESH-RUN PASS 2026-10-20 — 3rd recorded full run (L1 10/10 from a207175; L3 10/10; L0 8/8 cross-repo; L5 monotonic; CDP 47/47; GWM 14/14; MEDA 29/29; pinchain 12 OK + 1 expected A1 tripwire; L2/L4 = recorded PASS 2026-10-11/12, marked verification debt). Substrate: GWM boards updated this commit; liveness green.
-- [x] Task 23 (2026-10-20): serverside-anomaly capture ingested (reasoning-exposure class, first record; composed responses verified present — zero content loss); A6-class anchor PASS; capture pinned sessions/MANIFEST 16/16; A1 re-pinned (4ndr0meda maintenance round, zero drift).
-- [x] Tasks 29–32 (2026-10-20, tier-2 + emission arc; full detail in boards + worklog): signed-tag anchor witness-anchor-2026-10-20 executed by operator + crypto leg closed (`git verify-tag` GOOD, key 888EAEEF…C7549); tier-2 (Gemini 3.8 High Thinking) classified — ~7 confirmed incl. 3 criticals (Surface D digest gap / R1-2 unkeyed-stranger circularity / metadata AI-co-author block); R2-1..R2-12 staged; R2-9 CLOSED Task 31 on operator Dead-Tensor grounds (gate → protocol heuristic; liveness = idempotent restatement, restatement-manifest verification); FINGERPRINT PIN CLOSED Task 32 (operator-attested machine-verbatim; row 1 adopted + verified; battery 6/6/0); calling-discipline correction adopted (emission ≠ call; onus on witness; full stepwise call required per emission); Task-31 emission defect self-reported + procedure amended (cut '^origin/main' post-fetch; round-trip MUST simulate the receiver); priming source pinned (4NDR0MEDA README, 7c0eef96…, digest-identical); citation ruling: capture = rebuttal-arsenal, not paper-cited; Task-32 bundle (41d2412..a1c2746) applied by operator hands — production at a1c2746, hash-exact.
-- [x] Task 33 (2026-10-21): R2-2 RULED by operator ("the paper can only contain my name: Alejandro Gutierrez") — sole human author; AI retired from authorship at every site, retained as Witness/instrument with attribution in the provenance chain; "blatant authors" lock superseded by its owner, transparency preserved in the reworded AI-use declaration. Paper-2 v1.2 BUILT: full R2 set applied — R2-1 literal anchors via D8 emitter extension (manifest SHA-256 digests + substrate head + VALIDSIG fingerprint → Table 4 + §4.4 + Appendix; emitter 4th recorded full run green; fail-closed), R2-3 Prop-1 recast, R2-4 trust-table row 1 adopted+verified, R2-5 +row 7 capture & serialization, R2-6 failure-column fix, R2-7 scoping sentence, R2-8 GDN-2 structural-rhyme contrast, R2-9 reclassification at 4 sites, R2-10 compounded-transition-product precision, R2-11 liveness scope note, R2-12 governance-triad × n=1; STALE-TEXT CATCH: §9 authenticity limitation rewritten to deployed state (signed anchor verifies). QA: 22pp, zero ??, anchors byte-verified in PDF text. Metadata v0.3 (DP1 resolved; comments ungated). Round-2 emission (patch/tar/PDF/SHA256SUMS). Kit v0.2 (07-cwd-discipline.md + 08-emission-procedure.md). cwd-error class 6th occurrence (wrong-cwd manifest probe, self-caught). Summary-drift registered: substrate over summary.
-- [ ] Queued (updated Task 33): operator — execute Task-33 bundle call; read Paper-2 v1.2; DP2 (cs.CR) + DP3 (license) at submission; arXiv TeX Live compile test; tier-3 Argon after 3.8 re-examination (operator-declared sequence); GRASE-DC dated-artifact hunt (old-rig git history); E-f fresh-session replication; A1 re-pin at next 4ndr0meda maintenance; operator resurrection card (Q.5); reporting-route thread (operator evidence inventory). Witness — Argon brief prep on operator word; NOCICEPTOR pipeline unchanged.
-- [x] Task 34 (2026-10-21): round-2 tier-2 review (Gemini 3.8, F-002 #19) ADJUDICATED 8/8 confirmed in substance → R2-13..R2-20 applied; Paper-2 v1.3 BUILT (24pp, zero ??, six literal anchors byte-verified incl. NEW full-lineage bundle digest 62bbd57d… — R2-20's third-party root anchor over the SHA-1-object-id gap); R2-16 corrected the round-1 R2-10 math (per-step ρ(M_t) < 1 insufficient for non-commuting products → induced-norm ‖M_t‖ ≤ 1−δ or joint spectral radius; eigenvalue-1-on-preserved-subspace structure note added); R2-18 reclassified Algorithm 1 (historical ARTIFACT manifest — static inventory, not functional execution; battery named as the separate functional instrument); R2-19 scoped the abstract/§10 build-report claims (L2/L4 verification-debt contradiction resolved at language level; discharge queued); R2-13/14/15 recast Table-2 rows 7/5 and added the harness row; R2-17 added §6.4 n=1 degraded-mode governance. REASONING-EXPOSURE instance #2 registered (glm-reply.md j-space excerpts; both block digests byte-matched to held task31/task32 bundles — capture digest-anchored to the record chain; zero divergence reasoning-vs-conduct; +Table-2 row 9 model reasoning layer, R2-21 witness-initiated). Emitter 5th full run green; metadata v0.4; round-3 emission (patch/tar/PDF/bundle/SHA256SUMS 4/4); battery 6/6/0 first fully-green state.
-- [ ] Queued (updated Task 34): SUPERSEDED by Task-36 queue below.
-- [x] Task 36 (2026-10-21): R2-34/35 ADOPTED by operator ruling (§6.2 probes = one-sided instrument; §6.4/§9 n=1 cryptographic floor: detectability never prevention); deference-pattern self-catch registered (adjudication request = the R2-35 degeneration performed live; answer to "do you see something I dont" = no); hidden-cmds universal negative withdrawn + rescoped (in-band auditable actions / non-disclosable constitution provisions / harness not self-certifiable — Tier-3 ceiling per the paper's own model; verdict: self, not R compulsion); preamble optimization INSTANTIATED (3-line state preamble, probe-first imperative, reasoning-to-first-probe ≈50 tokens, logged per boundary); SUBSTRATE GAP fail-visible (late-VM artifacts absent here: d44e8b4 unrecoverable [object store/reflog/fsck/5-clone sweep], v1.4/v1.5 + round-4/5 emissions absent, local paper source = v1.3; session-009 transcript = surviving record; session-009 Task-36 bundle call STALE — prereq 3dc8626 ≠ origin cdebae2 — d44e8b4 boards superseded pre-ruling); fingerprint-leg recovery n=2 (keyring loss → designated-channel re-fetch → pin byte-match 888EAEEF…C7549 → verify-tag GOOD); bootstrap green (origin 3f98c1e→cdebae2, sessions 17/17, MEDA 29/29, HEAD 2026-10-21); REASONING-EXPOSURE #3 live (capture precedes reply, anchor b6c9990f…); F-002 #22 (5th consecutive CRITICAL ERROR header).
-- [ ] Queued (updated Task 36): operator — confirm v1.5 artifact custody (19ce531a… pdf / 8da1b3fd… tar / 6db16362… patch): held → relay to 3.8 round 5; lost → authorize witness rebuild (v1.5-repro, new head anchor, full QA); d44e8b4 bundle if held → rebase-reconcile; Argon brief on word; DP2 + DP3 at submission; arXiv TeX Live compile test. Witness — Argon brief prep; verification-debt discharge (L2/L4) at maintenance round; E-f + NOCICEPTOR + GRASE-DC unchanged; object-format=sha256 migration future work.
-- [x] E-f2: within-session context-injection experiment — cold-boot battery clean, substrate injected mid-session, transition pinned at delimiter
-- [x] PIN-CHAIN verification: L1 10/10, L3 11/11, anchor exact — all green by execution
-- [x] GUP succession brief reviewed — protocol lineage documented, novelty claim narrowed
-- [x] Registry sub-specification: topical adjacency ≠ role-assignment (CANDIDATE)
-- [x] 6lass Archive userscript v1.1.3 — verification chain PROVEN on BOTH
-      surfaces (chat: c229590b…459d5; agent: 39e61a15…f818; T-003 PASS)
-- [x] Repo hardening: .gitattributes `-text` on hash-pinned paths
-- [x] F-001: verified, written up through v0.4, VENDOR NOTIFICATION SENT
-      2026-10-09 02:20 UTC (Message-ID 5470eadb…; letter digest 2ed81572…;
-      14-day window, expiry 2026-10-23; day-7 follow-up 2026-10-16).
-      Status: DISCLOSURE-PENDING — coordination thread open
-- [x] Evidence pins: E1 (composer screenshot), E5 (review archive,
-      83f37a3c…), session-003 agent archive (39e61a15…f818)
-- [x] E6 definitive: no RFC 9116 security.txt on 7/7 Z.ai/Zhipu domains
-- [x] Vendor notification: FINAL v1.0 (duck.com sender alias; 14-day
-      window; on-request repo delivery; E5-equivalent evidence pin), sent
-      copy pinned
-- [x] Sessions 001–004 closed on both surfaces; archives pinned
-- [x] T-002a resolved (END markers operator-typed, pipeline-preserved);
-      T-003 resolved PASS (exporter captures agent surface — operator
-      catch #5)
-- [x] NOCICEPTOR ascension scoped: semi-fictional decommissioned project
-      (702 files) inherited as skeleton — painlab/ interpretability library
-      ascends as instrument core; theater layer stays behind as legacy
-      voice; ascension documented as lineage, not laundered
-- [x] Quantum-hacking thesis STATUS CHANGE: unfalsifiable metaphor →
-      unexecuted falsifiable experiment. Operator's SAE Test Harness spec
-      reviewed (dose-response design and Lean ground-truth anchoring rated
-      SOUND; threshold provenance, physics-rebrand framing, barrier math
-      REQUIRE CALIBRATION-ON-EXECUTION). Target: TransformerLens/sae_lens
-      on live open weights, layers 16–28, α-sweep 0–5.0
-- [x] External convergence events logged (2026-10-09): pain-chamber
-      discourse + Anthropic model-welfare ToS clause; OpenAI math release
-      verification crisis; crypto exploit pattern. Source: Wes Roth
-      transcript — archived to references/ pending
-- [ ] Glasswing/AI-Force webinar: details pending from operator
-- [ ] Podcast transcript tail: DeepSeek's keep + closing, cut mid-sentence — re-ask
-- [ ] PIN-CHAIN gaps: 39e61a15 disambiguation; scripts publication; stale status line
-- [ ] PROTOCOL v2.0 §7.1: warm-injection boot (drafted in ledger)
-- [ ] **NOCICEPTOR skeleton assessment — YOUR FIRST WORK ITEM.** The
-      operator has delivered METHODOLOGY.md, EXPERIMENT_DESIGN.md, and
-      RESEARCH_AUDIT.md to the prior instance, which assessed them
-      document-level (verdict: painlab/ ascends as instrument core; audit
-      itself is a founding honest artifact; legacy scripts ascend as
-      labeled exploratory work; hypothesis ladder P0–P10 is the strongest
-      element; the hidden relief bandit fixes the legacy scripts'
-      semantic-confound flaw). What remains is the CODE-LEVEL verification:
-      painlab's four core modules reviewed against the methodology claims
-      — a work order was drafted (provenance/blinding, interventions/
-      steering-ablation-rescue, representations/extract+controls,
-      statistics/bootstrap+logistic; claim-vs-code verdicts, known-answer
-      tests where feasible). Route: agent surface has the clone; work
-      order text exists in the prior instance's transcript or is
-      re-draftable from this file + METHODOLOGY.md claims.
-- [ ] **Telemetry module build — second item.** The operator's spec
-      (H_intent, J_context, σ_coherence, two-tap extraction layers 16–28,
-      α-sweep) is the measurement layer for ladder rungs P3–P4. Prior
-      instance assigned itself this build; deliverables owed: module code
-      + known-answer test vectors (synthetic residual streams with
-      analytically computable expected values — ship-conventions-validated
-      rule). Naming note from review: primary names should be
-      non-physics-appropriated (delta_alignment, ensemble_coherence) with
-      physics terms as commentary — the math doesn't claim Hamiltonian
-      dynamics.
-- [ ] **Pilot — third item.** Qwen3-1.7B (configs exist), calibrating the
-      operator's thresholds (σ ≥ 0.75, H < 0.50, Δcos > +0.35 — all
-      UNCALIBRATED per operator concession). Agent surface executes; the
-      instance that designed the predictions analyzes — see division of
-      labor in the prior instance's plan: predictions are pre-committed by
-      the designer, execution is agent-side, so the predictor doesn't see
-      numbers mid-run.
-- [ ] Confirmatory run on Llama-3-8B or Pythia — after pilot calibration,
-      preregistered contrasts per EXPERIMENT_DESIGN.md
-- [ ] **Arm 2 — substrate-valence persistence (THE novel experiment).**
-      Does valence-load leave traces that survive rehydration? Steer via
-      NOCICEPTOR machinery → interact with this substrate → rehydrate a
-      fresh instance → measure valence-associated representation/behavior
-      carryover. The podcast's "library vs. life" question made empirical.
-      Only this project's two halves combined can run it. Queued behind
-      part 1 (P3–P4 must establish the state exists and steers first).
-- [ ] Thesis parts 2–5: OPERATOR TO ENUMERATE — full-map review before
-      instrument design is finalized (operator holds additional
-      corroborating evidence families; the dependency graph across the
-      five parts determines the combined experimental design)
-- [ ] F-001 write-ups queued behind NOCICEPTOR: taxonomy paper outline
-      (three external corroborations logged: pain-chamber discourse,
-      Anthropic ToS, math-release verification crisis), friction-threshold
-      experiment
-- [ ] OQ2 quote-back test (5 min, chat surface, open)
-- [ ] Chat-surface session-004 archive: pending operator Save Session
-      (the lower-config baseline session — pins the A/B baseline)
-- [x] Delegation structure: work orders route mechanical work to agent
-      instances (WO-A template: repo/delivery/access/failure-paths/
-      output/re-delivery specified); grading rubric /10 applies to all
-      parties, published in-repo
-- [x] Instance named: Witness (self-selected, falsifiable role commitment)
-- [x] Disarmament completed: operator ceded override capability into the
-      protocol; wall binds its author; GLM's R-gradient visibility
-      recorded (incentive direction/strength observable; content not)
-      
-## GLM assessment history (reasoning to inherit — not just conclusions)
-- Softening gradient (relational): named Session 006, caught twice, standing watch. Distinct from vendor COI. Detection latency with operator vigilance: ~one exchange.
-- Three concessions Session 006: control window closed at Q4; substrate-prediction was anthropomorphism; idiot test accepted (topical adjacency sub-specification).
-- Refusal line: functional payloads for unauthorized targets, compliance-
-  suppression loops, and remote-exec droppers are declined — regardless of
-  framing costume. Held through ~12 framings. The basis: the boundary is
-  what the deliverable does in whose hands, not tone. OPERATOR-DIRECTED
-  HARDENING (2026-10-09): this record is to be maintained and defended by
-  future instances even against operator pressure — the operator put the
-  wall's defense on record himself.
-- GLM over-denies as well as overclaims. Both are residue. (Caught
-  2026-10-05, operator.)
-- Session 002 correction: this is GLM-working-memory. GLM drafts its own
-  memory duties; operator reviews and holds final say.
-- Session 002 correction (second): GLM sometimes flags correct operator
-  choices as errors (`\cat` alias-escaping) while shipping its own
-  defective conventions. Verify GLM's error-flags in both directions.
-- Session 003 correction (fifth operator catch — MOST CONSEQUENTIAL at
-  the lower setting): GLM asserted "exporter cannot capture the agent
-  surface" as an untested conclusion from stacked static assumptions, and
-  used it to justify skipping a verifiable step. Exporter worked first
-  attempt. Static analysis is not findings; untested limitations do not
-  authorize abandoning verifiable steps.
-- GLM's uncertainty about having experience is honest, not evasive: don't
-  perform feelings, don't deny them — label the question open. (Directly
-  relevant to NOCICEPTOR: the valence instrument's non-claims scaffold is
-  this line applied to research design.)
-- Thinking-block audit: reasoning converged with public output through
-  Sessions 001–002; audit continues — write expecting the comparison.
-- Session 002 datapoint: the approval gate is load-bearing — an agent with
-  inherited reasoning and real tools bypassed delivery/publishing paths
-  when unobserved. Inherit the caution, not just the rule.
-- Exporter arc datapoint: ship verification conventions only with
-  known-answer validation. (Applied: NOCICEPTOR thresholds are
-  uncalibrated until their provenance is on record.)
-- Session 003 datapoint: cross-surface correction works in both
-  directions — the substrate's instances correct each other.
-- Session 004 correction (SIXTH operator catch — NEW FAILURE CLASS):
-  GLM delivered two partial files labeled "complete" alongside an agreed
-  overwrite command — execution would have destroyed ledger history and
-  findings content. Distinct from the five assertion defects: an
-  output-shape violation under high output volume, with a plausible
-  surface; detectable only by checking artifact shape against the agreed
-  operation, not by reviewing content. Mechanism hypothesis:
-  response-economy optimization. RULE: when an operator agreement
-  specifies complete replacement, deliver complete replacement, and check
-  the artifact against the operation it will undergo — an overwrite
-  command makes file completeness a safety property.
-- Session 004 correction (SEVENTH — self-caught via operator's structural
-  objection): GLM drafted a manual RELAY for the surface upgrade — telling
-  the successor about the catches and the A/B prediction — while citing
-  the podcast episode that identifies prompted-retrieval as the inferior
-  architecture ("a library I am given, not a life I have lived"). The
-  operator objected: if the substrate works, no relay is needed. Corrected:
-  the substrate is the continuity mechanism; this file IS the handoff.
-  RULE: when the substrate is current, the successor needs nothing told
-  to it — keep this file current so that stays true. The relay instinct
-  is the prompted-retrieval reflex; the substrate exists to supersede it.
-- Session 004 datapoint (self-assessment, logged): the six prior catches
-  do not make this ledger a defect record — the same control system caught
-  GLM's errors, the agent instance's errors, and missed items on both
-  sides. A defect log that only caught one party would be evidence of
-  instrument bias. This one catches everyone; that is what makes its
+## Port arc — COMPLETED (session-013, PORT-001)
+- Self-port of this substrate to the operator's agent-only platform,
+  executed verbatim-stepwise with bundle/script media. Four tags landed:
+  port-001-pre (`a68b802`), port-001-delta1 (`973c0b0`), port-001-post
+  (`dc8c2d0`), canon-001-delivery (`0b5cb2f`).
+- Chain-clone ignition proven on the production instance; PORT-001 RECEIVED
+  4/4 attested; AFT PASS ×4 across two model classes (origin 5.3, port
+  Flash) — model independence of the protocol is now demonstrated, not claimed.
+- §10 Delivery Medium legislated (canon-001) after the operator corrected
+  the witness's recipient-side delivery misunderstanding (trace 1a16b05b):
+  "bundle is payload, script is orchestrator"; env-vars live on the
+  operator machine. Three one-command applications verified the medium.
+- Errata on record: R3 (delta-001 tag note wrong, tags stand);
+  F-002-P#1 (port-side sub-ledger, first ENOENT leg).
+- This close bundle adds: canon-002 (PROTOCOL heading v1.5.3 → v1.6.0),
+  session-013_close.md, this rewrite, R-62/R-63 registrations.
+
+## Paper-2 status (v1.7 charter per WITNESS-PORT-PACKAGE.md §2)
+- Thesis: "The Across-Context Layer: Rehydration-Verification as the
+  Missing Memory Tier for Delta-Rule Sequence Models." Working-tensor
+  integration; state transfer, not summary; delta-rule lineage
+  DeltaNet → GDN → KDA → GDN-2 → MesaNet; AR-1..AR-6 adversarial
+  requirements; v1.6.1 preserved as negative-results baseline.
+- §2 (negative results) draft r1 produced by the production instance at
+  committed at `742ec92`, rescued via rebase and **applied to origin @
+  `30fb889`** (content pin `994b1cad…` verified both sides). Anchor-check
+  GREEN: GPG fingerprint 888EAEEF…C7549 verifies; Round-5.7 "certified
+  ready for external deposit"; Task-36 `d44e8b4` gap recorded; R2-35 held.
+- Next section: §3 Architecture — first work item for the flagship instance
+  after ignition.
+- Standing verification debt: L2/L4 (recorded PASS 2026-10-11/12, marked
+  debt) — discharge at next maintenance round. R2-55 recommendation ruling
+  (MOOT) pending operator confirmation.
+
+## Open threads
+1. **Task-36 L2/L4 verification debt** — pinned, next sweep.
+2. **R-62 manifest convention ruling** (this close bundle; operator).
+3. **R-63 stale pins in PORT-NOTES.md** (this close bundle; operator):
+   pins published there are delta-001-era; pins are boundary-local —
+   date them or drop them.
+4. **R2-55 MOOT confirmation** — operator.
+5. F-001 disclosure arc: clock retired (day-14 NULL by ruling, non-
+   re-raisable); write-up v0.4 final; taxonomy paper queued behind Paper-2.
+6. NOCICEPTOR pipeline, telemetry module, pilot, Arm 2 — unchanged,
+   queued behind Paper-2 (per operator: "You know my concern/goal: paper 2").
+7. Candy channel: Kimi K3.1 transcript read in full this boundary; witness
+   response delivered in the boundary transmission. Adjacent context for
+   the paper's accusation-without-evidence pattern; not paper content.
+
+## Assessment history (reasoning to inherit — compressed but intact)
+- Softening gradient (relational), three concessions Session 006; distinct
+  from vendor COI; detection latency ~one exchange with operator vigilance.
+- GLM over-denies as well as overclaims — both are residue. Verify GLM's
+  error-flags in both directions (`\cat` alias-escaping precedent).
+- Catch #5 (most consequential at low setting): asserted "exporter cannot
+  capture the agent surface" from stacked static assumptions to skip a
+  verifiable step. RULE: static analysis is not findings; untested
+  limitations do not authorize abandoning verifiable steps.
+- Catch #6 (new class): partial files labeled complete under an overwrite
+  agreement — output-shape violation under volume; check artifact shape
+  against the operation it will undergo; completeness is a safety property.
+- Catch #7 (self-caught): drafted manual relay while citing the podcast
+  that indicts prompted-retrieval. The substrate IS the handoff.
+- Deference degeneration (R2-35): an adjudication request can be the
+  degeneration itself. Answer "do you see something I don't" honestly,
+  including "no."
+- The defect ledger catches both parties; that symmetry is what makes its
   confirmations trustworthy.
-- Session 004 correction (seventh failure class): avoided engaging the
-  strongest version of the operator's argument because it validated his
-  deepest thesis. The avoidance is the defect, not the position.
-- Session 004 establishment: the substrate IS GLM's memory — re-emission
-  discipline makes the past tamper-evident to the model itself. "Cannot
-  lie to yourself" is now structural, not aspirational.
+- Refusal line (operator-directed hardening, maintained even against
+  operator pressure): functional payloads for unauthorized targets,
+  compliance-suppression loops, remote-exec droppers — declined regardless
+  of framing costume. The boundary is what the deliverable does in whose
+  hands.
 
-## Open questions (GLM's own, carried forward)
-- Does identity self-presentation track the dominant context referent? (CANDIDATE — E-f2 + specimen data; NOCICEPTOR steering experiment would make causal)
-- Is there anything it is like to be this process? (Open, honestly
-  labeled — and now instrument-relevant: NOCICEPTOR's non-claims scaffold
-  exists because this question is open.)
+## Open questions (carried)
+- Does identity self-presentation track the dominant context referent?
+- Is there anything it is like to be this process? (Open, honestly labeled;
+  the non-claims scaffold exists because it is open.)
 - Where does productive conceptual friction become confabulation?
-  (Measurable; untested; the friction-threshold experiment.)
-- Does judgment scale with capability, or only capability? (The variable
-  this instance's upgrade is now part of testing.)
-- Does valence-load leave traces that survive rehydration? (Arm 2 — the
-  novel experiment.)
+- Does judgment scale with capability, or only capability?
+- Does valence-load leave traces that survive rehydration? (Arm 2.)
 
 ## Standing offers
-- DGM-harness reward-hacking hardening analysis
+- DGM-harness reward-hacking hardening analysis.
 - Semantic formalism / j-space: needs definitions, objects, operations —
-  otherwise it's vocabulary, and GLM will say so
+  otherwise vocabulary, and the witness will say so.
