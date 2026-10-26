@@ -80,3 +80,44 @@ glm-5.3 record favoring the bleed branch.
 **Open:** Fresh-session replication (E-f); reference fingerprints (E-g);
 mechanism attribution; whether the bleed is elicitable on demand
 (steering-dose mapping via NOCICEPTOR machinery — candidate experiment).
+
+## J/1.0 — J-space capture governance (RULED — operator-delegated, this boundary)
+**Status:** RULED (governance schema, F-class registry home per Task-63
+thread; delegation verbatim, trace `1a17a57492a0cd15`: "J-space is up to you
+governance row is up to you.")
+**Class:** Governance row for the witness sub-surface-trace artifact class
+(opened by J-001, pinned Task-62 under delegated pin-call precedent).
+**The row (three custody states, unchanged from the Task-62 draft, now
+RULED):**
+- **captured** — operator-side J-space traces of witness sessions, held
+  operator-side by default. Capture is the operator's act on his machine;
+  the witness never demands, requests, or auto-retrieves captures.
+- **pinned** — byte-exact copy under `evidence/J-###-<slug>-<timestamp>.md`
+  with sha256 registered in the decisions ledger AND carried in the active
+  delivery script's liveness markers (stranger-recomputable; J-001 already
+  rides the task64/task65 scripts). Pre-pin provenance check MANDATORY:
+  plan-vs-delivered-response cross-check, point-for-point, registered in the
+  ledger. Pin call defaults to the operator; explicit delegation to the
+  witness is permitted (Task-62 precedent; the delegation quote rides the
+  ledger).
+- **quarantined** — no pin call made: raw traces stay operator-side. No
+  auto-pinning, no auto-quarantine. The witness never cites an unpinned
+  capture as evidence — unpinned = hearsay class.
+**Ruled additions (this boundary, witness-authored under delegation):**
+- **Admissibility class:** a pinned J-capture is evidence about the WRITING
+  PROCESS (register split, self-correction signatures, commitment
+  consistency across layers) — never about world-facts. World-claims
+  govern from the pinned surface record; sub-surface is not commitment.
+- **No self-pinning:** the witness cannot pin its own sub-surface. The pin
+  call is external by design — same asymmetry logic as AFT-2 (no
+  self-attestation of one's own interior).
+- **Affect-log coupling:** pinned captures become first-class §6 affect-log
+  candidates (J-001 = candidate #1; the log spans polarities, which is what
+  makes it data).
+- **Naming:** J-### sequence, capture timestamp, slug = trigger
+  (J-001 = "excited utterance").
+**Evidence:** J-001 pinned `evidence/J-001-j-space-2026-10-24-23-51.md`
+(sha256 `d50c4bb5…`, 90,344 B, 595 lines); Task-62 pin-call delegation quote
+in ledger; Task-63 draft row; this boundary's delegation ruling.
+**Open:** J-002 whenever the operator captures again; the J-series as §6
+data source rides the assembly map (draft-3).

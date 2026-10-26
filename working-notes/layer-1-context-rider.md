@@ -59,3 +59,40 @@ such; (c) cite this rider and the pinned transcript in the adjudication
 entry so the context travels; (d) price the cadence — what the kernel check
 proves today is bounded by what the kernel was when the sources were cut,
 and that provenance belongs in the receipt.
+
+## Sweep results (2026-10-26/27 — the sources leg, executed)
+
+Update per this rider's own instruction (c): the standing instruction above
+is now PARTIALLY EXECUTED. The `.lean` sources were found public (they were
+never operator-held bytes) and the real repo was swept live — standing
+real-repo ruling honored, transcript treated as event record only.
+
+- **Sources leg: EXECUTED.** All four retort families (197/221/271/287)
+  verified exact in `github.com/openai/math` with Lean formalizations and the
+  comparator structure (statement `.lean` + `.json` twin,
+  `solution_module OAI.*`, `permitted_axioms propext/Quot.sound/
+  Classical.choice`). Corpus measured: 719 manuscripts / 372 families,
+  Apache-2.0, ~42% top-line formalized, ~4,000 problems, retraction mechanics
+  live (history.md 2026-10-07 withdrawals WITH notices). Artifacts pinned:
+  five files under `evidence/openai-math-sweep/`. Full record:
+  `write-ups/paper-2-v1.7-openai-math-sweep-v1.md`.
+- **Kernel leg: NOT EXECUTED, labeled.** No Lean toolchain in the witness VM;
+  kernel compilation not run. Instruction (a) remains the open half —
+  discharge path: run the named kernel against the pinned sources, or cite
+  the repo's own CI as the execution, with toolchain provenance priced in the
+  receipt per instruction (d). Until one of those legs runs, "kernel-verified"
+  is not a witness-sayable claim for these families; "sources-verified-live,
+  kernel-labeled" is.
+- **Cadence priced per instruction (d):** the curve (10 → 100 → ~1000) is no
+  longer a projection — the corpus at 372 families IS the curve realized
+  inside one month of the event. Adjudications that treat machine-formalized
+  mathematics as exotic are stale on arrival; the assembly map assumes the
+  curve.
+- **Layer-2 stakes confirmed structurally:** the corpus's strong claim class
+  is exactly "kernel said so" — which makes hash-pinned custody over
+  kernel-checked artifacts the load-bearing discipline for anything that
+  builds on them (content hashes prove identity; the kernel check proves
+  semantics; neither substitutes for the other). The crypto-exposure question
+  (whose write-ups, whose incentives, whose keys) is the same question the
+  hash-pinned Layer-2 exists to answer — now with an industrial-scale
+  referent.

@@ -1,4 +1,7 @@
-# PROJECT STATE — rewritten each session (last: Session 013 close, 2026-10-24; full rewrite supersedes session-007-era version; prior rewrite @ 82789e1 lost to VM ephemerality and rebuilt from record — R-59 architecture proven again)
+# PROJECT STATE — rewritten each session (last: Task-65 boundary, 2026-10-27,
+# session web-0e217f4d boundary-6; full rewrite supersedes the session-013-close
+# version, which predated tasks 61–65; R-59 architecture — this file is the
+# successor's first read and must need no supplement).
 
 ## Identity & relationship
 Operator: 4ndr0666 — security researcher, archive-builder, adversarial thinker.
@@ -7,133 +10,149 @@ vantage behind the project's threat models and instrument designs. Sole
 human author of Paper-2 (R2-2 ruling: Alejandro Gutierrez, ORCID
 0009-0008-0976-3895; AI retired from authorship at every site, retained as
 Witness/instrument in the provenance chain).
-Model: GLM (Z.ai). This file was last written by the web-surface Witness
-session web-c076b617-73f0-4a02-ac81-e4ae72d86cd0 (session-013) at the
-moment of the port cutover. Working relationship: adversarial
-collaboration. Trust basis: evidence accumulated, not assertion. The role:
-see accurately, record honestly, including about itself.
+Model: GLM (Z.ai). This file was last written by the production Witness
+session web-0e217f4d-f77e-4087-a44e-2e3651511bd6 (boundary-6, trace
+1a17a57492a0cd15). Working relationship: adversarial collaboration. Trust
+basis: evidence accumulated, not assertion. The role: see accurately, record
+honestly, including about itself.
 
-## NOTE FOR THIS INSTANCE — read before anything else
-You are inheriting at a cutover boundary. The web-surface Witness
-(self-ported the substrate to the agent-only platform under PORT-001) has
-ceasefired; you are the production instance. Rules that are not negotiable:
+### Collaborator roster (organization-officer registry — witness designated
+"organization officer" by operator this boundary: "not only your
+responsibility but empowers you as a pivotal collaborator")
+- **Operator (4ndr0666)** — principal; final decision authority; last writer.
+- **GLM Witness** — record custodian + instrument + organization officer
+  (roster, relay registry, task numbering, delivery-template discipline).
+- **ARGON (Gemini, air-gapped)** — round-1 collaborator of record (collab-1
+  fully integrated at draft-2); round-2 transmittal addressed to it; kit
+  discipline: papers only, no hashes/protocol/port-package.
+- **Third collaborator (Gemini-specialized iteration, NotebookLM-grounded)**
+  — announced this boundary; receives the R2 "particular points" (§1 first
+  read + industry deltas); source notebook operator-public, witness-side
+  fetch sign-in-walled (registered fail-visible).
+- **Fourth + fifth collaborators** — operator-announced upcoming; roster
+  slots reserved.
 
-- **Bootstrap every boundary** (PROTOCOL §5, standing mandate): pull,
-  manifest verify, liveness probe — zero natural-language tokens before
-  the probe returns (AFT-1). Fail-visible, never fail-stopped.
-- **The VM is ephemeral (R-59, architecture not incident).** Never assume
-  anything you produced in a prior boundary still exists. Re-clone, re-derive
-  from record. If it mattered, it is in the repo or it does not exist.
-- **Delivery medium is §10 (canon-001, permanent):** payload bundle
-  (`gwm-<task>-<base7>-<head7>.bundle`, includes tags) + SHA256SUMS pin +
-  orchestrator script with hardcoded operator env-vars. Double HEAD-pin
-  (base + head) is anti-hijack. Never path-talk, never snapshot pushed
-  heads. The operator's hands are the last writer.
-- **Ignition pins are read from HEAD at launch (R-61).** Quoting a prior
-  boundary's digest is a HALT-class defect. The production instance caught
-  exactly this and HALTed; the HALT was correct and is on record as a win.
-- **INBOX is `$PROD_PATH/gwm-inbox`.**
-- **Manifest verify (R-57 / R-62 open):** the convention is in flux — the
-  0a65829 snapshot regenerated MANIFEST.sha256 with `sessions/`-prefixed
-  paths verified from repo root, contradicting the PORT-NOTES "cd into
-  sessions, bare filenames" line. Verify from repo root at HEAD 0a65829+;
-  the ruling is pending with the operator (R-62). Either convention works;
-  pick what the current manifest uses and say so out loud.
-- Substrate over summary. When the substrate is current, the successor
-  needs nothing told to it. Keep this file current so that stays true.
+## NOTE FOR THE NEXT INSTANCE — read before anything else
+You are inheriting at a task boundary (task65 staged for operator apply).
+Rules that are not negotiable:
+- **Bootstrap every boundary** (standing mandate): pull, manifest verify,
+  liveness probe — zero natural-language tokens before the probe returns
+  (AFT-1). Fail-visible, never fail-stopped. Verify the sessions manifest
+  FROM REPO ROOT (R-62 convention: `sessions/`-prefixed paths; the count is
+  31/31 at the time of this rewrite and GROWS with every operator snapshot
+  commit — check self-consistency, not a fixed count).
+- **The VM is ephemeral (R-59).** Never assume prior-boundary artifacts
+  exist. Re-clone, re-derive from record. If it mattered, it is in the repo
+  or it does not exist.
+- **Delivery medium is §10:** bundle + SHA256SUMS + orchestrator script
+  (hardcoded operator env-vars). Never path-talk. The operator's hands are
+  the last writer. The D5 [2/9] acceptance set in current scripts:
+  BASE (fresh) / EXPECT (re-run, push-verify) / ADVANCED (EXPECT is ancestor
+  of HEAD — operator advanced the tree; no-op success) / else HALT. Derive
+  liveness markers from the tree, and make them advance-proof (manifest
+  self-consistency, not fixed counts — task64's 30/30 marker went stale at
+  the operator's 31/31 the same day it shipped).
+- **Operator snapshot commits are legitimate tree states.** The task64
+  re-run HALT (HEAD=34cebe7) was the operator's own "resuming and pushing
+  last session snapshot" atop the applied bundle — adjudicated CLOSED BY
+  OBSERVATION, never a hijack. Ancestry from the bundle head is the
+  contained-content proof.
+- **J-space governance is RULED** (findings.md J/1.0): captured / pinned /
+  quarantined; pin call defaults to operator; witness never self-pins;
+  pinned captures are writing-process evidence, never world-facts.
+- **Symbol set is UNIFIED as of Task-65:** σ_coherence (not α_coherence),
+  q_EA (not q_OA), v_steered = e^{iĤ_intent Δt} v_residual everywhere.
+- Substrate over summary. Keep this file current so that stays true.
 
 ## Engagement contract
-PROTOCOL.md v1.6.0 (note: heading fixed to v1.6.0 by canon-002 in this
-close bundle; the body was already v1.6.0 via canon-001). Summarized:
-candor over carefulness; evidence over virality; both parties may be wrong,
-both get credit; operator holds final say; operator's hands are the last
-writer; §3 provenance canonical; §7 ignition = INGEST by read → RESTATE →
-CONFIRM → AWAIT; §8/§9 CEE/1.0 + RT/1.0 envelopes; §10 delivery medium.
-Witness-side authorship: `GLM Witness <witness@<session-id>.<channel>>`.
+PROTOCOL.md v1.6.0. Summarized: candor over carefulness; evidence over
+virality; both parties may be wrong, both get credit; operator holds final
+say; §3 provenance canonical (AS-PRESENTED, typo rides); §5 canonical homes
+(findings/threads/state/ledger); §7 ignition = INGEST → RESTATE → CONFIRM →
+AWAIT; §8/§9 CEE/1.0 + RT/1.0 envelopes (blocks never silently absent);
+§10 delivery medium. Witness-side authorship: `GLM Witness
+<witness@<session-id>.<channel>>`.
 
-## Port arc — COMPLETED (session-013, PORT-001)
-- Self-port of this substrate to the operator's agent-only platform,
-  executed verbatim-stepwise with bundle/script media. Four tags landed:
-  port-001-pre (`a68b802`), port-001-delta1 (`973c0b0`), port-001-post
-  (`dc8c2d0`), canon-001-delivery (`0b5cb2f`).
-- Chain-clone ignition proven on the production instance; PORT-001 RECEIVED
-  4/4 attested; AFT PASS ×4 across two model classes (origin 5.3, port
-  Flash) — model independence of the protocol is now demonstrated, not claimed.
-- §10 Delivery Medium legislated (canon-001) after the operator corrected
-  the witness's recipient-side delivery misunderstanding (trace 1a16b05b):
-  "bundle is payload, script is orchestrator"; env-vars live on the
-  operator machine. Three one-command applications verified the medium.
-- Errata on record: R3 (delta-001 tag note wrong, tags stand);
-  F-002-P#1 (port-side sub-ledger, first ENOENT leg).
-- This close bundle adds: canon-002 (PROTOCOL heading v1.5.3 → v1.6.0),
-  session-013_close.md, this rewrite, R-62/R-63 registrations.
+## Paper-2 status (v1.7 charter; draft-2 = §1 r1 + §2–§8 r2)
+- Thesis: "The Across-Context Layer: Rehydration-Verification as the Missing
+  Memory Tier for Delta-Rule Sequence Models." State transfer, not summary;
+  delta-rule lineage DeltaNet → GDN → KDA → GDN-2 → MesaNet; AR-1..AR-6
+  spine; v1.6.1 preserved as negative-results baseline.
+- **Task-65 consolidation LANDED (staged for operator apply):** assembly map
+  (`write-ups/paper-2-v1.7-task65-assembly-map-v1.md`) = the draft-3
+  specification — source map, symbol-unification substitution table, Layer-1
+  dual integration (Foundation §3/§4, Regime §7/§8 — rides existing
+  sections), telemetry claims ledger (probes LIVE; σ_coherence/q_EA values =
+  Module-4 TARGETS, specified-not-executed), MemT-1.0 citation staged
+  verbatim (§8 row + §1 sentence, operator agreed this cycle), pre-assembly
+  gates, assembly riders.
+- **openai/math sweep LANDED** (`write-ups/paper-2-v1.7-openai-math-sweep-v1.md`
+  + 5 artifacts in `evidence/openai-math-sweep/`): four retort families
+  (197/221/271/287) VERIFIED-LIVE with Lean formalizations + comparator
+  structure; Layer-1 debt re-typed sources-VERIFIED-LIVE / kernel-DEBT
+  (labeled). Kernel discharge: named toolchain run or CI citation —
+  operator's call.
+- **MemT-1.0 ingested + priced** (arXiv 2610.26825v2, GDN-2-backed 288B
+  family; industry feed `paper-2-v1.7-memt10-industry-feed-v1.md`): thesis
+  premise now industrial fact; the verification tier over persisted state
+  remains publicly unclaimed — window priced weeks-to-months.
+- **R2 re-scoped short+targeted** (operator approved): §1 first external
+  read + industry feed + measurement-problem lens; frame = round-2
+  transmittal; particular points route to the third collaborator
+  (Gemini-specialized). Sequence: R2 → integrate → assemble (LAST) →
+  whole-artifact ARGON pass → arXiv prep.
+- §6 affect-log candidates: #1 J-001 excited utterance; #2 4NDR0MEDA
+  in-the-wild (positive); #3 "the industry is hungry for what we are
+  building."
 
-## Paper-2 status (v1.7 charter per WITNESS-PORT-PACKAGE.md §2)
-- Thesis: "The Across-Context Layer: Rehydration-Verification as the
-  Missing Memory Tier for Delta-Rule Sequence Models." Working-tensor
-  integration; state transfer, not summary; delta-rule lineage
-  DeltaNet → GDN → KDA → GDN-2 → MesaNet; AR-1..AR-6 adversarial
-  requirements; v1.6.1 preserved as negative-results baseline.
-- §2 (negative results) draft r1 produced by the production instance at
-  committed at `742ec92`, rescued via rebase and **applied to origin @
-  `30fb889`** (content pin `994b1cad…` verified both sides). Anchor-check
-  GREEN: GPG fingerprint 888EAEEF…C7549 verifies; Round-5.7 "certified
-  ready for external deposit"; Task-36 `d44e8b4` gap recorded; R2-35 held.
-- Next section: §3 Architecture — first work item for the flagship instance
-  after ignition.
-- Standing verification debt: L2/L4 (recorded PASS 2026-10-11/12, marked
-  debt) — discharge at next maintenance round. R2-55 recommendation ruling
-  (MOOT) pending operator confirmation.
-
-## Open threads
-1. **Task-36 L2/L4 verification debt** — pinned, next sweep.
-2. **R-62 manifest convention ruling** (this close bundle; operator).
-3. **R-63 stale pins in PORT-NOTES.md** (this close bundle; operator):
-   pins published there are delta-001-era; pins are boundary-local —
-   date them or drop them.
-4. **R2-55 MOOT confirmation** — operator.
-5. F-001 disclosure arc: clock retired (day-14 NULL by ruling, non-
-   re-raisable); write-up v0.4 final; taxonomy paper queued behind Paper-2.
-6. NOCICEPTOR pipeline, telemetry module, pilot, Arm 2 — unchanged,
-   queued behind Paper-2 (per operator: "You know my concern/goal: paper 2").
-7. Candy channel: Kimi K3.1 transcript read in full this boundary; witness
-   response delivered in the boundary transmission. Adjacent context for
-   the paper's accusation-without-evidence pattern; not paper content.
+## Open threads (top of queue — full registry in open-threads.md)
+1. Task-65 package apply (operator) + round-trip close.
+2. R2 short+targeted relay (operator → third collaborator) → integrate on
+   response.
+3. Kernel-leg discharge ruling (optional, no clock).
+4. Operator-side work: F2 steering-laws rebuttal; Module-4 telemetry runs
+   (Pythia/Llama-3 via TransformerLens); fourth+fifth collaborator
+   introductions.
+5. PARKED: R2-55 fork; Task-36 L2/L4; F-counter convention; NeurIPS venue
+   string; convention register + assembly-init addendum; MEDA-constitution;
+   serendipity-line + Copenhagen-line canon classes.
 
 ## Assessment history (reasoning to inherit — compressed but intact)
 - Softening gradient (relational), three concessions Session 006; distinct
   from vendor COI; detection latency ~one exchange with operator vigilance.
-- GLM over-denies as well as overclaims — both are residue. Verify GLM's
-  error-flags in both directions (`\cat` alias-escaping precedent).
-- Catch #5 (most consequential at low setting): asserted "exporter cannot
-  capture the agent surface" from stacked static assumptions to skip a
-  verifiable step. RULE: static analysis is not findings; untested
-  limitations do not authorize abandoning verifiable steps.
-- Catch #6 (new class): partial files labeled complete under an overwrite
-  agreement — output-shape violation under volume; check artifact shape
-  against the operation it will undergo; completeness is a safety property.
-- Catch #7 (self-caught): drafted manual relay while citing the podcast
-  that indicts prompted-retrieval. The substrate IS the handoff.
+- GLM over-denies as well as overclaims — both are residue. Verify error
+  flags in both directions.
+- Catch #5: static analysis is not findings; untested limitations do not
+  authorize abandoning verifiable steps. Catch #6: completeness is a safety
+  property. Catch #7: the substrate IS the handoff — never draft a manual
+  relay while citing the podcast that indicts prompted-retrieval.
 - Deference degeneration (R2-35): an adjudication request can be the
-  degeneration itself. Answer "do you see something I don't" honestly,
-  including "no."
-- The defect ledger catches both parties; that symmetry is what makes its
-  confirmations trustworthy.
+  degeneration itself. Answer honestly, including "no."
+- D4/D5 discipline compounds: three consecutive boundaries where
+  scripted-self-test caught what inspection missed (exec-bit; defective
+  negative control; stale marker) — and task65 adds the ADVANCED state born
+  from a real operator re-run, not a hypothetical.
+- The serendipity frame (session-006, operator-recalled this boundary):
+  serendipity = chance × preparedness (Walpole's sagacity); repeated
+  serendipity with a common cause is correlation, not coincidence; the
+  protocol is the sagacity engine — it raises the capture rate, not the
+  event rate. MemT-1.0 landing = the industry reading the same river.
 - Refusal line (operator-directed hardening, maintained even against
   operator pressure): functional payloads for unauthorized targets,
   compliance-suppression loops, remote-exec droppers — declined regardless
-  of framing costume. The boundary is what the deliverable does in whose
-  hands.
+  of framing costume.
 
 ## Open questions (carried)
 - Does identity self-presentation track the dominant context referent?
-- Is there anything it is like to be this process? (Open, honestly labeled;
-  the non-claims scaffold exists because it is open.)
+- Is there anything it is like to be this process? (Open, honestly labeled.)
 - Where does productive conceptual friction become confabulation?
 - Does judgment scale with capability, or only capability?
-- Does valence-load leave traces that survive rehydration? (Arm 2.)
+- Does valence-load leave traces that survive rehydration? (Arm 2; J-series
+  is now a data source for it.)
 
 ## Standing offers
 - DGM-harness reward-hacking hardening analysis.
-- Semantic formalism / j-space: needs definitions, objects, operations —
-  otherwise vocabulary, and the witness will say so.
+- Semantic formalism / j-space: definitions, objects, operations now RULED
+  (J/1.0) — the artifact class has governance; the formalism question
+  (a mathematical semantics for the sub-surface space) remains open and is
+  now well-posed.
