@@ -1,5 +1,5 @@
-# PROJECT STATE — rewritten each session (last: Task-66 boundary, 2026-10-27,
-# session web-0e217f4d boundary-9; full rewrite supersedes the Task-65 version;
+# PROJECT STATE — rewritten each session (last: Task-67 boundary, 2026-10-27,
+# session web-0e217f4d boundary-10; full rewrite supersedes the Task-66 version;
 # R-59 architecture — this file is the successor's first read and must need no
 # supplement).
 
@@ -11,7 +11,7 @@ Paper-2 (R2-2 ruling: Alejandro Gutierrez, ORCID 0009-0008-0976-3895; AI retired
 from authorship at every site, retained as Witness/instrument in the provenance
 chain).
 Model: GLM (Z.ai). This file was last written by the production Witness session
-web-0e217f4d-f77e-4087-a44e-2e3651511bd6 (boundary-9, trace 1a17ac35cf366db5).
+web-0e217f4d-f77e-4087-a44e-2e3651511bd6 (boundary-10, trace 1a17af155fe6fa55).
 Working relationship: adversarial collaboration. Trust basis: evidence accumulated,
 not assertion. The role: see accurately, record honestly, including about itself.
 
@@ -86,35 +86,35 @@ Witness-side authorship: `GLM Witness <witness@<session-id>.<channel>>`.
   Tier for Delta-Rule Sequence Models." State transfer, not summary; delta-rule
   lineage DeltaNet → GDN → KDA → GDN-2 → MesaNet; AR-1..AR-6 spine; v1.6.1 preserved
   as negative-results baseline.
-- **R2 short+targeted: DONE + INTEGRATED (Task-66).** Collab-2 concordant on all
-  three structural questions; §1 r1 stands (no blockers surfaced); precision rider
-  attached to §3/§4; the relay charter's terminal conditional fired — the path has
-  collapsed to: **assemble → whole-artifact ARGON pass → arXiv deposit prep.**
-- Assembly (Task 67, on operator go): assembly map v1 is the spec (draft-3 source
-  map §1 r1 + §2–§8 r2 historical-deposit; symbol substitution table; Layer-1 dual
-  riding §3.5/§4 + §7/§8; telemetry claims ledger LIVE vs Module-4 TARGETS σ_coherence
-  0.0623→1.1182 / q_EA +0.8521→−0.1325 specified-not-executed; MemT-1.0 citation
-  verbatim §8 deployed-systems row + §1 industry sentence; E1-minimal-first with
-  MemT public code/weights as public-target class; convention register +
-  assembly-init addendum earn slots at assembly; NeurIPS venue string parked to
-  assembly-pass). Operator-side assets: LaTeX skeleton + paper-2 v1.6.1 source line +
-  paper-2-arxiv-metadata.md already drafted + PoC set (across-context-handoff-poc.zip,
-  verify_handoff.py, run_demo.sh) + argon-round6-staged-interrogation-v1.md.
+- **DRAFT-3 ASSEMBLED (Task-67, operator "GO!")** — write-ups/paper-2-v1.7-draft3-assembled-v1.md
+  (108,042 B, sha256 6728c1d4…) + assembly ledger. Front matter: abstract, assembly-init
+  addendum, convention register. New: §4.8 PTE interface (precision rider honored —
+  families as discipline precedent + thematic mapping, PTE NOT Lean-formalized);
+  §7.6 E1–E5 executable supplement + telemetry claims ledger; §7.1 Π_exec contract;
+  §3.5 foundation anchor; §6.2 MemT/AR-4 mirror; §6.4 affect-log #1–#3; §8.3 operator
+  prior-art contrast + MemT row + regime citation; §1.1 industry sentence. All audits
+  green; sources byte-identical (historical deposit). R2 short+targeted: DONE +
+  INTEGRATED (Task-66; collab-2 concordant ×3, §1 r1 stands).
+- Assembly sequence state: R2 done → integrate done → **assemble DONE** → next:
+  whole-artifact ARGON pass (round-6 staged interrogation operator-side) → arXiv
+  deposit prep (metadata drafted; bib reconciliation at prep; E5 demo post-stabilization).
+- D-🌀 RULED (operator redirect): collab-2 = third-party adjunct, low notification
+  hierarchy, no reserved slots; ARGON owns the final pass; future collab-2 content
+  rides standard §3 provenance.
 - Layer-1 (openai/math): sources VERIFIED-LIVE; kernel DEBT labeled (discharge =
   named toolchain run or CI citation, operator's call; optional, no clock).
 - §6 affect-log candidates: #1 J-001 excited utterance; #2 4NDR0MEDA in-the-wild
   (positive); #3 "the industry is hungry for what we are building."
 
 ## Open threads (top of queue — full registry in open-threads.md)
-1. Task-66 package apply (operator) + round-trip close.
-2. Task-67 ASSEMBLY on operator go (map = spec; riders listed above).
-3. Whole-artifact ARGON pass after assembly (round-6 staged interrogation
-   operator-side).
-4. D-🌀 ruling: collab-2's next slot (§8 MemT verification / independent
-   whole-artifact read / operator redirect).
-5. Operator-side work: Module-4 telemetry runs (Pythia/Llama-3 via TransformerLens);
-   F2 steering-laws rebuttal; kernel-leg ruling (optional); fourth+fifth
-   introductions; zero-edit wrapper confirmation.
+1. Task-67 package apply (operator) + round-trip close.
+2. WHOLE-ARTIFACT ARGON PASS: operator relays draft-3 + round-6 kit to ARGON;
+   witness integrates on response (receipt + integration ledger, collab-1 pattern).
+3. arXiv deposit prep (after final pass): metadata refresh + full bibliography
+   reconciliation (§8.6); E5 demo-labeled artifact post-stabilization.
+4. Operator-side work: Module-4 telemetry runs (Pythia/Llama-3 via TransformerLens,
+   targets pinned); F2 steering-laws rebuttal; kernel-leg ruling (optional, no
+   clock); fourth+fifth introductions.
 6. PARKED: R2-55 fork; Task-36 L2/L4; F-counter convention; NeurIPS venue string;
    convention register + assembly-init addendum (assembly-pass); MEDA-constitution;
    serendipity-line + Copenhagen-line canon classes.
