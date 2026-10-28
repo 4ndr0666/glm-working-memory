@@ -72,6 +72,16 @@ Operator instruction: "Append compiled page count during Phase 4 build."
 Phase-4 appends e.g. "33 pages." from the clean-build page count — the only
 permitted post-lock mutation, and it appends rather than edits.
 
+**Phase-4 append (2026-10-29/30, Task-73, trace `1a184806a91640c9`):**
+compiled page count = **35 pages** (tectonic 0.15.0 clean build of
+`paper-2-v1.7-draft3-1-latex-v2.tex`, exit 0, zero errors; the References
+appendix adds two pages over the Task-71 33-page smoke build). Comments
+field final form: *"Evidence base: a hash-pinned program substrate
+(negative-results baseline, five adversarial review rounds, whole-artifact
+final-gate certification); the tensor-side design is architecture plus
+battery, with claim-status labels (LIVE / CLOSED / TARGET) throughout.
+35 pages."*
+
 ## 5. License — LOCKED
 
 **arXiv Non-exclusive License to Distribute** (the default at submission).

@@ -252,3 +252,236 @@ here.
    to a verified entry;
 4. no manuscript bytes move (draft-3.1 `9b326af7…` G0-asserted at Phase-4
    open and close, the Task-71 discipline).
+
+---
+
+## 7. Phase-4 carry-forward merge ledger (Task-73, trace `1a184806a91640c9`, 2026-10-29/30 UTC)
+
+**Operator relay received AS-PRESENTED (this boundary, item 2):**
+`refs-2.bib` — "the only bib file in the tree" — sha256
+`798d1dd499244b283c921222f27199c186645dc1ce6ecae469985aa655b7b101`,
+216 lines, 27 entries, header claiming operator-side live verification
+2026-10-20. **Adjudication:** accepted as the v1.6.1-baseline successor —
+the §4 request named the v1.6.1 bib as the carry-forward source, and the
+operator's relay clarifies the tree carries a single evolving bib
+(`refs-2.bib`) rather than a frozen v1.6.1 copy; the current canonical
+supersedes the archaeological original. Optional one-liner for the
+operator (not gating): `tar -xOf paper-2-v1.6.1-source.tar.gz '<glob>/refs-2.bib' | sha256sum`
+to pin whether the tarball's own bib matches — result registers as a note,
+never a merge input.
+
+### 7.1 Dedup ruling (§4 disposition applied)
+
+The draft-3.1 set prevails for the inline core; exactly six tree entries
+whose WORK the core already carries were dropped (tree key → core key):
+
+| Dropped tree key | Core key (kept) | Work |
+|---|---|---|
+| `yang2024deltanet` | `yang2024parallelizing` | arXiv 2406.06484 |
+| `yang2024gdn` | `yang2025gated` | arXiv 2412.06464 |
+| `vonoswald2026mesanet` | `vonoswald2026mesa` | arXiv 2506.05233 |
+| `kimiteam2025kimilinear` | `kimi2025linear` | arXiv 2510.26692 |
+| `hatamizadeh2026gdn2` | `hatamizadeh2026gateddeltanet2` | arXiv 2605.22791 |
+| `schlag2021linear` (same key) | `schlag2021linear` (deposit form) | arXiv 2102.11174 |
+
+Merged deposit set: **7 core (byte-preserved from
+`paper-2-v1.7-draft3-1-bib-v1.bib`) + 21 carried (byte-preserved blocks
+from `refs-2.bib`) = 28 entries.** One field-level note registered, not
+applied: the tree's `yang2024deltanet` carries NeurIPS 37 pages
+115491–115522 that the core entry omits; the appendix bibliography is
+unchanged by this (the deposit entry stands as verified at Task-72).
+
+### 7.2 Carried-entry verification records (21/21)
+
+Method: direct fetch of each origin this boundary (the DeltaNet precedent
+class — record verbatim as fetched, cross-check every asserted field).
+Fetch channel: mixed — interactive fetches for the arXiv/USENIX/IETF/PMLR
+origins; raw `curl` for the Crossref/IACR/PyPI/raw-GitHub/OpenReview-API
+origins (raw bytes hashed as receipts, §7.4). One channel note, fail-visible:
+the sandbox's interactive web-tool pool saturated mid-boundary; the raw
+channel completed the matrix. The IEEE Data Engineering Bulletin site
+itself was unreachable (server TLS unsupported by this boundary's client
+stack — `UNSUPPORTED_PROTOCOL`, curl and Python both), so `zaharia2018mlflow`
+verified against the authors' own canonical citation record instead (below).
+
+1. **siems2026ckda — PASS.** arXiv 2609.24797: title verbatim *"Complex
+   KDA: Understanding and Enhancing the Expressivity of Kimi Delta
+   Attention"*; 11 authors in order: Siems, Grazzi, Pöppel, Singh, Zela,
+   Carstensen, Jitsev, Hutter, Cevher, Orvieto, Klein — exact match to the
+   entry; v1 2026-09-21; cs.LG. Entry asserts no venue — consistent.
+2. **yang2024gla — PASS.** arXiv 2312.06635: title + 5 authors exact
+   (Yang, Wang, Shen, Panda, Kim). Venue cross-verified on the proceedings
+   origin: PMLR v235 index block reads "Gated Linear Attention Transformers
+   with Hardware-Efficient Training; Songlin Yang, Bailin Wang, Yikang
+   Shen, Rameswar Panda, Yoon Kim; *Proceedings of the 41st International
+   Conference on Machine Learning*, PMLR 235:56501-56523" — ICML 2024
+   confirmed; pages 56501–56523 recorded (the entry asserts no pages — no
+   conflict). Paper page `proceedings.mlr.press/v235/yang24ab.html`
+   (receipt hashed).
+3. **katharopoulos2020transformers — PASS.** PMLR v119 paper page: title
+   + authors (Katharopoulos, Vyas, Pappas, Fleuret) exact; *Proceedings of
+   Machine Learning Research, Volume 119* (ICML 2020), pages 5156–5165 —
+   exact match to the entry's asserted pages.
+4. **arora2024zoology — PASS.** arXiv 2312.04927: title + 8 authors exact
+   (Arora, Eyuboglu, Timalsina, Johnson, Poli, Zou, Rudra, Ré). Venue via
+   OpenReview API: forum `LY3ukUANko`, venue field **"ICLR 2024 poster"** —
+   the Twelfth ICLR confirmed.
+5. **dao2024mamba2 — PASS.** arXiv 2405.21060 comments field: "ICML 2024";
+   PMLR v235 paper page: *Proceedings of the 41st ICML*, pages 10041–10071 —
+   exact match to the entry's asserted pages.
+6. **lahoti2026mamba3 — PASS.** The entry carries no identifier; origin
+   located via arXiv API title query: **arXiv 2603.15569**, title verbatim
+   *"Mamba-3: Improved Sequence Modeling using State Space Principles"*;
+   8 authors exact (Lahoti, Li, Chen, Wang, Bick, Kolter, Dao, Gu); abs
+   page comments field: **"ICLR 2026"** — the Fourteenth ICLR confirmed.
+7. **widrow1960adaptive — PASS (partial-class, registered).** Crossref
+   record DOI `10.21236/ad0241531` (the DTIC 1960 registration): title
+   "ADAPTIVE SWITCHING CIRCUITS", authors B. WIDROW, M. E. HOFF, dated
+   1960-06-30; corroborated by the 1988 Neurocomputing selected-reprint
+   record ("(1960) Bernard Widrow and Marcian E. Hoff, 'Adaptive switching
+   circuits'"). Title/byline/year origin-verified; the venue string (IRE
+   WESCON Convention Record, pt. 4, pp. 96–104) is **corroborated-class**
+   — the 1960 proceedings volume has no open origin record from this
+   boundary; the string matches the universal standard citation of the
+   work. Recorded fail-visible; no field changed.
+8. **bischof1985wy — PASS (partial-class + refinement registered).**
+   Crossref DOI `10.1137/0908009`: "The WY Representation for Products of
+   Householder Matrices", Christian Bischof, Charles Van Loan, *SIAM
+   Journal on Scientific and Statistical Computing* 8(1):s2–s13, January
+   1987 — the journal version; title/byline origin-verified through it.
+   The entry's venue (SIAM Conference on Parallel Processing for Scientific
+   Computing, 1985 — the conference version) is **corroborated-class**.
+   Refinement registered for operator adjudication (no silent change):
+   the journal form (SISC 8(1):s2–s13, 1987, DOI 10.1137/0908009) is the
+   more standard citation of this work; Phase-5 may swap forms on a ruling.
+9. **merkle1988 — PASS.** Crossref DOI `10.1007/3-540-48184-2_32`: title
+   exact; *Lecture Notes in Computer Science* (= Advances in Cryptology —
+   CRYPTO '87 proceedings); pages 369–378; issued 1988 — all four asserted
+   fields exact.
+10. **laurie2013ct — PASS.** IETF datatracker RFC 6962: "Certificate
+    Transparency", Ben Laurie, Adam Langley, Emilia Kasper; published June
+    2013 (Experimental) — exact match to the entry.
+11. **torresarias2019inteto — PASS.** USENIX Security '19 presentation
+    page: title ("farm-to-table" casing), authors with affiliations
+    (Torres-Arias/NYU, Afzali/NJIT, Kuppusamy/Datadog, Curtmola/NJIT,
+    Cappos/NYU), 28th USENIX Security Symposium, pages 1393–1410 — exact.
+12. **samuel2010tuf — PASS.** Crossref DOI `10.1145/1866307.1866315`:
+    "Survivable key compromise in software update systems", *Proceedings
+    of the 17th ACM conference on Computer and communications security*,
+    pp. 61–72, 2010 — exact.
+13. **newman2022sigstore — PASS.** Crossref DOI `10.1145/3548606.3560596`:
+    title field "Sigstore" + subtitle field "Software Signing for
+    Everybody" (= the entry's full title); *Proceedings of the 2022 ACM
+    SIGSAC Conference on Computer and Communications Security*; pp.
+    2353–2367; authors Newman, Meyers, Torres-Arias (first three) — exact.
+14. **costan2016sgx — PASS.** IACR ePrint origin `eprint.iacr.org/2016/086`:
+    page title "Intel SGX Explained"; authors Victor Costan, Srinivas
+    Devadas — exact match to the entry.
+15. **mitchell2019modelcards — PASS.** Crossref DOI
+    `10.1145/3287560.3287596`: "Model Cards for Model Reporting",
+    *Proceedings of the Conference on Fairness, Accountability, and
+    Transparency* (FAT*), pp. 220–229, 2019 — exact.
+16. **packer2023memgpt — PASS.** arXiv 2310.08560: title + 7 authors exact
+    (Packer, Wooders, Lin, Fang, Patil, Stoica, Gonzalez); v1 2023-10-12.
+17. **zaharia2018mlflow — PASS.** Origin: the MLflow repository's own
+    canonical citation record `CITATION.cff`
+    (raw.githubusercontent.com/mlflow/mlflow/master/CITATION.cff) —
+    preferred-citation: title exact *"Accelerating the Machine Learning
+    Lifecycle with MLflow"*; 12 authors (Zaharia, Chen, Davidson, Ghodsi,
+    Hong, Konwinski, Murching, Nykodym, Ogilvie, Parkhe, Xie, Zumar — the
+    entry's 11 + "and others" elides exactly the 12th, Corey Zumar);
+    journal "IEEE Data Eng. Bull."; year 2018; volume 41; start 39; end
+    45 — every asserted field exact. Channel note: the DE Bulletin site
+    itself unreachable this boundary (TLS unsupported; no DOI exists for
+    debull papers; S2/OpenAlex rate-saturated; no Wayback snapshot) — the
+    authors' own machine-readable record is the origin that answered.
+18. **dvc2020 — PASS.** PyPI project record (name `dvc`, summary "Git for
+    data scientists - manage your code and data together") + repository
+    `pyproject.toml` (maintainers "Treeverse" [the company formerly
+    Iterative], support@dvc.org) + `README.rst` ("Data Version Control",
+    website dvc.org) + the live org path `github.com/iterative/dvc`. The
+    entry's title/URL exact; author "Iterative" = the 2020-era company
+    name (renamed Treeverse; the org path still serves) — attribution
+    note registered, no field changed.
+19. **chacon2014git — PASS.** git-scm.com/book/en/v2 (the authors'
+    canonical free hosting): "Pro Git book, written by Scott Chacon and
+    Ben Straub and published by Apress", 2nd Edition, 2014 — exact match
+    to the entry (@book, Pro Git, 2nd, Apress, 2014).
+20. **stevens2017sha1 — PASS.** Crossref DOI
+    `10.1007/978-3-319-63688-7_19`: "The First Collision for Full SHA-1",
+    *Lecture Notes in Computer Science* (CRYPTO 2017 proceedings),
+    pp. 570–596, 2017. The entry asserts venue/year + the SHAttered note,
+    no pages — consistent.
+21. **gutierrez2026articulation — PASS (witness-side recomputation).** The
+    pinned artifact's sha256 = `63ea783d1f427496180a93169f5a12b86cef50b175d5c5a63ae8e2909ccb39f9`
+    == MEDA PIN-CHAIN anchor **A5 byte-exact**; the artifact's own header
+    carries: "Date: 2026-10-19", "Author of record: 4ndr0666 (ORCID
+    0009-0008-0976-3895)", "AI-assistance: disclosed (GLM/Z.ai, instrument
+    class only, under a documented evidence protocol)", title "1=1 — The
+    Rehydration-Verification Architecture / Official Articulation, v1.0" —
+    every content claim of the entry verified against the pinned bytes.
+    Attribution note (no field change): the pinned artifact's public
+    homes are the coordinated-disclosure repo and MEDA A5; the entry's
+    howpublished points at the program substrate repo — operator's own
+    entry form, registered as such.
+
+### 7.3 Verdict
+
+**28/28 entries of the merged deposit bibliography carry origin-class
+verification evidence** (26 full — every asserted field checked against an
+origin; 2 partial-corroborated — title/byline/year origin-verified, the
+pre-internet proceedings venue strings corroborated-class with the evidence
+trail recorded). No placeholder, no parametric recall, no unverified key.
+The two partial-classes and the bischof journal-form refinement are the
+only adjudication-ready items, all registered above.
+
+### 7.4 Origin receipts (raw-fetch channel, sha256-prefix)
+
+Fetched bytes retained witness-side under
+`scratch/task73-origin-receipts/` (45 files, including the negative-route
+records — debull 404s, S2 429s, rate-limit bodies — kept per the
+fail-visible discipline):
+
+`50d0d832…` mamba3-arxiv-api.xml · `d6902510…` mamba3-abs.html ·
+`ab940079…` pmlr-v235-index.html · `6d657e36…` gla-pmlr-yang24ab.html ·
+`1706ba84…` zoology-openreview.json · `f640b820…` crossref-sha1.json ·
+`4057f64f…` sigstore-crossref.json · `5be38c2e…` crossref-SurvivableKeyComprom.json ·
+`f563ae65…` crossref-ModelCardsforModelRe.json · `58d603fd…` crossref-ADigitalSignatureBas.json ·
+`53b0e682…` crossref-widrow.json · `45a22222…` crossref-bischof2.json ·
+`0d8da091…` sgx-eprint.html · `0f1bb49d…` mlflow-citation.cff ·
+`9358dc5f…` mlflow-pypi.json · `6065382c…` dvc-pypi.json ·
+`7c9a77d6…` dvc-pyproject.toml · `d10985fd…` dvc-readme.rst ·
+`4134e3ca…` progit.html
+
+### 7.5 Merge disposition (Phase-4 artifacts)
+
+- **Bib form decision (the ledger §5 open):** appended
+  `thebibliography` appendix — the certified text's own convention
+  register anticipated exactly this ("the full bibliography carries
+  forward from the v1.6.1 bib and is reconciled at deposit prep"), zero
+  in-text bytes move, the 10 inline literal identifier sites stand
+  untouched, and no `\cite` conversion risk enters the deposit. The
+  `\cite{}` alternative stays pre-mapped (§5) for any post-deposit
+  revision.
+- **Merged bib:** `paper-2-v1.7-draft3-1-bib-v2.bib` (sha256
+  `18d1e05f…`, 11,039 B, 28 entries — 7 core byte-preserved + 21 carried
+  byte-preserved, 6 duplicates dropped per §7.1).
+- **Deposit .tex:** `paper-2-v1.7-draft3-1-latex-v2.tex` (sha256
+  `687c19d6…`, 131,850 B) — v1 with exactly three registered deltas: the
+  v2 provenance header (discharging the METADATA-ADJUDICATION-PENDING
+  block), the one-line `\title{}` swap per the metadata lock §1 (the
+  certified internal title preserved verbatim in the header), and the
+  References appendix (28 `\bibitem`, zero editorial prose; no explicit
+  `\section*{References}` — the article class's `thebibliography` emits
+  its own heading, a duplication caught at build review). Body
+  byte-identity machine-proven (G4, Task-68 class).
+- **Clean build:** tectonic 0.15.0, exit 0, zero errors — **35 pages**
+  (PDF sha256 `bcf55501…`); locked title renders verbatim; the old title
+  renders nowhere (header-comment-only); zero unresolved `??`; 28/28
+  bibliography entries render.
+- **Gate §6 application:** (1) .bib present in the source package ✓ (28
+  verified keys — the §2 core + this §7's carried set); (2) relay landed,
+  carried entries verified per §4 disposition, this §7 is the merge
+  ledger ✓; (3) compile clean, zero `??` ✓ (the thebibliography form has
+  no citation keys to resolve); (4) draft-3.1 `9b326af7…` G0-asserted at
+  open and close ✓.
