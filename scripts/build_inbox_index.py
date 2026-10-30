@@ -181,7 +181,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -347,6 +347,19 @@ def main():
     w("  entries; intake queue opened for the GUP-critical 8; §5 canonical")
     w("  home assigned (PROTOCOL v1.6.1); generator")
     w("  `scripts/build_inbox_index.py` rides the repo (named-tool law).")
+    w("- Task 77b, 2026-10-31, trace 1a18eeb2671b840d — first consolidation"
+      " run RED at file 1 of 8: paper-2-v1.6.1-source.tar.gz recorded"
+      " 99913db3… ≠ copied a764eb1f… (fail-closed halt — 1/8 tested, 7"
+      " untested, 0 consolidated, inbox left as found). §2 rows 1–2 pins"
+      " flagged suspect: both inherited from the v1.6 FINAL SET by"
+      " name-level propagation (the round5.6 receipt names the v1.6 tarball"
+      " and the v1.5reconstruct-to-v1.6 changes file); no independent"
+      " v1.6.1 hash act exists in the record. Adjudication issued in-band"
+      " (7-pin spot check, gpt git forensics, all-commit pin sweep,"
+      " alternate-copy + inner-content continuity); a confirmed record"
+      " defect lands as its own round re-cutting all three pin-embed sites"
+      " together (this generator's INTAKE_FILES, INDEX.md §2, and the"
+      " consolidate script's PINNED table).")
     w("")
 
     text = "\n".join(out)

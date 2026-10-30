@@ -320,3 +320,85 @@ governs boundary bootstraps and round records.
   gwm-task77-SHA256SUMS (three-file coverage; SUMS excluded from itself).
   Emission pins printed in the boundary transmission. Round-trip receipt
   appends here at the next boundary open.
+
+## [2026-10-31] Boundary open — Task 77b (trace 1a18eeb2671b840d; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git fetch origin`
+  — origin/main unchanged at `18518e8`; HEAD `ddd3593` (Task-77 head;
+  witness ahead 4 un-applied — 76, 76a, 76b, 77; the task76b kit remains
+  the live staged delivery); working tree clean; manifest 35/35 OK;
+  liveness trio intact, full digests recomputed — draft-3.1 `9b326af7…`,
+  tex-v2 `687c19d6…`, bib-v2 `18d1e05f…`; task77-index emission copies
+  re-verified 3/3 against gwm-task77-SHA256SUMS.
+- §3 REGISTER: a CodeQL badge for a `scr` repository rode outside the
+  START/END delimiters — rejected (2nd of the class; 76b precedent). The
+  QUICK BOOT measurement-problem rationale restated in-band —
+  acknowledged; this boundary's first output was the fetch.
+- OPERATOR PAYLOAD (the Task-77 paste-back): `sha256sum -c
+  gwm-task77-SHA256SUMS` 3/3 OK, then the consolidation run — [C0] ×3,
+  [C3] FAIL at `paper-2-v1.6.1-source.tar.gz` (recorded `99913db3…` ≠
+  copied `a764eb1f…`; mismatched copy removed; run halted); plus the
+  point-2 query on the R2 stage-2 remark ("I guess you mean this very
+  response?").
+- RUN DECODE (registered, not re-asked): the script is fail-closed at
+  FIRST mismatch (`exit 1` inside the copy loop) and the tarball is
+  PINNED[0]; no [C1]/[C2]/[C4] line can follow a [C3]. The paste is
+  therefore COMPLETE, not truncated — **1 of 8 tested, 1 RED, 7 UNTESTED,
+  0 consolidated; $GWM-INBOX left as found.** The Task-77 battery's
+  real-pin scope note ("GREEN path closes on paste-back") closed RED: the
+  harness performed exactly as designed — a catch, not a defect.
+- PIN-LINEAGE FINDING (the round's substance): `99913db3…` was born as
+  the **v1.6** tarball's digest (round5.6-build-receipt §2:
+  `paper-2-v1.6-source.tar.gz` @ `99913db3…`; changes
+  `paper-2-v1.5reconstruct-to-v1.6.changes` @ `778f9ac2…`) and propagated
+  onto the **v1.6.1** filenames at emissions-index §3 build time;
+  INDEX.md §2 cites "artifact-index digests-of-record (v1.6 FINAL SET)"
+  as pin site for both rows. Witness-side greps: NO independent hash act
+  of either v1.6.1 file exists anywhere in the record; `a764eb1f…`
+  appears nowhere prior to this paste; the certified v1.6 bytes are no
+  longer witness-side (`download/paper-2-v1.6-build/` gone from the VM —
+  R-59 class; workspace-wide search for `paper-2-v1.6*` returns nothing).
+  Two hypotheses staged: **H1 record defect** (name-level pin propagation
+  — the v1.6.1 files are their own cuts, true pins never recorded;
+  predicts the changes file ALSO mismatches `778f9ac2…`) vs **H2 local
+  drift** (the v1.6.1 files were byte-renames of the v1.6 artifacts and
+  the tarball has since been re-cut/modified; predicts the changes file
+  still hashes `778f9ac2…`). The script's own C3 hint ("the local gpt
+  tree may have drifted") assumed the pins were true pins — that
+  assumption is itself now under adjudication; a priori, the semantic
+  oddity of a "v1.6-to-v1.6.1" file carrying the v1.5→v1.6 changes
+  digest weighs toward H1, but nothing is re-pinned before the operator
+  forensics discriminate.
+- ADJUDICATION ISSUED (in-band, one paste-back closes): [X0] the 7
+  untested pins + tarball stat; [X1] gpt-clone git forensics (status /
+  path history / worktree-vs-HEAD bytes); [X2] all-commit sweep for
+  `99913db3…`; [X3] alternate-copy sweep + inner refs-2.bib continuity
+  check (note-class vs `798d1dd4…`, era-ambiguous by design — the tree's
+  refs-2.bib is the evolving canonical per the Task-73 relay). Decision
+  matrix: recover (git-held or alternate-copy certified bytes → re-run,
+  expect 8/8) vs supersede (77c re-anchors the pins from the operator's
+  in-band hash acts — this paste already attests `a764eb1f…` at §3 grade
+  — re-cutting all three pin-embed sites together: the generator's
+  INTAKE_FILES, INDEX.md §2, the consolidate script's PINNED table; then
+  battery + consolidation re-run). No re-pin on "these are the bytes that
+  are there" without the provenance act — GUP.
+- POINT-2 ANSWERED (R2 stage-2, query "I guess you mean this very
+  response?"): NO — the quoted note classified the operator's INSTRUCTION
+  (running the consolidation = stage 1); stage 2 is a byte-motion into
+  `references/white-paper-relay/` (§5-ratified home) with two
+  operator-electable channels: (a) operator-direct commit+push, witness
+  verifies at the next bootstrap pull against the recorded pins; (b)
+  transmit → witness pin-verify → deposit → rides the next kit. "Your
+  election" = operator's choice of channel and timing — both channels
+  originate operator-side; the witness holds none of the 8 (re-verified
+  this boundary). This response executes NEITHER stage — stage 1 itself
+  now stands 0/8 gated on the adjudication above.
+- SCOPE NOTES (fail-visible): no kit this round (operator push-hold
+  respected; this commit rides the next kit bundle, 76a precedent);
+  INDEX.md §4 row appended VIA THE GENERATOR (named-tool law — a manual
+  §4 append would be erased on the next regen; the generator's §4-row
+  writer + checker regex extended to 77b in the same act); no sessions/
+  rows (manifest 35/35); draft-3.1 byte-untouched (`9b326af7…`). The C0
+  source-tree line's doubled slash (`4ndr0666//gpt`) is cosmetic — a
+  trailing slash in the operator's PROD_PATH export; POSIX-equivalent,
+  no action.
