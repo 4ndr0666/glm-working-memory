@@ -533,6 +533,7 @@ artifact-index matrix and the decisions ledger.
 | 74a | `gwm-task74a-license-0d44bca-872a597` kit (apply-push) | DONE — round-trip closed by observation (origin/main == 872a597 at Task-75 open) |
 | 74 (umbrella, in-bound) | arxiv-anc / anchor-staging / release-assets / repo-surface-pin-snapshot / checklist / release-notes (task74-kit staging) | L2-surface + release-asset class, operator-optional (Task-74a commit note) |
 | 75 | `gwm-task75-SUK.sh` (+ `gwm-task75-gwm-872a597-<head7>` trio fallback) | THIS ROUND — the emissions-index round; kit + battery pins printed at emission |
+| 76 | `gwm-task76-SUK.sh` (+ `gwm-task76-gwm-7605226-<head7>` trio fallback) | THIS ROUND — the state-resync boundary; kit + battery pins printed at emission |
 
 ## 5. Provenance pins (source attachments, 2026-10-29)
 
@@ -564,3 +565,36 @@ sight; counts machine-asserted against the footers at generation time
 5. **Session archives**: `sessions/MANIFEST.sha256` governs transcripts; this
    file governs emissions; `worklog.md` (root, born Task 75) governs boundary
    bootstraps and round records.
+
+## 7. Addendum — published-remote custody verification (Task 76, 2026-10-30)
+
+Append-only annotation; §1–§5 stand as-registered (ground truth: operator
+INDEX attachment 2026-10-29). This section records what the Task-76
+state-resync probes established about the REGISTERED surfaces, without
+altering a single row:
+
+- **Published gpt tree ≠ indexed tree.** `github.com/4ndr0666/gpt` @
+  `e490a377` carries exactly ONE of the 58 §3 files
+  (`4NDR0MEDA-articulation_v1.0.md`, added at gpt `593c55c`); a
+  full-tree basename search over all 617 files at that tip returns zero
+  hits for the other 57. The 58-file tree exists only in the operator's
+  LOCAL gpt clone.
+- **Custody classification (machine-derived, recomputable via
+  `scripts/task76_resync_check.py`):** 22/58 durable (21 DURABLE-REPO +
+  1 DURABLE-GPT) — 36/58 LOCAL-ONLY (no copy in this repo, the published
+  gpt tree, or the published 4NDR0MEDA tree).
+- **GUP-critical subset (pins not repo-recomputable while bytes stay
+  operator-side):** `paper-2-v1.6.1-source.tar.gz` (99913db3…),
+  `paper-2-v1.6-to-v1.6.1.changes` (778f9ac2…), `refs-2.bib`
+  (798d1dd4…), `round5.2-counters-v1.md` (def5d3b1…) + `.sha256`,
+  `round5.4-counters-v1.md` (8c3f0497…) + `.sha256`,
+  `paper-2-arxiv-metadata.md` (0ef99398…). Detail + recommendations:
+  `working-notes/state-resync-check-v1.md`.
+- **MEDA:** `2daac65` confirmed ancestor of published 4NDR0MEDA main
+  `55bea18c` (Task-73 apply landed; observation-class closure). The
+  published MEDA tree (44 files) is anonymously enumerable; §-coverage
+  for `$ANDROMEDA` still awaits the operator's choice of source per the
+  2026-10-29 ruling.
+- **Generator custody corrected:** `scripts/task75_build_index.py`
+  (named in §5) rode the repo for the first time in the Task-76 commit —
+  sha256 `f0dcf028…`.

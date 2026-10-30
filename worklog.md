@@ -59,3 +59,56 @@ governs boundary bootstraps and round records.
   pins printed at emission (round-record page + boundary transmission) per the
   no-self-reference rule (Task-51 precedent). Round-trip receipt appends here
   at the next boundary open.
+
+## [2026-10-30] Boundary open — Task 76 (trace 1a18b40bff7af6a5; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git pull --ff-only`
+  fast-forwarded `872a597..7605226` (Task-75 SUK applied operator-side; origin
+  advanced); HEAD `7605226`; working tree clean; manifest 34/34 OK; liveness
+  pins intact — draft-3.1 `9b326af7…`, tex-v2 `687c19d6…`, bib-v2 `18d1e05f…`.
+  Push probe: no r/w credentials in this runtime (fail-visible; production
+  pushes stay operator-hands per §10 — QUICK BOOT step 1 as-registered at
+  Task 75: "zero r/w git credentials").
+- TASK-75 ROUND-TRIP CLOSED (operator [G0]–[G5] paste-back, KIT RESULT GREEN
+  @ 76052268f1851fad5eb71406920cada766908540): pins re-verified witness-side —
+  G0 kit self `1343c7a9…` MATCH; G3 bundle `06e23452…` MATCH; G4 tree
+  `27381050…` MATCH; HEAD40 MATCH; origin/main == 7605226; true fast-forward
+  872a597..7605226; sessions manifest 34 OK inside the run. Receipt = this
+  entry.
+- OPERATOR PAYLOAD: the Task-75 paste-back; the 4NDR0MEDA state-resync offer
+  (white-paper tree shared once, 2026-10-29; "if you see something there that
+  needs to be in gwm-inbox to make the index whole, let me know"); the
+  one-day-return catch-up request; QUICK BOOT re-declared (steps 0–4, four-var
+  env block).
+- ROUND WORK (Task 76 — THE STATE-RESYNC BOUNDARY):
+  1. working-notes/state-resync-check-v1.md BORN — read-only blobless probes
+     of the two public operator remotes: gpt@e490a377 (published
+     white_paper/4NDR0MEDA = 1 of 58 files; full-tree basename search = zero
+     hits for the other 57 → the indexed tree exists ONLY in the operator's
+     local gpt clone); custody classification 22 durable / 36 LOCAL-ONLY;
+     GUP-critical subset = 8 pinned files whose record pins are not
+     repo-recomputable; MEDA 2daac65 CONFIRMED ANCESTOR of published main
+     55bea18c (Task-73 operator item 1 CLOSED BY OBSERVATION, D5-class);
+     $ANDROMEDA probe capability registered, rows still parked per the
+     2026-10-29 ruling; recommendations R1–R4 (push gpt = bulk custody;
+     relay the 8 pinned files via gwm-outbox → substrate deposit).
+  2. scripts/task76_resync_check.py BORN (repo-runnable recompute of the
+     classification) + scripts/task75_build_index.py committed — TASK-75
+     EMISSION DEFECT DISCHARGED (fail-visible): the Task-75 commit message
+     and emissions-index §5 named the generator at a repo path, but it never
+     rode the commit; the repo-recomputability claim was half-true until
+     now. Generator sha256 `f0dcf028…`.
+  3. Boards ×3 (ledger Task-76 entry; open-threads Task-76 section;
+     artifact-index matrix row 76 + tree refresh) + emissions-index §4 row
+     76 + §7 custody addendum (append-only).
+- SCOPE NOTES (fail-visible): PROJECT_STATE full rewrite still deferred to
+  session close per §5.2 (9 tasks stale — flagged in the catch-up); no
+  sessions/ rows ride (manifest 34/34); no MEDA-repo bytes ride (read-only
+  probes only); $ANDROMEDA index rows NOT added from the probe (ruling
+  respected — operator choice offered in-band).
+- EMISSION: gwm-task76 package — PRIMARY gwm-task76-SUK.sh (single-file kit,
+  SUK v1.2 form, D5 universe, four-var env block) + §10 trio FALLBACK +
+  round-record HTML + battery evidence; declared share file:///download/ +
+  download/task76-kit/. Kit/bundle/battery pins printed at emission
+  (no-self-reference rule). Round-trip receipt appends here at the next
+  boundary open.
