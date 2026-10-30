@@ -534,6 +534,7 @@ artifact-index matrix and the decisions ledger.
 | 74 (umbrella, in-bound) | arxiv-anc / anchor-staging / release-assets / repo-surface-pin-snapshot / checklist / release-notes (task74-kit staging) | L2-surface + release-asset class, operator-optional (Task-74a commit note) |
 | 75 | `gwm-task75-SUK.sh` (+ `gwm-task75-gwm-872a597-<head7>` trio fallback) | THIS ROUND — the emissions-index round; kit + battery pins printed at emission |
 | 76 | `gwm-task76-SUK.sh` (+ `gwm-task76-gwm-7605226-<head7>` trio fallback) | THIS ROUND — the state-resync boundary; kit + battery pins printed at emission |
+| 76a | `gwm-task76-kit-battery.txt` + `gwm-task76-round-record.html` + `gwm-task76-SHA256SUMS` (re-cut, 5-file) — completion of the Task-76 emission | RETRY (Task-76a) — delivery-defect + emission-incompleteness discharge; battery 85/85 GREEN; harness `scripts/task76_battery.sh` rides the repo; this row's commit rides the next kit bundle |
 
 ## 5. Provenance pins (source attachments, 2026-10-29)
 

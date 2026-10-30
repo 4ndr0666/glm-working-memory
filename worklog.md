@@ -112,3 +112,53 @@ governs boundary bootstraps and round records.
   download/task76-kit/. Kit/bundle/battery pins printed at emission
   (no-self-reference rule). Round-trip receipt appends here at the next
   boundary open.
+
+## [2026-10-30] Boundary re-open — Task 76a emission retry (trace 1a18b66eb21ce659; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git pull --ff-only`
+  — already up to date; HEAD `ef6a4b8` (Task-76 round head, local; origin/main
+  still `7605226` — the task76 SUK awaits operator apply; pushes stay
+  operator-hands per §10); working tree clean at probe time; manifest 34/34 OK;
+  liveness pins intact — draft-3.1 `9b326af7…`, tex-v2 `687c19d6…`, bib-v2
+  `18d1e05f…`. Kit audit on the staged emission: 4 of 6 declared components
+  present (battery + round-record missing; SUMS at 3-of-5 coverage).
+- OPERATOR PAYLOAD: the delivery-defect complaint (verbatim substance: the
+  Task-76 emission was presented "with 0 dialog"; witness out of compliance;
+  "follow protocol and try again"); wrapper optimizations registered
+  operator-side; QUICK BOOT re-declared (steps 0–4, four-var env block,
+  measurement-problem rationale for prose-before-bootstrap = noise).
+- DEFECT REGISTRATION (fail-visible, two counts): (1) DELIVERY — the Task-76
+  boundary closed on a bare file presentation with zero dialog; the catch-up
+  narrative, emission declaration, and pin table never reached the operator;
+  (2) EMISSION INCOMPLETENESS — the declared six-file package staged only four
+  (battery evidence + round-record page absent, SUMS partial) while the
+  Task-76 worklog/ledger/threads/commit-message entries declared all six.
+- DISCHARGE (this boundary): kit directory completed to the Task-75 six-file
+  form. `gwm-task76-kit-battery.txt` BORN — 85/85 GREEN (P0 pin parse +
+  payload determinism [gzip level 9, mtime 0x6AE42E93, re-encode
+  byte-identical]; P1/P1b/P1c FRESH + push-leg + spaces-in-path; P2/P2b/P2c
+  stash legs incl. the identity-note phase; P3 fail-closed at a real ancestor;
+  P4a/P4b misdirection; P5 restricted-PATH; P6/P6b ALREADY + ADVANCED; P7
+  authoring-surface stability; P8 applied-tree content; RC corrupted-payload
+  red control). First full-form run 82/85 — three HARNESS-side trips (single-[
+  with `&&`; gzip mtime read from the gunzipped bundle instead of the gzip
+  stream; BRE `\( \)` group-escaping where literal parens were meant), ZERO
+  kit defects; fixed, re-run GREEN, trips disclosed. Round-record page cut
+  (re-issue disclosure card). SUMS re-cut to 5-file coverage. Battery harness
+  committed at `scripts/task76_battery.sh` (326 lines) — forensic note: an
+  UNFINISHED 210-line draft of the same harness was found at the VM workspace
+  scripts/ root, timestamped with the failed emission (05:43Z) — the boundary
+  died mid-execution, kit staged before its evidence existed; the draft is
+  scratch debris (R-59 class), superseded by the riding harness. The Task-75
+  harness never rode (scratch-only, R-59-lost) while its output shipped; that
+  gap closes here for this and future rounds.
+- EMISSION (re-issued complete): gwm-task76 package, six files, declared share
+  file:///download/ + download/task76-kit/. Kit/bundle/b64/battery/round-record
+  pins printed at emission — boundary transmission + round-record page +
+  SHA256SUMS, never here (no-self-reference rule, Task-51 precedent; form-fix
+  applied pre-emission: pin values initially embedded in this entry + ledger +
+  matrix row, stripped before the commit left the witness VM — the commit rode
+  no bundle and touched no remote). SUK range
+  7605226..ef6a4b8 unaffected (range-pinned, battery GREEN); this Task-76a
+  commit rides the NEXT kit bundle. Round-trip receipt appends here at the
+  next boundary open.
