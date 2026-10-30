@@ -32,7 +32,14 @@ already delivered into `$INBOX` (§4 maps tasks to kits). Names and counts are
 as-transmitted by the operator, 2026-10-29; witness-side mirrors live in
 `download/` (declared share) and the repo's canonical homes.
 
-## 1. `$INBOX` — witness→operator deliveries (219 files, 14 series)
+## 1. `$INBOX` — witness→operator deliveries (240 files, 15 series)
+
+Count as of Task 77 (2026-10-31): the 2026-10-29 operator INDEX snapshot
+registered 219 files (series 1.1–1.14); series 1.15 appends the post-snapshot
+emission rounds (Tasks 75–77) whose files were staged on the declared share
+after that snapshot and ride the operator's next INDEX reconciliation
+(INDEX.md itself — the registry born Task 77 — is registered in INDEX.md
+§1.16, not double-counted here).
 
 ### 1.1 GWM task-range kits — 83 files
 
@@ -351,6 +358,43 @@ Canonical substrate documents delivered as copies for operator-side reference: P
 ├── tracker-dark-closure-v1.md
 ```
 
+### 1.15 Post-snapshot emission rounds (Tasks 75–77) — 21 files
+
+Emissions staged on the declared share (`file:///download/`, per-round
+`taskNN-kit/` / `task77-index/` subdirectories) after the operator's
+2026-10-29 INDEX snapshot; copy into `$INBOX` at reconciliation if not
+already present. Per-round custody status: Task 75 kit APPLIED + PUSHED
+(origin/main reached `7605226`); Task 76/76a kit WITHDRAWN un-applied
+(fails closed at the advanced head by design — files retained as audit
+evidence of the 76a discharge; never run); Task 76b kit LIVE staged (base
+`18518e8`, awaiting operator apply); Task 77 emission = the INDEX-
+consolidation round (registry + intake tooling; no kit — the commit rides
+the next kit bundle per the 76a precedent).
+
+```
+├── gwm-inbox-consolidate-v1.sh
+├── gwm-task75-SHA256SUMS
+├── gwm-task75-SUK.sh
+├── gwm-task75-gwm-872a597-7605226.bundle
+├── gwm-task75-gwm-872a597-7605226.bundle.b64
+├── gwm-task75-kit-battery.txt
+├── gwm-task75-round-record.html
+├── gwm-task76-SHA256SUMS
+├── gwm-task76-SUK.sh
+├── gwm-task76-gwm-7605226-ef6a4b8.bundle
+├── gwm-task76-gwm-7605226-ef6a4b8.bundle.b64
+├── gwm-task76-kit-battery.txt
+├── gwm-task76-round-record.html
+├── gwm-task76b-SHA256SUMS
+├── gwm-task76b-SUK.sh
+├── gwm-task76b-gwm-18518e8-7f2e968.bundle
+├── gwm-task76b-gwm-18518e8-7f2e968.bundle.b64
+├── gwm-task76b-kit-battery.txt
+├── gwm-task76b-round-record.html
+├── gwm-task77-SHA256SUMS
+├── gwm-task77-consolidate-battery.txt
+```
+
 ## 2. `gwm-outbox` — operator-held source & reference material (9 files)
 
 Material the operator placed for witness ingestion (podcast relays, external
@@ -536,6 +580,7 @@ artifact-index matrix and the decisions ledger.
 | 76 | `gwm-task76-SUK.sh` (+ `gwm-task76-gwm-7605226-<head7>` trio fallback) | THIS ROUND — the state-resync boundary; kit + battery pins printed at emission |
 | 76a | `gwm-task76-kit-battery.txt` + `gwm-task76-round-record.html` + `gwm-task76-SHA256SUMS` (re-cut, 5-file) — completion of the Task-76 emission | RETRY (Task-76a) — delivery-defect + emission-incompleteness discharge; battery 85/85 GREEN; harness `scripts/task76_battery.sh` rides the repo; this row's commit rides the next kit bundle |
 | 76b | `gwm-task76b-SUK.sh` (+ `gwm-task76b-gwm-18518e8-<head7>` trio fallback) + `gwm-task76b-kit-battery.txt` + `gwm-task76b-round-record.html` + `gwm-task76b-SHA256SUMS` | RE-CUT (Task-76b) — sync confirmation + re-anchor round; supersedes the task76 kit (`gwm-task76-gwm-7605226-ef6a4b8` trio WITHDRAWN un-applied — unappliable at the operator's advanced head `18518e8`, fail-closed by design; its download/ directory remains as audit evidence, and the 76a completion files therein remain valid evidence of that round); base re-anchored onto the operator's session-017 snapshot; PROJECT_STATE fully rewritten; `scripts/build_suk.py` born; battery harness parametrized |
+| 77 | `INDEX.md` (the registry itself — registered INDEX.md §1.16, not double-counted in §1 here) + `gwm-inbox-consolidate-v1.sh` + `gwm-task77-consolidate-battery.txt` + `gwm-task77-SHA256SUMS` | THIS ROUND — the INDEX-consolidation round: canonical INDEX.md of $GWM-INBOX born (repo root, §5 homed at PROTOCOL v1.6.1; generator `scripts/build_inbox_index.py` rides); intake queue = the GUP-critical 8 with pin-verified consolidation; no kit this round (operator push-hold respected) — this row's commit rides the next kit bundle (76a precedent) |
 
 ## 5. Provenance pins (source attachments, 2026-10-29)
 

@@ -1,4 +1,4 @@
-# Engagement Protocol — v1.6.0
+# Engagement Protocol — v1.6.1
 
 ## 1. Collaboration model
 Adversarial collaboration. Either party may propose; the other stress-tests.
@@ -37,7 +37,13 @@ no sycophancy, in either direction.
 - Canonical homes (single source of truth per content type):
   findings → working-notes/findings.md; pending work → working-notes/
   open-threads.md; state → working-notes/PROJECT_STATE.md; decisions →
-  working-notes/decisions-ledger.md. Root contains only canonical, stable
+  working-notes/decisions-ledger.md; boundary journal → worklog.md
+  (root; born Task 75, homed here retroactively at v1.6.1 — the drift is
+  registered, closing it now rather than leaving the board un-homed);
+  emission registry → working-notes/emissions-index.md (Task 75, homed
+  here at v1.6.1, same retroactive registration); $GWM-INBOX registry →
+  INDEX.md (root; born Task 77 — the operator-side $GWM-INBOX mirror is a
+  copy, never the original). Root contains only canonical, stable
   documents. New content types get a canonical home assigned in this
   section BEFORE first use — never after drift is discovered.
 

@@ -227,3 +227,96 @@ governs boundary bootstraps and round records.
   declared share file:///download/ + download/task76b-kit/. Kit/bundle/
   battery pins printed at emission (no-self-reference rule). Round-trip
   receipt appends here at the next boundary open.
+
+## [2026-10-31] Boundary open — Task 77 · THE INDEX-CONSOLIDATION ROUND (trace 1a18ec4bf6f45179; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): pull CLEAN —
+  origin/main UNCHANGED at `18518e8` (no new operator snapshot since the
+  76b re-anchor); the witness stands ahead 3 un-applied (`daa737d` Task 76,
+  `b935023` Task 76a, `7f2e968` Task 76b — the stack the live task76b kit
+  carries, awaiting operator apply under the push-hold); tree clean, stash
+  empty. Manifest **35/35 OK**; liveness trio intact (draft-3.1
+  `9b326af7…`, tex-v2 `687c19d6…`, bib-v2 `18d1e05f…`).
+- OPERATOR PAYLOAD: five points + a mandate. (1) epistemic sync clarified —
+  4NDR0MEDA-in-context = `$PROD_PATH/gpt/documentation/white_paper/4NDR0MEDA`,
+  a LOCAL repo never uploaded, shown solely for INDEX consolidation; the
+  standing instruction: identify any files there (and in gwm-outbox /
+  $GLM-WORKING-MEMORY) that the witness needs in $GWM-INBOX; the INDEX
+  feature exists to hold the witness accountable for knowing what file
+  exists 100% of the time when instructing operator commands. (2)
+  operational sync acknowledged repaired. (3) PROJECT_STATE.md rewrite —
+  "ok?" (deferred to the witness). (4) build_suk.py — "isn't this what the
+  andr0666-engineering skill is for?" (5) battery parametrized — same
+  question. MANDATE: nothing pushed until the canonical INDEX.md of
+  $GWM-INBOX is confirmed and agreed; provide the copy commands that
+  finalize the canonical iteration; the witness utilizes and maintains
+  INDEX.md from now on.
+- ROUND WORK (Task 77 — the INDEX birth + consolidation):
+  1. **INDEX.md BORN** (repo root — canonical home assigned PROTOCOL §5
+     v1.6.1 BEFORE first use, per the section's own law): §0 contract
+     (command-eligibility rule: a file is either an INDEX row or a repo
+     file, else it does not exist for command purposes); §1 canonical set —
+     240 witness-emission files across 15 series + the registry itself =
+     241 entries (series 1.1–1.14 = the operator's 219-file 2026-10-29
+     snapshot; series 1.15 = post-snapshot emission rounds Tasks 75–77,
+     21 files, per-round custody status); §2 intake queue = the
+     GUP-critical 8 with full 64-char pins; §3 adjacent surfaces
+     (gwm-outbox / repo / gpt-tree balance / $ANDROMEDA — registered as
+     NOT inbox residents); §4 append-only maintenance log. Deterministic
+     generator `scripts/build_inbox_index.py` rides the repo (named-tool
+     law): parses the emissions-index boards, cross-checks the §4 rows
+     against the in-script registries, fail-closes on any drift; two runs
+     byte-identical.
+  2. **emissions-index updated**: §1 count 219→240 via series 1.15
+     (Tasks 75–77, as-of note; INDEX.md itself not double-counted —
+     registered INDEX.md §1.16); §4 row 77 appended (same-commit rule).
+  3. **gwm-inbox-consolidate-v1.sh** (repo `scripts/` + emission): the
+     operator-side, zero-decision intake executor — copies the
+     GUP-critical 8 from the gpt white-paper tree into $GWM-INBOX,
+     pin-verifies every copied byte against the repo digests of record,
+     idempotent (ALREADY-CONSOLIDATED class), fail-closed at missing
+     source / pin mismatch (mismatched copies rolled back; pre-existing
+     files never touched). Battery `scripts/task77_consolidate_battery.sh`
+     rides; FIRST RUN RED — caught a real defect (`$GWM-INBOX` in two echo
+     lines parsed as unbound `$GWM` under `set -u`; battery-first
+     discipline caught it pre-delivery); fixed; re-run **10/10 GREEN**.
+     Scope note (fail-visible): the real-pin COPIED+VERIFIED and
+     ALREADY-CONSOLIDATED paths require the certified operator-held bytes
+     and exercise at the operator's run — paste-back of the [C5]/[C6]
+     lines closes them.
+  4. **PROTOCOL.md v1.6.0 → v1.6.1**: §5 canonical homes extended —
+     worklog.md and emissions-index.md homed RETROACTIVELY (their Task-75
+     births never got §5 rows: the drift is registered here, closed now
+     rather than left un-homed), INDEX.md homed BEFORE first use; the
+     operator-side $GWM-INBOX/INDEX.md declared a copy, never the
+     original.
+  5. **Answers to operator points 3–5** ride the boundary transmission:
+     PROJECT_STATE (yes — §5.2 discipline, executed at 76b, ratified by
+     your kit apply, next full rewrite at session close); build_suk.py and
+     the parametrized battery (the andr0666-engineering skill is the SUK
+     v1.2 SPECIFICATION — its own A10/Part IV/Part V MANDATE a persisted
+     builder and a persisted re-runnable battery; the repo scripts are
+     those mandated artifacts made durable where the record can hold
+     them — the skill lives in the ephemeral VM skill store, outside the
+     substrate and invisible to GUP; spec ≠ implementation, and the skill
+     itself is the law that says so).
+- SCOPE NOTES (fail-visible): no kit this round — the operator's push-hold
+  is respected; this commit rides the NEXT kit bundle (76a precedent), and
+  the task76b kit remains the live staged delivery. No session rows
+  (manifest 35/35 unchanged; archives ride operator snapshots only, §5.1).
+  INDEX.md's own sha256 prints at emission surfaces only (no-self-reference
+  rule). $ANDROMEDA rows still parked pending the operator's source ruling.
+  **CWD INCIDENT (second of the class, repaired in-round):** the first
+  worklog-append heredoc executed against the VM workspace root
+  (`/home/z/my-project/worklog.md` — the multi-agent shared log, NOT this
+  journal) because the shell cwd resets between tool calls; 84 lines
+  landed in the wrong file; repaired immediately (stray truncated back to
+  its pre-incident 753 lines, byte-identical + mode restored, platform
+  git clean) and the entry re-appended against the repo path. Every
+  board-append now opens with an explicit `cd <repo>` — the 76a amend
+  incident's lesson re-applied and hardened.
+- EMISSION: file:///download/task77-index/ — INDEX.md +
+  gwm-inbox-consolidate-v1.sh + gwm-task77-consolidate-battery.txt +
+  gwm-task77-SHA256SUMS (three-file coverage; SUMS excluded from itself).
+  Emission pins printed in the boundary transmission. Round-trip receipt
+  appends here at the next boundary open.
