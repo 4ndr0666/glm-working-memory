@@ -168,3 +168,38 @@ order:
 - Task-75 paste-back pins re-verified witness-side: SUK `1343c7a9…`,
   bundle `06e23452…`, tree `27381050…`, HEAD40 `76052268f1851…` — all
   MATCH; round-trip CLOSED.
+
+## 9. Addendum — operator ruling on R1; sync confirmation (Task 76b, 2026-10-30)
+
+Append-only; §0–§8 stand as-written. The operator's 3rd-resync-attempt
+boundary transmission (verbatim substance): "Realizing the gpt repo which
+houses 4NDR0MEDA is not and will not be uploaded is a sign you are back in
+sync. Let me know otherwise; all tasks pending until sync is confirmed."
+
+- **R1 WITHDRAWN (operator ruling).** §6's R1 (commit + push the local gpt
+  clone) is rejected by the operator: the gpt repository is not and will not
+  be uploaded. The recommendation class is closed — not deferred, not
+  parked: overruled.
+- **Custody stance, re-registered under the ruling.** The 36 LOCAL-ONLY
+  files of §2 are local-only **by operator choice**, which is a standing
+  state, not an open defect. §1's finding (published gpt tree ≠ indexed
+  tree; 57 of 58 never pushed) is **permanent truth** under this ruling,
+  not a transient gap awaiting a push.
+- **The GUP-critical 8 (§3): R2 relay is now the only custody path.** With
+  R1 withdrawn, the eight record pins that are not repo-recomputable can
+  only gain recomputability via the gwm-outbox relay (operator transmits;
+  witness pin-verifies; deposits under a §5-ratified canonical home). If the
+  operator declines R2 as well, the pins remain operator-held by choice and
+  the emissions-index rows stand as name-level registrations of
+  operator-custodied bytes — the honest ceiling, now by ruling rather than
+  by accident.
+- **Sync state at this boundary:** epistemic sync CONFIRMED (this ruling
+  registered; the fresh snapshot `18518e8` — session-017 archive, manifest
+  34→35 — pulled and ingested as the springboard of record). Operational
+  sync REPAIRED in the same round: the witness clone had diverged (local
+  Task-76/76a commits vs. the operator's snapshot advance); the rounds were
+  rebased onto `18518e8` (old heads preserved under the
+  `task76-pre-reanchor-*` / `task76a-pre-reanchor-*` tags for audit), and
+  the delivery kit was re-cut against the new base — the prior kit
+  (`7605226..ef6a4b8`) would have failed closed at the operator's advanced
+  head, by design, never by force.

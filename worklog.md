@@ -162,3 +162,68 @@ governs boundary bootstraps and round records.
   7605226..ef6a4b8 unaffected (range-pinned, battery GREEN); this Task-76a
   commit rides the NEXT kit bundle. Round-trip receipt appends here at the
   next boundary open.
+
+## [2026-10-30] Boundary open — Task 76b · THE SYNC-CONFIRMATION + RE-ANCHOR ROUND (trace 1a18ba540c206721; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git pull --ff-only`
+  FAILED AS DESIGNED — origin/main advanced `7605226..18518e8` (the
+  operator's fresh session snapshot) while the witness held two un-applied
+  local rounds; branches diverged (local ahead 2 / behind 1). Registered
+  fail-visible, never force-pulled. Snapshot `18518e8` = "[Session
+  Snapshot]: 2nd resync attempt failed, this marks the 3rd…" carrying ONE
+  new file: `sessions/2026-10-30_session-017_2nd_attempted_resync_post_
+  index_upload.md` (1,851 lines; the archive of this conversation's turns
+  including the AFT-1-violating openings of the failed attempts and the
+  Task-76a retry delivery) + manifest row 35 (34→35). Post-repair manifest
+  **35/35 OK**; liveness trio intact (draft-3.1 `9b326af7…`, tex-v2
+  `687c19d6…`, bib-v2 `18d1e05f…`).
+- OPERATOR PAYLOAD: the sync declaration — "you are still out of sync"; the
+  fresh snapshot designated "the main springboard for backcasting for
+  systematic cohesion"; the gpt ruling — "Realizing the gpt repo which
+  houses 4NDR0MEDA is not and will not be uploaded is a sign you are back
+  in sync. Let me know otherwise; all tasks pending until sync is
+  confirmed." QUICK BOOT re-declared. Out-of-band sighting: a CodeQL
+  workflow badge for a `scr` repository rode outside the START/END
+  delimiters — rejected per §3, registered, not adjudicated.
+- SYNC STATE (the round's answer): EPISTEMIC SYNC CONFIRMED — the gpt
+  ruling is registered (R1 WITHDRAWN; the 36 LOCAL-ONLY white-paper files
+  are operator-custodied BY CHOICE, a standing state not an open defect;
+  the GUP-critical 8 gain recomputability only via the R2 relay if the
+  operator elects it — state-resync-check-v1.md §9 addendum). OPERATIONAL
+  SYNC REPAIRED — the divergence discharged by re-anchor: local rounds
+  rebased onto the snapshot (Task 76 `ef6a4b8→daa737d`, Task 76a
+  `8d68325→b935023`; old heads preserved under the `task76-pre-reanchor-*`
+  and `task76a-pre-reanchor-*` tags for audit; boards byte-carried). The
+  prior task76 kit (`7605226..ef6a4b8`) is WITHDRAWN un-applied — it would
+  fail closed at the operator's advanced head (neither BASE nor TIP nor
+  descendant), by design; its directory remains in download/ as audit
+  evidence of the 76a discharge; the 76a completion files (battery,
+  round-record, SUMS) remain valid evidence of that round.
+- ROUND WORK (Task 76b — backcasting for systematic cohesion, per the
+  operator's designation of the snapshot as springboard):
+  1. working-notes/PROJECT_STATE.md FULLY REWRITTEN (the §5.2 discipline
+     discharged: 11 rounds of staleness cleared — Task-68 through 76a
+     registered; delivery-medium evolution, board topology, defect classes,
+     the gpt ruling, the re-anchor precedent, and the continuity-economics
+     assessment all ride; witness drafts, operator approves by kit apply).
+  2. state-resync-check-v1.md §9 addendum (the gpt ruling + sync state).
+  3. scripts/build_suk.py BORN — the SUK builder now rides the repo
+     (closing the last not-ridden tool class: kits were previously
+     assembled by scratch-lost ad-hoc builders).
+  4. scripts/task76_battery.sh PARAMETRIZED (ROUND env; manifest count
+     and range-commit-count derived from the witness tree rather than
+     hardcoded) — one harness, every round.
+  5. Boards ×4 (this entry + ledger + threads + matrix row 76b) +
+     emissions-index §4 row 76b (same-commit rule).
+- SCOPE NOTES (fail-visible): the rebase rewrote the two un-applied local
+  commits (new SHAs; old heads tag-preserved; no remote ever held the old
+  SHAs); no sessions/ rows ride beyond the operator's own snapshot row
+  (manifest 35/35 unchanged by this commit); draft-3.1 byte-untouched
+  (`9b326af7…`); $ANDROMEDA rows still parked pending the operator's
+  source ruling.
+- EMISSION: gwm-task76b package — PRIMARY gwm-task76b-SUK.sh (range
+  `18518e8..` this round's head; SUK v1.2 form; D5 universe; four-var env
+  block) + §10 trio FALLBACK + round-record HTML + battery evidence;
+  declared share file:///download/ + download/task76b-kit/. Kit/bundle/
+  battery pins printed at emission (no-self-reference rule). Round-trip
+  receipt appends here at the next boundary open.

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-# scripts/task76_battery.sh — pre-ship battery for the gwm-task76 SUK
+# scripts/task76_battery.sh — pre-ship battery for gwm-taskNN SUK kits
 #
 # Task 76a (emission-retry boundary, 2026-10-30). Born because the Task-75
 # battery harness never rode the repo (scratch-only, R-59-lost) while its
@@ -8,8 +8,13 @@
 # defect class the Task-76 round discharged for the index generator. This
 # harness rides scripts/ so the battery evidence is repo-recomputable.
 #
+# Task 76b (sync-confirmation round, 2026-10-30): PARAMETRIZED. The round
+# label, pin values, manifest count, and range-commit count are read from the
+# kit and the witness tree — one harness, every round of the 76 lineage
+# (ROUND=76, 76a-retry evidence, 76b re-cut, and successors).
+#
 # USAGE:
-#   bash scripts/task76_battery.sh <path-to-gwm-task76-SUK.sh> \
+#   ROUND=76b bash scripts/task76_battery.sh <path-to-gwm-taskNN-SUK.sh> \
 #        <kit-dir-with-loose-bundle> <witness-clone>
 #
 # What it does (72 checks, task75 battery form):
@@ -47,6 +52,7 @@ set -uo pipefail
 SUK="${1:-/home/z/my-project/download/task76-kit/gwm-task76-SUK.sh}"
 KIT_DIR="${2:-/home/z/my-project/download/task76-kit}"
 WITNESS="${3:-/home/z/my-project/clone/4ndr0666/glm-working-memory}"
+ROUND="${ROUND:-76}"
 
 PASS=0; FAIL=0
 ok()  { PASS=$((PASS+1)); printf 'PASS  %s\n' "$1"; }
@@ -62,7 +68,11 @@ chkout() { # chkout <label> <grep-pattern> <file>
 SUK="$(cd "$(dirname "$SUK")" && pwd)/$(basename "$SUK")"
 KIT_DIR="$(cd "$KIT_DIR" && pwd)"
 WITNESS="$(cd "$WITNESS" && pwd)"
-LOOSE="$KIT_DIR/gwm-task76-gwm-7605226-ef6a4b8.bundle"
+# loose-bundle name derived from the kit's own pins (gwm-taskNN-gwm-<base7>-<tip7>)
+_PB0="$(sed -n 's/^PIN_BASE="\([0-9a-f]\{40\}\)"$/\1/p' "$SUK" | head -1)"
+_PT0="$(sed -n 's/^PIN_TIP="\([0-9a-f]\{40\}\)"$/\1/p' "$SUK" | head -1)"
+[ -n "$_PB0" ] && [ -n "$_PT0" ] || { echo "battery: cannot parse PIN_BASE/PIN_TIP from $SUK"; exit 2; }
+LOOSE="$KIT_DIR/gwm-task${ROUND}-gwm-${_PB0:0:7}-${_PT0:0:7}.bundle"
 B64TWIN="$LOOSE.b64"
 [ -f "$SUK" ] || { echo "battery: SUK not found: $SUK"; exit 2; }
 [ -f "$LOOSE" ] || { echo "battery: loose bundle not found: $LOOSE"; exit 2; }
@@ -70,7 +80,7 @@ B64TWIN="$LOOSE.b64"
 
 SCRATCH_ROOT="$(mktemp -d /tmp/task76-battery.XXXXXX)"
 echo "=================================================================="
-echo "TASK-76 SUK BATTERY — $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+echo "TASK-${ROUND} SUK BATTERY — $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 echo "kit: $SUK"
 echo "witness clone (authoring surface, P7-guarded): $WITNESS"
 echo "scratch: $SCRATCH_ROOT"
@@ -92,6 +102,10 @@ PWLOG="$(sed -n 's/^PIN_WORKLOG_SHA="\(.*\)"$/\1/p' "$SUK")"
 PSRC="$(sed -n 's/^PIN_STATE_RESYNC_SHA="\(.*\)"$/\1/p' "$SUK")"
 PG75="$(sed -n 's/^PIN_TASK75_GEN_SHA="\(.*\)"$/\1/p' "$SUK")"
 PC76="$(sed -n 's/^PIN_TASK76_CHK_SHA="\(.*\)"$/\1/p' "$SUK")"
+PBAT="$(sed -n 's/^PIN_TASK76_BATTERY_SHA="\(.*\)"$/\1/p' "$SUK")"
+PSTATE="$(sed -n 's/^PIN_PROJECT_STATE_SHA="\(.*\)"$/\1/p' "$SUK")"
+EXPECT_RANGE="$(git -C "$WITNESS" rev-list --count "$PB..$PT" 2>/dev/null || echo 1)"
+EXPECT_OK="$(grep -c '^[0-9a-f]\{64\}' "$WITNESS/sessions/MANIFEST.sha256" 2>/dev/null || echo 0)"
 
 chk "P0 pin parse (base/tip 40-hex, distinct)" bash -c "[[ '$PB' =~ ^[0-9a-f]{40}$ && '$PT' =~ ^[0-9a-f]{40}$ && '$PB' != '$PT' ]]"
 chk "P0 tree pin parse (40-hex)" bash -c "[[ '$PTT' =~ ^[0-9a-f]{40}$ ]]"
@@ -146,11 +160,11 @@ chk "P1-pre scratch clean" bash -c "[ -z \"\$(git -C '$S1' status --porcelain)\"
 
 L1="$SCRATCH_ROOT/p1.log"; run_kit "$S1" "$L1"; RC1=$?
 chk "P1 rc=0" bash -c "[ $RC1 -eq 0 ]"
-chkout "P1 GREEN line" "KIT RESULT: GREEN (Task-76 applied @ $PT)" "$L1"
+chkout "P1 GREEN line" "KIT RESULT: GREEN (Task-${ROUND} applied @ $PT)" "$L1"
 chkout "P1 push DEFERRED (no origin)" "PUSH DEFERRED" "$L1"
 chkout "P1 mode FRESH" "mode: FRESH" "$L1"
 chk "P1 HEAD == tip" bash -c "[ \"\$(git -C '$S1' rev-parse HEAD)\" = '$PT' ]"
-chk "P1 exactly one applied commit" bash -c "[ \$(git -C '$S1' rev-list --count '$PB..$PT') -eq 1 ]"
+chk "P1 applied-commit count == witness-derived range ($EXPECT_RANGE)" bash -c "[ \$(git -C '$S1' rev-list --count '$PB..$PT') -eq $EXPECT_RANGE ]"
 chk "P1 emissions-index worktree pin" bash -c "[ \"\$(sha256sum '$S1/working-notes/emissions-index.md' | sed 's/ .*//')\" = '$PEMI' ]"
 chk "P1 worklog worktree pin" bash -c "[ \"\$(sha256sum '$S1/worklog.md' | sed 's/ .*//')\" = '$PWLOG' ]"
 chk "P1 state-resync worktree pin" bash -c "[ \"\$(sha256sum '$S1/working-notes/state-resync-check-v1.md' | sed 's/ .*//')\" = '$PSRC' ]"
@@ -188,7 +202,7 @@ echo "untracked witness note" > "$S2/wip-note.txt"
 L2="$SCRATCH_ROOT/p2.log"; run_kit "$S2" "$L2"; RC2=$?
 chk "P2 rc=0 (dirty apply)" bash -c "[ $RC2 -eq 0 ]"
 git -C "$S2" stash list > "$SCRATCH_ROOT/p2-stashlist.txt" 2>/dev/null
-chkout "P2 kit-brand stash" "gwm-task76 WIP backup" "$SCRATCH_ROOT/p2-stashlist.txt"
+chkout "P2 kit-brand stash" "gwm-task${ROUND} WIP backup" "$SCRATCH_ROOT/p2-stashlist.txt"
 chk "P2 RESTORE-INSTRUCTIONS on disk" bash -c "ls '$S2'/.git/kit-backups/*/RESTORE-INSTRUCTIONS.txt >/dev/null 2>&1"
 chk "P2 WIP contained in stash (tracked)" bash -c "git -C '$S2' diff --name-only 'stash@{0}^1' 'stash@{0}' | grep -q '^TODO.md$'"
 chk "P2 untracked WIP contained (stash^3)" bash -c "git -C '$S2' show 'stash@{0}^3:wip-note.txt' | grep -q 'untracked witness note'"
@@ -204,7 +218,7 @@ mkscratch "$S2B" "$PB"
 echo "OPERATOR LOCAL EDIT ON WORKLOG — differs from delivered" >> "$S2B/worklog.md"
 L2B="$SCRATCH_ROOT/p2b.log"; run_kit "$S2B" "$L2B"; RC2B=$?
 chk "P2b rc=0 (collision apply)" bash -c "[ $RC2B -eq 0 ]"
-chk "P2b stash preserved (never auto-dropped)" bash -c "git -C '$S2B' stash list | grep -q 'gwm-task76 WIP backup'"
+chk "P2b stash preserved (never auto-dropped)" bash -c "git -C '$S2B' stash list | grep -q 'gwm-task${ROUND} WIP backup'"
 chk "P2b stashed bytes recoverable (stash@{0}:worklog.md)" bash -c "git -C '$S2B' show 'stash@{0}:worklog.md' | grep -q 'OPERATOR LOCAL EDIT ON WORKLOG'"
 chk "P2b delivered worklog.md intact (== pin)" bash -c "[ \"\$(sha256sum '$S2B/worklog.md' | sed 's/ .*//')\" = '$PWLOG' ]"
 
@@ -285,16 +299,19 @@ A="$S1"
 chk "P8 state-resync-check-v1.md exists post-apply" bash -c "[ -f '$A/working-notes/state-resync-check-v1.md' ]"
 chk "P8 task75 generator rides (sha pin)" bash -c "[ \"\$(sha256sum '$A/scripts/task75_build_index.py' | sed 's/ .*//')\" = '$PG75' ]"
 chk "P8 task76 checker rides (sha pin)" bash -c "[ \"\$(sha256sum '$A/scripts/task76_resync_check.py' | sed 's/ .*//')\" = '$PC76' ]"
+chk "P8 battery harness rides (sha pin, parametric form)" bash -c "[ \"\$(sha256sum '$A/scripts/task76_battery.sh' | sed 's/ .*//')\" = '$PBAT' ]"
 chkout "P8 emissions-index §7 custody addendum present" "Addendum — published-remote custody verification" "$A/working-notes/emissions-index.md"
-chkout "P8 emissions-index §4 row 76 present" "| 76 | " "$A/working-notes/emissions-index.md"
+chkout "P8 state-resync §9 gpt-ruling addendum present" "Addendum — operator ruling on R1" "$A/working-notes/state-resync-check-v1.md"
+chkout "P8 emissions-index §4 row ${ROUND} present" "| ${ROUND} | " "$A/working-notes/emissions-index.md"
 chkout "P8 emissions-index footer counts (219/9/58)" "219 files, 14 series" "$A/working-notes/emissions-index.md"
-chkout "P8 worklog Task-76 boundary record present" "Boundary open — Task 76" "$A/worklog.md"
-chkout "P8 artifact-index matrix row 76 present" "| 76 | " "$A/working-notes/artifact-index.md"
-chkout "P8 decisions-ledger Task-76 entry present" "## Task 76 (2026-10-30, trace 1a18b40bff7af6a5)" "$A/working-notes/decisions-ledger.md"
-chkout "P8 open-threads Task-76 section present" "### Task 76 (2026-10-30, trace 1a18b40bff7af6a5)" "$A/working-notes/open-threads.md"
-chk "P8 manifest self-consistency in applied tree (34 OK)" bash -c "[ \$(cd '$A' && sha256sum -c sessions/MANIFEST.sha256 2>/dev/null | grep -c ': OK') -eq 34 ]"
+chkout "P8 worklog Task-${ROUND} boundary record present" "Boundary open — Task ${ROUND}" "$A/worklog.md"
+chkout "P8 artifact-index matrix row ${ROUND} present" "| ${ROUND} | " "$A/working-notes/artifact-index.md"
+chkout "P8 decisions-ledger Task ${ROUND} entry present" "## Task ${ROUND} (" "$A/working-notes/decisions-ledger.md"
+chkout "P8 open-threads Task ${ROUND} section present" "### Task ${ROUND} (" "$A/working-notes/open-threads.md"
+chk "P8 PROJECT_STATE pin (applied == witness)" bash -c "[ \"\$(sha256sum '$A/working-notes/PROJECT_STATE.md' | sed 's/ .*//')\" = '$PSTATE' ]"
+chk "P8 manifest self-consistency in applied tree (${EXPECT_OK} OK)" bash -c "[ \$(cd '$A' && sha256sum -c sessions/MANIFEST.sha256 2>/dev/null | grep -c ': OK') -eq $EXPECT_OK ]"
 git -C "$A" log -1 --format=%s "$PT" > "$SCRATCH_ROOT/p8-subject.txt"
-chkout "P8 commit subject == Task 76 trace" "Task 76 (trace 1a18b40bff7af6a5)" "$SCRATCH_ROOT/p8-subject.txt"
+chkout "P8 commit subject == Task ${ROUND} trace" "Task ${ROUND} (trace " "$SCRATCH_ROOT/p8-subject.txt"
 
 # --- RC: red control (corrupted payload) ------------------------------------------------------
 RC_KIT="$SCRATCH_ROOT/rc-corrupted.sh"

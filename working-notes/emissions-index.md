@@ -535,6 +535,7 @@ artifact-index matrix and the decisions ledger.
 | 75 | `gwm-task75-SUK.sh` (+ `gwm-task75-gwm-872a597-<head7>` trio fallback) | THIS ROUND — the emissions-index round; kit + battery pins printed at emission |
 | 76 | `gwm-task76-SUK.sh` (+ `gwm-task76-gwm-7605226-<head7>` trio fallback) | THIS ROUND — the state-resync boundary; kit + battery pins printed at emission |
 | 76a | `gwm-task76-kit-battery.txt` + `gwm-task76-round-record.html` + `gwm-task76-SHA256SUMS` (re-cut, 5-file) — completion of the Task-76 emission | RETRY (Task-76a) — delivery-defect + emission-incompleteness discharge; battery 85/85 GREEN; harness `scripts/task76_battery.sh` rides the repo; this row's commit rides the next kit bundle |
+| 76b | `gwm-task76b-SUK.sh` (+ `gwm-task76b-gwm-18518e8-<head7>` trio fallback) + `gwm-task76b-kit-battery.txt` + `gwm-task76b-round-record.html` + `gwm-task76b-SHA256SUMS` | RE-CUT (Task-76b) — sync confirmation + re-anchor round; supersedes the task76 kit (`gwm-task76-gwm-7605226-ef6a4b8` trio WITHDRAWN un-applied — unappliable at the operator's advanced head `18518e8`, fail-closed by design; its download/ directory remains as audit evidence, and the 76a completion files therein remain valid evidence of that round); base re-anchored onto the operator's session-017 snapshot; PROJECT_STATE fully rewritten; `scripts/build_suk.py` born; battery harness parametrized |
 
 ## 5. Provenance pins (source attachments, 2026-10-29)
 
