@@ -41,14 +41,18 @@ GUP-class). This file's own sha256 prints at emission surfaces only
 
 ## §1 Canonical set — what MUST exist in $GWM-INBOX
 
-240 witness-emission files across 15 series
+246 witness-emission files across 15 series
 (series 1.1–1.14 = the operator's 2026-10-29 INDEX snapshot, 219
 files, as-registered emissions-index §1; series 1.15 = post-snapshot
 emission rounds staged on the declared share, reconciliation pending)
-plus this registry itself = **241 entries**. After the
+plus this registry itself = **247 entries**. After the
 §2 intake consolidates (8 files), the canonical
-post-consolidation population is **249
+post-consolidation population is **255
 entries**.
+
+The §2 consolidation EXECUTED operator-side on 2026-10-31 — 8/8
+pin-verified, [C6] GREEN; the canonical iteration is standing at
+**255 entries** in $GWM-INBOX.
 
 ### 1.1 GWM task-range kits — 83 files
 
@@ -339,13 +343,14 @@ entries**.
 ├── arxiv-submission-checklist-v1.md
 ```
 
-### 1.15 Post-snapshot emission rounds (Tasks 75–77) — 21 files
+### 1.15 Post-snapshot emission rounds (Tasks 75–78) — 27 files
 
 - Task 75: APPLIED + PUSHED (origin/main reached 7605226)
 - Task 76: WITHDRAWN — audit evidence of the 76a discharge; never run
-- Task 76b: LIVE STAGED — base 18518e8, awaiting operator apply
-- Task 77: EMITTED — share staging, ride-the-next-kit commit
-- Task 77c: EMITTED — same filenames re-staged with adjudicated pins (a764eb1f… / 037dbdd9… / 17b7d13b…); rides the next kit bundle
+- Task 76b: APPLIED + PUSHED — round-trip closed @ 7f2e968 (operator paste-back GREEN; session snapshot 6c8a76f rides above)
+- Task 77: EMITTED — files staged + verified 3/3 operator-side; commit riding the task78 kit
+- Task 77c: EMITTED — files re-verified 3/3 operator-side; consolidation 8/8 GREEN ([C6] canonical iteration standing); commit riding the task78 kit
+- Task 78: THIS ROUND — kit at base 6c8a76f carrying rebased 77+77b+77c+78
 
 ```
 ├── gwm-inbox-consolidate-v1.sh
@@ -369,6 +374,12 @@ entries**.
 ├── gwm-task76b-round-record.html
 ├── gwm-task77-SHA256SUMS
 ├── gwm-task77-consolidate-battery.txt
+├── gwm-task78-SHA256SUMS
+├── gwm-task78-SUK.sh
+├── gwm-task78-gwm-6c8a76f-<head7>.bundle
+├── gwm-task78-gwm-6c8a76f-<head7>.bundle.b64
+├── gwm-task78-kit-battery.txt
+├── gwm-task78-round-record.html
 ```
 
 ### 1.16 This registry — 1 file
@@ -419,9 +430,11 @@ emission (declared share) and thereafter mirrors the repo original
 ## §4 Maintenance log (append-only)
 
 - Task 77, 2026-10-31, trace 1a18ec4bf6f45179 — INDEX.md born: 219-file snapshot registry + series 1.15
-  (post-snapshot emission rounds, 21 files) + this registry = 241
+  (post-snapshot emission rounds, 27 files) + this registry = 247
   entries; intake queue opened for the GUP-critical 8; §5 canonical
   home assigned (PROTOCOL v1.6.1); generator
   `scripts/build_inbox_index.py` rides the repo (named-tool law).
 - Task 77b, 2026-10-31, trace 1a18eeb2671b840d — first consolidation run RED at file 1 of 8: paper-2-v1.6.1-source.tar.gz recorded 99913db3… ≠ copied a764eb1f… (fail-closed halt — 1/8 tested, 7 untested, 0 consolidated, inbox left as found). §2 rows 1–2 pins flagged suspect: both inherited from the v1.6 FINAL SET by name-level propagation (the round5.6 receipt names the v1.6 tarball and the v1.5reconstruct-to-v1.6 changes file); no independent v1.6.1 hash act exists in the record. Adjudication issued in-band (7-pin spot check, gpt git forensics, all-commit pin sweep, alternate-copy + inner-content continuity); a confirmed record defect lands as its own round re-cutting all three pin-embed sites together (this generator's INTAKE_FILES, INDEX.md §2, and the consolidate script's PINNED table).
 - Task 77c, 2026-10-31, trace 1a18f3fb25e9c1a9 — adjudication returned (operator paste-back): H1 CONFIRMED — the changes file hashes 037dbdd9… ≠ recorded 778f9ac2… exactly as H1 predicted, the other five [X0] pins GREEN (refs-2.bib, both counters .md files, round5.4 sidecar, arxiv-metadata), the tarball re-attested a764eb1f… at cut-era mtime; [X1] on disk, not in gpt HEAD; [X2] NO-COMMIT-HOLDS-99913db3… (no git-held recovery); [X3] single copy, inner refs-2.bib = 798d1dd4… (continuity GREEN). A THIRD mismatch surfaced at [X0]: round5.2-counters-v1.md.sha256 tree 17b7d13b… ≠ recorded b0bd553f… — adjudicated sidecar-re-cut: the current bytes are the canonical sha256sum line over the .md's true pin def5d3b1… (witness-recomputable; the same reconstruction over 8c3f0497… reproduces the round5.4 sidecar pin 94999ef7… exactly; the b0bd553f preimage is unrecoverable from the record — ARGON's Round-5.3 computation over the then-relayed form). SUPERSESSION EXECUTED: pins of record re-anchored (a764eb1f… / 037dbdd9… / 17b7d13b…) across all embed sites together — this generator's INTAKE_FILES, INDEX.md §2 (this regen), the consolidate script's PINNED table; historical boards stand as-presented, superseded by append-only addenda (emissions-index §8, state-resync-check §10). Battery re-run GREEN; the four task77-index files re-staged on the declared share under the superseding pins.
+- Task 77c consolidation executed operator-side, 2026-10-31 (trace 1a18f74b04f17959 paste-back): [C4] ×8 + [C5] 8/8 + [C6] GREEN — the canonical iteration finalized ($GWM-INBOX = §1 + §2 exactly at the then-current registry; the Task-77 real-pin battery leg closed GREEN; R2 stage-2 channel (a) operator-direct elected).
+- Task 78, 2026-10-31, trace 1a18f74b04f17959 — round-trip closures registered (76b kit APPLIED @ 7f2e968 + PUSHED, pins re-verified witness-side; 77c emission 3/3; INDEX v2 CONFIRMED — push-hold gate closed) + re-anchor (77/77b/77c rebased onto the session snapshot 6c8a76f, old heads tag-preserved) + series 1.15 grew to 27 files (task78 kit six; the bundle filename's <head7> placeholder resolves at kit cut) — canonical entries 241→247, post-consolidation 249→255; the task78 kit (base 6c8a76f) carries the rebased stack.

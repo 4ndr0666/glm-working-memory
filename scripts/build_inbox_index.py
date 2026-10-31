@@ -67,8 +67,9 @@ POST_SNAPSHOT_ROUNDS = {
         ],
     },
     "76b": {
-        "label": "Task 76b — sync-confirmation + re-anchor (live staged kit)",
-        "status": "LIVE STAGED — base 18518e8, awaiting operator apply",
+        "label": "Task 76b — sync-confirmation + re-anchor (applied kit)",
+        "status": "APPLIED + PUSHED — round-trip closed @ 7f2e968 (operator "
+                  "paste-back GREEN; session snapshot 6c8a76f rides above)",
         "files": [
             "gwm-task76b-SHA256SUMS",
             "gwm-task76b-SUK.sh",
@@ -80,7 +81,8 @@ POST_SNAPSHOT_ROUNDS = {
     },
     "77": {
         "label": "Task 77 — INDEX-consolidation round (registry birth)",
-        "status": "EMITTED — share staging, ride-the-next-kit commit",
+        "status": "EMITTED — files staged + verified 3/3 operator-side; "
+                  "commit riding the task78 kit",
         "files": [
             "gwm-inbox-consolidate-v1.sh",
             "gwm-task77-consolidate-battery.txt",
@@ -89,9 +91,23 @@ POST_SNAPSHOT_ROUNDS = {
     },
     "77c": {
         "label": "Task 77c — adjudication-return supersession (pin re-anchor)",
-        "status": "EMITTED — same filenames re-staged with adjudicated pins "
-                  "(a764eb1f… / 037dbdd9… / 17b7d13b…); rides the next kit bundle",
+        "status": "EMITTED — files re-verified 3/3 operator-side; consolidation "
+                  "8/8 GREEN ([C6] canonical iteration standing); commit "
+                  "riding the task78 kit",
         "files": [],
+    },
+    "78": {
+        "label": "Task 78 — round-trip-closure round (kit cut)",
+        "status": "THIS ROUND — kit at base 6c8a76f carrying rebased "
+                  "77+77b+77c+78",
+        "files": [
+            "gwm-task78-SHA256SUMS",
+            "gwm-task78-SUK.sh",
+            "gwm-task78-gwm-6c8a76f-<head7>.bundle",
+            "gwm-task78-gwm-6c8a76f-<head7>.bundle.b64",
+            "gwm-task78-kit-battery.txt",
+            "gwm-task78-round-record.html",
+        ],
     },
 }
 
@@ -190,7 +206,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -289,11 +305,15 @@ def main():
     w(f"post-consolidation population is **{canonical_total + intake_count}")
     w("entries**.")
     w("")
+    w("The §2 consolidation EXECUTED operator-side on 2026-10-31 — 8/8")
+    w("pin-verified, [C6] GREEN; the canonical iteration is standing at")
+    w(f"**{canonical_total + intake_count} entries** in $GWM-INBOX.")
+    w("")
     for major, minor, title, count, files in series:
         w(f"### {major}.{minor} {title} — {count} files")
         w("")
         if (major, minor) == (1, 15):
-            for rid in ("75", "76", "76b", "77", "77c"):
+            for rid in ("75", "76", "76b", "77", "77c", "78"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -390,6 +410,19 @@ def main():
       "by append-only addenda (emissions-index §8, state-resync-check §10). "
       "Battery re-run GREEN; the four task77-index files re-staged on the "
       "declared share under the superseding pins.")
+    w("- Task 77c consolidation executed operator-side, 2026-10-31 (trace "
+      "1a18f74b04f17959 paste-back): [C4] ×8 + [C5] 8/8 + [C6] GREEN — "
+      "the canonical iteration finalized ($GWM-INBOX = §1 + §2 exactly at "
+      "the then-current registry; the Task-77 real-pin battery leg closed "
+      "GREEN; R2 stage-2 channel (a) operator-direct elected).")
+    w("- Task 78, 2026-10-31, trace 1a18f74b04f17959 — round-trip closures "
+      "registered (76b kit APPLIED @ 7f2e968 + PUSHED, pins re-verified "
+      "witness-side; 77c emission 3/3; INDEX v2 CONFIRMED — push-hold gate "
+      "closed) + re-anchor (77/77b/77c rebased onto the session snapshot "
+      "6c8a76f, old heads tag-preserved) + series 1.15 grew to 27 files "
+      "(task78 kit six; the bundle filename's <head7> placeholder resolves "
+      "at kit cut) — canonical entries 241→247, post-consolidation "
+      "249→255; the task78 kit (base 6c8a76f) carries the rebased stack.")
     w("")
 
     text = "\n".join(out)

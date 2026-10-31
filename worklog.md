@@ -495,3 +495,87 @@ governs boundary bootstraps and round records.
   gwm-task77-SHA256SUMS (re-cut; three-file coverage, SUMS excluded from
   itself). Emission pins printed in the boundary transmission. Round-trip
   receipt appends here at the next boundary open.
+
+## [2026-10-31] Boundary open — Task 78 (trace 1a18f74b04f17959; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git fetch
+  origin` — origin/main advanced `18518e8`→`6c8a76f`: the task76b push
+  (`7f2e968`, confirmed live on the remote) + the operator's session
+  snapshot `6c8a76f` ("3rd resync attempt successful; previous session
+  snapshot held as stable springboard… INDEX system is now live and
+  contextual continuity repaired. This finalizes $GWM-INBOX
+  consolidation." — carrying sessions/2026-10-30_session-017_3rd_resync_
+  success_index_now_live.md, 2,053 lines; manifest 35→36). `git pull
+  --ff-only` FAILED AS DESIGNED (witness ahead 3 un-applied — 77, 77b,
+  77c; 76b precedent, registered fail-visible, never forced). RE-ANCHOR:
+  the three rounds rebased onto the snapshot (`ddd3593`→`1e1adbf`,
+  `1aa93ae`→`082545e`, `abf5843`→`be3888f`; old heads preserved under
+  task77-pre-reanchor-* / task77b-pre-reanchor-* / task77c-pre-reanchor-*
+  audit tags; no remote ever held the old SHAs). Post-rebase: manifest
+  36/36 OK; liveness trio intact — draft-3.1 `9b326af7…`, tex-v2
+  `687c19d6…`, bib-v2 `18d1e05f…`; working tree clean.
+- §3 REGISTER: transmission fully inside the START/END delimiters; no
+  out-of-band noise this boundary. QUICK BOOT rationale standing; this
+  boundary's first output was the fetch.
+- OPERATOR PAYLOAD (items 1–7, all RECEIVED VERBATIM): (1) SUMS 3/3 OK on
+  the re-cut task77-index set; (2) "Confirmed." — INDEX v2 AGREED; (3) the
+  consolidation run — [C0] ×3, [C4] ×8, [C5] 8/8, [C6] GREEN ("canonical
+  iteration finalized"); (4) the task76b kit apply — [G0]–[G5] GREEN,
+  KIT RESULT GREEN @ `7f2e968`, push receipt `18518e8..7f2e968 main ->
+  main`; (5) "5. (a)" — the R2 stage-2 channel election; (6) the session
+  snapshot upload; (7) the paper momentum note.
+- RECEIPTS (witness-side re-verification, this boundary): 76b kit
+  round-trip CLOSED — kit self `c40e62ec…` == staged witness copy, bundle
+  `182e5de9…` == staged, tree pin `6b0936b4…` == `7f2e968^{tree}`,
+  HEAD40 `7f2e96827…` confirmed on origin/main; the payload pin
+  `0da9fc03…` was verified in-band by the SUK itself at apply (its G3
+  leg); witness-side ad-hoc gzip re-encode of the loose bundle differs by
+  construction (stream mtime) — the lawful recompute is the battery P0
+  determinism method (re-encode at the payload's own mtime), noted. 77c
+  emission round-trip CLOSED — SUMS 3/3 == the §D mutual digest
+  (INDEX.md / consolidate script / battery evidence). CONSOLIDATION
+  GREEN — 8/8 pin-verified under the 77c pin table; the Task-77 real-pin
+  battery scope note CLOSED GREEN; canonical iteration standing
+  ($GWM-INBOX = INDEX §1+§2 exactly at the v2 registry, 249 entries; the
+  78 emission grows the canonical set to 247+8=255 at the operator's next
+  INDEX refresh).
+- INDEX v2 CONFIRMED ("Confirmed.") — the push-hold's stated gate CLOSED;
+  push cadence resumes with this round's kit.
+- R2 STAGE-2 CHANNEL (a) ELECTED (operator-direct commit+push of the 8
+  into references/white-paper-relay/; witness pin-verifies at the next
+  bootstrap pull against INDEX §2). SEQUENCING RULE issued with the queue:
+  apply the task78 kit FIRST, execute the relay SECOND — the SUK's
+  expected-head assert fails closed on an advanced head by design (the
+  operator's relay commit would otherwise trip the [G3] guard).
+- HARNESS TRIP (fail-visible, disclosed): `scripts/task76_battery.sh` P8
+  carried a hardcoded footer-counts grep ("219 files, 14 series") — stale
+  since the Task-77 §1 growth to 240/15; caught at the first post-77 kit
+  prep (this round); fixed to DERIVE the §1 header pair from the witness
+  tree (applied == witness), +1 check. The 76b parametrization had
+  derived every other count; this was its one miss.
+- REGISTRY MAINTENANCE (named-tool law): generator extended (76b/77/77c
+  statuses updated; 78 round registered — six kit files, bundle filename
+  `<head7>` placeholder resolving at kit cut, same §4-row checker
+  semantics; consolidation-closure + 78 §4 rows; §1 post-consolidation
+  standing note) and re-run — INDEX v3: series 1.15 = 27 files, §1 =
+  246/15, canonical 247, post-consolidation 255; determinism proven
+  (byte-identical second run). emissions-index §1/§1.15/§4 row 78 updated
+  in the same act (same-commit rule).
+- THE PAPER (operator item 7, "so close to publishing"): acknowledged —
+  Phase-5 is staged (deposit package + metadata lock + submission
+  checklist, all cut and pinned at Tasks 72–74); the submission itself is
+  operator-hands at arxiv.org; the witness stands ready for the
+  identifier-backfill round on submit. No new paper bytes touched this
+  boundary.
+- SCOPE NOTES (fail-visible): draft-3.1 byte-untouched (`9b326af7…`);
+  PROJECT_STATE.md unchanged (76b rewrite stands; §5.2 next full rewrite
+  at session close); no sessions/ rows added witness-side (manifest
+  36/36 = the operator's snapshot set); the snapshot message's `$\GWM-INBOX`
+  backslash is cosmetic.
+- EMISSION: file:///download/task78-kit/ — gwm-task78-SUK.sh + bundle +
+  .b64 twin + kit battery evidence + round-record HTML + SHA256SUMS
+  (six-file Task-75 form; five-file SUMS coverage, SUMS excluded from
+  itself). Kit/bundle/payload/battery/round-record pins printed at
+  emission surfaces only (boundary transmission + round-record page +
+  SHA256SUMS, no-self-reference rule). Round-trip receipt appends here at
+  the next boundary open.

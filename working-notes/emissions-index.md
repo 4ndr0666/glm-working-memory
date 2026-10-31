@@ -32,7 +32,7 @@ already delivered into `$INBOX` (§4 maps tasks to kits). Names and counts are
 as-transmitted by the operator, 2026-10-29; witness-side mirrors live in
 `download/` (declared share) and the repo's canonical homes.
 
-## 1. `$INBOX` — witness→operator deliveries (240 files, 15 series)
+## 1. `$INBOX` — witness→operator deliveries (246 files, 15 series)
 
 Count as of Task 77 (2026-10-31): the 2026-10-29 operator INDEX snapshot
 registered 219 files (series 1.1–1.14); series 1.15 appends the post-snapshot
@@ -358,7 +358,7 @@ Canonical substrate documents delivered as copies for operator-side reference: P
 ├── tracker-dark-closure-v1.md
 ```
 
-### 1.15 Post-snapshot emission rounds (Tasks 75–77) — 21 files
+### 1.15 Post-snapshot emission rounds (Tasks 75–78) — 27 files
 
 Emissions staged on the declared share (`file:///download/`, per-round
 `taskNN-kit/` / `task77-index/` subdirectories) after the operator's
@@ -366,12 +366,16 @@ Emissions staged on the declared share (`file:///download/`, per-round
 already present. Per-round custody status: Task 75 kit APPLIED + PUSHED
 (origin/main reached `7605226`); Task 76/76a kit WITHDRAWN un-applied
 (fails closed at the advanced head by design — files retained as audit
-evidence of the 76a discharge; never run); Task 76b kit LIVE staged (base
-`18518e8`, awaiting operator apply); Task 77 emission = the INDEX-
-consolidation round (registry + intake tooling; no kit — the commit rides
-the next kit bundle per the 76a precedent). Task 77c emission = the
-adjudication-return supersession round (the same four filenames re-staged
-under the adjudicated pins; no kit — rides the next bundle).
+evidence of the 76a discharge; never run); Task 76b kit APPLIED + PUSHED
+(round-trip closed @ `7f2e968`, operator paste-back GREEN; the operator's
+session snapshot `6c8a76f` rides above it); Task 77 emission = the INDEX-
+consolidation round (registry + intake tooling; files verified 3/3
+operator-side); Task 77c emission = the adjudication-return supersession
+round (files re-verified 3/3; the §2 consolidation executed 8/8
+pin-verified — [C6] GREEN, canonical iteration standing); commits
+77/77b/77c ride the task78 kit (rebased onto the snapshot). Task 78
+emission = the round-trip-closure kit (base `6c8a76f`, six files; the
+bundle filename's `<head7>` placeholder resolves at kit cut).
 
 ```
 ├── gwm-inbox-consolidate-v1.sh
@@ -395,6 +399,12 @@ under the adjudicated pins; no kit — rides the next bundle).
 ├── gwm-task76b-round-record.html
 ├── gwm-task77-SHA256SUMS
 ├── gwm-task77-consolidate-battery.txt
+├── gwm-task78-SHA256SUMS
+├── gwm-task78-SUK.sh
+├── gwm-task78-gwm-6c8a76f-<head7>.bundle
+├── gwm-task78-gwm-6c8a76f-<head7>.bundle.b64
+├── gwm-task78-kit-battery.txt
+├── gwm-task78-round-record.html
 ```
 
 ## 2. `gwm-outbox` — operator-held source & reference material (9 files)
@@ -585,6 +595,7 @@ artifact-index matrix and the decisions ledger.
 | 77 | `INDEX.md` (the registry itself — registered INDEX.md §1.16, not double-counted in §1 here) + `gwm-inbox-consolidate-v1.sh` + `gwm-task77-consolidate-battery.txt` + `gwm-task77-SHA256SUMS` | THIS ROUND — the INDEX-consolidation round: canonical INDEX.md of $GWM-INBOX born (repo root, §5 homed at PROTOCOL v1.6.1; generator `scripts/build_inbox_index.py` rides); intake queue = the GUP-critical 8 with pin-verified consolidation; no kit this round (operator push-hold respected) — this row's commit rides the next kit bundle (76a precedent) |
 | 77b | (none — in-band adjudication round; no files emitted) | THIS ROUND — the paste-back RED round: the Task-77 zero-edit path executed operator-side (SUMS 3/3 OK) and the consolidation halted fail-closed at the first pin — paper-2-v1.6.1-source.tar.gz recorded 99913db3… ≠ copied a764eb1f… (1/8 tested, 7 untested, 0 consolidated, inbox left as found); the Task-77 real-pin battery leg exercised RED (the designed catch, harness correct); the v1.6.1-source-line pins bounded as name-level propagation from the v1.6 FINAL SET (no independent v1.6.1 hash act exists in the record; the certified v1.6 bytes left witness custody with the VM — R-59 class); adjudication block + decision matrix issued in-band (7-pin spot check, gpt git forensics, all-commit pin sweep, alternate-copy + inner-content continuity); boards ×4 + INDEX.md §4 RED row via generator re-run; no kit (push-hold respected — rides the next bundle) |
 | 77c | `INDEX.md` + `gwm-inbox-consolidate-v1.sh` + `gwm-task77-consolidate-battery.txt` + `gwm-task77-SHA256SUMS` (re-cut — same filenames, superseding pins) | THIS ROUND — the adjudication-return round: operator [X0]–[X3] paste-back decoded — H1 CONFIRMED (changes `037dbdd9…` ≠ recorded `778f9ac2…` as staged; 5/7 [X0] pins GREEN; tarball `a764eb1f…` re-attested at cut-era mtime; [X1] on disk, not in gpt HEAD, the HEAD-side read hashing sha256(∅); [X2] NO-COMMIT-HOLDS-99913db3…; [X3] single copy + inner refs-2.bib `798d1dd4…` continuity) + a THIRD mismatch adjudicated in-round (round5.2 sidecar `17b7d13b…` ≠ `b0bd553f…` — canonical reconstruction from `def5d3b1…`, method validated by the round5.4 sidecar `94999ef7…`, preimage unrecoverable); SUPERSESSION re-cuts all pin-embed sites together (generator INTAKE_FILES + INDEX.md §2 via regen + consolidate PINNED → `a764eb1f…` / `037dbdd9…` / `17b7d13b…`), historical boards superseded by the §8 addendum; battery re-run 10/10 GREEN (byte-identical evidence, deterministic); no kit (push-hold respected — rides the next bundle) |
+| 78 | `gwm-task78-SUK.sh` (+ `gwm-task78-gwm-6c8a76f-<head7>` pair fallback) + `gwm-task78-kit-battery.txt` + `gwm-task78-round-record.html` + `gwm-task78-SHA256SUMS` | THIS ROUND — the round-trip-closure round: 76b kit round-trip CLOSED (APPLIED @ `7f2e968` + PUSHED, [G0]–[G5] GREEN, all pins re-verified witness-side: kit self `c40e62ec…` / bundle `182e5de9…` / tree `6b0936b4…` / HEAD40 confirmed on origin); 77c emission round-trip CLOSED (SUMS 3/3 = the §D mutual digest); §2 consolidation EXECUTED 8/8 pin-verified ([C4] ×8 + [C5] 8/8 + [C6] GREEN — canonical iteration standing); INDEX v2 CONFIRMED (push-hold gate closed); R2 stage-2 channel (a) operator-direct ELECTED (sequencing rule issued: kit apply first, relay second — the SUK expected-head assert fails closed on an advanced head by design); operator session snapshot `6c8a76f` ingested (session-017 v2 archive, 2,053 lines, manifest 35→36); witness re-anchored (77/77b/77c rebased onto the snapshot, old heads tag-preserved); battery harness P8 footer-check parametrization completed (stale hardcoded grep caught at first post-77 kit prep, disclosed); series 1.15 → 27 files, §1 → 246/15, INDEX v3 canonical 247 / post-consolidation 255; kit cut at base `6c8a76f` carrying the rebased 77+77b+77c+78 |
 
 ## 5. Provenance pins (source attachments, 2026-10-29)
 
