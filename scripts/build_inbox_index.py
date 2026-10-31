@@ -127,23 +127,34 @@ POST_SNAPSHOT_ROUNDS = {
     },
     "81": {
         "label": "Task 81 — deposit-package verification + kit-cut round",
-        "status": "EMITTED — the actual submission package boundary-delivered "
-                  "and verified three-way (upload == Task-73 staged emission == "
-                  "Task-73 SHA256SUMS pin; inner tex/bib == the repo v2 pins); "
-                  "the exact deposit bytes repo-custodied at "
-                  "references/arxiv-deposit/ (verifier [D0]–[D5] GREEN); the "
-                  "task78 <head7> placeholder resolved to aaac871 this round; "
-                  "kit staged + battery-proven at base 435d598 carrying Tasks "
-                  "79+80+81 — the new bundle filename rides the same "
-                  "placeholder semantics (resolves after apply+push)",
+        "status": "APPLIED + PUSHED @ a3dcf49 (operator [G0]–[G5] GREEN; "
+                  "push 435d598..a3dcf49 observed at the Task-82 bootstrap "
+                  "fetch; the <head7> placeholder resolved to a3dcf49 in the "
+                  "same round)",
         "files": [
             "gwm-task81-SHA256SUMS",
             "gwm-task81-SUK.sh",
-            "gwm-task81-gwm-435d598-<head7>.bundle",
-            "gwm-task81-gwm-435d598-<head7>.bundle.b64",
+            "gwm-task81-gwm-435d598-a3dcf49.bundle",
+            "gwm-task81-gwm-435d598-a3dcf49.bundle.b64",
             "gwm-task81-kit-battery.txt",
             "gwm-task81-round-record.html",
         ],
+    },
+    "82": {
+        "label": "Task 82 — ARGON-audit witness-verification round",
+        "status": "NO EMISSION FILES — the relayed ARGON audit of the live "
+                  "4NDR0MEDA repo + the arXiv deposit verified witness-side "
+                  "on cloned bytes (§1 LaTeX findings ALL confirmed against "
+                  "the repo-held deposit sources; §2 inventory REJECTED — 11 "
+                  "files missed incl. the tools/ verification toolchain; a NEW "
+                  "defect found: 55bea18 replaced the hero-banner PNG without "
+                  "re-stamping MANIFEST.sha256 — the repo's own gate FAILs "
+                  "42/43 at HEAD from a clean clone); the audit artifact "
+                  "4ndr0meda-55bea18c-unpacked.md repo-custodied at "
+                  "references/; deposit-path election (tex-v3 fix-before-submit "
+                  "vs submit-as-is) queued to the operator; commit riding the "
+                  "next kit bundle",
+        "files": [],
     },
 }
 
@@ -242,7 +253,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -357,7 +368,8 @@ def main():
         w(f"### {major}.{minor} {title} — {count} files")
         w("")
         if (major, minor) == (1, 15):
-            for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80", "81"):
+            for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80", "81",
+                        "82"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -532,6 +544,58 @@ def main():
       "canonical 253, post-consolidation 261. The task81 kit cut at base 435d598 "
       "carrying Tasks 79+80+81, battery-proven before staging. No sessions/ rows "
       "(manifest 36/36); draft-3.1/tex-v2/bib-v2 byte-untouched.")
+    w("- Task 82, 2026-11-01, trace 1a19440898a97db1 — the ARGON-audit "
+      "witness-verification round. Bootstrap: origin ADVANCED 435d598..a3dcf49 = "
+      "the task81 kit APPLIED + PUSHED operator-side (round-trip CLOSED; the "
+      "task81 <head7> placeholder resolved to a3dcf49 across all embed sites "
+      "together this round). The operator relayed ARGON's audit of the live "
+      "4NDR0MEDA repo + the arXiv deposit; the witness executed the verification "
+      "ARGON could not (it lacks an arbitrary-URL fetcher; the repo ZIP arrived "
+      "deflated in its context): 4NDR0MEDA cloned anonymously at HEAD == "
+      "55bea18c — the audited commit IS current HEAD, no fixes pushed since. "
+      "VERDICT LEDGER: ARGON §1 (LaTeX) — ALL content claims CONFIRMED against "
+      "the repo-held deposit bytes (687c19d6…/18d1e05f…): no secnumdepth → the "
+      "double-numbering defect (11 sections: 3 addenda + 8 manually-numbered → "
+      "compiled PDF renders '4 1. Introduction' … '11 8. Related Work'); every "
+      "quoted math-escape defect verbatim in the bytes (B \\textgreater{} 1; "
+      "window W; W\\_Q family; k-of-n ×3 sites; the critical "
+      "\\(\\Delta\\)\\_t\\^{}{(\\(\\ell\\))} literal-underscore site; the \\(\\neq\\) "
+      "relation splits; at \\(\\beta\\) = 1; every d \\(\\geq\\) 3); the truncated "
+      "chacon2014git bibitem (title/edition/publisher/year dropped — the .bib "
+      "holds them); 5 two-author comma-before-and sites; lahoti2026mamba3 as the "
+      "lone ICLR-as-@article outlier. ONE ARGON patch REJECTED: \\nocite{*} is a "
+      "no-op before a manual thebibliography (all 28 bibitems render uncited; "
+      "\\nocite only drives BibTeX runs). Line numbers registered as .md-wrapper-"
+      "relative (content verifies; offsets differ). ARGON §2 (repo audit) — MIXED: "
+      ".gitignore quote EXACT; CITATION.cff absent CONFIRMED; the PTE/E4/E5 "
+      "artifacts absent from the public tree CONFIRMED (Discrepancy #1 core "
+      "stands — pte-e5 + Module-4 trace are $GWM-INBOX residents, INDEX §1.11; "
+      "neither public repo carries them); but the 'exact file inventory' "
+      "REJECTED — 32 files listed vs 43 actual: the tools/ verification "
+      "toolchain (pinchain.py, manifest.py, reconcile.py, state_echo.py, "
+      "exporter-forge/) + runbooks/ + setup.sh + templates/ all missed; the "
+      "'only .py is inside the ZIP' sub-claim FALSE (5 tree .py + 7 more in the "
+      "golden-unit ZIP). Discrepancy #2 RESOLVED by witness evidence: "
+      "glm-working-memory is PUBLIC and anonymously cloneable (this boundary's "
+      "own bootstrap fetch; the witness holds zero credentials) — no 404 risk "
+      "today; ARGON's proposed bibitem rewrite is optional consolidation and its "
+      "own patch text is LaTeX-broken (markdown link syntax inside \\nolinkurl). "
+      "NEW DEFECT FOUND BEYOND ARGON: commit 55bea18 replaced the hero-banner "
+      "PNG (32,377 → 1,943,834 B) WITHOUT re-stamping MANIFEST.sha256 — the "
+      "manifest still pins the old banner b26c0a07… while the tree carries "
+      "c4535e5f…; the repo's own gate `tools/manifest.py verify` FAILs 42/43 at "
+      "HEAD from a clean clone (self-stamping-law violation; CI leg 1 would be "
+      "RED; pinchain unchanged: 13 checked, 0 FAIL, 5 unreachable). The ARGON §3 "
+      "extractor EXECUTED witness-side over the clone: "
+      "references/4ndr0meda-55bea18c-unpacked.md born (171,883 B, 012730e5…, "
+      "canonical sidecar; per-file sha256s embedded; repo-recomputable from the "
+      "public 4NDR0MEDA tree alone). DEPOSIT-PATH ELECTION QUEUED: the §1 "
+      "defects are typographic-only (no content/math changes) but visible in the "
+      "submitted PDF; witness recommends fix-before-submit (tex-v3+bib-v3 cut + "
+      "recompile + page-count re-verify + re-pin + package re-cut, one round on "
+      "operator GO) while the waiver pause makes it cheap; submit-as-is remains "
+      "electable (arXiv v1 flaws are replaceable later, identifier retained). No "
+      "emission files this round; this commit rides the next kit bundle.")
     w("")
 
     text = "\n".join(out)

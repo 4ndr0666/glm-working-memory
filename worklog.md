@@ -863,3 +863,167 @@ governs boundary bootstraps and round records.
   appends here at the next boundary open. Round-record bytes = this
   worklog entry; the §D mutual digest prints in the boundary
   transmission over exactly these bytes.
+
+## [2026-11-01] Boundary open — Task 82 (trace 1a19440898a97db1; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git pull
+  --ff-only` — GREEN; origin ADVANCED `435d598..a3dcf49` = the task81
+  kit APPLIED + PUSHED operator-side (local main already at `a3dcf49`;
+  working tree clean at the fetch); manifest 36/36 OK (repo-root
+  execution, no cwd slip this boundary); liveness trio intact —
+  draft-3.1 `9b326af7…`, tex-v2 `687c19d6…`, bib-v2 `18d1e05f…`;
+  task81 deposit verifier [D0]–[D5] GREEN at references/arxiv-deposit/.
+- TASK81 KIT ROUND-TRIP CLOSED (receipt appended per the standing
+  promise): push receipt `435d598..a3dcf49` observed at this boundary's
+  fetch; origin/main == local main == `a3dcf49`; the staged kit bundle
+  `gwm-task81-gwm-435d598-a3dcf49.bundle` verifies (base `435d598`,
+  head `a3dcf49`, tags none). The task81 `<head7>` placeholder
+  RESOLVED to `a3dcf49` across all embed sites together (generator
+  registry + emissions-index §1.15 tree block + §4 row 81 + INDEX
+  regen — no-self-reference constraint retired by the landing).
+- §3 REGISTER: transmission fully inside the START/END delimiters; no
+  out-of-band noise. Payload: the ARGON live-repo audit (§0–§3)
+  relayed verbatim, presented as "I asked ARGON to check out the live
+  repo and share its thoughts" while the paper pends the waiver.
+  ARGON's own §0 disclosure (no arbitrary-URL fetcher; the
+  4NDR0MEDA ZIP arrived as deflated binary streams — only
+  .gitignore STOREd uncompressed; line numbers are .md-wrapper-
+  relative) accepted as honest fail-visible framing. QUICK-START
+  env-var block matches the standing Task-52 declaration.
+- THE WITNESS-SIDE VERIFICATION (the work ARGON could not do, done):
+  4NDR0MEDA cloned anonymously (public repo; bootstrap-class pull;
+  zero credentials — same channel as every `git pull --ff-only` of
+  this substrate) at HEAD == `55bea18c` — the audited commit IS
+  current HEAD; no fixes have been pushed since the audit target.
+  VERDICT LEDGER on witness-recomputed evidence:
+  * ARGON §1 (LaTeX deposit audit) — ALL content claims CONFIRMED
+    against the repo-held locked bytes (tex `687c19d6…` / bib
+    `18d1e05f…`, the same bytes proven == the deposit package at
+    Task-81 [D1]/[D2]): (1.1) no `\setcounter{secnumdepth}{0}`
+    anywhere → the double-numbering defect is real — 11 sections
+    (3 unnumbered addenda precede 8 manually-numbered), so the
+    compiled article renders "4 1. Introduction" … "11 8. Related
+    Work" (both record-pinned renders — 33pp v1 and 35pp v2 — carry
+    it); (1.2) every quoted math-escape defect verbatim in the
+    bytes — L166 `B \textgreater{} 1`, L178 `bounded window W`,
+    L250 `W\_Q, W\_K, W\_V` + `W + \(\Delta W\)`, L258+L444
+    k-of-n family, L266 the critical `\(\Delta\)\_t\^{}\{(\(\ell\))\}`
+    literal-underscore/caret/brace site + `k\_t` + `\(\ell'\)
+    \textgreater{} \(\ell\)` split relation, L270 `\(\neq\)` splits
+    ×2 + `at \(\beta\) = 1`, L274 `every d \(\geq\) 3`; (1.3) the
+    thebibliography at L591 carries 28 bibitems with zero `\cite`
+    in the body — and the chacon2014git bibitem at L642 is
+    TRUNCATED to bare authors (title/edition/publisher/year all
+    dropped; the .bib L236–242 holds them) — plus the two-author
+    comma-before-and artifact at 5 sites (L614 dao2024mamba2, L618
+    widrow1960adaptive, L620 bischof1985wy, L632 costan2016sgx,
+    L642 chacon2014git); (1.4) lahoti2026mamba3 is the lone
+    ICLR-as-@article outlier (bib L135–140). ONE ARGON PATCH
+    REJECTED: `\nocite{*}` before a MANUAL thebibliography is a
+    no-op (all 28 bibitems render uncited regardless; \nocite only
+    drives BibTeX runs) — not a defect, not a fix. Independent
+    witness checks beyond ARGON: 28 bib entries brace-balanced;
+    ARGON's quoted line numbers are .md-wrapper-relative (content
+    verifies; offsets differ — e.g. its "Line 117" = tex L166).
+  * ARGON §2 (4NDR0MEDA audit) — MIXED: the .gitignore quote is
+    EXACT (6 lines, STOREd in the ZIP — the one file ARGON could
+    read); CITATION.cff absent CONFIRMED (enhancement, not defect);
+    Discrepancy #1 core CONFIRMED — no pte-e5 / module4-trace / E4
+    harness anywhere in the public tree (nor in glm-working-memory,
+    nor witness-side download/; they are $GWM-INBOX residents per
+    INDEX §1.11 + the 2026-10-30 LOCAL-ONLY ruling) while the
+    manuscript's §7.6 table marks phase-angle probes LIVE
+    ("benchmark scripts") and the E4 instrumentation engine CLOSED
+    ("reproduction harness + output pinned witness-side") — the
+    traceability gap is real for an arXiv reader. BUT the "exact
+    file inventory" is REJECTED: ARGON lists 32 files vs 43 actual
+    (git ls-tree -r) — the tools/ verification toolchain
+    (pinchain.py, manifest.py, reconcile.py, state_echo.py,
+    exporter-forge/ ×4) + runbooks/ ×2 + setup.sh +
+    templates/STATE-ECHO-TEMPLATE.md all missed; and the sub-claim
+    "the only .py anywhere is standard/golden_unit_hash.py inside
+    the ZIP" is FALSE — 5 tree .py files under tools/ plus 7 more
+    .py inside the golden-unit .skill ZIP. Discrepancy #2 RESOLVED
+    by witness evidence: glm-working-memory is PUBLIC and
+    anonymously cloneable — this boundary's own bootstrap fetch is
+    the direct proof (the witness holds zero git credentials) — so
+    bib [28]'s URL carries no 404 risk today; ARGON's proposed
+    bibitem rewrite is optional consolidation, and its own patch
+    text is LaTeX-broken (markdown link syntax inside \nolinkurl
+    would typeset literally).
+  * NEW DEFECT FOUND BEYOND ARGON (invisible to it — the PNG and
+    the manifest are deflated/computed state): commit `55bea18`
+    ("architecturally aligned image hero banner generation")
+    replaced assets/4ndr0meda-hero-banner.png (32,377 → 1,943,834 B,
+    a 60× weight jump) WITHOUT re-stamping MANIFEST.sha256 — the
+    manifest still pins the old banner `b26c0a07…` (= the 2daac65
+    blob, verified) while the tree carries `c4535e5f…` (git blob ==
+    worktree, checkout faithful). The repo's own gate
+    `python3 tools/manifest.py verify` FAILs 42/43 at HEAD from a
+    clean clone — a self-stamping-law violation (every prior
+    content commit's message claims "manifest rebuilt N/N";
+    55bea18's claims nothing and did nothing); CI leg 1
+    (.github/workflows/verify.yml → manifest verify) is RED-class
+    on the pushed HEAD. Pinchain unchanged and clean: 13 checked,
+    0 FAIL, 5 unreachable (standing debt classes).
+  * ARGON §3 extractor EXECUTED witness-side (the artifact ARGON
+    asked the operator to produce, cut by the party with the
+    tooling): `4ndr0meda-unpacked.md` over the clone — 3,230 lines,
+    171,883 B, sha256 `012730e5…`, per-file sha256s embedded,
+    deterministically regenerable from the public 4NDR0MEDA tree
+    alone. Repo-custodied at `references/4ndr0meda-55bea18c-unpacked.md`
+    + canonical sha256 sidecar (77c method).
+- DEPOSIT-PATH ADJUDICATION (the operator's live question, answered
+  with the evidence above): every §1 defect is TYPOGRAPHIC — no
+  content, math, or claim changes — but they are visible in the
+  rendered PDF an arXiv reader would download (double section
+  numbers on every page header-equivalent, one truncated reference,
+  literal-underscore artifacts in §4.7). Witness recommendation:
+  FIX-BEFORE-SUBMIT — cut tex-v3 + bib-v3 (ARGON's patch set minus
+  the no-op \nocite), recompile (page count MUST be re-measured; the
+  metadata lock's "…35 pages." comments field governs), re-pin, and
+  re-cut the deposit package — one witness round on operator GO,
+  cheapest exactly now while the endorsement waiver has the deposit
+  paused anyway. SUBMIT-AS-IS remains electable (arXiv v1
+  typographic flaws are replaceable via a later v2 replacement,
+  identifier retained) — operator's call; the witness concurs with
+  either but recommends the fix.
+- 4NDR0MEDA PRE-ANNOUNCEMENT CHECKLIST (operator-side, from the
+  verified findings; nothing here blocks the GWM substrate): (1)
+  re-stamp the MEDA manifest — `python3 tools/manifest.py build`
+  then commit (or revert the banner); (2) on the PTE public-custody
+  election — commit pte-e5 + the Module-4 trace + the E4 harness
+    into a supplement/ or benchmarks/ home IF the §7.6
+  traceability claim is to hold for readers (PROTOCOL §4
+  disclosure: the paper already names them; committing is
+  consistent), re-stamp + push; (3) OPTIONAL: CITATION.cff
+  (ARGON's drop-in verified title-consistent with the Phase-4 lock
+  S1 — tex L26 matches) and the README traceability table;
+  (4) OPTIONAL: the expanded .gitignore. The witness clone at
+  /home/z/my-project/clone/4ndr0666/4NDR0MEDA stands as the
+  verification base for the next round's re-check.
+- REGISTRY MAINTENANCE (named-tool law): generator extended (82
+  registered — no emission files; 81 status → APPLIED + PUSHED @
+  a3dcf49; task81 bundle filenames resolved to `a3dcf49`; §1.15
+  status loop + §4 checker regex extended to 82; §4 row 82) and
+  re-run — INDEX v3: §1 = 252/15, canonical 253,
+  post-consolidation 261 (NO count changes — this round emits
+  nothing); §1.15 = 33 files; heading range widened to Tasks
+  75–82; determinism proven (byte-identical second run,
+  `20a0912e…`). emissions-index §1 header + §1.15 preamble/tree +
+  §4 rows 81-resolve + 82 in the same act (same-commit rule).
+  Boards ×4 + artifact-index row 82.
+- SCOPE NOTES (fail-visible): draft-3.1 byte-untouched
+  (`9b326af7…`); tex-v2/bib-v2 byte-untouched (`687c19d6…` /
+  `18d1e05f…` — this round VERIFIED them, it did not modify them;
+  a tex-v3 lands only on the operator's GO); PROJECT_STATE
+  unchanged (76b rewrite stands, §5.2); no sessions/ rows
+  (manifest 36/36); Phase-5 remains PAUSED pending the waiver
+  outcome; the 4NDR0MEDA clone is witness-side reference state
+  (VM-side, INDEX §3 class), not a GWM substrate motion.
+- EMISSION: none this round (nothing operator-suited requires a
+  kit — the elections are answered in-band; the tex-v3 cut, if
+  elected, is the NEXT round's work and rides the kit after it).
+  This commit rides the next kit bundle. Round-record bytes = this
+  worklog entry; the §D mutual digest prints in the boundary
+  transmission over exactly these bytes.
