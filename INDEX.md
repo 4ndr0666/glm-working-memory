@@ -345,6 +345,7 @@ entries**.
 - Task 76: WITHDRAWN — audit evidence of the 76a discharge; never run
 - Task 76b: LIVE STAGED — base 18518e8, awaiting operator apply
 - Task 77: EMITTED — share staging, ride-the-next-kit commit
+- Task 77c: EMITTED — same filenames re-staged with adjudicated pins (a764eb1f… / 037dbdd9… / 17b7d13b…); rides the next kit bundle
 
 ```
 ├── gwm-inbox-consolidate-v1.sh
@@ -391,11 +392,11 @@ relay (witness pin-verify → repo `references/white-paper-relay/` home,
 
 | File | Recorded pin (sha256) | Pin site |
 |---|---|---|
-| `paper-2-v1.6.1-source.tar.gz` | `99913db3f8ed8a1b85cc1e502226014345966bd3c23e6a106df3c30689f51a5c` | artifact-index digests-of-record (v1.6 FINAL SET) |
-| `paper-2-v1.6-to-v1.6.1.changes` | `778f9ac2d8fd62dc874b00347b1fabaa236e8f8402fedccbc05bc0953c22090c` | artifact-index digests-of-record (v1.6 FINAL SET) |
+| `paper-2-v1.6.1-source.tar.gz` | `a764eb1fafd4df3c5436bae58ecc178aa3a98bb2164f95b50f181415f6c6bfa0` | 77c supersession — operator adjudication [X0]/[X1], trace 1a18f3fb25e9c1a9 (H1: v1.6 tarball pin name-propagated, round5.6 receipt §2) |
+| `paper-2-v1.6-to-v1.6.1.changes` | `037dbdd997cc8c36d5749ade5333e93cd9252ac5acf64e7aebc63c1765148123` | 77c supersession — operator adjudication [X0], trace 1a18f3fb25e9c1a9 (H1: v1.6 changes pin name-propagated; the discriminating mismatch) |
 | `refs-2.bib` | `798d1dd499244b283c921222f27199c186645dc1ce6ecae469985aa655b7b101` | task72-bib-verification-ledger (relay receipt) |
 | `round5.2-counters-v1.md` | `def5d3b1a77a700a5a7cc496d04d5e062188be59e75f207aad5803b82ca5a7ad` | round5.3/5.5 ARGON receipts; artifact-index |
-| `round5.2-counters-v1.md.sha256` | `b0bd553f1aa8e320b42f132312a8818456c4ff3a9bdcf423d0d5e67d0b3a2b1d` | round5.3 ARGON receipt (sidecar pin, 90 B) |
+| `round5.2-counters-v1.md.sha256` | `17b7d13b317ab3d5dd188be8d480451baa36510083e44e5f05b2b5a855992e46` | 77c supersession — witness reconstruction (canonical sha256sum line over def5d3b1…; method validated by round5.4 sidecar 94999ef7…) + operator [X0] |
 | `round5.4-counters-v1.md` | `8c3f0497fc7768433890406cdf21cc2224f8816c4f11bbeca70e9c94a5dfbe9d` | round5.5 ARGON receipt; artifact-index (14,187 B) |
 | `round5.4-counters-v1.md.sha256` | `94999ef7d8357cf7631038d9f8dd4f49313954f0b3c02bdb075976c394bdf264` | artifact-index (sidecar pin, 90 B) |
 | `paper-2-arxiv-metadata.md` | `0ef99398ea3df5dc659532f523ee9548f36ceb5ede50b739e600b47d74add8ed` | artifact-index; session-010 archive (v0.7) |
@@ -423,3 +424,4 @@ emission (declared share) and thereafter mirrors the repo original
   home assigned (PROTOCOL v1.6.1); generator
   `scripts/build_inbox_index.py` rides the repo (named-tool law).
 - Task 77b, 2026-10-31, trace 1a18eeb2671b840d — first consolidation run RED at file 1 of 8: paper-2-v1.6.1-source.tar.gz recorded 99913db3… ≠ copied a764eb1f… (fail-closed halt — 1/8 tested, 7 untested, 0 consolidated, inbox left as found). §2 rows 1–2 pins flagged suspect: both inherited from the v1.6 FINAL SET by name-level propagation (the round5.6 receipt names the v1.6 tarball and the v1.5reconstruct-to-v1.6 changes file); no independent v1.6.1 hash act exists in the record. Adjudication issued in-band (7-pin spot check, gpt git forensics, all-commit pin sweep, alternate-copy + inner-content continuity); a confirmed record defect lands as its own round re-cutting all three pin-embed sites together (this generator's INTAKE_FILES, INDEX.md §2, and the consolidate script's PINNED table).
+- Task 77c, 2026-10-31, trace 1a18f3fb25e9c1a9 — adjudication returned (operator paste-back): H1 CONFIRMED — the changes file hashes 037dbdd9… ≠ recorded 778f9ac2… exactly as H1 predicted, the other five [X0] pins GREEN (refs-2.bib, both counters .md files, round5.4 sidecar, arxiv-metadata), the tarball re-attested a764eb1f… at cut-era mtime; [X1] on disk, not in gpt HEAD; [X2] NO-COMMIT-HOLDS-99913db3… (no git-held recovery); [X3] single copy, inner refs-2.bib = 798d1dd4… (continuity GREEN). A THIRD mismatch surfaced at [X0]: round5.2-counters-v1.md.sha256 tree 17b7d13b… ≠ recorded b0bd553f… — adjudicated sidecar-re-cut: the current bytes are the canonical sha256sum line over the .md's true pin def5d3b1… (witness-recomputable; the same reconstruction over 8c3f0497… reproduces the round5.4 sidecar pin 94999ef7… exactly; the b0bd553f preimage is unrecoverable from the record — ARGON's Round-5.3 computation over the then-relayed form). SUPERSESSION EXECUTED: pins of record re-anchored (a764eb1f… / 037dbdd9… / 17b7d13b…) across all embed sites together — this generator's INTAKE_FILES, INDEX.md §2 (this regen), the consolidate script's PINNED table; historical boards stand as-presented, superseded by append-only addenda (emissions-index §8, state-resync-check §10). Battery re-run GREEN; the four task77-index files re-staged on the declared share under the superseding pins.

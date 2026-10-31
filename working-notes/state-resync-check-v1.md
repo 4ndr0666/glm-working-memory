@@ -203,3 +203,21 @@ sync. Let me know otherwise; all tasks pending until sync is confirmed."
   the delivery kit was re-cut against the new base — the prior kit
   (`7605226..ef6a4b8`) would have failed closed at the operator's advanced
   head, by design, never by force.
+
+
+## 10. Addendum — §3 pin table superseded in part (Task 77c, 2026-10-31)
+
+Append-only; §0–§9 stand as-written. The operator's adjudication paste-back
+(trace 1a18f3fb25e9c1a9) superseded three of §3's recorded pins: rows 1–2
+(the v1.6.1 source line) were name-level propagations of the v1.6 FINAL SET
+digests — H1 confirmed, the changes file hashes `037dbdd9…` (not
+`778f9ac2…`) exactly as the record-defect hypothesis predicted — and the
+round5.2 sidecar's `b0bd553f…` (ARGON's Round-5.3 computation over the
+then-relayed form) was a pre-canonical relay form whose preimage is not
+recoverable from the record; the tree's current bytes are the canonical
+sha256sum line over the .md's true pin (`17b7d13b…`, witness-recomputable).
+The pins of record now live in INDEX.md §2 (generator-maintained) and are
+mirrored in the consolidate script's PINNED table; the superseded digests,
+their lineage, and the reconstruction snippet are registered at
+emissions-index §8. §9's R2-relay path is unchanged — and now unblocks for
+all eight files once the 77c consolidation run returns GREEN.

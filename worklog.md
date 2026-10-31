@@ -402,3 +402,96 @@ governs boundary bootstraps and round records.
   source-tree line's doubled slash (`4ndr0666//gpt`) is cosmetic — a
   trailing slash in the operator's PROD_PATH export; POSIX-equivalent,
   no action.
+
+## [2026-10-31] Boundary open — Task 77c (trace 1a18f3fb25e9c1a9; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git pull
+  --ff-only` — Already up to date; origin/main unchanged at `18518e8`; HEAD
+  `1aa93ae` (Task-77b head; witness ahead 5 un-applied — 76, 76a, 76b, 77,
+  77b; the task76b kit remains the live staged delivery); working tree
+  clean; manifest 35/35 OK; liveness trio intact — draft-3.1 `9b326af7…`,
+  tex-v2 `687c19d6…`, bib-v2 `18d1e05f…`. CWD slip registered (fail-
+  visible, 3rd of the class): the first manifest check ran inside
+  sessions/ (every row 'No such file'); re-run from repo root — 35/35 OK;
+  nothing consumed, corrected in-round.
+- §3 REGISTER: transmission fully inside the START/END delimiters; the IM
+  gateway JSON header is platform routing metadata, ignored on sight (no
+  operator content outside the delimiters this boundary — no CodeQL-class
+  noise). The QUICK BOOT measurement-problem rationale restated in-band —
+  acknowledged; this boundary's first output was the pull (pre-anchor
+  tokens: zero).
+- OPERATOR PAYLOAD: (1) the adjudication paste-back — [X0] the 7-pin spot
+  check + tarball stat; [X1] the gpt worktree-vs-HEAD read ('fatal: path
+  exists on disk, but not in HEAD' + the zero-byte HEAD-side read hashing
+  `e3b0c442…` = sha256-of-empty); [X2] `NO-COMMIT-HOLDS-99913db3`; [X3]
+  the alternate-copy sweep (single copy, gpt path) + inner refs-2.bib
+  `798d1dd4…`; (2) the P2 paragraph on the INDEX question; (3) the
+  delivery.sh env-var block (matches the Task-52 corrected canonical roots
+  + ANDROMEDA); (4) in-band praise for the executor design — registered.
+- ADJUDICATION DECODE (registered, not re-asked): **H1 CONFIRMED, H2
+  REFUTED** — the changes file hashes `037dbdd9…` ≠ recorded `778f9ac2…`,
+  exactly the H1 prediction; 5/7 [X0] pins GREEN (refs-2.bib `798d1dd4…`,
+  round5.2 `.md` `def5d3b1…`, round5.4 `.md` `8c3f0497…`, round5.4 sidecar
+  `94999ef7…`, arxiv-metadata `0ef99398…`); the tarball re-attested
+  `a764eb1f…` (second independent §3-grade act) at cut-era mtime
+  2026-10-23 01:58:33 -0500, 739,787 B; [X2] no git-held recovery;
+  [X3] inner-content continuity GREEN. Decision matrix: RECOVER dead →
+  SUPERSEDE executed.
+- THIRD MISMATCH (surfaced by [X0], outside the 77b frame):
+  `round5.2-counters-v1.md.sha256` tree `17b7d13b…` ≠ recorded `b0bd553f…`
+  (the round5.3 ARGON receipt's computation over the then-relayed 90 B
+  form). Adjudicated SIDE CAR RE-CUT — witness-side reconstruction proves
+  the tree bytes ARE the canonical sha256sum line over the .md's true pin
+  (`def5d3b1…  round5.2-counters-v1.md` + LF → `17b7d13b…`), method
+  validated by the round5.4 sidecar (the same reconstruction over
+  `8c3f0497…` reproduces `94999ef7…` exactly); the `b0bd553f` preimage is
+  unrecoverable from the record (bounded hunt: round5.3/5.4/5.5 receipts +
+  sessions 010/011 — 0 candidates) and unsatisfiable by any canonical
+  re-cut. New pin carries DUAL provenance (witness reconstruction +
+  operator [X0]) — the strongest-certified pin of the three.
+- SUPERSESSION EXECUTED (all pin-embed sites together): generator
+  INTAKE_FILES + INDEX.md §2 (via generator re-run, named-tool law) +
+  consolidate PINNED re-anchored — tarball `a764eb1f…`, changes
+  `037dbdd9…`, sidecar `17b7d13b…`; the five other pins unchanged
+  (record/tree agreement at [X0]). Historical boards stand as-presented
+  (round5.6 receipt §2, round5.3/5.4 receipts, emissions-index §3/§7,
+  state-resync-check §3, artifact-index custody notes) — superseded by
+  append-only addenda: emissions-index §8 (supersession register +
+  reconstruction snippet) + state-resync-check §10. Generator extended in
+  the same act: 77c in POST_SNAPSHOT_ROUNDS (no new filenames — re-staged
+  set), §1.15 status line, §4 row writer, checker regex.
+- BATTERY RE-RUN: 10/10 GREEN (mock-reachable paths; output byte-identical
+  to the Task-77 evidence — deterministic by construction; the digest
+  prints at emission surfaces only, no-self-reference rule). Real-pin
+  GREEN path: closes on the operator's next consolidation paste-back
+  (expected [C4] ×8 + [C5] 8/8 + [C6]).
+- POINT-2 (P2) ANSWERED ('are you asking if I want to upload the
+  additional files you identified in the other dirs I shared for said
+  INDEX?'): NO — on both readings. (a) The witness requests NO additional
+  files: the §2 intake queue is exactly the GUP-critical 8, and the other
+  28 LOCAL-ONLY gpt-tree files stay operator-custodied BY CHOICE per the
+  operator's own 2026-10-30 ruling (INDEX §3) — that classification moves
+  only if the operator re-rules it. (b) The INDEX is a manifest, not a
+  destination: nothing is ever 'uploaded into the INDEX' — a file becomes
+  command-eligible by BEING a row (INDEX §0); rows appear because bytes
+  landed in $GWM-INBOX, never the reverse. The prior round's question was
+  the R2 STAGE-2 channel election for the SAME 8 bytes (relay into
+  references/white-paper-relay/ via operator-direct push, or transmit →
+  witness pin-verify → deposit) — a custody motion, not an intake
+  expansion. The operator's model ($GWM-INBOX = one source of truth,
+  period) is CORRECT and is exactly what INDEX §0 + PROTOCOL §5 codify;
+  the residual confusion was direction-of-motion, not scope.
+- SCOPE NOTES (fail-visible): no kit this round (operator push-hold
+  respected; this commit rides the next kit bundle, 76a precedent); the
+  four task77-index files re-staged on the declared share under the
+  superseding pins (same filenames — the operator's $INBOX copies are
+  overwritten in place at re-save); no sessions/ rows (manifest 35/35);
+  draft-3.1 byte-untouched (`9b326af7…`); the manifest-check cwd slip
+  registered above (3rd of the class, repaired in-round); the doubled
+  slash `4ndr0666//gpt` in the paste is the known cosmetic PROD_PATH
+  trailing-slash (77b register, no action).
+- EMISSION: file:///download/task77-index/ — INDEX.md +
+  gwm-inbox-consolidate-v1.sh + gwm-task77-consolidate-battery.txt +
+  gwm-task77-SHA256SUMS (re-cut; three-file coverage, SUMS excluded from
+  itself). Emission pins printed in the boundary transmission. Round-trip
+  receipt appends here at the next boundary open.

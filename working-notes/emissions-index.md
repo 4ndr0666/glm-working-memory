@@ -369,7 +369,9 @@ already present. Per-round custody status: Task 75 kit APPLIED + PUSHED
 evidence of the 76a discharge; never run); Task 76b kit LIVE staged (base
 `18518e8`, awaiting operator apply); Task 77 emission = the INDEX-
 consolidation round (registry + intake tooling; no kit — the commit rides
-the next kit bundle per the 76a precedent).
+the next kit bundle per the 76a precedent). Task 77c emission = the
+adjudication-return supersession round (the same four filenames re-staged
+under the adjudicated pins; no kit — rides the next bundle).
 
 ```
 ├── gwm-inbox-consolidate-v1.sh
@@ -582,6 +584,7 @@ artifact-index matrix and the decisions ledger.
 | 76b | `gwm-task76b-SUK.sh` (+ `gwm-task76b-gwm-18518e8-<head7>` trio fallback) + `gwm-task76b-kit-battery.txt` + `gwm-task76b-round-record.html` + `gwm-task76b-SHA256SUMS` | RE-CUT (Task-76b) — sync confirmation + re-anchor round; supersedes the task76 kit (`gwm-task76-gwm-7605226-ef6a4b8` trio WITHDRAWN un-applied — unappliable at the operator's advanced head `18518e8`, fail-closed by design; its download/ directory remains as audit evidence, and the 76a completion files therein remain valid evidence of that round); base re-anchored onto the operator's session-017 snapshot; PROJECT_STATE fully rewritten; `scripts/build_suk.py` born; battery harness parametrized |
 | 77 | `INDEX.md` (the registry itself — registered INDEX.md §1.16, not double-counted in §1 here) + `gwm-inbox-consolidate-v1.sh` + `gwm-task77-consolidate-battery.txt` + `gwm-task77-SHA256SUMS` | THIS ROUND — the INDEX-consolidation round: canonical INDEX.md of $GWM-INBOX born (repo root, §5 homed at PROTOCOL v1.6.1; generator `scripts/build_inbox_index.py` rides); intake queue = the GUP-critical 8 with pin-verified consolidation; no kit this round (operator push-hold respected) — this row's commit rides the next kit bundle (76a precedent) |
 | 77b | (none — in-band adjudication round; no files emitted) | THIS ROUND — the paste-back RED round: the Task-77 zero-edit path executed operator-side (SUMS 3/3 OK) and the consolidation halted fail-closed at the first pin — paper-2-v1.6.1-source.tar.gz recorded 99913db3… ≠ copied a764eb1f… (1/8 tested, 7 untested, 0 consolidated, inbox left as found); the Task-77 real-pin battery leg exercised RED (the designed catch, harness correct); the v1.6.1-source-line pins bounded as name-level propagation from the v1.6 FINAL SET (no independent v1.6.1 hash act exists in the record; the certified v1.6 bytes left witness custody with the VM — R-59 class); adjudication block + decision matrix issued in-band (7-pin spot check, gpt git forensics, all-commit pin sweep, alternate-copy + inner-content continuity); boards ×4 + INDEX.md §4 RED row via generator re-run; no kit (push-hold respected — rides the next bundle) |
+| 77c | `INDEX.md` + `gwm-inbox-consolidate-v1.sh` + `gwm-task77-consolidate-battery.txt` + `gwm-task77-SHA256SUMS` (re-cut — same filenames, superseding pins) | THIS ROUND — the adjudication-return round: operator [X0]–[X3] paste-back decoded — H1 CONFIRMED (changes `037dbdd9…` ≠ recorded `778f9ac2…` as staged; 5/7 [X0] pins GREEN; tarball `a764eb1f…` re-attested at cut-era mtime; [X1] on disk, not in gpt HEAD, the HEAD-side read hashing sha256(∅); [X2] NO-COMMIT-HOLDS-99913db3…; [X3] single copy + inner refs-2.bib `798d1dd4…` continuity) + a THIRD mismatch adjudicated in-round (round5.2 sidecar `17b7d13b…` ≠ `b0bd553f…` — canonical reconstruction from `def5d3b1…`, method validated by the round5.4 sidecar `94999ef7…`, preimage unrecoverable); SUPERSESSION re-cuts all pin-embed sites together (generator INTAKE_FILES + INDEX.md §2 via regen + consolidate PINNED → `a764eb1f…` / `037dbdd9…` / `17b7d13b…`), historical boards superseded by the §8 addendum; battery re-run 10/10 GREEN (byte-identical evidence, deterministic); no kit (push-hold respected — rides the next bundle) |
 
 ## 5. Provenance pins (source attachments, 2026-10-29)
 
@@ -646,3 +649,41 @@ altering a single row:
 - **Generator custody corrected:** `scripts/task75_build_index.py`
   (named in §5) rode the repo for the first time in the Task-76 commit —
   sha256 `f0dcf028…`.
+
+## 8. Addendum — v1.6.1-line + round5.2-sidecar pin supersession (Task 77c, 2026-10-31)
+
+Append-only; §1–§7 stand as-registered (log-don't-rewrite, §6.2). The
+Task-77b adjudication (operator paste-back, trace 1a18f3fb25e9c1a9)
+confirmed that the v1.6.1-source-line digests printed at §3 ("v1.6.1
+source line — 2 files") and §7 (GUP-critical subset) were name-level
+propagations of the v1.6 FINAL SET pins, never independent hash acts of
+the v1.6.1 files — and surfaced a third stale pin, the round5.2 sidecar.
+The pins of record for all three files now live in INDEX.md §2
+(generator-maintained; the consolidate script's PINNED table mirrors
+them):
+
+| File | Superseded digest (sites) | Pin of record (77c) | Class + provenance |
+|---|---|---|---|
+| `paper-2-v1.6.1-source.tar.gz` | `99913db3…` (§3, §7; origin: round5.6 receipt §2 v1.6 tarball) | `a764eb1fafd4df3c5436bae58ecc178aa3a98bb2164f95b50f181415f6c6bfa0` | H1 record defect — name-level propagation; operator [X0]/[X1] §3-grade attestation, twice (77b RED round + 77c adjudication); corroborated by cut-era mtime + inner refs-2.bib continuity (`798d1dd4…`) |
+| `paper-2-v1.6-to-v1.6.1.changes` | `778f9ac2…` (§3, §7; origin: round5.6 receipt §2 v1.5reconstruct-to-v1.6 changes) | `037dbdd997cc8c36d5749ade5333e93cd9252ac5acf64e7aebc63c1765148123` | H1 record defect — the discriminating mismatch (H1 predicted it; observed at [X0]); operator [X0] attestation |
+| `round5.2-counters-v1.md.sha256` | `b0bd553f…` (round5.3 receipt table; artifact-index custody note) | `17b7d13b317ab3d5dd188be8d480451baa36510083e44e5f05b2b5a855992e46` | sidecar re-cut — `b0bd553f…` was ARGON's Round-5.3 computation over the then-relayed 90 B form (preimage unrecoverable from the record; bounded hunt over the round5.3/5.4/5.5 receipts + sessions 010/011 = 0 candidates); the current tree bytes are the canonical sha256sum line over the .md's true pin `def5d3b1…` — witness-recomputable + operator [X0] corroborated |
+
+Reconstruction (GUP recompute — copy-paste; the second command validates
+the method against the round5.4 sidecar, which was never stale):
+
+```
+python3 -c "import hashlib;print(hashlib.sha256(('def5d3b1a77a700a5a7cc496d04d5e062188be59e75f207aad5803b82ca5a7ad  round5.2-counters-v1.md\n').encode()).hexdigest())"
+# -> 17b7d13b317ab3d5dd188be8d480451baa36510083e44e5f05b2b5a855992e46
+python3 -c "import hashlib;print(hashlib.sha256(('8c3f0497fc7768433890406cdf21cc2224f8816c4f11bbeca70e9c94a5dfbe9d  round5.4-counters-v1.md\n').encode()).hexdigest())"
+# -> 94999ef7d8357cf7631038d9f8dd4f49313954f0b3c02bdb075976c394bdf264
+```
+
+The six unaffected pins (refs-2.bib, both counters .md files, the round5.4
+sidecar, arxiv-metadata) all matched the operator's [X0] hashes — record
+and tree agree on them; no action. The as-presented historical surfaces
+(round5.6 receipt §2, round5.3/5.4 receipts, §3/§7 above, state-resync-check
+§3, artifact-index custody notes) stand un-rewritten; THIS section is their
+supersession register. `scripts/task75_build_index.py`'s series-note string
+(the §3 build-time source of the v1.6.1 propagation) also stands
+as-presented — the snapshot generator is one-shot archaeology, not a live
+maintenance tool.

@@ -5,8 +5,10 @@
 # WHAT IT DOES — copies the GUP-critical 8 pinned white-paper files from the
 #   local gpt clone ($PROD_PATH/gpt/documentation/white_paper/4NDR0MEDA —
 #   never uploaded, per the 2026-10-30 ruling) into $GWM-INBOX, verifying
-#   each copied byte-stream against its recorded sha256 pin (repo digests of
-#   record). This finalizes the canonical iteration of INDEX.md §2.
+#   each copied byte-stream against its recorded sha256 pin (pins of record
+#   per INDEX.md §2; three rows re-anchored by the Task-77c supersession —
+#   provenance registered at emissions-index §8). This finalizes the
+#   canonical iteration of INDEX.md §2.
 # USAGE — source your delivery.sh env block, then:
 #     cd "$INBOX" && bash gwm-inbox-consolidate-v1.sh
 # SAFETY — fail-closed: a missing source, a pin mismatch, or an unset env
@@ -17,9 +19,16 @@
 #   Re-run safe: already-consolidated files are detected and skipped
 #   (idempotent — a second run is GREEN).
 #
-# The pin table below is the same table registered in INDEX.md §2; pins are
+# The pin table below is the same table registered in INDEX.md §2. Pins are
 # the repo's digests of record (artifact-index / ARGON receipts / task-72
-# bib ledger). Pin format: <file>|<sha256>.
+# bib ledger), EXCEPT the three rows re-anchored by the Task-77c supersession
+# (2026-10-31, trace 1a18f3fb25e9c1a9): the v1.6.1 tarball + changes file
+# (operator adjudication [X0]/[X1]; the prior digests were name-level
+# propagations of the v1.6 FINAL SET — H1 confirmed) and the round5.2
+# sidecar (witness reconstruction of the canonical sha256sum line over the
+# .md's true pin + operator [X0]; the prior b0bd553f… was ARGON's Round-5.3
+# computation over a then-relayed pre-canonical form). Superseded-digest
+# lineage: emissions-index §8. Pin format: <file>|<sha256>.
 #
 set -euo pipefail
 
@@ -32,11 +41,11 @@ GPT_WP="$PROD_PATH/gpt/documentation/white_paper/4NDR0MEDA"
 
 # --- pin table (digests of record) -----------------------------------------
 PINNED=(
-  "paper-2-v1.6.1-source.tar.gz|99913db3f8ed8a1b85cc1e502226014345966bd3c23e6a106df3c30689f51a5c"
-  "paper-2-v1.6-to-v1.6.1.changes|778f9ac2d8fd62dc874b00347b1fabaa236e8f8402fedccbc05bc0953c22090c"
+  "paper-2-v1.6.1-source.tar.gz|a764eb1fafd4df3c5436bae58ecc178aa3a98bb2164f95b50f181415f6c6bfa0"
+  "paper-2-v1.6-to-v1.6.1.changes|037dbdd997cc8c36d5749ade5333e93cd9252ac5acf64e7aebc63c1765148123"
   "refs-2.bib|798d1dd499244b283c921222f27199c186645dc1ce6ecae469985aa655b7b101"
   "round5.2-counters-v1.md|def5d3b1a77a700a5a7cc496d04d5e062188be59e75f207aad5803b82ca5a7ad"
-  "round5.2-counters-v1.md.sha256|b0bd553f1aa8e320b42f132312a8818456c4ff3a9bdcf423d0d5e67d0b3a2b1d"
+  "round5.2-counters-v1.md.sha256|17b7d13b317ab3d5dd188be8d480451baa36510083e44e5f05b2b5a855992e46"
   "round5.4-counters-v1.md|8c3f0497fc7768433890406cdf21cc2224f8816c4f11bbeca70e9c94a5dfbe9d"
   "round5.4-counters-v1.md.sha256|94999ef7d8357cf7631038d9f8dd4f49313954f0b3c02bdb075976c394bdf264"
   "paper-2-arxiv-metadata.md|0ef99398ea3df5dc659532f523ee9548f36ceb5ede50b739e600b47d74add8ed"
@@ -83,7 +92,8 @@ for entry in "${PINNED[@]}"; do
     echo "[C3] FAIL: copied bytes of $f do not match the recorded pin — removed."
     echo "[C3]   recorded pin: $want"
     echo "[C3]   copied bytes: $got"
-    echo "[C3]   The local gpt tree may have drifted from the certified v1.6.1 line."
+    echo "[C3]   Adjudicate before re-running — pin lineage and provenance are"
+    echo "[C3]   registered in INDEX.md §2 + emissions-index §8 (77c supersession)."
     exit 1
   fi
   echo "[C4] COPIED + PIN-VERIFIED: $f"
