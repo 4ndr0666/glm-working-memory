@@ -653,3 +653,123 @@ governs boundary bootstraps and round records.
 - EMISSION: none this round (verification + registry maintenance only).
   Round-record bytes = this worklog entry; the §D mutual digest prints in
   the boundary transmission over exactly these bytes.
+
+## [2026-10-31] Boundary open — Task 80 (trace 1a1903489f031ce1; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git pull
+  --ff-only` — GREEN, already up to date (origin/main unchanged at
+  `435d598`; witness ahead 1 — Task 79's `6fc6c94` riding the next kit
+  per the 76a precedent); manifest 36/36 OK; liveness trio intact —
+  draft-3.1 `9b326af7…`, tex-v2 `687c19d6…`, bib-v2 `18d1e05f…`.
+- §3 REGISTER: TWO transmissions at this boundary. The first (gateway
+  trace `1a1902f4a321093d`) arrived complete witness-side — not
+  truncated — but is SUPERSEDED by the operator's explicit opening
+  instruction in the second ("DISREGARD the failed transmission just
+  now and instead consider this the direct response to my standing queue
+  of Phase-5 arXiv submission"); the second (gateway trace
+  `1a1903489f031ce1`) is AUTHORITATIVE; envelope bodies byte-identical
+  between the two (the second adds the DISREGARD preamble and names the
+  START/END delimiters explicitly). Envelope-declared trace
+  `1a184806a91640c9` — identical to the Task-73 Phase-4 append trace in
+  the metadata lock §4 (workbench session-trace reuse; cosmetic,
+  registered). "From: Operator (4ndr0666) & Gemini Workbench" —
+  AI-assisted transmission declared in-envelope; per §3 the in-delimiter
+  text is the operator's.
+- OPERATOR PAYLOAD (authoritative envelope, RECEIVED VERBATIM): (1)
+  PHASE-5 PAUSED — arXiv cs.AI endorsement gate hit (first-time /
+  independent submitter account); Manual Endorsement Waiver support
+  ticket submitted (attaching paper-2-v1.7-draft3-1-latex-v1.pdf,
+  referencing github.com/4ndr0666/4NDR0MEDA); 24–48h resolution window;
+  substrate byte-frozen. (2) Metadata locked (title candidate 1; sole
+  author + ORCID; cs.AI primary, 3 cross-lists). (3) Package readiness:
+  "TeX/BibTeX v2 package … compiled cleanly to 33-page PDF". (4) Banners
+  (PNG + SVG) built/rendered/pushed; PIN-CHAIN.md + MANIFEST.sha256
+  green. (5) PIVOT to PTE / v1.8 executable supplement:
+  PhaseComplexAttention refinement, σ_coherence + q_EA telemetry probes,
+  E1–E5 suite, F2 Triton kernel. (6) Election question: which module or
+  benchmark first?
+- RECEIPTS (witness verification, this boundary):
+  (a) METADATA-LOCK CROSS-CHECK GREEN — every envelope claim ==
+  `write-ups/paper-2-v1.7-arxiv-metadata-lock-v1.md` (v1, LOCKED): title
+  candidate 1 "State Transfer, Not Summary…" (§1); sole author Alejandro
+  Gutierrez, ORCID 0009-0008-0976-3895 (§2); cs.AI primary +
+  cs.CL/cs.LG/cs.CR cross-lists (§3). The relayed
+  paper-2-arxiv-metadata.md v0.7's older cs.CR-primary recommendation is
+  superseded by the lock (v0.7 = the pre-lock draft; the lock is the
+  single source of truth by its own status line).
+  (b) PAGE-COUNT DISCREPANCY ADJUDICATED BY RECOMPILE — the envelope's
+  "33-page PDF" vs the lock §4's Phase-4 append "35 pages"; the repo
+  holds tex-v2 + bib-v2, so the claim is GUP-recomputable: witness
+  recompile in a scratch dir (/tmp/t80-build; repo bytes untouched),
+  tectonic 0.15.0 (the same version as the Task-73 build), exit 0, zero
+  errors, embedded thebibliography (28 entries: 7 record-verified core +
+  21 carried forward) → **35 pages** (PDF 229,178 B). THE LOCK CONFIRMED
+  at 35; the envelope's 33 is a workbench slip (33 = the Task-71
+  smoke-build count of tex-v1; the v2 References appendix adds two
+  pages, exactly as the lock records). Surfaced to the operator: the
+  arXiv form's comments field is LOCKED at "…35 pages." — the form entry
+  must carry 35, never 33.
+  (c) PUBLISHED-REMOTE PROBE GREEN — github.com/4ndr0666/4NDR0MEDA @
+  main `55bea18`: PIN-CHAIN.md + MANIFEST.sha256 at root ✓; hero banner
+  assets (SVG + PNG renders) in assets/ ✓; latest commit
+  "architecturally aligned image hero banner generation" (4ndr0666, Oct
+  29). Registered nuance: the banner push PREDATES this boundary — it is
+  standing state already observed at Task 76's published-main
+  verification (`55bea18`), not a new motion since; the 1280×320 8-bit
+  specifics are workbench-reported (existence confirmed remote-side,
+  geometry not).
+  (d) PTE MATH GROUNDED — the envelope's formulas are draft-3.1 §4.8
+  verbatim: 𝒜_ij = q_i†k_j (complex sesquilinear projection, Hermitian
+  conjugate asymmetry), v_steered = e^{iĤ_intent Δt} v_residual
+  (per-head unitary steering), ‖Ψ‖₂ = 1 (projective unit-ray
+  constraint); σ_coherence + q_EA with the Module-4 TARGET bands
+  (0.0623 → 1.1182; +0.8521 → −0.1325, Pythia/Llama-3 via
+  TransformerLens — "specified, not executed") at §4.8 + the §7.6
+  telemetry claims ledger. The envelope's bracket refs [274–275] and
+  [181–187] map to NO record artifact (those lines in draft-3.1 are §6.1
+  and §4.5–4.7; section-04-r2 is 63 lines) — they are workbench-local
+  line refs into the v1.8 working copy (not in the record); registered
+  as such.
+  (e) V1-PDF-ON-TICKET NOTE — the waiver ticket attached latex-v1.pdf
+  (the 33-page smoke render) while the deposit package is the v2 build
+  (35 pages): the endorsement reviewer sees the v1 render. Not a defect
+  (operator's out-of-band choice; both PDFs are record-pinned INDEX
+  §1.6), but the title-block-era + page-count divergence is surfaced so
+  the eventual deposit form and the endorsed artifact stay consistent.
+- PIVOT REGISTERED: the PTE / v1.8 executable-supplement pivot = the
+  standing v1.8/arXiv-v2 queue (task-72 payload (f); lock §6)
+  ACTIVATING — deposit operations frozen out-of-band; the endorsement
+  ticket is the only pending Phase-5 item. No ticket number or receipt
+  was pasted — registered PENDING-VERIFY (operator-report class); the
+  ticket resolution paste-back queues the deposit-resume round, and the
+  identifier-backfill round follows on submit.
+- ELECTION ANSWERED (the envelope's closing question):
+  **PhaseComplexAttention module verification FIRST** — the projection +
+  ‖Ψ‖₂=1 wrapper is the dependency root (the E-suite exercises the
+  module; Module-4's target bands assume its numerics), statically
+  verifiable without GPU, and the silent-failure class: a wrong
+  normalization produces plausible-but-wrong telemetry downstream, and
+  every later number inherits it. Order: (1) module; (2) E1–E5 harness
+  as the integration gate (the 1=1 capture-state hash = the determinism
+  leg); (3) Module-4 TransformerLens alignment against the §7.6 target
+  bands; (4) F2 Triton kernel last (performance, gated on correctness).
+  CUSTODY PRECONDITION named: the PTE sources are NOT repo-held
+  (pte-e5-executable-demo-benchmark-v2.py + the Module-4 telemetry trace
+  are $GWM-INBOX residents per INDEX §1.11; the PhaseComplexAttention
+  module source is workbench/operator-side) — for witness co-work the
+  source set rides the channel-(a) relay pattern (proven end-to-end
+  with the GUP-critical 8 at Task 79): operator-direct commit+push into
+  the repo, witness pin-verifies at the next bootstrap.
+- REGISTRY MAINTENANCE (named-tool law): generator extended (80
+  registered — no emission files; §1.15 status tuple + §4 checker
+  regex) and re-run; emissions-index §1.15 (Tasks 75–80) + §4 row 80;
+  boards ×4 + artifact-index row 80 in the same act (same-commit rule).
+- SCOPE NOTES (fail-visible): draft-3.1 byte-untouched (`9b326af7…`);
+  tex-v2/bib-v2 byte-untouched (`687c19d6…` / `18d1e05f…` — the
+  recompile ran in a scratch dir, /tmp/t80-build; the repo files were
+  never modified); PROJECT_STATE unchanged (76b rewrite stands, §5.2);
+  no sessions/ rows (manifest 36/36); no kit (nothing operator-suited
+  requires one — Tasks 79+80 ride the next kit bundle together).
+- EMISSION: none this round. Round-record bytes = this worklog entry;
+  the §D mutual digest prints in the boundary transmission over exactly
+  these bytes.

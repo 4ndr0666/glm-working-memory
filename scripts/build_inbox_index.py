@@ -116,6 +116,15 @@ POST_SNAPSHOT_ROUNDS = {
                   "commit riding the next kit bundle",
         "files": [],
     },
+    "80": {
+        "label": "Task 80 — deposit-hold registration + PTE-pivot election round",
+        "status": "NO EMISSION FILES — Phase-5 paused at the arXiv endorsement "
+                  "gate (waiver ticket pending operator-side, 24–48h); PTE/v1.8 "
+                  "pivot registered + module-first election answered; 33-vs-35pp "
+                  "discrepancy adjudicated by witness recompile (lock's 35 "
+                  "confirmed); commit riding the next kit bundle",
+        "files": [],
+    },
 }
 
 # The $GWM-INBOX consolidation queue: the GUP-critical 8 — the only gpt-tree
@@ -213,7 +222,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -328,7 +337,7 @@ def main():
         w(f"### {major}.{minor} {title} — {count} files")
         w("")
         if (major, minor) == (1, 15):
-            for rid in ("75", "76", "76b", "77", "77c", "78", "79"):
+            for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -461,6 +470,26 @@ def main():
       "where-and-when-is-there-a-$GWM question) — §0 label-clarification "
       "bullet added, build_suk.py gained a fail-closed label guard. No "
       "emission files this round; this commit rides the next kit bundle.")
+    w("- Task 80, 2026-10-31, trace 1a1903489f031ce1 — the deposit-hold "
+      "registration + PTE-pivot election round (envelope-declared workbench "
+      "trace 1a184806a91640c9): Phase-5 PAUSED at the arXiv cs.AI endorsement "
+      "gate (Manual Endorsement Waiver ticket submitted operator-side, "
+      "attaching the latex-v1 PDF + referencing the 4NDR0MEDA repo; 24–48h "
+      "window; no receipt pasted — PENDING-VERIFY). Metadata-lock cross-check "
+      "GREEN (envelope claims == the lock v1 exactly). Page-count discrepancy "
+      "ADJUDICATED BY WITNESS RECOMPILE: tectonic 0.15.0, exit 0, scratch-dir "
+      "→ 35 pages — the lock's Phase-4 append CONFIRMED; the envelope's 33 = "
+      "the Task-71 tex-v1 smoke count; the arXiv form's locked comments field "
+      "carries '35 pages.'. Published-remote probe GREEN (4NDR0MEDA @ 55bea18: "
+      "PIN-CHAIN.md + MANIFEST.sha256 + banner assets — standing state since "
+      "the Oct-29 banner commit, not a new motion). PTE/v1.8 pivot registered "
+      "(the standing task-72 queue activating; the envelope's formulas = "
+      "draft-3.1 §4.8 verbatim; its bracket refs are workbench-local) and the "
+      "election ANSWERED: PhaseComplexAttention module verification FIRST, "
+      "then E1–E5 as the integration gate, then Module-4 TransformerLens "
+      "alignment vs the §7.6 target bands, F2 Triton last; PTE sources not "
+      "repo-held — the channel-(a) relay pattern offered for witness co-work. "
+      "No emission files this round; this commit rides the next kit bundle.")
     w("")
 
     text = "\n".join(out)
