@@ -49,18 +49,18 @@ GUP-class). This file's own sha256 prints at emission surfaces only
 
 ## §1 Canonical set — what MUST exist in $GWM-INBOX
 
-246 witness-emission files across 15 series
+252 witness-emission files across 15 series
 (series 1.1–1.14 = the operator's 2026-10-29 INDEX snapshot, 219
 files, as-registered emissions-index §1; series 1.15 = post-snapshot
 emission rounds staged on the declared share, reconciliation pending)
-plus this registry itself = **247 entries**. After the
+plus this registry itself = **253 entries**. After the
 §2 intake consolidates (8 files), the canonical
-post-consolidation population is **255
+post-consolidation population is **261
 entries**.
 
 The §2 consolidation EXECUTED operator-side on 2026-10-31 — 8/8
 pin-verified, [C6] GREEN; the canonical iteration is standing at
-**255 entries** in $GWM-INBOX.
+**261 entries** in $GWM-INBOX.
 
 ### 1.1 GWM task-range kits — 83 files
 
@@ -351,7 +351,7 @@ pin-verified, [C6] GREEN; the canonical iteration is standing at
 ├── arxiv-submission-checklist-v1.md
 ```
 
-### 1.15 Post-snapshot emission rounds (Tasks 75–80) — 27 files
+### 1.15 Post-snapshot emission rounds (Tasks 75–81) — 33 files
 
 - Task 75: APPLIED + PUSHED (origin/main reached 7605226)
 - Task 76: WITHDRAWN — audit evidence of the 76a discharge; never run
@@ -361,6 +361,7 @@ pin-verified, [C6] GREEN; the canonical iteration is standing at
 - Task 78: APPLIED + PUSHED @ aaac871 (operator [G0]–[G5] GREEN; push 6c8a76f..aaac871; the R2 relay 435d598 rides above)
 - Task 79: NO EMISSION FILES — the R2 relay @ 435d598 witness-verified 8/8 (INDEX §2 pins); boards + registry maintenance only; commit riding the next kit bundle
 - Task 80: NO EMISSION FILES — Phase-5 paused at the arXiv endorsement gate (waiver ticket pending operator-side, 24–48h); PTE/v1.8 pivot registered + module-first election answered; 33-vs-35pp discrepancy adjudicated by witness recompile (lock's 35 confirmed); commit riding the next kit bundle
+- Task 81: EMITTED — the actual submission package boundary-delivered and verified three-way (upload == Task-73 staged emission == Task-73 SHA256SUMS pin; inner tex/bib == the repo v2 pins); the exact deposit bytes repo-custodied at references/arxiv-deposit/ (verifier [D0]–[D5] GREEN); the task78 <head7> placeholder resolved to aaac871 this round; kit staged + battery-proven at base 435d598 carrying Tasks 79+80+81 — the new bundle filename rides the same placeholder semantics (resolves after apply+push)
 
 ```
 ├── gwm-inbox-consolidate-v1.sh
@@ -386,10 +387,16 @@ pin-verified, [C6] GREEN; the canonical iteration is standing at
 ├── gwm-task77-consolidate-battery.txt
 ├── gwm-task78-SHA256SUMS
 ├── gwm-task78-SUK.sh
-├── gwm-task78-gwm-6c8a76f-<head7>.bundle
-├── gwm-task78-gwm-6c8a76f-<head7>.bundle.b64
+├── gwm-task78-gwm-6c8a76f-aaac871.bundle
+├── gwm-task78-gwm-6c8a76f-aaac871.bundle.b64
 ├── gwm-task78-kit-battery.txt
 ├── gwm-task78-round-record.html
+├── gwm-task81-SHA256SUMS
+├── gwm-task81-SUK.sh
+├── gwm-task81-gwm-435d598-<head7>.bundle
+├── gwm-task81-gwm-435d598-<head7>.bundle.b64
+├── gwm-task81-kit-battery.txt
+├── gwm-task81-round-record.html
 ```
 
 ### 1.16 This registry — 1 file
@@ -449,7 +456,7 @@ their pins are repo-recomputable.
 ## §4 Maintenance log (append-only)
 
 - Task 77, 2026-10-31, trace 1a18ec4bf6f45179 — INDEX.md born: 219-file snapshot registry + series 1.15
-  (post-snapshot emission rounds, 27 files) + this registry = 247
+  (post-snapshot emission rounds, 33 files) + this registry = 253
   entries; intake queue opened for the GUP-critical 8; §5 canonical
   home assigned (PROTOCOL v1.6.1); generator
   `scripts/build_inbox_index.py` rides the repo (named-tool law).
@@ -459,3 +466,4 @@ their pins are repo-recomputable.
 - Task 78, 2026-10-31, trace 1a18f74b04f17959 — round-trip closures registered (76b kit APPLIED @ 7f2e968 + PUSHED, pins re-verified witness-side; 77c emission 3/3; INDEX v2 CONFIRMED — push-hold gate closed) + re-anchor (77/77b/77c rebased onto the session snapshot 6c8a76f, old heads tag-preserved) + series 1.15 grew to 27 files (task78 kit six; the bundle filename's <head7> placeholder resolves at kit cut) — canonical entries 241→247, post-consolidation 249→255; the task78 kit (base 6c8a76f) carries the rebased stack.
 - Task 79, 2026-10-31, trace 1a18fc5c14a61761 — the R2 stage-2 relay verified at the bootstrap pull: operator commit `435d598` (channel (a); single-commit advance off `aaac871`) deposited the GUP-critical 8 under `references/white-paper-relay/`; witness re-hash 8/8 == §2 pins of record, sidecar canonical-line consistency re-proven, stats matched — `scripts/task79_relay_verify.sh` [R0]–[R3] GREEN. The task78 kit round-trip registered (APPLIED + PUSHED @ `aaac871`; the paste-back's head-40 line carried a 38-hex slip, closed by the push receipt + history). Naming defect registered + fixed: the task78 SUK's G4 label carried $GWM-INBOX inside double quotes, so the operator-side shell expanded $GWM into a phantom path (the operator's where-and-when-is-there-a-$GWM question) — §0 label-clarification bullet added, build_suk.py gained a fail-closed label guard. No emission files this round; this commit rides the next kit bundle.
 - Task 80, 2026-10-31, trace 1a1903489f031ce1 — the deposit-hold registration + PTE-pivot election round (envelope-declared workbench trace 1a184806a91640c9): Phase-5 PAUSED at the arXiv cs.AI endorsement gate (Manual Endorsement Waiver ticket submitted operator-side, attaching the latex-v1 PDF + referencing the 4NDR0MEDA repo; 24–48h window; no receipt pasted — PENDING-VERIFY). Metadata-lock cross-check GREEN (envelope claims == the lock v1 exactly). Page-count discrepancy ADJUDICATED BY WITNESS RECOMPILE: tectonic 0.15.0, exit 0, scratch-dir → 35 pages — the lock's Phase-4 append CONFIRMED; the envelope's 33 = the Task-71 tex-v1 smoke count; the arXiv form's locked comments field carries '35 pages.'. Published-remote probe GREEN (4NDR0MEDA @ 55bea18: PIN-CHAIN.md + MANIFEST.sha256 + banner assets — standing state since the Oct-29 banner commit, not a new motion). PTE/v1.8 pivot registered (the standing task-72 queue activating; the envelope's formulas = draft-3.1 §4.8 verbatim; its bracket refs are workbench-local) and the election ANSWERED: PhaseComplexAttention module verification FIRST, then E1–E5 as the integration gate, then Module-4 TransformerLens alignment vs the §7.6 target bands, F2 Triton last; PTE sources not repo-held — the channel-(a) relay pattern offered for witness co-work. No emission files this round; this commit rides the next kit bundle.
+- Task 81, 2026-10-31, trace 1a1905cebcf39595 — the deposit-package verification + kit-cut round: the operator boundary-delivered the actual arXiv submission package (paper-2-arxiv-deposit-v1.tar.gz) and confirmed the waiver ticket's proof attachment is the 33-page v1 render — the Task-80 consistency question ANSWERED (ticket proof and deposit artifact are intentionally split; the deposit package is the 35-page v2 build; the form comments field stays locked at '…35 pages.'). Package verified THREE-WAY on witness-recomputed digests: delivered bytes == the Task-73 staged emission == the Task-73 SHA256SUMS pin (wrapper c4148807…, 46,466 B), inner tex 687c19d6… + bib 18d1e05f… == the repo v2 pins of record — the package IS the locked v2 bytes. Substrate custody: the exact deposit bytes deposited at references/arxiv-deposit/ (canonical sha256 sidecar; repo-rode verifier scripts/task81_deposit_verify.sh [D0]–[D5] GREEN — GUP-class re-verification at every future bootstrap). The task78 bundle-filename <head7> placeholder RESOLVED to aaac871 across the emissions-index §1.15 block, §4 row 78, and this generator's registry (the staged kit file was always so named; the record now matches). Series 1.15 grew to 33 files (task81 kit six — the new bundle filename rides the same placeholder semantics, resolving after apply+push); §1 = 252/15, canonical 253, post-consolidation 261. The task81 kit cut at base 435d598 carrying Tasks 79+80+81, battery-proven before staging. No sessions/ rows (manifest 36/36); draft-3.1/tex-v2/bib-v2 byte-untouched.

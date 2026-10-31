@@ -773,3 +773,93 @@ governs boundary bootstraps and round records.
 - EMISSION: none this round. Round-record bytes = this worklog entry;
   the §D mutual digest prints in the boundary transmission over exactly
   these bytes.
+
+## [2026-10-31] Boundary open — Task 81 (trace 1a1905cebcf39595; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git pull
+  --ff-only` — GREEN, already up to date (origin/main unchanged at
+  `435d598`; witness ahead 2 — Tasks 79+80 riding the next kit per the
+  standing plan); manifest 36/36 OK — after an in-round cwd-slip repair
+  (the check first ran from inside `sessions/`, where the manifest's
+  repo-root-relative paths fail open; 4th of the class, fail-visible,
+  re-run from the repo root GREEN); liveness trio intact — draft-3.1
+  `9b326af7…`, tex-v2 `687c19d6…`, bib-v2 `18d1e05f…`.
+- §3 REGISTER: transmission fully inside the START/END delimiters; no
+  out-of-band noise this boundary. One attachment:
+  `paper-2-arxiv-deposit-v1.tar.gz` (46,466 B). The "pdg" typo (pdf)
+  and the QUICK-START env-var block (PROD_PATH / INBOX / GWM / ANDROMEDA
+  — matches the standing declaration) registered.
+- OPERATOR PAYLOAD (RECEIVED VERBATIM): (1) "The waiver ticket has a
+  copy of the 33pg pdg as an attachment for proof." (2) "The actual
+  submission package is attached." — read as the direct answer to the
+  Task-80 surfaced item (the v1-render-on-ticket vs v2-deposit
+  divergence), delivering the deposit package for the record.
+- RECEIPTS (witness verification, this boundary): DEPOSIT PACKAGE
+  VERIFIED THREE-WAY, all on witness-recomputed digests — [D0] shape:
+  source-only, exactly 2 members (tex-v2 131,850 B + bib-v2 11,039 B),
+  no directories, no extraneous entries; wrapper sha256 `c4148807…`,
+  46,466 B. [D1] inner tex == the repo tex-v2 of record `687c19d6…`
+  (live-rehashed both sides). [D2] inner bib == the repo bib-v2 of
+  record `18d1e05f…` (live-rehashed both sides). [D3] wrapper
+  byte-identity three ways: the boundary delivery (upload/) == the
+  Task-73 staged emission (download/task73-kit/, unchanged since cut)
+  == the Task-73 SHA256SUMS pin line (`c4148807…` recorded at the
+  Phase-4 emission) — the delivered package IS the Task-73 Phase-4
+  deposit package, and its inner bytes ARE the locked v2 sources that
+  the Task-80 recompile adjudicated to 35 pages. [D4] standing
+  page-count discipline: the arXiv form's comments field stays LOCKED
+  at "…35 pages."; the ticket's 33-page attachment is the v1 smoke
+  render serving as the waiver's proof-of-work — operator-confirmed
+  intentional this boundary, CLOSING the Task-80 consistency question;
+  the deposit artifact (v2, 35pp) and the endorsement evidence (v1,
+  33pp) are split by design, both renders record-pinned (INDEX §1.6).
+- SUBSTRATE CUSTODY: the exact deposit bytes deposited at
+  `references/arxiv-deposit/` (paper-2-arxiv-deposit-v1.tar.gz +
+  canonical sha256 sidecar, 77c-method line). The wrapper was
+  previously inbox-held (INDEX §1.6, snapshot series) +
+  witness-download-staged (task73-kit) but NOT repo-held; the repo
+  held only the inner sources (write-ups/). The deposit home gives the
+  exact submitted bytes substrate custody — the identifier-backfill
+  round's byte-identity anchor. Repo-rode verifier
+  `scripts/task81_deposit_verify.sh` born this round: [D0]–[D5] GREEN
+  (fail-closed, read-only, GUP-class — re-proves wrapper pin + inner
+  pins + sidecar canonical line + the §1.6 registration name from the
+  repository alone at every future bootstrap).
+- THE TASK78 `<head7>` PLACEHOLDER RESOLVED: the staged task78 kit
+  bundle was always named `gwm-task78-gwm-6c8a76f-aaac871.bundle` (the
+  cut-time head, now applied + pushed); the INDEX/emissions registry
+  rows carried the `<head7>` placeholder because the filename embeds
+  the head of the very commit that registers it (self-reference) —
+  resolved this round to `aaac871` across all embed sites together
+  (emissions-index §1.15 block + §4 row 78, and the generator's
+  POST_SNAPSHOT_ROUNDS registry → INDEX.md regen). The task81 kit's
+  own bundle filename rides the same placeholder semantics (resolves
+  at the round after its apply+push).
+- REGISTRY MAINTENANCE (named-tool law): generator extended (81
+  registered — six kit files with the placeholder bundle name; 78
+  filenames resolved; §1.15 tuple + §4 checker regex extended to 81;
+  §4 row 81) and re-run — INDEX v3: §1 = 252/15, canonical 253,
+  post-consolidation 261; §1.15 = 33 files; heading range widened to
+  Tasks 75–81; determinism proven (byte-identical second run,
+  `2554e881…`). emissions-index §1 header/preamble + §1.15 + §4 row 78
+  resolution + §4 row 81 in the same act (same-commit rule). Boards ×4
+  + artifact-index row 81.
+- SCOPE NOTES (fail-visible): draft-3.1 byte-untouched (`9b326af7…`);
+  tex-v2/bib-v2 byte-untouched (`687c19d6…` / `18d1e05f…`);
+  PROJECT_STATE unchanged (76b rewrite stands, §5.2); no sessions/
+  rows (manifest 36/36); the manifest-check cwd slip registered above
+  (4th of the class, repaired in-round); Phase-5 remains PAUSED
+  pending the waiver outcome — nothing in this round touches the
+  deposit path itself (the substrate is byte-frozen except the
+  registry/custody boards + the deposit home, which is additive).
+- EMISSION: file:///download/task81-kit/ — gwm-task81-SUK.sh + bundle
+  + .b64 twin + kit battery evidence + round-record HTML + SHA256SUMS
+  (six-file Task-75 form; five-file SUMS coverage, SUMS excluded from
+  itself). Kit/bundle/payload/battery/round-record pins printed at
+  emission surfaces only (boundary transmission + round-record page +
+  SHA256SUMS, no-self-reference rule). The kit carries Tasks 79+80+81
+  (base `435d598` → tip). AFTER THE KIT: refresh the inbox mirror
+  (`cp "$GWM/INDEX.md" "$INBOX/INDEX.md"`). Round-trip receipt
+  appends here at the next boundary open. Round-record bytes = this
+  worklog entry; the §D mutual digest prints in the boundary
+  transmission over exactly these bytes.

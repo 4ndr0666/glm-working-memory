@@ -103,8 +103,8 @@ POST_SNAPSHOT_ROUNDS = {
         "files": [
             "gwm-task78-SHA256SUMS",
             "gwm-task78-SUK.sh",
-            "gwm-task78-gwm-6c8a76f-<head7>.bundle",
-            "gwm-task78-gwm-6c8a76f-<head7>.bundle.b64",
+            "gwm-task78-gwm-6c8a76f-aaac871.bundle",
+            "gwm-task78-gwm-6c8a76f-aaac871.bundle.b64",
             "gwm-task78-kit-battery.txt",
             "gwm-task78-round-record.html",
         ],
@@ -124,6 +124,26 @@ POST_SNAPSHOT_ROUNDS = {
                   "discrepancy adjudicated by witness recompile (lock's 35 "
                   "confirmed); commit riding the next kit bundle",
         "files": [],
+    },
+    "81": {
+        "label": "Task 81 — deposit-package verification + kit-cut round",
+        "status": "EMITTED — the actual submission package boundary-delivered "
+                  "and verified three-way (upload == Task-73 staged emission == "
+                  "Task-73 SHA256SUMS pin; inner tex/bib == the repo v2 pins); "
+                  "the exact deposit bytes repo-custodied at "
+                  "references/arxiv-deposit/ (verifier [D0]–[D5] GREEN); the "
+                  "task78 <head7> placeholder resolved to aaac871 this round; "
+                  "kit staged + battery-proven at base 435d598 carrying Tasks "
+                  "79+80+81 — the new bundle filename rides the same "
+                  "placeholder semantics (resolves after apply+push)",
+        "files": [
+            "gwm-task81-SHA256SUMS",
+            "gwm-task81-SUK.sh",
+            "gwm-task81-gwm-435d598-<head7>.bundle",
+            "gwm-task81-gwm-435d598-<head7>.bundle.b64",
+            "gwm-task81-kit-battery.txt",
+            "gwm-task81-round-record.html",
+        ],
     },
 }
 
@@ -222,7 +242,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -337,7 +357,7 @@ def main():
         w(f"### {major}.{minor} {title} — {count} files")
         w("")
         if (major, minor) == (1, 15):
-            for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80"):
+            for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80", "81"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -490,6 +510,28 @@ def main():
       "alignment vs the §7.6 target bands, F2 Triton last; PTE sources not "
       "repo-held — the channel-(a) relay pattern offered for witness co-work. "
       "No emission files this round; this commit rides the next kit bundle.")
+    w("- Task 81, 2026-10-31, trace 1a1905cebcf39595 — the deposit-package "
+      "verification + kit-cut round: the operator boundary-delivered the actual "
+      "arXiv submission package (paper-2-arxiv-deposit-v1.tar.gz) and confirmed "
+      "the waiver ticket's proof attachment is the 33-page v1 render — the "
+      "Task-80 consistency question ANSWERED (ticket proof and deposit artifact "
+      "are intentionally split; the deposit package is the 35-page v2 build; the "
+      "form comments field stays locked at '…35 pages.'). Package verified "
+      "THREE-WAY on witness-recomputed digests: delivered bytes == the Task-73 "
+      "staged emission == the Task-73 SHA256SUMS pin (wrapper c4148807…, "
+      "46,466 B), inner tex 687c19d6… + bib 18d1e05f… == the repo v2 pins of "
+      "record — the package IS the locked v2 bytes. Substrate custody: the "
+      "exact deposit bytes deposited at references/arxiv-deposit/ (canonical "
+      "sha256 sidecar; repo-rode verifier scripts/task81_deposit_verify.sh "
+      "[D0]–[D5] GREEN — GUP-class re-verification at every future bootstrap). "
+      "The task78 bundle-filename <head7> placeholder RESOLVED to aaac871 across "
+      "the emissions-index §1.15 block, §4 row 78, and this generator's registry "
+      "(the staged kit file was always so named; the record now matches). Series "
+      "1.15 grew to 33 files (task81 kit six — the new bundle filename rides the "
+      "same placeholder semantics, resolving after apply+push); §1 = 252/15, "
+      "canonical 253, post-consolidation 261. The task81 kit cut at base 435d598 "
+      "carrying Tasks 79+80+81, battery-proven before staging. No sessions/ rows "
+      "(manifest 36/36); draft-3.1/tex-v2/bib-v2 byte-untouched.")
     w("")
 
     text = "\n".join(out)
