@@ -38,6 +38,14 @@ GUP-class). This file's own sha256 prints at emission surfaces only
   trees are pin-verified on entry (sha256 against the recorded
   digests of record) by `gwm-inbox-consolidate-v1.sh`; a byte that
   fails its pin is not consolidated.
+- **Naming (label discipline, Task 79).** The token $GWM-INBOX is a
+  label for $INBOX — the gwm-inbox directory (emissions-index §1's
+  `$INBOX`) — in its INDEX-registry role. It is not a shell variable
+  and not a sibling directory of the repo; any operator-visible
+  expansion of the $GWM inside it (e.g. the task78 SUK G4 line
+  printing /home/git/clone/4ndr0666/glm-working-memory-INBOX) is a
+  quoting artifact of a double-quoted label — registered Task 79 and
+  builder-guarded since (build_suk.py rejects unescaped $ in labels).
 
 ## §1 Canonical set — what MUST exist in $GWM-INBOX
 
@@ -343,14 +351,15 @@ pin-verified, [C6] GREEN; the canonical iteration is standing at
 ├── arxiv-submission-checklist-v1.md
 ```
 
-### 1.15 Post-snapshot emission rounds (Tasks 75–78) — 27 files
+### 1.15 Post-snapshot emission rounds (Tasks 75–79) — 27 files
 
 - Task 75: APPLIED + PUSHED (origin/main reached 7605226)
 - Task 76: WITHDRAWN — audit evidence of the 76a discharge; never run
 - Task 76b: APPLIED + PUSHED — round-trip closed @ 7f2e968 (operator paste-back GREEN; session snapshot 6c8a76f rides above)
-- Task 77: EMITTED — files staged + verified 3/3 operator-side; commit riding the task78 kit
-- Task 77c: EMITTED — files re-verified 3/3 operator-side; consolidation 8/8 GREEN ([C6] canonical iteration standing); commit riding the task78 kit
-- Task 78: THIS ROUND — kit at base 6c8a76f carrying rebased 77+77b+77c+78
+- Task 77: EMITTED — files staged + verified 3/3 operator-side; commit rode the task78 kit (landed @ aaac871)
+- Task 77c: EMITTED — files re-verified 3/3 operator-side; consolidation 8/8 GREEN ([C6] canonical iteration standing); commit rode the task78 kit (landed @ aaac871)
+- Task 78: APPLIED + PUSHED @ aaac871 (operator [G0]–[G5] GREEN; push 6c8a76f..aaac871; the R2 relay 435d598 rides above)
+- Task 79: NO EMISSION FILES — the R2 relay @ 435d598 witness-verified 8/8 (INDEX §2 pins); boards + registry maintenance only; commit riding the next kit bundle
 
 ```
 ├── gwm-inbox-consolidate-v1.sh
@@ -418,6 +427,15 @@ fail-closed). INDEX.md itself enters $GWM-INBOX from this round's
 emission (declared share) and thereafter mirrors the repo original
 (`cp "$GWM/INDEX.md" "$INBOX/INDEX.md"` after each apply).
 
+R2 stage-2 relay EXECUTED operator-side 2026-10-31 — channel (a),
+commit `435d598` (single-commit advance off the Task-78 applied head
+`aaac871`): the eight deposited under `references/white-paper-relay/`,
+witness-verified at the next bootstrap pull (Task 79: 8/8 repo copies
+re-hashed == this table; sidecar canonical-line consistency re-proven;
+`scripts/task79_relay_verify.sh` [R0]–[R3] GREEN). The eight now hold
+double custody — $GWM-INBOX (consolidated) + the repo relay home — and
+their pins are repo-recomputable.
+
 ## §3 Adjacent surfaces — registered, NOT $GWM-INBOX residents
 
 | Surface | Population | Relation |
@@ -438,3 +456,4 @@ emission (declared share) and thereafter mirrors the repo original
 - Task 77c, 2026-10-31, trace 1a18f3fb25e9c1a9 — adjudication returned (operator paste-back): H1 CONFIRMED — the changes file hashes 037dbdd9… ≠ recorded 778f9ac2… exactly as H1 predicted, the other five [X0] pins GREEN (refs-2.bib, both counters .md files, round5.4 sidecar, arxiv-metadata), the tarball re-attested a764eb1f… at cut-era mtime; [X1] on disk, not in gpt HEAD; [X2] NO-COMMIT-HOLDS-99913db3… (no git-held recovery); [X3] single copy, inner refs-2.bib = 798d1dd4… (continuity GREEN). A THIRD mismatch surfaced at [X0]: round5.2-counters-v1.md.sha256 tree 17b7d13b… ≠ recorded b0bd553f… — adjudicated sidecar-re-cut: the current bytes are the canonical sha256sum line over the .md's true pin def5d3b1… (witness-recomputable; the same reconstruction over 8c3f0497… reproduces the round5.4 sidecar pin 94999ef7… exactly; the b0bd553f preimage is unrecoverable from the record — ARGON's Round-5.3 computation over the then-relayed form). SUPERSESSION EXECUTED: pins of record re-anchored (a764eb1f… / 037dbdd9… / 17b7d13b…) across all embed sites together — this generator's INTAKE_FILES, INDEX.md §2 (this regen), the consolidate script's PINNED table; historical boards stand as-presented, superseded by append-only addenda (emissions-index §8, state-resync-check §10). Battery re-run GREEN; the four task77-index files re-staged on the declared share under the superseding pins.
 - Task 77c consolidation executed operator-side, 2026-10-31 (trace 1a18f74b04f17959 paste-back): [C4] ×8 + [C5] 8/8 + [C6] GREEN — the canonical iteration finalized ($GWM-INBOX = §1 + §2 exactly at the then-current registry; the Task-77 real-pin battery leg closed GREEN; R2 stage-2 channel (a) operator-direct elected).
 - Task 78, 2026-10-31, trace 1a18f74b04f17959 — round-trip closures registered (76b kit APPLIED @ 7f2e968 + PUSHED, pins re-verified witness-side; 77c emission 3/3; INDEX v2 CONFIRMED — push-hold gate closed) + re-anchor (77/77b/77c rebased onto the session snapshot 6c8a76f, old heads tag-preserved) + series 1.15 grew to 27 files (task78 kit six; the bundle filename's <head7> placeholder resolves at kit cut) — canonical entries 241→247, post-consolidation 249→255; the task78 kit (base 6c8a76f) carries the rebased stack.
+- Task 79, 2026-10-31, trace 1a18fc5c14a61761 — the R2 stage-2 relay verified at the bootstrap pull: operator commit `435d598` (channel (a); single-commit advance off `aaac871`) deposited the GUP-critical 8 under `references/white-paper-relay/`; witness re-hash 8/8 == §2 pins of record, sidecar canonical-line consistency re-proven, stats matched — `scripts/task79_relay_verify.sh` [R0]–[R3] GREEN. The task78 kit round-trip registered (APPLIED + PUSHED @ `aaac871`; the paste-back's head-40 line carried a 38-hex slip, closed by the push receipt + history). Naming defect registered + fixed: the task78 SUK's G4 label carried $GWM-INBOX inside double quotes, so the operator-side shell expanded $GWM into a phantom path (the operator's where-and-when-is-there-a-$GWM question) — §0 label-clarification bullet added, build_suk.py gained a fail-closed label guard. No emission files this round; this commit rides the next kit bundle.

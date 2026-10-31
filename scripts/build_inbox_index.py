@@ -82,7 +82,7 @@ POST_SNAPSHOT_ROUNDS = {
     "77": {
         "label": "Task 77 — INDEX-consolidation round (registry birth)",
         "status": "EMITTED — files staged + verified 3/3 operator-side; "
-                  "commit riding the task78 kit",
+                  "commit rode the task78 kit (landed @ aaac871)",
         "files": [
             "gwm-inbox-consolidate-v1.sh",
             "gwm-task77-consolidate-battery.txt",
@@ -93,13 +93,13 @@ POST_SNAPSHOT_ROUNDS = {
         "label": "Task 77c — adjudication-return supersession (pin re-anchor)",
         "status": "EMITTED — files re-verified 3/3 operator-side; consolidation "
                   "8/8 GREEN ([C6] canonical iteration standing); commit "
-                  "riding the task78 kit",
+                  "rode the task78 kit (landed @ aaac871)",
         "files": [],
     },
     "78": {
         "label": "Task 78 — round-trip-closure round (kit cut)",
-        "status": "THIS ROUND — kit at base 6c8a76f carrying rebased "
-                  "77+77b+77c+78",
+        "status": "APPLIED + PUSHED @ aaac871 (operator [G0]–[G5] GREEN; "
+                  "push 6c8a76f..aaac871; the R2 relay 435d598 rides above)",
         "files": [
             "gwm-task78-SHA256SUMS",
             "gwm-task78-SUK.sh",
@@ -108,6 +108,13 @@ POST_SNAPSHOT_ROUNDS = {
             "gwm-task78-kit-battery.txt",
             "gwm-task78-round-record.html",
         ],
+    },
+    "79": {
+        "label": "Task 79 — relay-verification round (R2 stage-2 closed)",
+        "status": "NO EMISSION FILES — the R2 relay @ 435d598 witness-verified "
+                  "8/8 (INDEX §2 pins); boards + registry maintenance only; "
+                  "commit riding the next kit bundle",
+        "files": [],
     },
 }
 
@@ -206,7 +213,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -293,6 +300,14 @@ def main():
     w("  trees are pin-verified on entry (sha256 against the recorded")
     w("  digests of record) by `gwm-inbox-consolidate-v1.sh`; a byte that")
     w("  fails its pin is not consolidated.")
+    w("- **Naming (label discipline, Task 79).** The token $GWM-INBOX is a")
+    w("  label for $INBOX — the gwm-inbox directory (emissions-index §1's")
+    w("  `$INBOX`) — in its INDEX-registry role. It is not a shell variable")
+    w("  and not a sibling directory of the repo; any operator-visible")
+    w("  expansion of the $GWM inside it (e.g. the task78 SUK G4 line")
+    w("  printing /home/git/clone/4ndr0666/glm-working-memory-INBOX) is a")
+    w("  quoting artifact of a double-quoted label — registered Task 79 and")
+    w("  builder-guarded since (build_suk.py rejects unescaped $ in labels).")
     w("")
     w("## §1 Canonical set — what MUST exist in $GWM-INBOX")
     w("")
@@ -313,7 +328,7 @@ def main():
         w(f"### {major}.{minor} {title} — {count} files")
         w("")
         if (major, minor) == (1, 15):
-            for rid in ("75", "76", "76b", "77", "77c", "78"):
+            for rid in ("75", "76", "76b", "77", "77c", "78", "79"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -351,6 +366,15 @@ def main():
     w("fail-closed). INDEX.md itself enters $GWM-INBOX from this round's")
     w("emission (declared share) and thereafter mirrors the repo original")
     w("(`cp \"$GWM/INDEX.md\" \"$INBOX/INDEX.md\"` after each apply).")
+    w("")
+    w("R2 stage-2 relay EXECUTED operator-side 2026-10-31 — channel (a),")
+    w("commit `435d598` (single-commit advance off the Task-78 applied head")
+    w("`aaac871`): the eight deposited under `references/white-paper-relay/`,")
+    w("witness-verified at the next bootstrap pull (Task 79: 8/8 repo copies")
+    w("re-hashed == this table; sidecar canonical-line consistency re-proven;")
+    w("`scripts/task79_relay_verify.sh` [R0]–[R3] GREEN). The eight now hold")
+    w("double custody — $GWM-INBOX (consolidated) + the repo relay home — and")
+    w("their pins are repo-recomputable.")
     w("")
     w("## §3 Adjacent surfaces — registered, NOT $GWM-INBOX residents")
     w("")
@@ -423,6 +447,20 @@ def main():
       "(task78 kit six; the bundle filename's <head7> placeholder resolves "
       "at kit cut) — canonical entries 241→247, post-consolidation "
       "249→255; the task78 kit (base 6c8a76f) carries the rebased stack.")
+    w("- Task 79, 2026-10-31, trace 1a18fc5c14a61761 — the R2 stage-2 relay "
+      "verified at the bootstrap pull: operator commit `435d598` (channel (a); "
+      "single-commit advance off `aaac871`) deposited the GUP-critical 8 "
+      "under `references/white-paper-relay/`; witness re-hash 8/8 == §2 pins "
+      "of record, sidecar canonical-line consistency re-proven, stats matched "
+      "— `scripts/task79_relay_verify.sh` [R0]–[R3] GREEN. The task78 kit "
+      "round-trip registered (APPLIED + PUSHED @ `aaac871`; the paste-back's "
+      "head-40 line carried a 38-hex slip, closed by the push receipt + "
+      "history). Naming defect registered + fixed: the task78 SUK's G4 label "
+      "carried $GWM-INBOX inside double quotes, so the operator-side shell "
+      "expanded $GWM into a phantom path (the operator's "
+      "where-and-when-is-there-a-$GWM question) — §0 label-clarification "
+      "bullet added, build_suk.py gained a fail-closed label guard. No "
+      "emission files this round; this commit rides the next kit bundle.")
     w("")
 
     text = "\n".join(out)

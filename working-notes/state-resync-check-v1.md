@@ -221,3 +221,22 @@ mirrored in the consolidate script's PINNED table; the superseded digests,
 their lineage, and the reconstruction snippet are registered at
 emissions-index §8. §9's R2-relay path is unchanged — and now unblocks for
 all eight files once the 77c consolidation run returns GREEN.
+
+## 11. Addendum — R2 stage-2 relay EXECUTED + witness-verified (Task 79, 2026-10-31)
+
+Append-only; §0–§10 stand as-written. The channel-(a) relay foreseen at §9
+(operator-direct commit+push of the GUP-critical 8 into the repo) landed as
+commit `435d598` on the Task-78 applied head `aaac871` — single-commit
+advance, 8 files under `references/white-paper-relay/`, 957 insertions, no
+deletions, push receipt `aaac871..435d598`. Witness verification at the next
+bootstrap pull (Task 79, trace 1a18fc5c14a61761; `scripts/task79_relay_verify.sh`,
+fail-closed, read-only): [R0] commit shape GREEN (single-commit, paths
+confined, no collateral motion, relay bytes == HEAD bytes); [R1] 8/8
+repo-copy digests == INDEX.md §2 pins of record (the 77c supersession set —
+`a764eb1f…`, `037dbdd9…`, `798d1dd4…`, `def5d3b1…`, `17b7d13b…`,
+`8c3f0497…`, `94999ef7…`, `0ef99398…`); [R2] both counters sidecars
+reconstruct as the canonical sha256sum line over their .md's true pins; [R3]
+stats == the operator paste (tarball 739,787 B; 8 files / 957 insertions).
+The §3 finding's GUP-critical caveat is thereby RETIRED: all eight pins are
+now repo-recomputable (repo relay custody alongside the $GWM-INBOX
+consolidated custody — double custody). §6's R2 recommendation is CLOSED.

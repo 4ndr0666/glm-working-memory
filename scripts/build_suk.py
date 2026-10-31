@@ -134,6 +134,14 @@ def main() -> None:
     blob_calls = []
     for spec in args.blob:
         path, pinvar, label = spec.split(":", 2)
+        # Task-79 label guard: the label lands inside a DOUBLE-QUOTED bash
+        # string, so a bare '$' expands operator-side (the task78 G4 defect:
+        # the $GWM-INBOX label printed as a phantom
+        # .../glm-working-memory-INBOX path in the operator's [G4] output).
+        # '$' is allowed only backslash-escaped.
+        if label.replace("\\$", "").count("$"):
+            sys.exit(f"build_suk: unescaped '$' in --blob label for {path!r} "
+                     f"— escape as \\$ or spell the label without '$'")
         blob_calls.append(
             f'pin_blob "{path}" "${pinvar}" "{label}"')
     new_pre = (new_pre[:k] + "\n".join(blob_calls) + "\n" + new_pre[last_end:])

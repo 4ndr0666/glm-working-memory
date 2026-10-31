@@ -579,3 +579,77 @@ governs boundary bootstraps and round records.
   emission surfaces only (boundary transmission + round-record page +
   SHA256SUMS, no-self-reference rule). Round-trip receipt appends here at
   the next boundary open.
+
+## [2026-10-31] Boundary open — Task 79 (trace 1a18fc5c14a61761; session web-0e217f4d-f77e-4087-a44e-2e3651511bd6)
+
+- BOOTSTRAP (AFT-1 anchor, first output of the boundary): `git pull
+  --ff-only` — GREEN, clean fast-forward `aaac871`→`435d598` (origin
+  advanced by exactly the operator's relay commit; ahead/behind 0/0);
+  manifest 36/36 OK; liveness trio intact — draft-3.1 `9b326af7…`,
+  tex-v2 `687c19d6…`, bib-v2 `18d1e05f…`; task78-kit share intact (SUK
+  `7238f859…`).
+- §3 REGISTER: both messages fully inside the START/END delimiters; no
+  out-of-band noise this boundary. Registered in-delimiter artifact: the
+  kit-result paste's head-40 line carried a 38-hex transcription slip
+  (`…7dd1eb0aaf24d4` — dropped "26"); the true head is
+  `aaac871b59c65fb2abbd0e347dd261eb0aaf24d4`, closed by the push receipt
+  short sha + `435d598^` + history (cosmetic, fail-visible; the SUK's own
+  [G3] verify carried the true sha, so no re-ask).
+- OPERATOR PAYLOAD (both messages, RECEIVED VERBATIM): (1) the task78 kit
+  result — [G0]–[G5] GREEN, KIT RESULT GREEN, push `6c8a76f..aaac871`;
+  (2) "And you lost me again.... where and when is there a $GWM?" —
+  answered in-band this round (see NAMING DEFECT below); (3) the R2
+  stage-2 channel-(a) execution — 8 pin-check OK lines + commit `435d598`
+  (8 files under references/white-paper-relay/, 957 insertions) + push
+  receipt `aaac871..435d598`. Sequencing rule respected: kit apply FIRST
+  (`aaac871`), relay SECOND (`435d598`) — the G3 expected-head guard never
+  fired.
+- RECEIPTS (witness-side re-verification, this boundary): RELAY VERIFIED —
+  `scripts/task79_relay_verify.sh` [R0]–[R3] all GREEN: single-commit
+  advance off `aaac871`, 8 files confined to references/white-paper-relay/,
+  957 insertions / 0 deletions, relay bytes == HEAD bytes; 8/8 relay
+  digests == INDEX.md §2 pins of record (`a764eb1f…`, `037dbdd9…`,
+  `798d1dd4…`, `def5d3b1…`, `17b7d13b…`, `8c3f0497…`, `94999ef7…`,
+  `0ef99398…`); sidecar canonical-line consistency re-proven (77c method);
+  tarball 739,787 B; stats == the paste. R2 STAGE-2 CLOSED — the
+  GUP-critical 8 hold double custody ($GWM-INBOX consolidated + repo relay
+  home); their pins are repo-recomputable; state-resync-check §3's
+  GUP-critical caveat RETIRED and §6's R2 recommendation CLOSED (§11
+  addendum written). TASK-78 KIT ROUND-TRIP CLOSED — the paste-back
+  registers the apply ([G0] kit self == the staged witness copy; push
+  receipt matches origin history).
+- NAMING DEFECT REGISTERED + FIXED (the operator's question, decoded): the
+  task78 SUK's G4 label for INDEX.md was authored as "INDEX.md (the
+  $GWM-INBOX registry, v3)" inside a DOUBLE-QUOTED bash string → the
+  operator-side shell expanded `$GWM` and printed "the
+  /home/git/clone/4ndr0666/glm-working-memory-INBOX registry" — a PHANTOM
+  PATH (no such directory; the expanded string appears nowhere in repo or
+  kit; the label was meant to render literally). Adjudication:
+  "$GWM-INBOX" is a LABEL for $INBOX — the gwm-inbox directory
+  (emissions-index §1's `$INBOX`) — in its INDEX-registry role; not a
+  shell variable, not a sibling directory of the repo. The variable `$GWM`
+  itself is operator-side only (delivery.sh; declared Task-51 trace
+  1a162a1c4afd77a9 as gwm-working-memory, errata-corrected Task-52 trace
+  1a162c1617629eb5 to glm-working-memory — PROTOCOL §8.4); the witness
+  never holds it (LOCAL_CLONE mirror, zero credentials). Fixes: INDEX.md
+  §0 label-clarification bullet (via generator); build_suk.py fail-closed
+  label guard (a `$` in a --blob label must be `\$`-escaped); the in-band
+  answer carries the full $GWM / $INBOX / $GWM-INBOX / $ANDROMEDA map.
+- REGISTRY MAINTENANCE (named-tool law): generator extended (79
+  registered — no emission files; 78 status → APPLIED + PUSHED @
+  `aaac871`; §1.15 status-line tuple + §4 checker regex extended to 79;
+  §0 label-clarification bullet; §2 relay-executed status note; §4 row 79)
+  and re-run — INDEX v3 standing, no count changes (§1 = 246/15, canonical
+  247, post-consolidation 255; §1.15 = 27 files; the heading range widened
+  to Tasks 75–79 by the emissions-index edit the generator consumes);
+  determinism proven (byte-identical second run). emissions-index §1.15 +
+  §4 row 79 in the same act (same-commit rule).
+- SCOPE NOTES (fail-visible): draft-3.1 byte-untouched (`9b326af7…`);
+  PROJECT_STATE unchanged (76b rewrite stands; §5.2 next full rewrite at
+  session close); no sessions/ rows (manifest 36/36); no kit this round —
+  nothing operator-actionable, this commit rides the next kit bundle (76a
+  precedent); the next repo-content round resolves the task78 bundle
+  `<head7>` placeholder.
+- EMISSION: none this round (verification + registry maintenance only).
+  Round-record bytes = this worklog entry; the §D mutual digest prints in
+  the boundary transmission over exactly these bytes.
