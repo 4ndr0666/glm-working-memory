@@ -156,6 +156,27 @@ POST_SNAPSHOT_ROUNDS = {
                   "next kit bundle",
         "files": [],
     },
+    "83": {
+        "label": "Task 83 — GO-FIX execution round (tex-v3 + deposit package v2)",
+        "status": "EMITTED — the operator's GO FIX elected fix-before-submit: "
+                  "tex-v3 a975d7d1… + bib-v3 8b5bc0fc… cut (Task-82 confirmed "
+                  "patch set exactly; the \\nocite{*} no-op rejected; v2 "
+                  "verified read-only); recompiled 35 pages UNCHANGED (the "
+                  "lock's comments field stands); deposit package v2 "
+                  "bacc1f18… 47,084 B cut deterministically and deposited at "
+                  "references/arxiv-deposit/ beside the untouched v1 anchor; "
+                  "verifier scripts/task83_deposit_verify.sh [E0]–[E6] GREEN; "
+                  "§1.6 collateral +4; kit six staged — this series; the "
+                  "commit + the riding Task-82 commit land with this kit",
+        "files": [
+            "gwm-task83-SHA256SUMS",
+            "gwm-task83-SUK.sh",
+            "gwm-task83-gwm-a3dcf49-<head7>.bundle",
+            "gwm-task83-gwm-a3dcf49-<head7>.bundle.b64",
+            "gwm-task83-kit-battery.txt",
+            "gwm-task83-round-record.html",
+        ],
+    },
 }
 
 # The $GWM-INBOX consolidation queue: the GUP-critical 8 — the only gpt-tree
@@ -253,7 +274,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82|83) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -369,7 +390,7 @@ def main():
         w("")
         if (major, minor) == (1, 15):
             for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80", "81",
-                        "82"):
+                        "82", "83"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -596,6 +617,35 @@ def main():
       "operator GO) while the waiver pause makes it cheap; submit-as-is remains "
       "electable (arXiv v1 flaws are replaceable later, identifier retained). No "
       "emission files this round; this commit rides the next kit bundle.")
+    w("- Task 83, 2026-11-01, trace 1a19470a33de4459 — the GO-FIX execution "
+      "round: the operator's boundary item 1 (\"GO FIX\") elected the "
+      "Task-82 fix-before-submit recommendation. tex-v3 a975d7d1… (133,303 B) "
+      "+ bib-v3 8b5bc0fc… (11,947 B) cut by scripts/task83_cut_v3.py — the "
+      "Task-82 verdict-ledger confirmed patch set EXACTLY (secnumdepth; the "
+      "math-escape sites incl. the critical literal-underscore repair; the "
+      "chacon un-truncation from the .bib of record; 5 two-author commas; the "
+      "lahoti re-type; the ARGON \\nocite{*} no-op REJECTED), every "
+      "replacement count-asserted, v2 sources liveness-pinned and verified "
+      "read-only before AND after. Recompiled tectonic 0.15.0 exit 0 → 35 "
+      "pages UNCHANGED — the metadata lock's '…35 pages.' comments field "
+      "STANDS (no supersession); the double-numbering fix verified on the "
+      "render ('1. Introduction', no auto-number prefix). Deposit package v2 "
+      "bacc1f18… 47,084 B cut by scripts/task83_cut_package.sh "
+      "deterministically (sorted members, fixed mtime, owner 0:0, gzip -n; "
+      "double-cut byte-identity gate) and deposited at "
+      "references/arxiv-deposit/ beside the UNTOUCHED v1 anchor c4148807…; "
+      "repo-rode verifier scripts/task83_deposit_verify.sh born GREEN "
+      "[E0]–[E6] incl. the v1 backward leg. Registry: §1.6 +4 (33 files), "
+      "§1.15 +6 (39 files — the task83 kit; heading range widened to Tasks "
+      "75–83, closing a one-round heading lag), §1 = 262/15, canonical 263, "
+      "post-consolidation 271. The task83 kit cut at base a3dcf49 carrying "
+      "Tasks 82+83, battery-proven before staging. Operator-side MEDA motion "
+      "verified this round: origin advanced 55bea18..2386584 (manifest "
+      "re-stamp) then ..5f41bfd (gitignore per ARGON) — the checklist items "
+      "(1) and (4) executed; re-verified on a fresh clone. No sessions/ rows "
+      "(manifest 36/36); draft-3.1/tex-v2/bib-v2 byte-untouched; on "
+      "deposit-resume the arXiv upload swaps to the v2 package with the "
+      "comments field unchanged.")
     w("")
 
     text = "\n".join(out)

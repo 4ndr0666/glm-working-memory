@@ -32,11 +32,11 @@ already delivered into `$INBOX` (§4 maps tasks to kits). Names and counts are
 as-transmitted by the operator, 2026-10-29; witness-side mirrors live in
 `download/` (declared share) and the repo's canonical homes.
 
-## 1. `$INBOX` — witness→operator deliveries (252 files, 15 series)
+## 1. `$INBOX` — witness→operator deliveries (262 files, 15 series)
 
-Count as of Task 82 (2026-11-01): the 2026-10-29 operator INDEX snapshot
+Count as of Task 83 (2026-11-01): the 2026-10-29 operator INDEX snapshot
 registered 219 files (series 1.1–1.14); series 1.15 appends the post-snapshot
-emission rounds (Tasks 75–82) whose files were staged on the declared share
+emission rounds (Tasks 75–83) whose files were staged on the declared share
 after that snapshot and ride the operator's next INDEX reconciliation
 (INDEX.md itself — the registry born Task 77 — is registered in INDEX.md
 §1.16, not double-counted here).
@@ -281,13 +281,14 @@ Out-of-band MEDA-repo deliveries outside the task-kit series: a3-repin bundle (9
 ├── meda.b64
 ```
 
-### 1.6 Paper-2 collateral documents — 29 files
+### 1.6 Paper-2 collateral documents — 33 files
 
-Transmittals, receipts, integration ledgers, boundary registrations, section drafts, assembled drafts (draft-3, draft-3.1), bib v1/v2, LaTeX v1/v2 + built PDFs, deposit tarball, metadata lock, deposit-prep plan, adjudications, industry feed, build log — the manuscript's document trail, dual-channeled with write-ups/.
+Transmittals, receipts, integration ledgers, boundary registrations, section drafts, assembled drafts (draft-3, draft-3.1), bib v1/v2/v3, LaTeX v1/v2/v3 + built PDFs, deposit tarballs v1/v2, the GO-FIX build ledger, metadata lock, deposit-prep plan, adjudications, industry feed, build log — the manuscript's document trail, dual-channeled with write-ups/.
 
 ```
 ├── emitter-build-log-v1.6.1.txt
 ├── paper-2-arxiv-deposit-v1.tar.gz
+├── paper-2-arxiv-deposit-v2.tar.gz
 ├── paper-2-v1.7-argon-collab1-integration-v1.md
 ├── paper-2-v1.7-argon-collab1-receipt-v1.md
 ├── paper-2-v1.7-argon-finalgate-integration-v1.md
@@ -303,16 +304,19 @@ Transmittals, receipts, integration ledgers, boundary registrations, section dra
 ├── paper-2-v1.7-draft3-1-assembled-v1.md
 ├── paper-2-v1.7-draft3-1-bib-v1.bib
 ├── paper-2-v1.7-draft3-1-bib-v2.bib
+├── paper-2-v1.7-draft3-1-bib-v3.bib
 ├── paper-2-v1.7-draft3-1-deposit-v1.pdf
 ├── paper-2-v1.7-draft3-1-latex-v1.pdf
 ├── paper-2-v1.7-draft3-1-latex-v1.tex
 ├── paper-2-v1.7-draft3-1-latex-v2.tex
+├── paper-2-v1.7-draft3-1-latex-v3.tex
 ├── paper-2-v1.7-draft3-assembled-v1.md
 ├── paper-2-v1.7-draft3-assembly-ledger-v1.md
 ├── paper-2-v1.7-notebooklm-addendum-adjudication-v1.md
 ├── paper-2-v1.7-task71-conversion-ledger-v1.md
 ├── paper-2-v1.7-task72-bib-verification-ledger-v1.md
 ├── paper-2-v1.7-task73-phase4-build-ledger-v1.md
+├── paper-2-v1.7-task83-fix-build-ledger-v1.md
 ├── reply-to-argon-postbuild-transmittal-v1.md
 ├── round5.7-argon-receipt-v1.md
 ```
@@ -358,7 +362,7 @@ Canonical substrate documents delivered as copies for operator-side reference: P
 ├── tracker-dark-closure-v1.md
 ```
 
-### 1.15 Post-snapshot emission rounds (Tasks 75–81) — 33 files
+### 1.15 Post-snapshot emission rounds (Tasks 75–83) — 39 files
 
 Emissions staged on the declared share (`file:///download/`, per-round
 `taskNN-kit/` / `task77-index/` subdirectories) after the operator's
@@ -409,7 +413,21 @@ defect found beyond ARGON: 55bea18 replaced the hero-banner PNG without
 re-stamping MANIFEST.sha256, the repo's own gate FAILs 42/43 at HEAD from a
 clean clone; the audit artifact 4ndr0meda-55bea18c-unpacked.md repo-custodied
 at references/; deposit-path election queued to the operator; the commit
-rides the next kit bundle).
+rides the next kit bundle). Task 83 = the GO-FIX execution round (the
+operator's item-1 "GO FIX" electing fix-before-submit: tex-v3 `a975d7d1…` +
+bib-v3 `8b5bc0fc…` cut by the repo-rode scripts/task83_cut_v3.py — the
+Task-82 verdict-ledger confirmed patch set exactly, the ARGON \nocite{*}
+no-op rejected, v2 sources verified read-only before and after; recompiled
+tectonic 0.15.0 exit 0 → 35 pages — page count UNCHANGED, the metadata
+lock's "…35 pages." comments field STANDS; the double-numbering fix
+verified on the render; the deposit package re-cut deterministically as
+paper-2-arxiv-deposit-v2.tar.gz `bacc1f18…` 47,084 B by
+scripts/task83_cut_package.sh — sorted members, fixed mtime, owner 0:0,
+gzip -n, bit-reproducible by construction; deposited at
+references/arxiv-deposit/ beside the untouched v1 anchor; repo-rode
+verifier scripts/task83_deposit_verify.sh [E0]–[E6] GREEN incl. the v1
+backward leg; collateral emissions tex-v3/bib-v3/package-v2 + the GO-FIX
+build ledger join §1.6 this round; the task83 kit six join this series).
 
 ```
 ├── gwm-inbox-consolidate-v1.sh
@@ -445,6 +463,12 @@ rides the next kit bundle).
 ├── gwm-task81-gwm-435d598-a3dcf49.bundle.b64
 ├── gwm-task81-kit-battery.txt
 ├── gwm-task81-round-record.html
+├── gwm-task83-SHA256SUMS
+├── gwm-task83-SUK.sh
+├── gwm-task83-gwm-a3dcf49-<head7>.bundle
+├── gwm-task83-gwm-a3dcf49-<head7>.bundle.b64
+├── gwm-task83-kit-battery.txt
+├── gwm-task83-round-record.html
 ```
 
 ## 2. `gwm-outbox` — operator-held source & reference material (9 files)
@@ -640,6 +664,7 @@ artifact-index matrix and the decisions ledger.
 | 80 | (none — deposit-hold registration + PTE-pivot election round; no files emitted) | THIS ROUND — Phase-5 PAUSED at the arXiv cs.AI endorsement gate (first-time/independent submitter; Manual Endorsement Waiver support ticket submitted operator-side attaching the latex-v1 PDF + referencing the 4NDR0MEDA repo; 24–48h window; no ticket receipt pasted — PENDING-VERIFY); metadata-lock cross-check GREEN (envelope claims == lock v1 exactly: title candidate 1, sole author + ORCID, cs.AI primary + cs.CL/cs.LG/cs.CR); PAGE-COUNT DISCREPANCY ADJUDICATED BY WITNESS RECOMPILE (tectonic 0.15.0, exit 0, scratch-dir, embedded 28-entry thebibliography → 35 pages; the lock's Phase-4 append CONFIRMED; the envelope's 33 = the Task-71 tex-v1 smoke count — the arXiv form's locked comments field carries "35 pages."); published-remote probe GREEN (4NDR0MEDA @ 55bea18: PIN-CHAIN.md + MANIFEST.sha256 + banner assets present — standing state since the Oct-29 banner commit, already observed at Task 76; not a new motion); PTE/v1.8 pivot registered (the standing task-72 queue activating) with the math grounded in draft-3.1 §4.8 (envelope formulas verbatim; the bracket refs are workbench-local, mapping to no record artifact) and the ELECTION ANSWERED: PhaseComplexAttention module verification FIRST, then E1–E5 as the integration gate, then Module-4 TransformerLens alignment vs the §7.6 target bands, F2 Triton last; custody precondition named (PTE sources not repo-held — the channel-(a) relay pattern offered for witness co-work); the v1-pdf-on-ticket divergence surfaced (endorsement reviewer sees the 33-page v1 render while the deposit package is the 35-page v2 build); no kit — the commit rides the next kit bundle |
 | 81 | `gwm-task81-SUK.sh` (+ `gwm-task81-gwm-435d598-a3dcf49` pair fallback — placeholder resolved Task 82) + `gwm-task81-kit-battery.txt` + `gwm-task81-round-record.html` + `gwm-task81-SHA256SUMS` | APPLIED + PUSHED @ `a3dcf49` — the deposit-package verification + kit-cut round: the actual submission package boundary-delivered and verified THREE-WAY on witness-recomputed digests (upload == the Task-73 staged emission == the Task-73 SHA256SUMS pin; wrapper `c4148807…` 46,466 B; inner tex `687c19d6…` + bib `18d1e05f…` == the repo v2 pins of record — the package IS the locked v2 bytes); the waiver-ticket consistency question ANSWERED (the 33-page v1 render is the ticket's proof attachment by operator confirmation — the Task-80 surfaced item closes; the deposit package is the 35-page v2 build, the form comments field stays locked at 35); the exact deposit bytes taken into substrate custody at `references/arxiv-deposit/` (canonical sha256 sidecar + repo-rode verifier scripts/task81_deposit_verify.sh [D0]–[D5] GREEN — GUP-class re-verification at every future bootstrap); the task78 `<head7>` placeholder RESOLVED to `aaac871` (emissions §1.15 block + §4 row 78 + generator registry + INDEX regen together); series 1.15 → 33 files, §1 → 252/15, canonical 253 / post-consolidation 261; kit cut at base `435d598` carrying Tasks 79+80+81, battery-proven before staging; round-trip closed at the Task-82 bootstrap (push `435d598..a3dcf49`) |
 | 82 | (none — verification + adjudication round; no files emitted) | THIS ROUND — the ARGON-audit witness-verification round: the operator relayed ARGON's audit of the live repo (paper pending the endorsement-waiver outcome) and the witness executed the verification ARGON could not (no arbitrary-URL fetcher; the 4NDR0MEDA ZIP arrived deflated in its context — only .gitignore was STOREd): 4NDR0MEDA cloned anonymously at HEAD == `55bea18c` (the audited commit IS current HEAD; no fixes pushed since; bootstrap-class pull, zero credentials). VERDICT LEDGER — ARGON §1 (LaTeX): ALL content claims CONFIRMED against the repo-held deposit bytes (`687c19d6…`/`18d1e05f…`): no secnumdepth (11 sections: 3 addenda + 8 manually-numbered → the compiled PDF double-numbers "4 1. Introduction" … "11 8. Related Work"); every quoted math-escape defect verbatim (B \textgreater{} 1; window W; W\_Q family; k-of-n ×3; the critical \(\Delta\)\_t\^{}{(\(\ell\))} literal-underscore site; the \(\neq\) splits; at \(\beta\) = 1; every d \(\geq\) 3); the truncated chacon2014git bibitem; 5 two-author comma sites; lahoti2026mamba3 the lone ICLR-as-@article outlier — ONE patch REJECTED (\nocite{*} is a no-op before a manual thebibliography); ARGON's line numbers are .md-wrapper-relative (content verifies, offsets differ). ARGON §2 (repo): MIXED — .gitignore quote EXACT; CITATION.cff absent CONFIRMED; PTE/E4/E5 artifacts absent from the public tree CONFIRMED (Discrepancy #1 core stands: pte-e5 + Module-4 trace are $GWM-INBOX residents INDEX §1.11, witness download/ lacks them, neither public repo carries them); the "exact file inventory" REJECTED — 32 listed vs 43 actual (tools/ verification toolchain, runbooks/, setup.sh, templates/ all missed; "only .py is inside the ZIP" FALSE — 5 tree .py + 7 in the golden-unit ZIP); Discrepancy #2 RESOLVED — glm-working-memory is PUBLIC and anonymously cloneable (this boundary's own fetch; zero credentials), no 404 risk today, ARGON's rewrite optional + its own patch LaTeX-broken. NEW DEFECT BEYOND ARGON: 55bea18 replaced the hero-banner PNG (32,377 → 1,943,834 B) WITHOUT re-stamping MANIFEST.sha256 — `tools/manifest.py verify` FAILs 42/43 at HEAD from a clean clone (self-stamping violation; CI leg 1 RED-class; pinchain unchanged 13/0 FAIL/5 unreachable). ARGON's §3 extractor EXECUTED witness-side: `references/4ndr0meda-55bea18c-unpacked.md` born (171,883 B, `012730e5…`, canonical sidecar, per-file sha256s embedded). Deposit-path election QUEUED (tex-v3 fix-before-submit recommended while the waiver pause makes it cheap vs submit-as-is with later arXiv replacement); no kit — the commit rides the next kit bundle |
+| 83 | `gwm-task83-SUK.sh` + `gwm-task83-gwm-a3dcf49-<head7>` pair (bundle + b64 twin) + `gwm-task83-kit-battery.txt` + `gwm-task83-round-record.html` + `gwm-task83-SHA256SUMS` + §1.6 collateral ×4 (tex-v3, bib-v3, deposit package v2, GO-FIX build ledger) | THIS ROUND — the GO-FIX execution round: the operator's item-1 "GO FIX" elected fix-before-submit; tex-v3 `a975d7d1…` (133,303 B) + bib-v3 `8b5bc0fc…` (11,947 B) cut by scripts/task83_cut_v3.py (repo-rode, fail-closed count-asserted; the Task-82 verdict-ledger confirmed patch set EXACTLY — secnumdepth + the math-escape sites + the chacon un-truncation + 5 two-author commas + the lahoti re-type; the ARGON \nocite{*} no-op REJECTED; v2 sources liveness-pinned and verified read-only before AND after); recompiled tectonic 0.15.0 exit 0 → **35 pages — UNCHANGED** (the metadata lock's "…35 pages." comments field STANDS; no supersession) and the double-numbering fix verified on the render ("1. Introduction", no auto-number prefix); deposit package v2 cut deterministically (`bacc1f18…`, 47,084 B — sorted members, fixed mtime, owner 0:0, gzip -n; double-cut byte-identity gate GREEN) and deposited at references/arxiv-deposit/ beside the UNTOUCHED v1 anchor `c4148807…`; repo-rode verifier scripts/task83_deposit_verify.sh born GREEN [E0]–[E6] (incl. the v1 backward leg via the Task-81 verifier); §1.6 +4 (33 files), §1.15 +6 (39 files), §1 = 262/15, canonical 263, post-consolidation 271; the task83 kit cut at base `a3dcf49` carrying Tasks 82+83, battery-proven before staging; on deposit-resume the arXiv upload swaps to the v2 package, comments field unchanged |
 
 ## 5. Provenance pins (source attachments, 2026-10-29)
 
