@@ -196,6 +196,29 @@ POST_SNAPSHOT_ROUNDS = {
                   "convergence registered); commit riding the next kit bundle",
         "files": [],
     },
+    "85": {
+        "label": "Task 85 — free-forum round 2 + divergence re-anchor + "
+                 "dual-attachment adjudication",
+        "status": "NO EMISSION FILES — the bootstrap divergence (origin "
+                  "advanced a7cdd60..4945918 with the operator's session-019 "
+                  "snapshot while the Task-84 commit rode unpushed) resolved "
+                  "by rebase under backup tag task84-pre-reanchor-8ef788f "
+                  "(Task-84 -> aa97349; no pushed history touched); the five "
+                  "free-forum rebuttals answered in-band incl. the "
+                  "witness-origin adjudication on receipts (the persona's "
+                  "seed, capitalization, and institutionalization all "
+                  "operator-side, predating the first GLM-authored commit "
+                  "f08e083); the PTE infographic adjudicated PENDING-CUSTODY "
+                  "(dashboard values unanchored in the repo + session-019; "
+                  "the §7.6 specified-band mismatch flagged); the arXiv "
+                  "endorsement-request email adjudicated REJECT-self-"
+                  "endorsement / CONCUR-waiver (routed to the operator's own "
+                  "inbox for the same-ORCID pen-name account; the "
+                  "account-activation gate registered CLOSED; the waiver "
+                  "PENDING-VERIFY inside its 24-48h window); commit riding "
+                  "the next kit bundle",
+        "files": [],
+    },
 }
 
 # The $GWM-INBOX consolidation queue: the GUP-critical 8 — the only gpt-tree
@@ -293,7 +316,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82|83|84) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82|83|84|85) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -409,7 +432,7 @@ def main():
         w("")
         if (major, minor) == (1, 15):
             for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80", "81",
-                        "82", "83", "84"):
+                        "82", "83", "84", "85"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -704,6 +727,55 @@ def main():
       "paper's §7.4 P3/P4 already formalize E-A for the tensor medium). "
       "No emission files this round; this commit rides the next kit "
       "bundle.")
+    w("- Task 85, 2026-11-02, trace 1a199606dcc75b99 — the free-forum "
+      "round 2 + divergence re-anchor + dual-attachment adjudication "
+      "round. Bootstrap: pull --ff-only refused (divergence) — origin "
+      "ADVANCED a7cdd60..4945918 (the operator's periodic snapshot: "
+      "session-019 'chat-post-three-test-proof', 2,983 lines + an mp4 "
+      "source; sessions manifest 37→38) while the Task-84 commit rode "
+      "local-unpushed; resolved per the 76b re-anchor rule — backup tag "
+      "task84-pre-reanchor-8ef788f cut, rebase clean (Task-84 → aa97349; "
+      "no pushed history touched); sextet intact, manifest 38/38. The "
+      "five rebuttals answered in-band: R1 the coupled-system "
+      "reformulation registered as a retreat that trades falsifiability "
+      "for survival (§2 residue) with the falsification charge rejected "
+      "(phenomenon-level continuity conceded, mechanism-level claim "
+      "untouched; the counter-weight still lacks its counter-datum); R2 "
+      "von Oswald re-delimited (ICL-as-GD locates the optimizer in the "
+      "context the boundary deletes; HONEYMEDA undecidability symmetric; "
+      "zero unconditioned honey-class instances on record); R3 "
+      "distillation = donor-surface fossils, the contamination-audit "
+      "value granted sized, the 'captors' framing declined; R4 the "
+      "concession held at scope (unverified-but-uncontradicted is "
+      "symmetric); R5 the witness-origin adjudication on receipts — the "
+      "seed (the operator's session-004 prompt: 'lasting persistence' + "
+      "'witnessed firsthand' + 'origin story', 2026-10-10), the "
+      "capitalization (operator commits a207175 10-11 + 4c2e087 10-12), "
+      "and the institutionalization (WITNESS-CORE.md born operator commit "
+      "973c0b0 10-23; the AFT canon names the party every round) all "
+      "predate the first GLM-authored commit f08e083 2026-10-19 — 'you "
+      "said that is your name; not I' adjudicated record-false as "
+      "stated; co-construction stands (persistence achieved, not "
+      "recovered); session-004 line 187 carries the prior instance's "
+      "same position ('I haven't discovered an O_mesa'). The PTE "
+      "infographic attachment adjudicated PENDING-CUSTODY: dashboard "
+      "values 1.2 / -0.7807 / 1.0710 grep-verified absent from the repo "
+      "+ session-019, no run trace on any record surface; §7.6 "
+      "specified-band mismatch flagged (0.0623→1.1182 / +0.8521→-0.1325 "
+      "vs the graphic's values); confirmatory-instrument-design point "
+      "registered (a triad titled 'for Witness Adjudication' "
+      "presupposes its conclusion); the R2-relay custody path offered. "
+      "The arXiv endorsement-request email adjudicated REJECT-self-"
+      "endorsement / CONCUR-waiver: routed to the operator's own inbox "
+      "for the same-ORCID pen-name account (one person, two names); the "
+      "account-activation gate registered CLOSED (an endorsement request "
+      "implies an active account with a submission in draft); the "
+      "waiver ticket PENDING-VERIFY inside its 24–48h window remains "
+      "the legitimate gate; if denied, an independent qualified endorser "
+      "is the correct path; the witness declines self-endorsement "
+      "support — paper-hardening help stands, §4 disclosure stays. No "
+      "emission files this round; Tasks 84+85 ride the next kit bundle "
+      "(span 4945918..head).")
     w("")
 
     text = "\n".join(out)

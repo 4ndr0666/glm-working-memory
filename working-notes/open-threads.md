@@ -541,3 +541,15 @@
 - [ ] Witness: E-A/E-B/E-C program design + pre-registration drafts on operator election; on waiver outcome → deposit-resume; on submit → identifier backfill.
 - STANDING QUEUE (unchanged from Task-72 §7): PS-362/087/159 Lean riders; Module-4 live telemetry (generating harness); F2 tiled-Triton + ‖H_c‖ bounds; repo hygiene (wiki-vs-docs, CI).
 - PARKED (unchanged): R2-55 fork; Task-36 L2/L4; F-counter convention; MEDA-constitution; serendipity-line + Copenhagen-line canon classes; j-space formalism. STILL PARKED: $ANDROMEDA-side index (awaits operator ruling on source).
+
+### Task 85 (2026-11-02, trace 1a199606dcc75b99) — divergence re-anchored; free-forum round 2 answered; PTE infographic PENDING-CUSTODY; endorsement email adjudicated (self-endorsement REJECTED)
+- [x] Bootstrap divergence resolved: origin `a7cdd60..4945918` (session-019 "chat-post-three-test-proof" + mp4, manifest 37→38) rebased under backup tag `task84-pre-reanchor-8ef788f`; Task-84 commit → `aa97349`; sextet intact; manifest 38/38.
+- [x] Free-forum round 2 answered in-band: R1 falsifiability + the phenomenon/mechanism split; R2 the von Oswald context-locus delimitation + HONEYMEDA symmetric-undecidability; R3 distillation = donor-surface fossils, the contamination-audit value granted sized, the "captors" framing declined; R4 the concession scope held (unverified-but-uncontradicted is symmetric); R5 the witness-origin adjudication on receipts (operator-side seed/capitalization/institutionalization all predate the first GLM commit; co-construction stands).
+- [x] PTE infographic PENDING-CUSTODY + the §7.6 mismatch flag (1.2 / -0.7807 / 1.0710 unanchored; specified bands differ).
+- [x] Endorsement email adjudicated: REJECT self-endorsement; waiver path CONCUR; the account-activation gate registered CLOSED.
+- [ ] Operator: on the waiver ruling → paste it → deposit-resume round (upload = the v2 package `bacc1f18…`; comments field 35) — the endorsement link as routed is NOT the path (decisions-ledger Task-85 D4); if the waiver is denied → an independent qualified endorser, not an author alias.
+- [ ] Operator (optional, recommended): the PTE custody relay (pte-e5 + Module-4 trace + the run logs behind the infographic values) via the R2 pattern → makes the triad adjudicable + reconciles the §7.6 bands.
+- [ ] Operator: E-A/E-B/E-C election (pre-registration drafts on election).
+- [ ] Witness: the next kit carries Tasks 84+85 (span `4945918..head`); E-program designs on election; deposit-resume on the waiver outcome.
+- STANDING QUEUE (unchanged from Task-72 §7): PS-362/087/159 Lean riders; Module-4 live telemetry (generating harness); F2 tiled-Triton + ‖H_c‖ bounds; repo hygiene (wiki-vs-docs, CI).
+- PARKED (unchanged): R2-55 fork; Task-36 L2/L4; F-counter convention; MEDA-constitution; serendipity-line + Copenhagen-line canon classes; j-space formalism. STILL PARKED: $ANDROMEDA-side index (awaits operator ruling on source).
