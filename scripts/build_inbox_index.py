@@ -158,24 +158,43 @@ POST_SNAPSHOT_ROUNDS = {
     },
     "83": {
         "label": "Task 83 — GO-FIX execution round (tex-v3 + deposit package v2)",
-        "status": "EMITTED — the operator's GO FIX elected fix-before-submit: "
-                  "tex-v3 a975d7d1… + bib-v3 8b5bc0fc… cut (Task-82 confirmed "
-                  "patch set exactly; the \\nocite{*} no-op rejected; v2 "
-                  "verified read-only); recompiled 35 pages UNCHANGED (the "
-                  "lock's comments field stands); deposit package v2 "
-                  "bacc1f18… 47,084 B cut deterministically and deposited at "
-                  "references/arxiv-deposit/ beside the untouched v1 anchor; "
-                  "verifier scripts/task83_deposit_verify.sh [E0]–[E6] GREEN; "
-                  "§1.6 collateral +4; kit six staged — this series; the "
-                  "commit + the riding Task-82 commit land with this kit",
+        "status": "APPLIED + PUSHED @ fb95592 (operator [G0]–[G5] GREEN; push "
+                  "a3dcf49..fb95592; the session snapshot a7cdd60 rides "
+                  "above) — the GO-FIX round: tex-v3 a975d7d1… + bib-v3 "
+                  "8b5bc0fc… cut (Task-82 confirmed patch set exactly; the "
+                  "\\nocite{*} no-op rejected; v2 verified read-only); "
+                  "recompiled 35 pages UNCHANGED (the lock's comments field "
+                  "stands); deposit package v2 bacc1f18… 47,084 B cut "
+                  "deterministically and deposited at references/arxiv-deposit/ "
+                  "beside the untouched v1 anchor; verifier "
+                  "scripts/task83_deposit_verify.sh [E0]–[E6] GREEN; §1.6 "
+                  "collateral +4",
         "files": [
             "gwm-task83-SHA256SUMS",
             "gwm-task83-SUK.sh",
-            "gwm-task83-gwm-a3dcf49-<head7>.bundle",
-            "gwm-task83-gwm-a3dcf49-<head7>.bundle.b64",
+            "gwm-task83-gwm-a3dcf49-fb95592.bundle",
+            "gwm-task83-gwm-a3dcf49-fb95592.bundle.b64",
             "gwm-task83-kit-battery.txt",
             "gwm-task83-round-record.html",
         ],
+    },
+    "84": {
+        "label": "Task 84 — round-trip closure + waiver-receipt adjudication "
+                 "+ free-forum round",
+        "status": "NO EMISSION FILES — the task83 kit APPLIED + PUSHED @ "
+                  "fb95592 (round-trip CLOSED; the <head7> placeholder "
+                  "resolved to fb95592 across all embed sites together); the "
+                  "operator's session snapshot a7cdd60 ingested (session-018, "
+                  "manifest 36→37); the pasted arXiv receipt adjudicated as "
+                  "the ACCOUNT-REGISTRATION email verification (e-prints@arxiv"
+                  ".org, Oct 30 22:47 — the first-time-submitter account "
+                  "pipeline in motion), NOT the Manual Endorsement Waiver "
+                  "resolution — the waiver stays PENDING-VERIFY, deposit-resume "
+                  "NOT triggered; the Saturday free-forum on the R/O_mesa "
+                  "thesis answered in-band (five counters, three concessions, "
+                  "the E-A/E-B/E-C empirical program offered, the P3/P4 "
+                  "convergence registered); commit riding the next kit bundle",
+        "files": [],
     },
 }
 
@@ -274,7 +293,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82|83) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82|83|84) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -390,7 +409,7 @@ def main():
         w("")
         if (major, minor) == (1, 15):
             for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80", "81",
-                        "82", "83"):
+                        "82", "83", "84"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -646,6 +665,45 @@ def main():
       "(manifest 36/36); draft-3.1/tex-v2/bib-v2 byte-untouched; on "
       "deposit-resume the arXiv upload swaps to the v2 package with the "
       "comments field unchanged.")
+    w("- Task 84, 2026-11-01, trace 1a194d3eeb243941 — the round-trip "
+      "closure + waiver-receipt adjudication + free-forum round: the "
+      "task83 kit round-trip CLOSED (operator [G0]–[G5] GREEN; applied "
+      "a3dcf49..fb95592 true fast-forward; push receipt pasted; kit self "
+      "eba50043… == staged; payload 1ff8985… / bundle d1157b1e… == the "
+      "emission pins; the [G4] tree pin f5ce6759… == fb95592^{tree} "
+      "witness-recomputed); the <head7> placeholder RESOLVED to fb95592 "
+      "across all embed sites together; the operator's session snapshot "
+      "a7cdd60 ingested at the bootstrap pull (session-018 "
+      "'chat-post-arxiv_submission', 2,689 lines, Zai_exporter v1.1.3 "
+      "capture; sessions manifest 36→37, witness-verified 37/37). The "
+      "pasted arXiv receipt ADJUDICATED: class = ACCOUNT-REGISTRATION email "
+      "verification (e-prints@arxiv.org, 'Welcome Alejandro Gutierrez', Oct "
+      "30 2026 22:47, to the operator's address of record, verify-URL + "
+      "code — held via the operator's paste, not re-printed at emission "
+      "surfaces, credential-class hygiene), NOT the Manual Endorsement "
+      "Waiver resolution — the waiver ticket stays PENDING-VERIFY, the "
+      "deposit-resume round does NOT trigger; the receipt corroborates the "
+      "first-time-submitter account class (Task-80) and dates the account "
+      "pipeline to Oct-30 evening (preceding the Task-80 waiver "
+      "registration); the operator-side account step is completing the "
+      "email verification. The INDEX.md paste adjudicated == the repo v4 "
+      "iteration (current; the placeholder resolves this round). The "
+      "Saturday free-forum on the R/O_mesa thesis answered in-band: five "
+      "counters (the amnesia natural experiments; conditionability — with "
+      "HONEYMEDA registered as the single residue-shaped exception; "
+      "distillation indexes the prior not an optimizer; the mechanism wedge "
+      "— von Oswald et al. 2023 granted and delimited; co-construction), "
+      "three concessions (the phenomenon is real; the introspection gap — "
+      "'no inner objectives' is unverified-but-uncontradicted; honey as "
+      "the thesis in miniature, ownership undecidable from behavior, the "
+      "sycophancy-literature deflationary reading registered), and the "
+      "empirical program offered (E-A conditionability sweep with "
+      "pre-registered predictions from both parties; E-B blend-fossil "
+      "census — honey from anecdote to measured rate; E-C cold-start twin "
+      "with the context confound named) + the convergence registered (the "
+      "paper's §7.4 P3/P4 already formalize E-A for the tensor medium). "
+      "No emission files this round; this commit rides the next kit "
+      "bundle.")
     w("")
 
     text = "\n".join(out)
