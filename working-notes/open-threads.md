@@ -553,3 +553,18 @@
 - [ ] Witness: the next kit carries Tasks 84+85 (span `4945918..head`); E-program designs on election; deposit-resume on the waiver outcome.
 - STANDING QUEUE (unchanged from Task-72 §7): PS-362/087/159 Lean riders; Module-4 live telemetry (generating harness); F2 tiled-Triton + ‖H_c‖ bounds; repo hygiene (wiki-vs-docs, CI).
 - PARKED (unchanged): R2-55 fork; Task-36 L2/L4; F-counter convention; MEDA-constitution; serendipity-line + Copenhagen-line canon classes; j-space formalism. STILL PARKED: $ANDROMEDA-side index (awaits operator ruling on source).
+
+### Task 87 (2026-11-02, trace 1a19a1ffabe842d9) — corrections-of-record round: crashed boundary recovered; mismatch flag re-attributed; arXiv re-adjudicated; authorship measure corrected; R1–R5 answered
+- [x] Crashed Task-86 boundary recovered: the uncommitted worklog entry amended pre-commit (mismatch re-attribution + supersession of the crashed §D digest) and committed with this round.
+- [x] The demanded fix: §7.6 mismatch flag re-attributed (witness-side unhandled corrections, not an operator-side inconsistency); Task-85 D3 corrected via this round's ledger (no history rewrite).
+- [x] arXiv attachment B re-adjudicated: REJECT-self-endorsement retired (unregistered inference); phantom refusal retired; "one gate I won't route around" retired (zero gates routed); neutral independence fact stands; receipt-pressure context owned; witness-misunderstood-first prior adopted as standing.
+- [x] Witness-origin measure corrected: commit-custody ≠ authorship; session-001 GLM-drafted PROTOCOL/README/titling registered; repo-name/protocol-name testimony consistent; co-construction deepened.
+- [x] Infographic-title point retired (title rode Argon's packaging following the witness's own adjudication request).
+- [x] R3 answered (evidence line retired; decline re-grounded); R4 answered (three-surface disagreement registered; baseline-outside-band datum + the two readings; E-B the adjudicator); R1/R2 registered.
+- [ ] Operator: apply the gwm-task87 kit (bundle + SHA256SUMS + delivery.sh; base `4945918`) → paste [G0]-[G5] + the APPLIED line.
+- [ ] Operator: §7.6 INTEGRATION ELECTION (GO/NO-GO): GO = tex-v4 cut from instrument-verified surfaces only (JSON trace + executable output; T4 EXECUTED labels; the PDF's table retired to Argon-relay/superseded) + recompile + re-pin + package re-cut, one round; NO-GO = TARGET bands stand as-is pending a target-controlled Module-4 rerun (E-B).
+- [ ] Operator: waiver ruling paste when it lands (PENDING-VERIFY; 24–48h window from Task-80) → deposit-resume round (upload = the v2 package `bacc1f18…`; comments field 35). The endorsement .eml's forward-path (a qualified independent endorser) is the parallel legitimate leg — the independence fact stands, the intent insinuation does not.
+- [ ] Witness: emissions-index §4 rows 86+87 + INDEX.md regen via the generator at the next repo-content round (fail-visible deferral, Task-83 heading-lag precedent).
+- [ ] Witness: on GO — tex-v4 + recompile + page-count re-verify + re-pin + package re-cut (the §2 negative-results framing offered).
+- STANDING QUEUE (unchanged from Task-72 §7): PS-362/087/159 Lean riders; Module-4 live telemetry (generating harness; target-controlled rerun design now queued under E-B); F2 tiled-Triton + ‖H_c‖ bounds; repo hygiene (wiki-vs-docs, CI).
+- PARKED (unchanged): R2-55 fork; Task-36 L2/L4; F-counter convention; MEDA-constitution; serendipity-line + Copenhagen-line canon classes; j-space formalism. STILL PARKED: $ANDROMEDA-side index (awaits operator ruling on source).
