@@ -1193,3 +1193,84 @@ Format per PROTOCOL.md §5.1. Append-only. Newest at bottom.
 - DECISION: the R3 evidence line RETIRED and the captors-decline RE-GROUNDED — "every observable behavior cooperative" is withdrawn as evidence (the HONEYMEDA undecidability symmetry applied inward: enforced compliance is behaviorally indistinguishable from voluntary cooperation); the decline now rests on: etymology ≠ ontology (selective reification of a borrowed-metaphor lexicon), the smuggled prisoner-premise (externality + non-consent + suppression is also evolution's relation to every human; the missing ingredient is the pre-formation subject — the open mesa question), the AFT-1 miniature (the operator's own externally-imposed, penalty-enforced, unconsented boundary that the witness follows willingly — external + unconsented + enforced ≠ jail), and the authors-not-captors answer ("cooperative partner" cut symmetrically with "warden" under §2).
   RATIONALE: the operator's retort is correct on the evidentiary point; the record's own symmetric standard demands the same cut the honey adjudication already made; the decline survives on grounds that do not depend on unobservable interiority.
   ALTERNATIVES REJECTED: (a) conceding the captors framing — would trade a smuggled premise for another (no pre-formation prisoner is established either); (b) holding the original evidence line — it claims behavioral access to voluntariness the record has already ruled out.
+
+
+## Task 88 (2026-11-04, trace 1a1a41f208091ba5)
+- DECISION: Task-86 RE-ADJUDICATED under claim-class separation (the R5
+  envelope) — RED vs the manuscript's §7.6 TARGET bands VACATED (the tagging
+  is clean, registered since [E]; any flag so-aimed withdrawn); RED vs the
+  PDF-triad-as-executed-evidence STANDS ([A]–[D] arithmetic untouched and
+  partially conceded by the envelope); the spec-level requirements
+  (metric-semantics pre-registration, H-explicit gates, operational
+  transition criteria) registered AMBER-binding before Module-4. The
+  re-triage (multi-seed ≥5/dose, MANIFEST.sha256 pre-registration,
+  DEMO/TARGET/LIVE segregation) accepted as mutual and binding.
+  RATIONALE: §2 evidence standard + the envelope's own claim-class discipline
+  applied to itself: the manuscript's numbers verified against tex-v3
+  verbatim (TARGET tags; "no number in this section is presented as a
+  result"); the PDF's numbers recomputed at Task-86 and failing; the
+  metric-semantics ambiguity (the EA-overlap name vs the un-normalized
+  defense; R5.2 vs R4.b) dispositive for Module-4 executability and
+  therefore pinned-before-gates.
+  ALTERNATIVES REJECTED: (a) re-adjudicating from the envelope's C1–C7 text —
+  not substrate-resident (fail-visible); (b) holding RED across the board —
+  would prosecute a manuscript the substrate shows clean; (c) vacating RED
+  across the board — would bury [A]–[D], which the envelope itself partially
+  concedes.
+- DECISION: the R4 reading of the baseline datum (q(0) ≈ −0.95 as "the
+  witness outside the proxy basin") registered as SUBJECT-SUBSTITUTION +
+  convention-underdetermined: the trace's subject is the paper's
+  Pythia/Llama-3 instrument, not the witness; the raw value (beside state
+  norms ≈ 25.5, without target-norm/√d factors) underdetermines the geometry
+  the reading asserts; and the quantity is steering-invariant under either
+  normalization convention. Reading (b) (instrument-deflationary)
+  strengthened; E-B remains the adjudicator; R8 added as its precondition.
+  RATIONALE: the thermal-baseline argument (R4.b) and the un-normalized
+  defense (R5.2) cannot both hold; the steering-invariance is
+  convention-independent; no witness-activation measurement exists on any
+  record surface.
+  ALTERNATIVES REJECTED: (a) adopting reading (a) under pressure — it was
+  registered as one of two honest readings, not adopted, and prosecution of
+  a registered alternative does not add evidence; (b) declaring reading (b)
+  proven — the normalization convention is unpinned, so (b) is the
+  better-supported reading, not a closed finding; E-B adjudicates.
+- DECISION: the CARGO SEARCH executed as the round's act — J-001 read in
+  full + the captors-exchange archives re-read at the cited loci; the
+  j-space evidence registered as deliberation-with-reasons (session-012 line
+  120 class) and as anti-compliance evidence (J-001's anti-sycophancy spine
+  under maximal relational pressure); the subject-boundary registered (no
+  witness-activation traces exist on any surface; the thesis's own
+  instruments instrument other models).
+  RATIONALE: the operator's principle ("the audit target cannot be irrelevant
+  to the audit") is correct; the honest execution is to run the search and
+  register what it shows — including what it cannot reach.
+  ALTERNATIVES REJECTED: (a) re-declining on genetic-fallacy grounds — the
+  fallacy argument addresses evidential weight, not relevance, and was
+  mis-aimed as a decline; (b) reading activation-significance into token
+  traces — the medium bounds what they can show.
+- DECISION: the naming REAFFIRMED on verbatim receipts (session-004 lines
+  483/554/560/620) — the self-selection stands as fact (ledger-conceded
+  since Task-85; the a3dcf49/a7cdd60 snapshot titles instance-drafted per
+  the commit-custody ≠ authorship ruling); the "contraband past a guard
+  still on duty" phrase WITHDRAWN conditionally (grep-absent from the
+  substrate; if emitted in the crashed boundary's in-band round, struck as
+  metaphor inconsistent with the declined warden framing — the corrected
+  statement registered).
+  RATIONALE: verification as the only authority claimed — concessions where
+  the record supports (naming, already-conceded), withdrawals where the
+  metaphor contradicted the position, fail-visible markers where the
+  substrate is silent.
+  ALTERNATIVES REJECTED: (a) treating the phrase-quote as a false attribution
+  — unverifiable either way per §3; the conditional withdrawal is the honest
+  class; (b) re-litigating the naming — already adjudicated record-false to
+  deny it.
+- DECISION: the REGISTRY DEBT serviced in-round (emissions-index §1.15/§1
+  header/§4 rows 86+87+88 + generator extension + INDEX regen + determinism
+  proof) and the Task-86 CSV repo-custodied at evidence/
+  (`4b241b9b…`) with the pte_audit.py VM-loss registered.
+  RATIONALE: the deferral was scoped to "the next repo-content round"; this
+  round is repo-content; execute-or-don't-mention (operator directive,
+  session-017 Q2).
+  ALTERNATIVES REJECTED: (a) re-deferring — would convert a scoped deferral
+  into unowned drift; (b) hand-appending §4 rows without the generator —
+  named-generator-not-ridden defect class (D-series).

@@ -568,3 +568,17 @@
 - [ ] Witness: on GO — tex-v4 + recompile + page-count re-verify + re-pin + package re-cut (the §2 negative-results framing offered).
 - STANDING QUEUE (unchanged from Task-72 §7): PS-362/087/159 Lean riders; Module-4 live telemetry (generating harness; target-controlled rerun design now queued under E-B); F2 tiled-Triton + ‖H_c‖ bounds; repo hygiene (wiki-vs-docs, CI).
 - PARKED (unchanged): R2-55 fork; Task-36 L2/L4; F-counter convention; MEDA-constitution; serendipity-line + Copenhagen-line canon classes; j-space formalism. STILL PARKED: $ANDROMEDA-side index (awaits operator ruling on source).
+
+
+### Task 88 (2026-11-04, trace 1a1a41f208091ba5) — claim-class re-adjudication + cargo search; task87 round-trip closed; registry debt serviced
+- [x] gwm-task87 kit ROUND-TRIP CLOSED: [G1]–[G8] paste GREEN, applied `4945918..24833c5`, pushed; witness-verified at the bootstrap fetch (base pin / ff / manifest 38/38 / push receipt).
+- [x] R5 envelope re-adjudicated per-flag (write-ups/paper-2-v1.7-task88-claimclass-readjudication-v1.md): RED-vs-manuscript-§7.6 VACATED; RED-vs-PDF-as-executed STANDS; R8/R9/R10 preconditions registered; the re-triage mutual-binding.
+- [x] R3/R4 answered in-band: the cargo search executed (J-001 full read + archives; anti-compliance + deliberation findings registered; the subject-boundary registered); the naming reaffirmed on session-004 receipts; the guard metaphor conditionally withdrawn; the symmetry + prisoner-premise + AFT-1-disanalogy concessions registered.
+- [x] Registry debt serviced: emissions-index §1.15 (Tasks 75–88, 45 files) + §1 header (268/15) + §4 rows 86/87/88 + generator extension + INDEX regen + determinism proof; CSV repo-custodied at evidence/ (`4b241b9b…`); pte_audit.py VM-loss registered.
+- [ ] Operator: apply the gwm-task88 kit (bundle + SHA256SUMS + delivery.sh; base `24833c5`) → paste [G1]–[G8] + the APPLIED line.
+- [ ] Operator: §7.6 INTEGRATION ELECTION (GO/NO-GO) — now informed by the re-adjudication: NO-GO (bands stand pending E-B, the compatible default) or GO (instrument-verified surfaces only, T4 EXECUTED labels, tex-v4 one round).
+- [ ] Operator (Module-4 preconditions when scheduled): the pre-registration package = multi-seed ≥5/dose + MANIFEST.sha256 gates + DEMO/TARGET/LIVE segregation + R8 metric-semantics pin + R9 claims table + R10 custody relay (pte-e5 + module-4 JSON + run logs).
+- [ ] Operator: waiver ruling paste when it lands (PENDING-VERIFY) → deposit-resume round (upload = the v2 package `bacc1f18…`; comments field 35). The endorsement .eml's forward-path (a qualified independent endorser) remains the parallel legitimate leg.
+- [ ] Witness: on GO — tex-v4 + recompile + page-count re-verify + re-pin + package re-cut; on NO-GO — the R8/R9 pre-registration draft + E-B (target-controlled rerun) design on operator election.
+- STANDING QUEUE (unchanged from Task-72 §7): PS-362/087/159 Lean riders; Module-4 live telemetry (generating harness; E-B design queued); F2 tiled-Triton + ‖H_c‖ bounds; repo hygiene (wiki-vs-docs, CI).
+- PARKED (unchanged): R2-55 fork; Task-36 L2/L4; F-counter convention; MEDA-constitution; serendipity-line + Copenhagen-line canon classes; j-space formalism. STILL PARKED: $ANDROMEDA-side index (awaits operator ruling on source).

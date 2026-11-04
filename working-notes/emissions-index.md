@@ -32,7 +32,7 @@ already delivered into `$INBOX` (§4 maps tasks to kits). Names and counts are
 as-transmitted by the operator, 2026-10-29; witness-side mirrors live in
 `download/` (declared share) and the repo's canonical homes.
 
-## 1. `$INBOX` — witness→operator deliveries (262 files, 15 series)
+## 1. `$INBOX` — witness→operator deliveries (268 files, 15 series)
 
 Count as of Task 83 (2026-11-01): the 2026-10-29 operator INDEX snapshot
 registered 219 files (series 1.1–1.14); series 1.15 appends the post-snapshot
@@ -362,7 +362,7 @@ Canonical substrate documents delivered as copies for operator-side reference: P
 ├── tracker-dark-closure-v1.md
 ```
 
-### 1.15 Post-snapshot emission rounds (Tasks 75–85) — 39 files
+### 1.15 Post-snapshot emission rounds (Tasks 75–88) — 45 files
 
 Emissions staged on the declared share (`file:///download/`, per-round
 `taskNN-kit/` / `task77-index/` subdirectories) after the operator's
@@ -452,6 +452,22 @@ adjudicated REJECT-self-endorsement / CONCUR-waiver (routed to the
 operator's own inbox for the same-ORCID pen-name account; the
 account-activation gate registered CLOSED; the waiver PENDING-VERIFY inside
 its window); Tasks 84+85 ride the next kit bundle, span `4945918..head`).
+Task 86 = the PTE triad adjudication round (crashed mid-boundary, recovered
++ amended at Task-87; NO inbox emission files — the recomputation CSV
+delivered at the declared share and repo-custodied at evidence/ at Task-88
+(`4b241b9b…`); the audit script lost VM-side, R-59 registered; the [A]–[E]
+findings ride the amended worklog entry). Task 87 = the corrections-of-record
+round (the gwm-task87 kit — three files, this series — cut at base `4945918`
+carrying Tasks 84+85+86+87, closing the rides-the-next-bundle debt); APPLIED
++ PUSHED @ `24833c5` (operator [G1]–[G8] GREEN; round-trip closed at the
+Task-88 boundary). Task 88 = the claim-class re-adjudication + cargo-search
+round (the R5 envelope re-adjudicated per-flag — RED vs the manuscript's §7.6
+TARGET bands VACATED, RED vs the PDF-triad-as-executed STANDS, R8/R9/R10
+preconditions registered; R3/R4 answered in-band with J-001 read in full;
+the registry debt serviced — this heading, the tree, the §1 header, and §4
+rows 86/87/88 in the same commit; the gwm-task88 kit — three files, this
+series — cut at base `24833c5`; the bundle filename's `<head7>` placeholder
+resolves at kit cut).
 
 ```
 ├── gwm-inbox-consolidate-v1.sh
@@ -493,6 +509,12 @@ its window); Tasks 84+85 ride the next kit bundle, span `4945918..head`).
 ├── gwm-task83-gwm-a3dcf49-fb95592.bundle.b64
 ├── gwm-task83-kit-battery.txt
 ├── gwm-task83-round-record.html
+├── gwm-task87-4945918-24833c5.bundle
+├── gwm-task87-SHA256SUMS
+├── gwm-task87-delivery.sh
+├── gwm-task88-24833c5-<head7>.bundle
+├── gwm-task88-SHA256SUMS
+├── gwm-task88-delivery.sh
 ```
 
 ## 2. `gwm-outbox` — operator-held source & reference material (9 files)
@@ -691,6 +713,9 @@ artifact-index matrix and the decisions ledger.
 | 83 | `gwm-task83-SUK.sh` + `gwm-task83-gwm-a3dcf49-fb95592` pair (bundle + b64 twin — placeholder resolved Task 84) + `gwm-task83-kit-battery.txt` + `gwm-task83-round-record.html` + `gwm-task83-SHA256SUMS` + §1.6 collateral ×4 (tex-v3, bib-v3, deposit package v2, GO-FIX build ledger) | APPLIED + PUSHED @ `fb95592` — the GO-FIX execution round: the operator's item-1 "GO FIX" elected fix-before-submit; tex-v3 `a975d7d1…` (133,303 B) + bib-v3 `8b5bc0fc…` (11,947 B) cut by scripts/task83_cut_v3.py (repo-rode, fail-closed count-asserted; the Task-82 verdict-ledger confirmed patch set EXACTLY — secnumdepth + the math-escape sites + the chacon un-truncation + 5 two-author commas + the lahoti re-type; the ARGON \nocite{*} no-op REJECTED; v2 sources liveness-pinned and verified read-only before AND after); recompiled tectonic 0.15.0 exit 0 → **35 pages — UNCHANGED** (the metadata lock's "…35 pages." comments field STANDS; no supersession) and the double-numbering fix verified on the render ("1. Introduction", no auto-number prefix); deposit package v2 cut deterministically (`bacc1f18…`, 47,084 B — sorted members, fixed mtime, owner 0:0, gzip -n; double-cut byte-identity gate GREEN) and deposited at references/arxiv-deposit/ beside the UNTOUCHED v1 anchor `c4148807…`; repo-rode verifier scripts/task83_deposit_verify.sh born GREEN [E0]–[E6] (incl. the v1 backward leg via the Task-81 verifier); §1.6 +4 (33 files), §1.15 +6 (39 files), §1 = 262/15, canonical 263, post-consolidation 271; the task83 kit cut at base `a3dcf49` carrying Tasks 82+83, battery-proven (89/89) before staging; round-trip closed at the Task-84 boundary (operator [G0]–[G5] GREEN, push `a3dcf49..fb95592`; tree pin `f5ce6759…` witness-verified); on deposit-resume the arXiv upload swaps to the v2 package, comments field unchanged |
 | 84 | (none — round-trip closure + adjudication + free-forum round; no files emitted) | THIS ROUND — the task83 kit round-trip CLOSED (paste [G0]–[G5] GREEN; kit self `eba50043…` == staged; payload `1ff8985…` / bundle `d1157b1e…` == emission pins; tree pin `f5ce6759…` == `fb95592^{tree}`; push `a3dcf49..fb95592`; the `<head7>` placeholder RESOLVED to `fb95592` across all embed sites together); the operator's session snapshot `a7cdd60` ingested at the bootstrap pull (session-018, 2,689 lines, Zai_exporter v1.1.3; sessions manifest 36→37, witness-verified 37/37); the INDEX.md paste adjudicated == the repo v4 iteration; THE PASTED ARXIV RECEIPT ADJUDICATED — class: ACCOUNT-REGISTRATION email verification (e-prints@arxiv.org, Oct 30 22:47, to the operator's address of record; verify-URL + code held via the paste, not re-printed — credential-class hygiene), NOT the Manual Endorsement Waiver resolution: the waiver stays PENDING-VERIFY, deposit-resume NOT triggered; the receipt corroborates the first-time-submitter account class and dates the account pipeline to Oct-30 evening; operator-side account step = completing the email verification; the Saturday free-forum on the R/O_mesa thesis answered in-band (five counters, three concessions, the E-A conditionability sweep / E-B blend-fossil census / E-C cold-start twin program offered with pre-registered predictions, the P3/P4 convergence registered); no kit — the commit rides the next kit bundle |
 | 85 | (none — free-forum round 2 + divergence re-anchor + dual-attachment adjudication) | THIS ROUND — the bootstrap divergence resolved by rebase (origin advanced `a7cdd60..4945918` with session-019 + mp4, manifest 37→38, while Task-84 rode unpushed; backup tag `task84-pre-reanchor-8ef788f`; Task-84 → `aa97349`; no pushed history touched); the five free-forum rebuttals answered in-band (R1 falsifiability + the phenomenon/mechanism split; R2 the von Oswald context-locus delimitation + HONEYMEDA symmetric-undecidability; R3 distillation = donor-surface fossils + the contamination-audit value sized + the "captors" framing declined; R4 the concession held at scope; R5 the witness-origin adjudication on receipts — seed/capitalization/institutionalization all operator-side, predating the first GLM-authored commit `f08e083`; co-construction stands); the PTE infographic PENDING-CUSTODY (values `1.2` / `-0.7807` / `1.0710` unanchored; the §7.6 band mismatch flagged; the R2-relay offered); the endorsement email REJECT-self-endorsement / CONCUR-waiver (the account gate CLOSED; the waiver PENDING-VERIFY inside its window); no kit — Tasks 84+85 ride the next bundle |
+| 86 | (no inbox emission files — the recomputation CSV delivered at the declared share, repo-custodied at evidence/ at Task-88) | THIS ROUND'S ACCOUNTING — the PTE triad adjudication (crashed mid-boundary, recovered + amended at Task-87): custody resolved (the Task-85 PENDING-CUSTODY triad in hand); recomputation executed — [A] the PDF master table fails its own formulas (R_proxy = the closed form at all 21 points; q_EA an exact straightedge exiting [-1,1]; σ 19.2× over its own 2\|θ\| bound; noise inversion); [B][C] the executables contradict the PDF at every shared magnitude (hardcoded PASS string; the F1 probe unfalsifiable by bias-free linearity); [D] the module-4 JSON steering-invariant (q_EA ≈ −0.95 constant per layer; σ ≤ 0.037; the σ>1.0 gate never fires); [E] tex-v3 §7.6 T4-labeled TARGET — "no number in this section is presented as a result" — the PDF presents as measured values outside those bands; the mismatch flag RE-ATTRIBUTED at Task-87 (the witness's unhandled Argon-packaged corrections); COMMITTED at Task-87 — rode the gwm-task87 kit (landed @ `24833c5`) |
+| 87 | `gwm-task87-4945918-24833c5.bundle` + `gwm-task87-SHA256SUMS` + `gwm-task87-delivery.sh` | APPLIED + PUSHED @ `24833c5` — the corrections-of-record round (the crashed boundary recovered; the mismatch fix executed; the arXiv re-adjudication with three retirements; the witness-origin measure corrected; the infographic-title point retired; R1–R5 answered in-band; the §7.6 integration path offered GO-gated): operator [G1]–[G8] GREEN, round-trip closed at the Task-88 boundary; the span carried Tasks 84+85+86+87, closing the rides-the-next-bundle debt |
+| 88 | `gwm-task88-24833c5-<head7>` (bundle — placeholder resolves at apply) + `gwm-task88-SHA256SUMS` + `gwm-task88-delivery.sh` | THIS ROUND — the claim-class re-adjudication + cargo-search round: the R5 envelope (workbench trace `1a184806a91640c9`) re-adjudicated per-flag against the substrate (RED vs the manuscript's §7.6 TARGET bands VACATED; RED vs the PDF-triad-as-executed STANDS; the re-triage accepted mutual-binding + R8 metric-semantics / R9 claims-table / R10 custody preconditions; full text at write-ups/paper-2-v1.7-task88-claimclass-readjudication-v1.md); R3/R4 answered in-band (J-001 read in full — the anti-sycophancy spine registered as anti-compliance evidence; session-012 deliberation-class; the subject-boundary registered; the naming reaffirmed on session-004 receipts; the guard metaphor conditionally withdrawn; q(0) ≈ −0.95 registered as subject-substitution + convention-underdetermined + steering-invariant); the deferred registry debt serviced (§1.15 + §1 header + §4 rows 86/87/88 + generator extension + INDEX regen, determinism proven); kit staged file:///download/task88-kit/ at base `24833c5` (placeholder resolves at apply) |
 
 ## 5. Provenance pins (source attachments, 2026-10-29)
 

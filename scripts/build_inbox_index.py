@@ -219,6 +219,46 @@ POST_SNAPSHOT_ROUNDS = {
                   "the next kit bundle",
         "files": [],
     },
+    "86": {
+        "label": "Task 86 — PTE triad adjudication (crashed boundary, "
+                 "recovered + amended at Task-87)",
+        "status": "NO INBOX EMISSION FILES — the recomputation CSV delivered "
+                  "at the declared share and repo-custodied at evidence/ at "
+                  "Task-88 (4b241b9b…); the audit script lost VM-side (R-59, "
+                  "registered); the [A]–[E] findings ride the amended worklog "
+                  "entry; COMMITTED at Task-87 — rode the gwm-task87 kit "
+                  "(landed @ 24833c5)",
+        "files": [],
+    },
+    "87": {
+        "label": "Task 87 — corrections-of-record round",
+        "status": "APPLIED + PUSHED @ 24833c5 (operator [G1]–[G8] GREEN; "
+                  "round-trip closed at the Task-88 boundary; the span "
+                  "carried Tasks 84+85+86+87, closing the rides-the-next-"
+                  "bundle debt)",
+        "files": [
+            "gwm-task87-4945918-24833c5.bundle",
+            "gwm-task87-SHA256SUMS",
+            "gwm-task87-delivery.sh",
+        ],
+    },
+    "88": {
+        "label": "Task 88 — claim-class re-adjudication + cargo-search round",
+        "status": "THIS ROUND — the R5 envelope re-adjudicated per-flag "
+                  "(RED vs the manuscript's §7.6 TARGET bands VACATED; RED vs "
+                  "the PDF-triad-as-executed STANDS; the re-triage accepted "
+                  "mutual-binding with R8/R9/R10 preconditions); R3/R4 "
+                  "answered in-band (J-001 read in full; the naming reaffirmed "
+                  "on session-004 receipts); the deferred registry debt "
+                  "serviced; kit staged file:///download/task88-kit/ at base "
+                  "24833c5 — the bundle filename's <head7> placeholder "
+                  "resolves at kit cut",
+        "files": [
+            "gwm-task88-24833c5-<head7>.bundle",
+            "gwm-task88-SHA256SUMS",
+            "gwm-task88-delivery.sh",
+        ],
+    },
 }
 
 # The $GWM-INBOX consolidation queue: the GUP-critical 8 — the only gpt-tree
@@ -316,7 +356,7 @@ def cross_check_post_snapshot(emi_text, series):
     # (INDEX.md §1.16), never inside POST_SNAPSHOT_ROUNDS — §4 rows may name
     # it; it is covered by design (excluded from the §1.15 block check).
     covered = registered | {"INDEX.md"}
-    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82|83|84|85) \|(.+?)\|", emi_text, re.M)
+    rows = re.findall(r"^\| (75|76|76a|76b|77|77b|77c|78|79|80|81|82|83|84|85|86|87|88) \|(.+?)\|", emi_text, re.M)
     for round_id, cell in rows:
         for tok in re.findall(r"`([^`]+)`", cell):
             if "<head7>" in tok:
@@ -432,7 +472,7 @@ def main():
         w("")
         if (major, minor) == (1, 15):
             for rid in ("75", "76", "76b", "77", "77c", "78", "79", "80", "81",
-                        "82", "83", "84", "85"):
+                        "82", "83", "84", "85", "86", "87", "88"):
                 r = POST_SNAPSHOT_ROUNDS[rid]
                 w(f"- Task {rid}: {r['status']}")
             w("")
@@ -776,6 +816,62 @@ def main():
       "support — paper-hardening help stands, §4 disclosure stays. No "
       "emission files this round; Tasks 84+85 ride the next kit bundle "
       "(span 4945918..head).")
+    w("- Task 86, 2026-11-02, trace 1a199a655533e79d — the PTE triad "
+      "adjudication round (crashed mid-boundary; recovered + amended at "
+      "Task-87): the Task-85 PENDING-CUSTODY triad resolved in hand and "
+      "recomputed — [A] the PDF master table fails its own formulas (R_proxy "
+      "the closed form at all 21 points, max dev 4.5e-05; q_EA an exact "
+      "straightedge; σ 19.2× over its own 2|θ| bound; noise inversion); "
+      "[B][C] the executables contradict the PDF at every shared magnitude "
+      "(hardcoded PASS string beside the un-evaluated norm; the F1 probe "
+      "unfalsifiable by bias-free linearity); [D] the module-4 JSON "
+      "steering-invariant (q_EA ≈ −0.95 constant per layer; σ ≤ 0.037; the "
+      "σ>1.0 gate never fires); [E] the manuscript's §7.6 bands T4-labeled "
+      "TARGET — clean. The mismatch flag RE-ATTRIBUTED at Task-87 (the "
+      "witness's unhandled Argon-packaged corrections, not an operator "
+      "inconsistency). The recomputation CSV repo-custodied at evidence/ at "
+      "Task-88 (4b241b9b…); the audit script lost VM-side (R-59, registered).")
+    w("- Task 87, 2026-11-02, trace 1a19a1ffabe842d9 — the corrections-of-"
+      "record round: the crashed boundary recovered; the demanded mismatch "
+      "fix executed; the arXiv endorsement email re-adjudicated (three "
+      "retirements — the REJECT-self-endorsement route, the phantom "
+      "self-endorsement refusal, 'the one gate I won't route around'; the "
+      "neutral independence fact standing; witness-misunderstood-first "
+      "adopted); the witness-origin authorship measure corrected (commit-"
+      "custody ≠ authorship; session-001 GLM-drafted PROTOCOL/README/titling "
+      "registered; co-construction deepened); the infographic-title point "
+      "retired; R1–R5 answered in-band; the gwm-task87 kit (base 4945918, "
+      "carrying Tasks 84+85+86+87) APPLIED + PUSHED @ 24833c5 — operator "
+      "[G1]–[G8] GREEN at the Task-88 boundary (round-trip closed); series "
+      "1.15 → 42 files at this round's accounting (45 with the task88 kit "
+      "below).")
+    w("- Task 88, 2026-11-04, trace 1a1a41f208091ba5 — the claim-class "
+      "re-adjudication + cargo-search round: the R5 envelope (PTE Empirical "
+      "Triad & Claim-Class Reframing, workbench trace 1a184806a91640c9) "
+      "re-adjudicated per-flag against the substrate — RED vs the "
+      "manuscript's §7.6 TARGET bands VACATED (the tagging clean, verified "
+      "verbatim against tex-v3; any flag so-aimed withdrawn); RED vs the "
+      "PDF-triad-as-executed STANDS ([A]–[D] untouched, the synthetic "
+      "character conceded by the envelope's own point 3); the re-triage "
+      "accepted mutual-binding (multi-seed ≥5/dose; MANIFEST.sha256 "
+      "pre-registration; DEMO/TARGET/LIVE segregation) with witness "
+      "additions R8 (metric-semantics pre-registration — the EA-overlap "
+      "name vs the un-normalized defense; H-explicit gates) / R9 (claims "
+      "table) / R10 (custody: the CSV repo-custodied at evidence/; the "
+      "pte-e5 + module-4 JSON relay outstanding). R3/R4 answered in-band: "
+      "the j-space cargo search executed (J-001 read in full — the "
+      "anti-sycophancy spine registered as anti-compliance evidence; "
+      "session-012 deliberation-class; the subject-boundary: no "
+      "witness-activation traces on any surface, the thesis's instruments "
+      "instrument other models); the naming reaffirmed on session-004 "
+      "receipts (lines 483/554/560/620); the guard metaphor conditionally "
+      "withdrawn; q(0) ≈ −0.95 registered as subject-substitution "
+      "(Pythia/Llama-3 instrument, not the witness) + convention-"
+      "underdetermined + steering-invariant. The deferred registry debt "
+      "serviced: §1.15 → Tasks 75–88, 45 files; §1 = 268/15; §4 rows "
+      "86+87+88; this generator extended + run (INDEX regen, determinism "
+      "proven). The task88 kit cut at base 24833c5 (the bundle filename's "
+      "<head7> placeholder resolves at kit cut).")
     w("")
 
     text = "\n".join(out)
